@@ -130,7 +130,22 @@
   }
   .unit-syllabus li::before{content:"›";position:absolute;left:5px;font-size:16px;font-weight:700;line-height:1.4}
 
-  /* ── Learn cards ── */
+  /* ── Set picker ── */
+  .setlist{padding:14px 0 80px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .setcard{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;align-items:center;gap:16px;box-shadow:var(--shadow);cursor:pointer;transition:transform .14s,border-color .2s,box-shadow .2s}
+  .setcard:hover{transform:translateY(-2px);border-color:var(--green);box-shadow:0 16px 36px -18px rgba(35,79,59,.4)}
+  .setcard.locked{cursor:default;opacity:.55}
+  .setcard.locked:hover{transform:none;border-color:var(--line);box-shadow:var(--shadow)}
+  .setnum{font-family:'Fraunces';font-size:30px;font-weight:700;line-height:1;flex:0 0 auto;width:44px;text-align:center}
+  .setbody{flex:1;min-width:0}
+  .setlabel{font-family:'Fraunces';font-size:18px;font-weight:600;color:var(--ink);line-height:1.1}
+  .setmeta{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
+  .tierbadge{font-family:'IBM Plex Mono';font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:3px 8px;border-radius:20px}
+  .mixbadge{font-family:'IBM Plex Mono';font-size:11px;font-weight:500;color:var(--ink-soft);background:var(--paper-2);padding:3px 8px;border-radius:6px}
+  .mixbadge.soon{color:var(--gold);background:var(--gold-soft)}
+  .setgo{font-family:'IBM Plex Sans';font-size:13px;font-weight:600;color:var(--green-deep);flex:0 0 auto}
+  .setscore{font-family:'IBM Plex Mono';font-size:14px;font-weight:600;color:var(--green-deep);background:var(--green-soft);padding:5px 10px;border-radius:8px;flex:0 0 auto}
+  .diffbadge{font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:4px 10px;border-radius:20px}
   .learn{padding:18px 0 80px;animation:fade .4s ease}
   .lcard{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:26px 28px;margin-bottom:20px;box-shadow:var(--shadow)}
   .lcard h3{font-family:'Fraunces';font-size:25px;font-weight:700;margin-bottom:6px;color:var(--green-deep)}
@@ -223,6 +238,7 @@
   @media(max-width:640px){
     .grid{grid-template-columns:1fr}
     .howto{grid-template-columns:1fr}
+    .setlist{grid-template-columns:1fr}
     .unit-head{flex-wrap:wrap}
     .unit .acts{width:100%}.unit .acts .btn{flex:1}
     .unit-syllabus{padding:10px 12px 14px 12px}
@@ -261,6 +277,7 @@ function render(){
   crumb.classList.toggle('hide',cur.view==='home');
   if(cur.view==='home')    return renderHome();
   if(cur.view==='subject') return renderSubject(cur.ctx);
+  if(cur.view==='sets')    return renderSets(cur.ctx);
   if(cur.view==='learn')   return renderLearn(cur.ctx);
   if(cur.view==='quiz')    return renderQuiz(cur.ctx);
 }
@@ -280,7 +297,7 @@ function renderHome(){
   app.innerHTML=`
     <section class="hero">
       <div class="catchphrase">Learn. Test. Repeat.</div>
-      <div class="tagline">Welcome to the world of Finance</div>
+      <div class="tagline">Fundamentals of Finance</div>
     </section>
 
     <div class="howto">
@@ -326,8 +343,11 @@ function renderSubject(key){
     '#8b5e2a', // warm brown
   ];
   const units=s.units.map((u,i)=>{
-    const t=u.topics[0], hasQ=t&&t.questions&&t.questions.length, hasL=t&&t.learn&&t.learn.length, sc=scores[u.id];
-    const meta=`${hasQ?`${t.questions.length} questions`:'No questions yet'}${u.marks?` &nbsp;·&nbsp; ${u.marks} marks`:''}`;
+    const t=u.topics[0];
+    const sets=t&&t.sets?t.sets:null;
+    const liveSets=sets?sets.filter(x=>x.questions&&x.questions.length).length:0;
+    const hasQ=liveSets>0, hasL=t&&t.learn&&t.learn.length;
+    const meta=`${sets?`${sets.length} practice sets &nbsp;·&nbsp; ${liveSets} ready`:'No questions yet'}${u.marks?` &nbsp;·&nbsp; ${u.marks} marks`:''}`;
     const syllabusHtml=(!hasL&&u.syllabus&&u.syllabus.length)
       ?`<ul class="unit-syllabus">${u.syllabus.map((item,idx)=>{
           const c=PALETTE[idx%PALETTE.length];
@@ -339,11 +359,10 @@ function renderSubject(key){
         <div class="unit-title">
           <h4>${u.title}</h4>
           <div class="sub">${meta}</div>
-          ${sc?`<div class="scorechip">Last score &nbsp;·&nbsp; ${sc.correct}/${sc.total}</div>`:''}
         </div>
         <div class="acts">
           <button class="btn btn-ghost" ${hasL?'':'disabled style="opacity:.4;cursor:default"'} onclick="go('learn',{subj:'${key}',unit:${i}})">Learn</button>
-          <button class="btn btn-green" ${hasQ?'':'disabled style="opacity:.4;cursor:default"'} onclick="go('quiz',{subj:'${key}',unit:${i}})">Test</button>
+          <button class="btn btn-green" ${hasQ?'':'disabled style="opacity:.4;cursor:default"'} onclick="go('sets',{subj:'${key}',unit:${i}})">Test</button>
         </div>
       </div>
       ${syllabusHtml}
@@ -358,6 +377,36 @@ function renderSubject(key){
     <section class="units">${units}
       ${s.accent==='soon'?`<div class="note">📝 <b>Content for this subject is being prepared.</b> Check back soon — units will be unlocked as they are added.</div>`:''}
     </section>`;
+}
+
+function renderSets(ctx){
+  const u=DATA[ctx.subj].units[ctx.unit];
+  const sets=(u.topics[0]&&u.topics[0].sets)||[];
+  const cards=sets.map((set,idx)=>{
+    const live=set.questions&&set.questions.length;
+    const sc=scores[`${u.id}:${idx}`];
+    const tier=idx<3?'Foundation':idx<6?'Building':idx<8?'Stretch':'Advanced';
+    const tierColor=idx<3?'var(--green)':idx<6?'var(--gold)':idx<8?'#7b3f9e':'var(--coral)';
+    return `<div class="setcard ${live?'':'locked'}" ${live?`onclick="go('quiz',{subj:'${ctx.subj}',unit:${ctx.unit},setIdx:${idx}})"`:''}>
+      <div class="setnum" style="color:${tierColor}">${String(idx+1).padStart(2,'0')}</div>
+      <div class="setbody">
+        <div class="setlabel">${set.label||('Set '+(idx+1))}</div>
+        <div class="setmeta">
+          <span class="tierbadge" style="background:${tierColor}1f;color:${tierColor}">${tier}</span>
+          ${set.mix?`<span class="mixbadge">${set.mix} E/M/VH</span>`:''}
+          ${live?`<span class="mixbadge">${set.questions.length} Q</span>`:`<span class="mixbadge soon">Coming soon</span>`}
+        </div>
+      </div>
+      ${sc?`<div class="setscore">${sc.correct}/${sc.total}</div>`:(live?`<div class="setgo">Start →</div>`:'')}
+    </div>`;
+  }).join('');
+  app.innerHTML=`
+    <section style="padding:30px 0 6px">
+      <div style="font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:6px">${DATA[ctx.subj].name} &nbsp;·&nbsp; Unit ${ctx.unit+1} &nbsp;·&nbsp; Practice</div>
+      <h2 style="font-family:Fraunces;font-size:30px;font-weight:700;color:var(--green-deep);margin-bottom:4px;max-width:24ch">${u.title}</h2>
+      <p style="color:var(--ink-soft);font-size:14px;margin-bottom:8px">Ten sets, 30 questions each. Difficulty rises set by set — Set 1 builds your base, Set 10 tests true mastery. Work through them in order.</p>
+    </section>
+    <section class="setlist">${cards}</section>`;
 }
 
 function renderLearn(ctx){
@@ -376,7 +425,7 @@ function renderLearn(ctx){
     </section>
     <section class="learn">${blocks}
       <div style="text-align:center;padding-top:10px">
-        <button class="btn btn-green" onclick="go('quiz',{subj:'${ctx.subj}',unit:${ctx.unit}})">I'm ready — test me →</button>
+        <button class="btn btn-green" onclick="go('sets',{subj:'${ctx.subj}',unit:${ctx.unit}})">I'm ready — practise now →</button>
       </div>
     </section>`;
 }
@@ -385,13 +434,18 @@ function renderLearn(ctx){
 let quiz=null;
 function renderQuiz(ctx){
   const u=DATA[ctx.subj].units[ctx.unit];
-  if(!quiz||quiz.unitId!==u.id){
-    quiz={unitId:u.id,ctx,i:0,correct:0,answered:false,picked:null,qs:u.topics[0].questions};
+  const setIdx=ctx.setIdx||0;
+  const set=u.topics[0].sets[setIdx];
+  const key=`${u.id}:${setIdx}`;
+  if(!quiz||quiz.key!==key){
+    quiz={key,unitId:u.id,setIdx,ctx,i:0,correct:0,answered:false,picked:null,qs:set.questions,setLabel:set.label||('Set '+(setIdx+1))};
   }
   if(quiz.done){return renderResult(u);}
   const q=quiz.qs[quiz.i];
   const pct=Math.round((quiz.i/quiz.qs.length)*100);
   const typeLabel={standard:"Multiple Choice",assertion:"Assertion – Reason",matching:"Match the Columns",case:"Case-based"}[q.type];
+  const diffMap={E:['Easy','var(--green)'],M:['Moderate','var(--gold)'],VH:['Very Hard','var(--coral)']};
+  const diff=q.diff&&diffMap[q.diff]?diffMap[q.diff]:null;
 
   let promptHtml='';
   if(q.type==='case'){
@@ -432,13 +486,17 @@ function renderQuiz(ctx){
 
   app.innerHTML=`
     <section class="quiz">
+      <div style="font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px">${u.title} &nbsp;·&nbsp; ${quiz.setLabel}</div>
       <div class="qprog">
         <div class="cnt">${quiz.i+1} / ${quiz.qs.length}</div>
         <div class="track"><div class="fill" style="width:${pct}%"></div></div>
         <div class="cnt" style="color:var(--green-deep)">${quiz.correct} ✓</div>
       </div>
       <div class="qcard">
-        <div class="qtype">${typeLabel}</div>
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:14px">
+          <div class="qtype" style="margin:0">${typeLabel}</div>
+          ${diff?`<div class="diffbadge" style="background:${diff[1]}1f;color:${diff[1]}">${diff[0]}</div>`:''}
+        </div>
         ${promptHtml}
         <div class="opts">${opts}</div>
         ${explainHtml}
@@ -454,7 +512,7 @@ function answer(k){
 }
 function nextQ(){
   if(quiz.i===quiz.qs.length-1){
-    quiz.done=true;scores[quiz.unitId]={correct:quiz.correct,total:quiz.qs.length};
+    quiz.done=true;scores[quiz.key]={correct:quiz.correct,total:quiz.qs.length};
   } else {
     quiz.i++;quiz.answered=false;quiz.picked=null;
   }
@@ -464,18 +522,19 @@ function nextQ(){
 function renderResult(u){
   const pct=Math.round((quiz.correct/quiz.qs.length)*100);
   let band,msg;
-  if(pct>=80){band='var(--good)';msg="Strong grasp of this unit. Ready for exam-style questions.";}
-  else if(pct>=50){band='var(--gold)';msg="A fair start — revisit the Learn section for the concepts you missed.";}
-  else{band='var(--coral)';msg="Needs another pass. Work through the Learn cards again, then retry.";}
-  const ctx=quiz.ctx;
+  if(pct>=80){band='var(--good)';msg="Strong grasp of this set. Move on to the next, harder set.";}
+  else if(pct>=50){band='var(--gold)';msg="A fair attempt — revisit the Learn section for the concepts you missed, then retry.";}
+  else{band='var(--coral)';msg="This set needs another pass. Work through the Learn cards again before retrying.";}
+  const ctx=quiz.ctx, setIdx=quiz.setIdx, label=quiz.setLabel;
   app.innerHTML=`
     <section class="result">
       <div class="score">${quiz.correct}<small>/${quiz.qs.length}</small></div>
-      <div class="verdictband" style="background:${band}1f;color:${band}">${pct}% correct</div>
+      <div class="verdictband" style="background:${band}1f;color:${band}">${pct}% &nbsp;·&nbsp; ${label}</div>
       <h3>${u.title}</h3><p>${msg}</p>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-        <button class="btn btn-green" onclick="quiz=null;go('quiz',{subj:'${ctx.subj}',unit:${ctx.unit}})">Retake test</button>
-        <button class="btn btn-ghost" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit}})">Review the concepts</button>
+        <button class="btn btn-green" onclick="quiz=null;go('quiz',{subj:'${ctx.subj}',unit:${ctx.unit},setIdx:${setIdx}})">Retake this set</button>
+        <button class="btn btn-ghost" onclick="quiz=null;go('sets',{subj:'${ctx.subj}',unit:${ctx.unit}})">All sets</button>
+        <button class="btn btn-ghost" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit}})">Review concepts</button>
       </div>
     </section>`;
   quiz=null;
