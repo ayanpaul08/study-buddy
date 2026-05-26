@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Buddy — WBCHSE Class XI Commerce</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2321; --ink-soft:#3c4742; --paper:#f4efe3; --paper-2:#ece4d2;
+    --card:#fbf8f0; --line:#d8cdb4; --line-strong:#c2b390;
+    --green:#2f6b4f; --green-deep:#234f3b; --green-soft:#e3eee6;
+    --gold:#b6862c; --gold-soft:#f8f0db; --coral:#c0492f; --coral-soft:#f6e2dc;
+    --orange:#e8620a;
+    --good:#2f6b4f; --good-soft:#e3eee6; --bad:#b23a26; --bad-soft:#f6e2dc;
+    --shadow:0 1px 0 rgba(0,0,0,.04), 0 8px 24px -12px rgba(31,40,33,.28);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'IBM Plex Sans',sans-serif; color:var(--ink); line-height:1.55;
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(47,107,79,.07), transparent 60%),
+      repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(47,107,79,.05) 31px, rgba(47,107,79,.05) 32px),
+      var(--paper);
+    min-height:100vh; -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+
+  /* ── Header ── */
+  header{
+    border-bottom:1.5px solid var(--line-strong);
+    background:linear-gradient(180deg,var(--paper-2),transparent);
+    position:sticky;top:0;z-index:30;backdrop-filter:blur(6px);
+  }
+  .bar{display:flex;align-items:center;gap:14px;padding:13px 32px;max-width:1200px;margin:0 auto}
+  .crest{
+    width:40px;height:40px;border-radius:9px;flex:0 0 auto;cursor:pointer;
+    background:var(--green-deep);color:#f4efe3;display:grid;place-items:center;
+    font-family:'Fraunces';font-weight:700;font-size:20px;box-shadow:var(--shadow);letter-spacing:-.5px;
+  }
+  .brand h1{font-family:'Fraunces';font-weight:800;font-size:28px;line-height:1;color:var(--orange);letter-spacing:-.3px}
+  .brand .ai{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;margin-top:3px}
+  .spacer{flex:1}
+  .crumb{font-size:13px;color:var(--green-deep);font-weight:600;cursor:pointer}
+  .crumb:hover{text-decoration:underline}
+
+  /* ── Buttons ── */
+  .btn{
+    font-family:'IBM Plex Sans';font-weight:600;font-size:14px;border:none;cursor:pointer;
+    padding:11px 18px;border-radius:10px;transition:transform .08s ease, box-shadow .2s, background .2s;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn-green{background:var(--green-deep);color:#f4efe3;box-shadow:var(--shadow)}
+  .btn-green:hover{background:var(--green)}
+  .btn-ghost{background:transparent;border:1.5px solid var(--line-strong);color:var(--ink)}
+  .btn-ghost:hover{background:var(--paper-2)}
+
+  /* ── Homepage hero ── */
+  .hero{padding:52px 0 36px;border-bottom:1px solid var(--line);margin-bottom:36px}
+  .hero .catchphrase{
+    font-family:'Fraunces';font-weight:700;font-style:italic;
+    font-size:clamp(38px,8vw,68px);line-height:1;letter-spacing:-.5px;
+    background:linear-gradient(135deg,var(--green-deep) 0%,var(--gold) 100%);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    margin-bottom:0;
+  }
+  .hero .tagline{
+    font-family:'Fraunces';font-weight:600;font-style:italic;
+    font-size:clamp(18px,3vw,26px);color:var(--ink-soft);margin-top:2.2em;letter-spacing:.01em;
+  }
+
+  /* ── How-to strip ── */
+  .howto{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:36px}
+  .step{background:var(--card);border:1.5px solid var(--line);border-radius:13px;padding:18px;box-shadow:var(--shadow)}
+  .step .snum{font-family:'Fraunces';font-size:32px;font-weight:700;color:var(--line-strong);line-height:1;margin-bottom:6px}
+  .step h4{font-family:'Fraunces';font-size:17px;font-weight:600;color:var(--green-deep);margin-bottom:5px}
+  .step p{font-size:13.5px;color:var(--ink-soft);line-height:1.5}
+
+  /* ── Question-types strip ── */
+  .qtypes{margin-bottom:40px}
+  .qtypes h3{font-family:'Fraunces';font-size:16px;font-weight:600;color:var(--ink-soft);
+    letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px;
+    border-bottom:1px solid var(--line);padding-bottom:8px}
+  .qtrow{display:flex;flex-wrap:nowrap;gap:12px;overflow-x:auto;padding-bottom:4px}
+  .qtbadge{display:flex;align-items:center;gap:10px;background:var(--card);border:1.5px solid var(--line);
+    border-radius:10px;padding:11px 16px;font-size:13.5px;box-shadow:var(--shadow);flex:1;min-width:0;white-space:nowrap}
+  .qtbadge .icon{width:28px;height:28px;border-radius:7px;display:grid;place-items:center;font-size:14px;flex:0 0 auto}
+  .qtbadge .icon.g{background:var(--green-soft);color:var(--green-deep)}
+  .qtbadge .icon.o{background:var(--gold-soft);color:var(--gold)}
+  .qtbadge .icon.r{background:var(--coral-soft);color:var(--coral)}
+  .qtbadge .icon.b{background:#e8eef8;color:#2c4a8a}
+  .qtbadge b{color:var(--ink);font-weight:600}
+  .qtbadge span{color:var(--ink-soft)}
+
+  /* ── Subject 2×2 grid ── */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding-bottom:60px}
+  .subj{
+    background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:24px;
+    cursor:pointer;transition:transform .15s ease, box-shadow .2s, border-color .2s;
+    position:relative;overflow:hidden;box-shadow:var(--shadow);
+  }
+  .subj:hover{transform:translateY(-3px);border-color:var(--green);box-shadow:0 18px 40px -18px rgba(35,79,59,.45)}
+  .subj .code{font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;font-weight:600}
+  .subj h3{font-family:'Fraunces';font-size:22px;font-weight:700;margin:8px 0 5px;line-height:1.15;color:var(--ink)}
+  .subj .meta{font-size:13px;color:var(--ink-soft)}
+  .pill{display:inline-block;margin-top:14px;font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:20px}
+  .pill.ready{background:var(--green-soft);color:var(--green-deep)}
+  .pill.soon{background:var(--paper-2);color:var(--ink-soft)}
+
+  /* ── Unit list ── */
+  .units{padding:14px 0 70px}
+  .unit{background:var(--card);border:1.5px solid var(--line);border-radius:14px;margin-bottom:14px;box-shadow:var(--shadow);overflow:hidden}
+  .unit-head{display:flex;align-items:center;gap:16px;padding:16px 20px}
+  .unit .num{font-family:'Fraunces';font-size:28px;color:var(--line-strong);font-weight:700;flex:0 0 38px;text-align:center;line-height:1}
+  .unit-title{flex:1;min-width:0}
+  .unit h4{font-family:'Fraunces';font-size:18px;font-weight:600;line-height:1.2;color:var(--green-deep)}
+  .unit .sub{font-size:12px;color:var(--ink-soft);margin-top:3px;font-family:'IBM Plex Mono'}
+  .unit .acts{display:flex;gap:8px;flex:0 0 auto}
+  .unit .acts .btn{padding:8px 14px;font-size:13px}
+  .scorechip{font-family:'IBM Plex Mono';font-size:12px;color:var(--green-deep);font-weight:600;background:var(--green-soft);padding:3px 8px;border-radius:6px;margin-top:5px;display:inline-block}
+  .unit-syllabus{border-top:1px solid var(--line);padding:10px 20px 14px 74px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px 24px}
+  .unit-syllabus li{font-size:12.5px;color:var(--ink-soft);padding:4px 0 4px 14px;position:relative;list-style:none}
+  .unit-syllabus li::before{content:"›";position:absolute;left:0;color:var(--gold);font-weight:700}
+
+  /* ── Learn cards ── */
+  .learn{padding:18px 0 80px;animation:fade .4s ease}
+  .lcard{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:26px 28px;margin-bottom:20px;box-shadow:var(--shadow)}
+  .lcard h3{font-family:'Fraunces';font-size:25px;font-weight:700;margin-bottom:6px;color:var(--green-deep)}
+  .lcard .kicker{font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:12px}
+  .lcard p{margin:10px 0;color:var(--ink-soft);font-size:15.5px}
+  .lcard strong{color:var(--green-deep)}
+  .lcard ul{margin:10px 0 10px 4px;list-style:none}
+  .lcard li{padding:5px 0 5px 22px;position:relative;color:var(--ink-soft);font-size:15px}
+  .lcard li::before{content:"§";position:absolute;left:0;color:var(--gold);font-weight:700;font-family:'Fraunces'}
+  .lcard li b{color:var(--coral)}
+  .diagram{margin:18px 0;background:var(--paper);border:1px dashed var(--line-strong);border-radius:12px;padding:18px;text-align:center}
+  .diagram svg{max-width:100%;height:auto}
+  .dcap{font-size:12px;color:var(--ink-soft);margin-top:8px;font-style:italic;font-family:'Fraunces'}
+  .example{margin:16px 0;border-left:3px solid var(--green);background:var(--green-soft);border-radius:0 10px 10px 0;padding:14px 18px}
+  .example .lbl{font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-deep);font-weight:600}
+  .example p{margin:6px 0 0;color:var(--ink);font-size:14.5px}
+  .casebox{margin:16px 0;border-left:3px solid var(--gold);background:var(--gold-soft);border-radius:0 10px 10px 0;padding:14px 18px}
+  .casebox .lbl{font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .casebox p{margin:6px 0 0;color:var(--ink);font-size:14.5px}
+  table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+  table.cmp th,table.cmp td{border:1px solid var(--line-strong);padding:9px 12px;text-align:left}
+  table.cmp th{background:var(--green-deep);color:#f4efe3;font-weight:600}
+  table.cmp tr:nth-child(even) td{background:var(--paper)}
+
+  /* ── Quiz ── */
+  .quiz{padding:22px 0 90px;animation:fade .4s ease}
+  .qprog{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+  .qprog .track{flex:1;height:8px;background:var(--paper-2);border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+  .qprog .fill{height:100%;background:linear-gradient(90deg,var(--green),var(--green-deep));border-radius:20px;transition:width .35s ease}
+  .qprog .cnt{font-family:'IBM Plex Mono';font-size:13px;font-weight:600;color:var(--ink-soft)}
+  .qcard{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:28px;box-shadow:var(--shadow)}
+  .qtype{display:inline-block;font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--gold);background:var(--gold-soft);padding:4px 10px;border-radius:20px;margin-bottom:14px}
+  .qpassage{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:16px;font-size:14.5px;color:var(--ink-soft);line-height:1.6}
+  .qpassage .lbl{font-family:'IBM Plex Mono';font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);font-weight:600;display:block;margin-bottom:6px}
+  .ar{margin-bottom:16px}
+  .ar div{padding:11px 14px;border-radius:9px;margin-bottom:8px;font-size:14.5px;border:1px solid var(--line)}
+  .ar .a{background:var(--green-soft)} .ar .r{background:var(--gold-soft)}
+  .ar b{font-family:'IBM Plex Mono';font-size:12px;letter-spacing:.06em;color:var(--coral)}
+  .qtext{font-family:'Fraunces';font-size:21px;font-weight:600;line-height:1.3;margin-bottom:6px;color:var(--ink)}
+  table.match{width:100%;border-collapse:collapse;margin:8px 0 4px;font-size:14px}
+  table.match th{background:var(--green-deep);color:#f4efe3;font-size:12px;font-weight:600;padding:7px 12px;text-align:left}
+  table.match td{border:1px solid var(--line-strong);padding:8px 12px;vertical-align:top}
+  table.match td:first-child{width:50%;background:var(--paper)}
+
+  /* options */
+  .opts{margin-top:18px;display:flex;flex-direction:column;gap:11px}
+  .opt{display:flex;flex-direction:column;border:1.5px solid var(--line);background:var(--card);border-radius:11px;padding:0;cursor:pointer;transition:all .14s ease;overflow:hidden}
+  .opt-main{display:flex;align-items:flex-start;gap:13px;padding:14px 16px;font-size:15px}
+  .opt:hover .opt-main{background:var(--green-soft)}
+  .opt .key{font-family:'IBM Plex Mono';font-weight:600;font-size:13px;width:24px;height:24px;border-radius:6px;background:var(--paper-2);display:grid;place-items:center;flex:0 0 auto;color:var(--ink-soft)}
+  .opt-explain{display:none;padding:10px 16px 12px 53px;font-size:13px;line-height:1.55;border-top:1px solid var(--line)}
+  .opt.answered .opt-explain{display:block}
+  .opt.correct{border-color:var(--good)}
+  .opt.correct .opt-main{background:var(--good-soft)}
+  .opt.correct .key{background:var(--good);color:#fff}
+  .opt.correct .opt-explain{background:var(--good-soft);color:var(--green-deep);border-top-color:rgba(47,107,79,.2)}
+  .opt.wrong{border-color:var(--bad)}
+  .opt.wrong .opt-main{background:var(--bad-soft)}
+  .opt.wrong .key{background:var(--bad);color:#fff}
+  .opt.wrong .opt-explain{background:var(--bad-soft);color:var(--bad);border-top-color:rgba(178,58,38,.2)}
+  .opt.neutral.answered .opt-main{background:var(--paper-2)}
+  .opt.neutral .opt-explain{background:var(--paper-2);color:var(--ink-soft)}
+  .opt.disabled{cursor:default}
+  .opt.disabled:hover .opt-main{background:inherit}
+  .opt.correct.disabled:hover .opt-main{background:var(--good-soft)}
+  .opt.wrong.disabled:hover .opt-main{background:var(--bad-soft)}
+  .opt.neutral.answered.disabled:hover .opt-main{background:var(--paper-2)}
+
+  .explain-header{margin-top:20px;border-radius:12px;padding:16px 18px;font-size:15px;line-height:1.6;animation:fade .3s ease}
+  .explain-header.ok{background:var(--good-soft);border:1px solid var(--good)}
+  .explain-header.no{background:var(--bad-soft);border:1px solid var(--bad)}
+  .explain-header .verdict{font-family:'Fraunces';font-weight:700;font-size:17px;margin-bottom:5px}
+  .explain-header.ok .verdict{color:var(--good)} .explain-header.no .verdict{color:var(--bad)}
+  .explain-header .core{color:var(--ink)}
+  .qnav{display:flex;justify-content:flex-end;margin-top:20px}
+
+  /* result */
+  .result{padding:50px 0 90px;text-align:center;animation:fade .4s ease}
+  .result .score{font-family:'Fraunces';font-size:72px;font-weight:700;color:var(--green-deep);line-height:1}
+  .result .score small{font-size:30px;color:var(--line-strong)}
+  .result h3{font-family:'Fraunces';font-size:26px;font-weight:600;margin:14px 0 6px;color:var(--ink)}
+  .result p{color:var(--ink-soft);max-width:46ch;margin:0 auto 22px}
+  .verdictband{display:inline-block;padding:7px 16px;border-radius:30px;font-weight:600;font-size:14px;margin-bottom:10px}
+
+  .note{background:var(--gold-soft);border:1px dashed var(--gold);border-radius:12px;padding:16px 18px;margin:18px 0;font-size:14px;color:var(--ink-soft)}
+  .note b{color:var(--ink)}
+  footer{border-top:1.5px solid var(--line-strong);padding:20px 0;text-align:center;font-size:12px;color:var(--line-strong);font-family:'IBM Plex Mono'}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .hide{display:none}
+  @media(max-width:640px){
+    .grid{grid-template-columns:1fr}
+    .howto{grid-template-columns:1fr}
+    .unit-head{flex-wrap:wrap}
+    .unit .acts{width:100%}.unit .acts .btn{flex:1}
+    .unit-syllabus{padding-left:20px;grid-template-columns:1fr}
+    .lcard{padding:20px}
+    .opt-explain{padding-left:16px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="crest" onclick="go('home')">V</div>
+    <div class="brand">
+      <h1>Study Buddy</h1>
+      <div class="ai">powered by AI &nbsp;·&nbsp; WBCHSE Class XI Commerce</div>
+    </div>
+    <div class="spacer"></div>
+    <div id="crumb" class="crumb hide" onclick="back()">‹ Back</div>
+  </div>
+</header>
+
+<main id="app" class="wrap"></main>
+
+<footer>Study Buddy · Powered by AI · WBCHSE Class XI Commerce · Semester I</footer>
+
+<script src="data.js"></script>
+<script>
+const scores={}, app=document.getElementById('app'), crumb=document.getElementById('crumb');
+let stack=[];
+function go(v,c){stack.push({view:v,ctx:c});render()}
+function back(){stack.pop();render()}
+function reset(v){stack=[{view:v}];render()}
+
+function render(){
+  const cur=stack[stack.length-1]||{view:'home'};
+  crumb.classList.toggle('hide',cur.view==='home');
+  if(cur.view==='home')    return renderHome();
+  if(cur.view==='subject') return renderSubject(cur.ctx);
+  if(cur.view==='learn')   return renderLearn(cur.ctx);
+  if(cur.view==='quiz')    return renderQuiz(cur.ctx);
+}
+
+function renderHome(){
+  const cards=Object.entries(DATA).map(([key,s])=>{
+    const ready=s.units.some(u=>u.topics.length&&u.topics[0].questions&&u.topics[0].questions.length);
+    const qCount=s.units.reduce((n,u)=>n+(u.topics[0]?.questions?.length||0),0);
+    return `<div class="subj" onclick="go('subject','${key}')">
+      <div class="code">Semester I</div>
+      <h3>${s.name}</h3>
+      <div class="meta">${s.units.length} units${qCount?` &nbsp;·&nbsp; ${qCount} questions`:''}</div>
+      <span class="pill ${ready?'ready':'soon'}">${ready?'Ready to practise':'Coming soon'}</span>
+    </div>`;
+  }).join('');
+
+  app.innerHTML=`
+    <section class="hero">
+      <div class="catchphrase">Learn. Test. Repeat.</div>
+      <div class="tagline">Fundamentals of Finance</div>
+    </section>
+
+    <div class="howto">
+      <div class="step">
+        <div class="snum">01</div>
+        <h4>Open a Subject</h4>
+        <p>Choose any of the four Commerce subjects below. Each subject is divided into exam-aligned units with their marks weightage.</p>
+      </div>
+      <div class="step">
+        <div class="snum">02</div>
+        <h4>Learn the Concept</h4>
+        <p>Each unit has a <strong>Learn</strong> section — concept cards, flow diagrams, worked examples and real-world cases before you attempt a single question.</p>
+      </div>
+      <div class="step">
+        <div class="snum">03</div>
+        <h4>Test & Review</h4>
+        <p>Hit <strong>Test</strong> to attempt MCQs. After every answer you see not just why the correct option is right, but why each wrong option is wrong too.</p>
+      </div>
+    </div>
+
+    <div class="qtypes">
+      <h3>Question types covered</h3>
+      <div class="qtrow">
+        <div class="qtbadge"><div class="icon g">A</div><div><b>Multiple Choice</b><br><span>Standard 4-option MCQ</span></div></div>
+        <div class="qtbadge"><div class="icon o">A/R</div><div><b>Assertion – Reason</b><br><span>Evaluate two linked statements</span></div></div>
+        <div class="qtbadge"><div class="icon r">↔</div><div><b>Match the Columns</b><br><span>Pair Column A items with Column B</span></div></div>
+        <div class="qtbadge"><div class="icon b">¶</div><div><b>Case-based</b><br><span>Read a scenario, then answer</span></div></div>
+      </div>
+    </div>
+
+    <section class="grid">${cards}</section>`;
+}
+
+function renderSubject(key){
+  const s=DATA[key];
+  const units=s.units.map((u,i)=>{
+    const t=u.topics[0], hasQ=t&&t.questions&&t.questions.length, hasL=t&&t.learn&&t.learn.length, sc=scores[u.id];
+    const meta=`${hasQ?`${t.questions.length} questions`:'No questions yet'}${u.marks?` &nbsp;·&nbsp; ${u.marks} marks`:''}`;
+    const syllabusHtml=(!hasL&&u.syllabus&&u.syllabus.length)
+      ?`<ul class="unit-syllabus">${u.syllabus.map(item=>`<li>${item}</li>`).join('')}</ul>`:'';
+    return `<div class="unit">
+      <div class="unit-head">
+        <div class="num">${i+1}</div>
+        <div class="unit-title">
+          <h4>${u.title}</h4>
+          <div class="sub">${meta}</div>
+          ${sc?`<div class="scorechip">Last score &nbsp;·&nbsp; ${sc.correct}/${sc.total}</div>`:''}
+        </div>
+        <div class="acts">
+          <button class="btn btn-ghost" ${hasL?'':'disabled style="opacity:.4;cursor:default"'} onclick="go('learn',{subj:'${key}',unit:${i}})">Learn</button>
+          <button class="btn btn-green" ${hasQ?'':'disabled style="opacity:.4;cursor:default"'} onclick="go('quiz',{subj:'${key}',unit:${i}})">Test</button>
+        </div>
+      </div>
+      ${syllabusHtml}
+    </div>`;
+  }).join('');
+  app.innerHTML=`
+    <section style="padding-top:34px">
+      <div style="font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px">Semester I</div>
+      <h2 style="font-family:Fraunces;font-size:34px;font-weight:700;color:var(--green-deep);margin-bottom:4px">${s.name}</h2>
+      <p style="color:var(--ink-soft);font-size:14px;margin-bottom:24px">Select a unit to learn the concept or jump straight into practice questions.</p>
+    </section>
+    <section class="units">${units}
+      ${s.accent==='soon'?`<div class="note">📝 <b>Content for this subject is being prepared.</b> Check back soon — units will be unlocked as they are added.</div>`:''}
+    </section>`;
+}
+
+function renderLearn(ctx){
+  const u=DATA[ctx.subj].units[ctx.unit];
+  const blocks=(u.topics[0].learn||[]).map(b=>{
+    if(b.diagram)   return `<div class="lcard" style="padding:18px"><div class="diagram">${b.diagram}<div class="dcap">${b.cap||''}</div></div></div>`;
+    if(b.example)   return `<div class="lcard" style="padding:18px"><div class="example"><div class="lbl">Worked example</div><p>${b.example}</p></div></div>`;
+    if(b.caseStudy) return `<div class="lcard" style="padding:18px"><div class="casebox"><div class="lbl">Case in point</div><p>${b.caseStudy}</p></div></div>`;
+    return `<div class="lcard">${b.kicker?`<div class="kicker">${b.kicker}</div>`:''}<h3>${b.h}</h3>${b.html}</div>`;
+  }).join('');
+  app.innerHTML=`
+    <section style="padding:30px 0 6px">
+      <div style="font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:6px">${DATA[ctx.subj].name} &nbsp;·&nbsp; Unit ${ctx.unit+1}</div>
+      <h2 style="font-family:Fraunces;font-size:32px;font-weight:700;color:var(--green-deep);margin-bottom:4px;max-width:22ch">${u.title}</h2>
+      <p style="color:var(--ink-soft);font-size:14px">Read through the concept cards below before attempting the test.</p>
+    </section>
+    <section class="learn">${blocks}
+      <div style="text-align:center;padding-top:10px">
+        <button class="btn btn-green" onclick="go('quiz',{subj:'${ctx.subj}',unit:${ctx.unit}})">I'm ready — test me →</button>
+      </div>
+    </section>`;
+}
+
+/* ── QUIZ ENGINE ── */
+let quiz=null;
+function renderQuiz(ctx){
+  const u=DATA[ctx.subj].units[ctx.unit];
+  if(!quiz||quiz.unitId!==u.id){
+    quiz={unitId:u.id,ctx,i:0,correct:0,answered:false,picked:null,qs:u.topics[0].questions};
+  }
+  if(quiz.done){return renderResult(u);}
+  const q=quiz.qs[quiz.i];
+  const pct=Math.round((quiz.i/quiz.qs.length)*100);
+  const typeLabel={standard:"Multiple Choice",assertion:"Assertion – Reason",matching:"Match the Columns",case:"Case-based"}[q.type];
+
+  let promptHtml='';
+  if(q.type==='case'){
+    promptHtml=`<div class="qpassage"><span class="lbl">Read the situation</span>${q.passage}</div><div class="qtext">${q.q}</div>`;
+  } else if(q.type==='assertion'){
+    promptHtml=`<div class="ar"><div class="a"><b>Assertion (A):</b> ${q.assertion}</div><div class="r"><b>Reason (R):</b> ${q.reason}</div></div><div class="qtext">Choose the correct option:</div>`;
+  } else if(q.type==='matching'){
+    const thead=`<tr><th>Column A</th><th>Column B</th></tr>`;
+    const rows=q.columnA.map((a,k)=>`<tr><td>${a}</td><td>${q.columnB[k]}</td></tr>`).join('');
+    promptHtml=`<div class="qtext">${q.q}</div><table class="match">${thead}${rows}</table>`;
+  } else {
+    promptHtml=`<div class="qtext">${q.q}</div>`;
+  }
+
+  const opts=q.options.map((o,k)=>{
+    const isCorrect=k===q.answer, isPicked=k===quiz.picked;
+    let cls='opt';
+    if(quiz.answered){
+      cls+=' answered disabled';
+      if(isCorrect) cls+=' correct';
+      else if(isPicked) cls+=' wrong';
+      else cls+=' neutral';
+    }
+    const optEx=quiz.answered&&q.optionExplains?(
+      `<div class="opt-explain">${isCorrect?'✓ ':'✗ '}${q.optionExplains[k]}</div>`
+    ):'';
+    return `<div class="${cls}" ${quiz.answered?'':`onclick="answer(${k})"`}>
+      <div class="opt-main"><span class="key">${String.fromCharCode(65+k)}</span><span>${o}</span></div>
+      ${optEx}
+    </div>`;
+  }).join('');
+
+  const explainHtml=quiz.answered?`<div class="explain-header ${quiz.picked===q.answer?'ok':'no'}">
+    <div class="verdict">${quiz.picked===q.answer?'✓ Correct':'✗ Not quite'}</div>
+    <div class="core">${q.explain}</div></div>`:'';
+
+  const nextLabel=quiz.i===quiz.qs.length-1?'See result →':'Next question →';
+
+  app.innerHTML=`
+    <section class="quiz">
+      <div class="qprog">
+        <div class="cnt">${quiz.i+1} / ${quiz.qs.length}</div>
+        <div class="track"><div class="fill" style="width:${pct}%"></div></div>
+        <div class="cnt" style="color:var(--green-deep)">${quiz.correct} ✓</div>
+      </div>
+      <div class="qcard">
+        <div class="qtype">${typeLabel}</div>
+        ${promptHtml}
+        <div class="opts">${opts}</div>
+        ${explainHtml}
+        ${quiz.answered?`<div class="qnav"><button class="btn btn-green" onclick="nextQ()">${nextLabel}</button></div>`:''}
+      </div>
+    </section>`;
+}
+
+function answer(k){
+  quiz.answered=true;quiz.picked=k;
+  if(k===quiz.qs[quiz.i].answer) quiz.correct++;
+  render();
+}
+function nextQ(){
+  if(quiz.i===quiz.qs.length-1){
+    quiz.done=true;scores[quiz.unitId]={correct:quiz.correct,total:quiz.qs.length};
+  } else {
+    quiz.i++;quiz.answered=false;quiz.picked=null;
+  }
+  render();
+}
+
+function renderResult(u){
+  const pct=Math.round((quiz.correct/quiz.qs.length)*100);
+  let band,msg;
+  if(pct>=80){band='var(--good)';msg="Strong grasp of this unit. Ready for exam-style questions.";}
+  else if(pct>=50){band='var(--gold)';msg="A fair start — revisit the Learn section for the concepts you missed.";}
+  else{band='var(--coral)';msg="Needs another pass. Work through the Learn cards again, then retry.";}
+  const ctx=quiz.ctx;
+  app.innerHTML=`
+    <section class="result">
+      <div class="score">${quiz.correct}<small>/${quiz.qs.length}</small></div>
+      <div class="verdictband" style="background:${band}1f;color:${band}">${pct}% correct</div>
+      <h3>${u.title}</h3><p>${msg}</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-green" onclick="quiz=null;go('quiz',{subj:'${ctx.subj}',unit:${ctx.unit}})">Retake test</button>
+        <button class="btn btn-ghost" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit}})">Review the concepts</button>
+      </div>
+    </section>`;
+  quiz=null;
+}
+
+reset('home');
+</script>
+</body>
+</html>
