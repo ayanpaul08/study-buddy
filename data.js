@@ -411,7 +411,7 @@ const DATA = {
      Semester I: Units 1–3 Microeconomics · Units 4–6 Statistics
      ══════════════════════════════════════════════════════════════════════════ */
   economics:{
-    name:"Economics (with Statistics)", code:"ECO", accent:"soon",
+    name:"Economics", code:"ECO", accent:"soon",
     units:[
       {
         id:"eco-u1",

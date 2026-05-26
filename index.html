@@ -122,9 +122,13 @@
   .unit .acts{display:flex;gap:8px;flex:0 0 auto}
   .unit .acts .btn{padding:8px 14px;font-size:13px}
   .scorechip{font-family:'IBM Plex Mono';font-size:12px;color:var(--green-deep);font-weight:600;background:var(--green-soft);padding:3px 8px;border-radius:6px;margin-top:5px;display:inline-block}
-  .unit-syllabus{border-top:1px solid var(--line);padding:10px 20px 14px 74px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px 24px}
-  .unit-syllabus li{font-size:12.5px;color:var(--ink-soft);padding:4px 0 4px 14px;position:relative;list-style:none}
-  .unit-syllabus li::before{content:"›";position:absolute;left:0;color:var(--gold);font-weight:700}
+  .unit-syllabus{border-top:1px solid var(--line);padding:10px 20px 16px 20px;list-style:none}
+  .unit-syllabus li{
+    font-size:14.5px;font-weight:500;padding:7px 12px 7px 18px;
+    position:relative;border-left:3px solid transparent;margin-bottom:4px;
+    border-radius:0 8px 8px 0;transition:background .15s;
+  }
+  .unit-syllabus li::before{content:"›";position:absolute;left:5px;font-size:16px;font-weight:700;line-height:1.4}
 
   /* ── Learn cards ── */
   .learn{padding:18px 0 80px;animation:fade .4s ease}
@@ -221,7 +225,7 @@
     .howto{grid-template-columns:1fr}
     .unit-head{flex-wrap:wrap}
     .unit .acts{width:100%}.unit .acts .btn{flex:1}
-    .unit-syllabus{padding-left:20px;grid-template-columns:1fr}
+    .unit-syllabus{padding:10px 12px 14px 12px}
     .lcard{padding:20px}
     .opt-explain{padding-left:16px}
   }
@@ -312,11 +316,23 @@ function renderHome(){
 
 function renderSubject(key){
   const s=DATA[key];
+  const PALETTE=[
+    '#2d6b4a', // deep green
+    '#a07228', // dark amber
+    '#7b3f9e', // deep purple
+    '#2a4f8f', // rich blue
+    '#b84030', // dark coral
+    '#1e7a72', // deep teal
+    '#8b5e2a', // warm brown
+  ];
   const units=s.units.map((u,i)=>{
     const t=u.topics[0], hasQ=t&&t.questions&&t.questions.length, hasL=t&&t.learn&&t.learn.length, sc=scores[u.id];
     const meta=`${hasQ?`${t.questions.length} questions`:'No questions yet'}${u.marks?` &nbsp;·&nbsp; ${u.marks} marks`:''}`;
     const syllabusHtml=(!hasL&&u.syllabus&&u.syllabus.length)
-      ?`<ul class="unit-syllabus">${u.syllabus.map(item=>`<li>${item}</li>`).join('')}</ul>`:'';
+      ?`<ul class="unit-syllabus">${u.syllabus.map((item,idx)=>{
+          const c=PALETTE[idx%PALETTE.length];
+          return `<li style="color:${c};border-left-color:${c};background:${c}12">${item}</li>`;
+        }).join('')}</ul>`:'';
     return `<div class="unit">
       <div class="unit-head">
         <div class="num">${i+1}</div>
