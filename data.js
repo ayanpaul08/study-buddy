@@ -512,7 +512,258 @@ const DATA = {
                 <tr><td><b>AS</b> (prescribed by ICAI)</td><td>All non-company entities — partnerships, sole traders, trusts, societies</td><td>ICAI standards; broadly historical cost based</td></tr>
               </table>
               <p><b>Ind AS vs AS:</b> Ind AS are India's converged version of IFRS (adapted — not identical). They use fair value and present value more extensively. Traditional AS are simpler and primarily historical-cost based — which is what you study at Class XI level.</p>
-              <p>For WBCHSE examinations: understand what AS are, why they are needed, their objectives, benefits, limitations, and the formulation process. The individual list of AS numbers (AS 1 through AS 29, Ind AS 1 through 116) is background knowledge only — it is not tested at Class XI.</p>`}
+              <p>For WBCHSE examinations: understand what AS are, why they are needed, their objectives, benefits, limitations, and the formulation process. The individual list of AS numbers (AS 1 through AS 29, Ind AS 1 through 116) is background knowledge only — it is not tested at Class XI.</p>`},
+
+
+            /* ── BASIC ACCOUNTING TERMS ── */
+
+            {h:"Capital, Drawings, and the owner's financial stake", kicker:"Basic Accounting Terms · Owner's stake", html:`
+              <p>Every business has an owner (or owners) who invest resources into it. These concepts define the financial relationship between the owner and the business — remember, under the <b>Business Entity Concept</b>, the business and the owner are treated as completely separate.</p>
+              <ul>
+                <li><b>Capital:</b> The amount invested by the owner in the business — cash, goods, or any asset brought in. From the business's viewpoint, capital is what the business <i>owes back</i> to the owner and is therefore treated as an internal liability (also called Owner's Equity or Proprietor's Fund).</li>
+                <li><b>Drawings:</b> Any cash, goods, or asset taken out of the business by the owner for personal use. Drawings reduce capital. They are NOT an expense of the business — they are a withdrawal of the owner's stake.</li>
+                <li><b>Net Worth:</b> Capital + Profits earned − Losses − Drawings = the true net stake of the owner in the business at any point.</li>
+              </ul>
+              <p><b>Formula for closing capital:</b> Closing Capital = Opening Capital + Fresh Capital Introduced + Net Profit − Net Loss − Drawings.</p>
+              <p><b>Example:</b> Ramesh starts a business with ₹5,00,000 cash. He takes ₹20,000 worth of goods for home use in June. The ₹20,000 is Drawings — it reduces his capital to ₹4,80,000 (before any profit or loss). If the business earns ₹80,000 profit, closing capital = ₹4,80,000 + ₹80,000 = ₹5,60,000.</p>`},
+
+            {h:"Assets — what the business owns and controls", kicker:"Basic Accounting Terms · Assets", html:`
+              <p>An <b>asset</b> is any resource owned or controlled by the business that is expected to provide future economic benefit. Assets are broadly divided into Fixed (Non-current) and Current Assets.</p>
+              <table class="cmp">
+                <tr><th colspan="2">Fixed / Non-current Assets — held for long-term use; NOT for resale</th></tr>
+                <tr><td><b>Tangible</b></td><td>Have physical existence — land, buildings, machinery, vehicles, furniture, equipment</td></tr>
+                <tr><td><b>Intangible</b></td><td>No physical form but carry real value — goodwill, patents, trademarks, copyrights, brand names</td></tr>
+                <tr><td><b>Wasting / Depleting</b></td><td>Natural resources that physically diminish as they are used — mines, oil and gas wells, quarries, timber forests</td></tr>
+                <tr><td><b>Fictitious</b></td><td>Not real assets — losses or expenses that cannot be written off at once and are carried forward temporarily — preliminary expenses, discount on issue of shares. Written off gradually over future years.</td></tr>
+                <tr><th colspan="2">Current Assets — expected to be converted to cash or consumed within one year</th></tr>
+                <tr><td colspan="2">Inventories (stock), Debtors (trade receivables), Cash and bank balance, Short-term investments, Bills receivable, Prepaid expenses, Accrued income</td></tr>
+              </table>
+              <p>⭐ <strong>Key rule:</strong> The same item can be a fixed asset for one business and stock (goods) for another. A car is a fixed asset for a transport company — but for a car dealer, it is stock-in-trade.</p>`},
+
+            {h:"Liabilities — what the business owes to outside parties", kicker:"Basic Accounting Terms · Liabilities", html:`
+              <p>A <b>liability</b> is an obligation — a legal duty to pay money, goods, or services to an external party — arising from a past transaction or event.</p>
+              <table class="cmp">
+                <tr><th>Type</th><th>Meaning</th><th>Examples</th></tr>
+                <tr><td><b>Long-term (Non-current) Liabilities</b></td><td>Repayable after more than one year</td><td>Term loans from banks, debentures, mortgage loans, long-term bonds</td></tr>
+                <tr><td><b>Current (Short-term) Liabilities</b></td><td>Repayable within one year</td><td>Trade creditors, bills payable, bank overdraft, outstanding expenses, short-term loans, income received in advance</td></tr>
+                <tr><td><b>Contingent Liability</b></td><td>A possible obligation that may arise depending on a future uncertain event</td><td>A court case that may go against the business; a guarantee given on behalf of a third party</td></tr>
+              </table>
+              <p><b>Capital vs Liabilities:</b> Capital (owner's equity) is sometimes called an <i>internal liability</i> — the business owes it to the owner. External liabilities (loans, creditors) are owed to outsiders. The <b>Accounting Equation</b> captures this: <strong>Assets = Capital + Liabilities</strong> — everything the business owns is financed either by the owner or by outsiders.</p>`},
+
+            {h:"Goods, Stock, Purchases, Sales, Debtors and Creditors", kicker:"Basic Accounting Terms · Trading vocabulary", html:`
+              <p>These six terms form the core vocabulary of any trading business. Getting them right is essential for understanding all future journal entries and financial statements.</p>
+              <table class="cmp">
+                <tr><th>Term</th><th>Meaning</th><th>Key point</th></tr>
+                <tr><td><b>Goods</b></td><td>Items in which the business trades — bought and sold as the main business activity</td><td>What is "goods" for one business may be a fixed asset for another. A computer is goods for a computer dealer; a fixed asset for an accountant.</td></tr>
+                <tr><td><b>Stock (Inventory)</b></td><td>Value of unsold goods at the end of an accounting period</td><td>Opening Stock = start of period; Closing Stock = end of period</td></tr>
+                <tr><td><b>Purchases</b></td><td>Goods bought for resale (or raw materials for production)</td><td>Cash Purchase — paid immediately; Credit Purchase — paid later, creates a Creditor</td></tr>
+                <tr><td><b>Sales</b></td><td>Goods sold to customers</td><td>Cash Sale — received immediately; Credit Sale — received later, creates a Debtor</td></tr>
+                <tr><td><b>Debtors (Trade Receivables)</b></td><td>Persons who owe money to the business — they bought goods on credit from us</td><td>Debtors are a <i>current asset</i> — the business expects to collect this money</td></tr>
+                <tr><td><b>Creditors (Trade Payables)</b></td><td>Persons to whom the business owes money — we bought goods on credit from them</td><td>Creditors are a <i>current liability</i> — the business must pay this amount</td></tr>
+              </table>`},
+
+            {h:"Trade Discount and Cash Discount — two very different reductions", kicker:"Basic Accounting Terms · Discount", html:`
+              <p>Both discounts reduce the amount paid, but they arise at different times and are treated very differently in the books of account.</p>
+              <table class="cmp">
+                <tr><th></th><th>Trade Discount</th><th>Cash Discount</th></tr>
+                <tr><td><b>When given</b></td><td>At the time of sale — deducted from the list price on the invoice</td><td>After the sale — given for prompt / early payment</td></tr>
+                <tr><td><b>Purpose</b></td><td>To encourage bulk buying, or to give dealers a margin to sell at MRP</td><td>To encourage quick settlement of dues</td></tr>
+                <tr><td><b>Recorded in books?</b></td><td>❌ NO — only the net price (after discount) is entered. The discount itself never appears in any account.</td><td>✅ YES — the full invoice amount and the discount are both recorded. Discount Allowed is an expense for the seller; Discount Received is income for the buyer.</td></tr>
+                <tr><td><b>Example</b></td><td>List price ₹10,000 less 20% trade discount = invoice at ₹8,000 (only ₹8,000 enters the books)</td><td>If the ₹8,000 invoice is paid within 10 days, 2% cash discount = ₹160. Books show: invoice ₹8,000, discount allowed ₹160, cash received ₹7,840.</td></tr>
+              </table>
+              <p><b>Memory aid:</b> Trade discount is a price reduction before the sale is recorded. Cash discount is a reward after the sale is recorded, for paying quickly.</p>`},
+
+            {h:"Revenue, Income, Profit, Loss, Bad Debts, Voucher and more", kicker:"Basic Accounting Terms · More key terms", html:`
+              <p>These terms complete the core vocabulary of accounting. Each has a precise meaning that differs from everyday usage.</p>
+              <table class="cmp">
+                <tr><th>Term</th><th>Meaning</th></tr>
+                <tr><td><b>Revenue</b></td><td>Income earned from the normal, recurring business operations — sales, fees, commission received, rent received. Recurring in nature.</td></tr>
+                <tr><td><b>Income</b></td><td>A broader term covering all earnings — includes both revenue from operations and other income (gain on sale of asset, interest received).</td></tr>
+                <tr><td><b>Profit</b></td><td>The surplus when revenue exceeds expenses. Gross Profit = Revenue − Cost of Goods Sold. Net Profit = Gross Profit − all other operating expenses.</td></tr>
+                <tr><td><b>Loss</b></td><td>The deficit when expenses exceed revenue. Reduces owner's capital.</td></tr>
+                <tr><td><b>Gain</b></td><td>A one-off, incidental profit not from the main business operations — e.g. profit on sale of old machinery. Non-recurring.</td></tr>
+                <tr><td><b>Bad Debts</b></td><td>Amounts owed by debtors that are irrecoverable and must be written off as a loss (expense).</td></tr>
+                <tr><td><b>Voucher</b></td><td>A written document that serves as evidence for a business transaction — the source document for every journal entry. Examples: invoice, receipt, cheque counterfoil, debit/credit note.</td></tr>
+                <tr><td><b>Solvent / Insolvent</b></td><td>Solvent: the business can meet all its financial obligations (assets &gt; liabilities). Insolvent: cannot meet obligations (liabilities &gt; assets).</td></tr>
+              </table>`},
+
+            /* ── SYSTEM OF ACCOUNTING ── */
+
+            {h:"The Accounting Equation — the foundation of Double Entry", kicker:"System of Accounting · The bedrock", html:`
+              <p>Every business transaction can be explained by one fundamental equation:</p>
+              <div style="text-align:center;font-size:20px;font-weight:700;color:#234f3b;margin:18px 0;letter-spacing:.02em">Assets = Capital + Liabilities</div>
+              <p>This equation is always in balance. Every transaction changes one or more of the three elements, but the equation always remains equal. This self-balancing property is the foundation of the <b>Double Entry System</b>.</p>
+              <table class="cmp">
+                <tr><th>Transaction</th><th>Effect</th><th>Equation stays balanced?</th></tr>
+                <tr><td>Owner invests ₹5,00,000 cash</td><td>Cash ↑ ₹5L, Capital ↑ ₹5L</td><td>✓ Both sides increase equally</td></tr>
+                <tr><td>Buy machinery on credit ₹2,00,000</td><td>Machinery ↑ ₹2L, Creditor ↑ ₹2L</td><td>✓ Asset and liability increase equally</td></tr>
+                <tr><td>Repay ₹50,000 of loan in cash</td><td>Cash ↓ ₹50K, Loan ↓ ₹50K</td><td>✓ Asset and liability decrease equally</td></tr>
+                <tr><td>Pay rent ₹10,000 cash</td><td>Cash ↓ ₹10K, Capital ↓ ₹10K (profit reduces)</td><td>✓ Asset decreases, Capital decreases equally</td></tr>
+              </table>
+              <p>The equation also shows the two sources of financing for every asset the business owns — either the owner funded it (Capital) or outsiders did (Liabilities).</p>`},
+
+            {h:"Double Entry System — recording both sides of every transaction", kicker:"System of Accounting · Double Entry", html:`
+              <p>The <b>Double Entry System</b>, developed in 15th-century Italy and systematised by Luca Pacioli (1494), is the universally accepted method of bookkeeping. It is based on one simple principle:</p>
+              <div style="text-align:center;font-size:15px;font-weight:700;color:#234f3b;margin:16px 0">Every transaction has TWO equal and opposite effects.<br>For every Debit, there is an equal Credit.</div>
+              <p>Each transaction is recorded in at least two accounts — one account is <b>debited</b> and another is <b>credited</b> by the same amount. Over all transactions, total debits must equal total credits.</p>
+              <p><b>Advantages of Double Entry System:</b></p>
+              <ul>
+                <li><b>Complete record:</b> Both aspects of every transaction are recorded — nothing is missed.</li>
+                <li><b>Self-checking (Trial Balance):</b> If total debits = total credits, the books are arithmetically correct.</li>
+                <li><b>Profit or loss:</b> Can be accurately determined by preparing a Profit and Loss Account.</li>
+                <li><b>Financial position:</b> A Balance Sheet showing assets, liabilities and capital can be prepared at any time.</li>
+                <li><b>Fraud detection:</b> The internal check through balancing makes manipulation harder to conceal.</li>
+                <li><b>Universal:</b> Suitable for businesses of all sizes and types — from a sole trader to a multinational.</li>
+              </ul>`},
+
+            {h:"Single Entry System — incomplete records and their drawbacks", kicker:"System of Accounting · Single Entry", html:`
+              <p>The <b>Single Entry System</b> is not really a system at all — it is a loose, inconsistent approach to record-keeping that does not follow the principles of Double Entry. It typically maintains only a cash book and personal accounts (debtors and creditors); there is no systematic record of assets and liabilities.</p>
+              <table class="cmp">
+                <tr><th>Feature</th><th>Single Entry</th><th>Double Entry</th></tr>
+                <tr><td>Completeness</td><td>Incomplete — records only cash and some personal accounts</td><td>Complete — records both aspects of every transaction</td></tr>
+                <tr><td>Trial Balance</td><td>Cannot be prepared — no way to check arithmetic accuracy</td><td>Can be prepared — total debits = total credits</td></tr>
+                <tr><td>Profit determination</td><td>Only an estimate (using Statement of Affairs method)</td><td>Accurate — from Profit and Loss Account</td></tr>
+                <tr><td>Financial position</td><td>Cannot prepare a proper Balance Sheet</td><td>Full Balance Sheet can be prepared</td></tr>
+                <tr><td>Fraud and error</td><td>Easy to conceal — no internal check</td><td>Harder to conceal — self-balancing system</td></tr>
+                <tr><td>Used by</td><td>Very small traders prioritising simplicity</td><td>All properly managed businesses</td></tr>
+              </table>
+              <p>Single entry is also called <i>incomplete records</i>. It is not recognised as acceptable for tax purposes or under the Companies Act.</p>`},
+
+            {h:"Types of Accounts — Personal, Real, and Nominal", kicker:"System of Accounting · Types of accounts", html:`
+              <p>Every account in accounting falls into one of three categories. Understanding the type of account is the key to applying the correct rule of debit and credit.</p>
+              <table class="cmp">
+                <tr><th>Type</th><th>What it represents</th><th>Examples</th></tr>
+                <tr><td><b>Personal Account</b></td><td>Accounts of persons — individuals, firms, companies, and institutions</td><td>Ramesh's Account, SBI Loan Account, Capital Account, Drawings Account, Debtors, Creditors, Outstanding Expenses A/c, Prepaid Expenses A/c</td></tr>
+                <tr><td><b>Real Account</b></td><td>Accounts of tangible things (assets you can touch) and intangible things (assets you cannot touch)</td><td>Cash A/c, Machinery A/c, Land A/c, Stock A/c (tangible); Goodwill A/c, Patents A/c, Trademarks A/c (intangible)</td></tr>
+                <tr><td><b>Nominal Account</b></td><td>Accounts of expenses, losses, incomes, and gains — these do not represent real persons or real things; they exist only for the accounting period</td><td>Rent A/c, Salaries A/c, Interest Paid A/c (expenses); Sales A/c, Commission Received A/c, Discount Received A/c (income)</td></tr>
+              </table>
+              <p>Nominal accounts are closed at the end of each accounting year — their balances transfer to the Profit and Loss Account. Personal and Real accounts are carried forward to the next year (they appear in the Balance Sheet).</p>`},
+
+            {diagram:`<svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
+              <text x="350" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#3c4742" font-family="Fraunces, serif">The Golden Rules of Debit and Credit</text>
+              <rect x="10" y="36" width="200" height="172" rx="10" fill="#e3eee6" stroke="#234f3b" stroke-width="1.5"/>
+              <text x="110" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#234f3b">Personal Account</text>
+              <text x="110" y="78" text-anchor="middle" font-size="10.5" fill="#3c4742">Accounts of persons,</text>
+              <text x="110" y="91" text-anchor="middle" font-size="10.5" fill="#3c4742">firms and companies</text>
+              <rect x="30" y="105" width="160" height="28" rx="6" fill="#234f3b"/>
+              <text x="110" y="123" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">Debit the Receiver</text>
+              <rect x="30" y="139" width="160" height="28" rx="6" fill="#2f6b4f"/>
+              <text x="110" y="157" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">Credit the Giver</text>
+              <text x="110" y="196" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">e.g. Bought from Suresh on credit:</text>
+              <text x="110" y="207" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">Debit Purchases, Credit Suresh</text>
+              <rect x="250" y="36" width="200" height="172" rx="10" fill="#f8f0db" stroke="#b6862c" stroke-width="1.5"/>
+              <text x="350" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6420">Real Account</text>
+              <text x="350" y="78" text-anchor="middle" font-size="10.5" fill="#3c4742">Accounts of tangible</text>
+              <text x="350" y="91" text-anchor="middle" font-size="10.5" fill="#3c4742">and intangible assets</text>
+              <rect x="270" y="105" width="160" height="28" rx="6" fill="#b6862c"/>
+              <text x="350" y="123" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">Debit what Comes In</text>
+              <rect x="270" y="139" width="160" height="28" rx="6" fill="#8a6420"/>
+              <text x="350" y="157" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">Credit what Goes Out</text>
+              <text x="350" y="196" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">e.g. Bought machinery for cash:</text>
+              <text x="350" y="207" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">Debit Machinery, Credit Cash</text>
+              <rect x="490" y="36" width="200" height="172" rx="10" fill="#f6e2dc" stroke="#c0492f" stroke-width="1.5"/>
+              <text x="590" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#b23a26">Nominal Account</text>
+              <text x="590" y="78" text-anchor="middle" font-size="10.5" fill="#3c4742">Accounts of expenses,</text>
+              <text x="590" y="91" text-anchor="middle" font-size="10.5" fill="#3c4742">losses, incomes, gains</text>
+              <rect x="510" y="105" width="160" height="28" rx="6" fill="#c0492f"/>
+              <text x="590" y="123" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">Debit Expenses &amp; Losses</text>
+              <rect x="510" y="139" width="160" height="28" rx="6" fill="#a03825"/>
+              <text x="590" y="157" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">Credit Incomes &amp; Gains</text>
+              <text x="590" y="196" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">e.g. Paid rent ₹5,000 cash:</text>
+              <text x="590" y="207" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">Debit Rent A/c, Credit Cash</text>
+            </svg>`, cap:"The Three Golden Rules — memorise these and you can record any transaction correctly. Personal: Receiver / Giver. Real: In / Out. Nominal: Expense-Loss / Income-Gain."},
+
+            /* ── BASIS OF ACCOUNTING ── */
+
+            {h:"Cash Basis of Accounting — record only when cash actually moves", kicker:"Basis of Accounting · Cash basis", html:`
+              <p>Under the <b>Cash Basis of Accounting</b>, transactions are recorded only when cash is physically received or paid — not when income is earned or expense is incurred.</p>
+              <ul>
+                <li><b>Income</b> is recognised only when cash is <i>received</i>, regardless of when it was earned.</li>
+                <li><b>Expense</b> is recognised only when cash is <i>paid</i>, regardless of when it was incurred.</li>
+              </ul>
+              <p><b>Consequence:</b> There are no debtors (credit sales go unrecorded until cash arrives), no creditors (credit purchases go unrecorded until paid), no outstanding expenses, and no prepaid items.</p>
+              <p><b>Where it is used:</b> Small unorganised businesses, individual professionals (doctors, lawyers, consultants), certain government accounts, and not-for-profit organisations.</p>
+              <p><b>Limitations:</b></p>
+              <ul>
+                <li>Does NOT match income and expenses to the correct accounting period — gives a distorted picture of performance.</li>
+                <li>A business can show a loss simply because customers paid late, even if it traded profitably.</li>
+                <li>NOT permitted under the Companies Act or GAAP for corporate financial reporting.</li>
+                <li>Easy to manipulate profit by delaying or accelerating payments.</li>
+              </ul>`},
+
+            {h:"Accrual Basis of Accounting — record when earned or incurred, not when paid", kicker:"Basis of Accounting · Accrual basis", html:`
+              <p>Under the <b>Accrual Basis of Accounting</b>, transactions are recorded when they occur economically — when income is <i>earned</i> and expenses are <i>incurred</i> — regardless of when cash moves.</p>
+              <ul>
+                <li><b>Income</b> is recognised when it is <i>earned</i> (the service is performed or goods delivered), even if cash has not yet been received.</li>
+                <li><b>Expense</b> is recognised when it is <i>incurred</i> (the resource is used or benefit consumed), even if cash has not yet been paid.</li>
+              </ul>
+              <p><b>What accrual basis creates in the accounts:</b></p>
+              <ul>
+                <li><b>Debtors</b> — sales made on credit (earned but not yet received in cash)</li>
+                <li><b>Creditors</b> — purchases made on credit (incurred but not yet paid)</li>
+                <li><b>Outstanding Expenses</b> — expenses incurred but not yet paid (e.g. unpaid salaries)</li>
+                <li><b>Prepaid Expenses</b> — cash paid in advance for future benefits (e.g. rent paid 3 months early)</li>
+                <li><b>Accrued Income</b> — income earned but not yet received (e.g. interest due but not credited)</li>
+                <li><b>Income Received in Advance</b> — cash received for a service not yet performed</li>
+              </ul>
+              <p>Accrual basis is one of the three <b>Fundamental Accounting Assumptions</b> (along with Going Concern and Consistency). It is mandated by the Companies Act, AS 1, and all accepted accounting standards. It gives a <strong>true and fair view</strong> of the business's actual performance for the period.</p>`},
+
+            {h:"Cash vs Accrual — the same business, two different profit figures", kicker:"Basis of Accounting · The critical difference", html:`
+              <p>The two bases can produce very different profit figures from the same set of underlying transactions. Consider a business in the month of March:</p>
+              <ul>
+                <li>Goods sold worth ₹1,00,000 — cash received ₹60,000 in March; ₹40,000 still due from debtors</li>
+                <li>Expenses incurred ₹70,000 — cash paid ₹55,000 in March; ₹15,000 still outstanding to creditors</li>
+              </ul>
+              <table class="cmp">
+                <tr><th></th><th>Cash Basis</th><th>Accrual Basis</th></tr>
+                <tr><td><b>Revenue recognised</b></td><td>₹60,000 (cash received only)</td><td>₹1,00,000 (all goods delivered)</td></tr>
+                <tr><td><b>Expenses recognised</b></td><td>₹55,000 (cash paid only)</td><td>₹70,000 (all expenses incurred)</td></tr>
+                <tr><td><b>Profit for March</b></td><td>₹5,000</td><td>₹30,000</td></tr>
+              </table>
+              <p>Which figure truly represents March's performance? The <b>accrual figure of ₹30,000</b> — because the business earned ₹1,00,000 of revenue and incurred ₹70,000 of costs in March, regardless of when cash moved. The cash basis figure of ₹5,000 reflects the timing of cash flows, not the economic reality of the period.</p>
+              <p>This is why the <b>Matching Concept</b> (match expenses of a period to the income of the same period) and the <b>Accrual Concept</b> work hand in hand — both require the accrual basis to function correctly.</p>`},
+
+            /* ── GST ── */
+
+            {h:"GST — India's unified indirect tax and what it replaced", kicker:"GST · Introduction &amp; Structure", html:`
+              <p>The <b>Goods and Services Tax (GST)</b> is a comprehensive, multi-stage, destination-based indirect tax introduced in India on <strong>1 July 2017</strong>. It replaced a complex web of central and state taxes that had created a cascading (tax-on-tax) burden and fragmented India's national market.</p>
+              <p><b>Taxes replaced by GST:</b></p>
+              <ul>
+                <li><i>Central taxes replaced:</i> Central Excise Duty, Service Tax, Central Sales Tax (CST), Additional Customs Duty, Countervailing Duty</li>
+                <li><i>State taxes replaced:</i> State VAT, Octroi, Entry Tax, Luxury Tax, Entertainment Tax, Purchase Tax</li>
+              </ul>
+              <p><b>Dual GST Structure</b> (reflecting India's federal system — both Centre and States have taxing powers):</p>
+              <table class="cmp">
+                <tr><th>Type</th><th>Levied by</th><th>When it applies</th></tr>
+                <tr><td><b>CGST</b> (Central GST)</td><td>Central Government</td><td>Intra-state transactions (within the same state) — levied alongside SGST</td></tr>
+                <tr><td><b>SGST</b> (State GST)</td><td>State Government</td><td>Intra-state transactions — levied alongside CGST</td></tr>
+                <tr><td><b>IGST</b> (Integrated GST)</td><td>Central Government</td><td>Inter-state transactions (between two different states) and imports</td></tr>
+              </table>
+              <p>For example: a trader in West Bengal selling to a buyer in West Bengal pays CGST + SGST. The same trader selling to a buyer in Maharashtra pays IGST instead.</p>`},
+
+            {h:"Characteristics of GST", kicker:"GST · Characteristics", html:`
+              <p>GST has several defining features that distinguish it from the old indirect tax system:</p>
+              <ul>
+                <li><b>Comprehensive:</b> Covers both goods and services under a single tax — unlike the old system where goods and services were taxed separately under different laws.</li>
+                <li><b>Multi-stage:</b> GST is levied at every stage of the supply chain — from manufacturer to wholesaler to retailer. However, each stage only pays tax on the <i>value it adds</i>, not on the full price (because of ITC).</li>
+                <li><b>Destination-based:</b> Tax revenue goes to the state where goods or services are <i>consumed</i> (the destination), not where they are produced or manufactured. This is fair to consuming states.</li>
+                <li><b>Dual structure:</b> Both the Centre (CGST/IGST) and the States (SGST) levy GST simultaneously — a feature designed for India's federal system.</li>
+                <li><b>Input Tax Credit (ITC):</b> At each stage, the registered dealer can claim a credit for the GST already paid by the previous stage. This eliminates the cascading effect (tax on tax) that existed under the old VAT-plus-excise-plus-service-tax structure.</li>
+                <li><b>Technology-driven:</b> Administered through the GSTN (GST Network) portal — registration, filing, and payment are all done online.</li>
+                <li><b>Threshold-based:</b> Small businesses below a turnover threshold are exempt from GST registration (currently ₹20 lakh for services; ₹40 lakh for goods in most states).</li>
+              </ul>`},
+
+            {h:"Advantages of GST", kicker:"GST · Advantages", html:`
+              <p>GST brought significant benefits to businesses, consumers, and the government alike:</p>
+              <ul>
+                <li><b>Eliminates the cascading effect:</b> Under the old system, taxes were levied on taxes — a manufacturer's excise duty became part of the cost on which VAT was charged, and so on. GST's ITC mechanism ensures tax is paid only on value added, not on previously taxed amounts.</li>
+                <li><b>Unified national market:</b> A single tax across all states removes the patchwork of state-level taxes, check-posts, and entry barriers that slowed down inter-state trade. India effectively becomes one common market.</li>
+                <li><b>Reduced tax burden on consumers:</b> Eliminating cascading typically reduces the effective tax rate on final goods, lowering prices for consumers.</li>
+                <li><b>Simplified compliance:</b> One tax (instead of 17+ central and state taxes), one registration (valid across India), and unified returns — less paperwork and lower compliance costs for businesses.</li>
+                <li><b>Wider tax base:</b> Many businesses that were outside the tax net (operating under exemption thresholds of old taxes) are now brought into the system, increasing government revenue.</li>
+                <li><b>Transparency and reduced corruption:</b> The fully electronic GSTN system reduces human interface, making tax evasion harder and reducing opportunities for harassment or bribery at checkpoints.</li>
+                <li><b>Boost to Make in India:</b> By removing tax-on-tax, Indian manufactured goods become more cost-competitive both domestically and in export markets.</li>
+              </ul>`}
           ],
 
           /* ============================== SETS ============================== */
