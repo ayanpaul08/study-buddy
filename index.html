@@ -220,7 +220,7 @@
   .explain-header .verdict{font-family:'Fraunces';font-weight:700;font-size:17px;margin-bottom:5px}
   .explain-header.ok .verdict{color:var(--good)} .explain-header.no .verdict{color:var(--bad)}
   .explain-header .core{color:var(--ink)}
-  .qnav{display:flex;justify-content:flex-end;margin-top:20px}
+  .qnav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px}
 
   /* result */
   .result{padding:50px 0 90px;text-align:center;animation:fade .4s ease}
@@ -284,8 +284,15 @@ function render(){
 
 function renderHome(){
   const cards=Object.entries(DATA).map(([key,s])=>{
-    const ready=s.units.some(u=>u.topics.length&&u.topics[0].questions&&u.topics[0].questions.length);
-    const qCount=s.units.reduce((n,u)=>n+(u.topics[0]?.questions?.length||0),0);
+    const ready=s.units.some(u=>{
+      const t=u.topics&&u.topics[0];
+      return t&&t.sets&&t.sets.some(set=>set.questions&&set.questions.length);
+    });
+    const qCount=s.units.reduce((n,u)=>{
+      const t=u.topics&&u.topics[0];
+      if(!t||!t.sets) return n;
+      return n+t.sets.reduce((m,set)=>m+((set.questions&&set.questions.length)||0),0);
+    },0);
     return `<div class="subj" onclick="go('subject','${key}')">
       <div class="code">Semester I</div>
       <h3>${s.name}</h3>
@@ -438,10 +445,13 @@ function renderQuiz(ctx){
   const set=u.topics[0].sets[setIdx];
   const key=`${u.id}:${setIdx}`;
   if(!quiz||quiz.key!==key){
-    quiz={key,unitId:u.id,setIdx,ctx,i:0,correct:0,answered:false,picked:null,qs:set.questions,setLabel:set.label||('Set '+(setIdx+1))};
+    quiz={key,unitId:u.id,setIdx,ctx,i:0,answers:new Array(set.questions.length).fill(null),qs:set.questions,setLabel:set.label||('Set '+(setIdx+1))};
   }
   if(quiz.done){return renderResult(u);}
   const q=quiz.qs[quiz.i];
+  const picked=quiz.answers[quiz.i];
+  const answered=picked!==null&&picked!==undefined;
+  const correctSoFar=quiz.answers.reduce((n,a,idx)=>n+(a!==null&&a===quiz.qs[idx].answer?1:0),0);
   const pct=Math.round((quiz.i/quiz.qs.length)*100);
   const typeLabel={standard:"Multiple Choice",assertion:"Assertion – Reason",matching:"Match the Columns",case:"Case-based"}[q.type];
   const diffMap={E:['Easy','var(--green)'],M:['Moderate','var(--gold)'],VH:['Very Hard','var(--coral)']};
@@ -461,28 +471,34 @@ function renderQuiz(ctx){
   }
 
   const opts=q.options.map((o,k)=>{
-    const isCorrect=k===q.answer, isPicked=k===quiz.picked;
+    const isCorrect=k===q.answer, isPicked=k===picked;
     let cls='opt';
-    if(quiz.answered){
+    if(answered){
       cls+=' answered disabled';
       if(isCorrect) cls+=' correct';
       else if(isPicked) cls+=' wrong';
       else cls+=' neutral';
     }
-    const optEx=quiz.answered&&q.optionExplains?(
+    const optEx=answered&&q.optionExplains?(
       `<div class="opt-explain">${isCorrect?'✓ ':'✗ '}${q.optionExplains[k]}</div>`
     ):'';
-    return `<div class="${cls}" ${quiz.answered?'':`onclick="answer(${k})"`}>
+    return `<div class="${cls}" ${answered?'':`onclick="answer(${k})"`}>
       <div class="opt-main"><span class="key">${String.fromCharCode(65+k)}</span><span>${o}</span></div>
       ${optEx}
     </div>`;
   }).join('');
 
-  const explainHtml=quiz.answered?`<div class="explain-header ${quiz.picked===q.answer?'ok':'no'}">
-    <div class="verdict">${quiz.picked===q.answer?'✓ Correct':'✗ Not quite'}</div>
+  const explainHtml=answered?`<div class="explain-header ${picked===q.answer?'ok':'no'}">
+    <div class="verdict">${picked===q.answer?'✓ Correct':'✗ Not quite'}</div>
     <div class="core">${q.explain}</div></div>`:'';
 
-  const nextLabel=quiz.i===quiz.qs.length-1?'See result →':'Next question →';
+  const isLast=quiz.i===quiz.qs.length-1;
+  const advanceLabel=isLast?'See result →':(answered?'Next question →':'Skip →');
+  const advanceClass=answered?'btn-green':'btn-ghost';
+  const qnav=`<div class="qnav">
+    <button class="btn btn-ghost" onclick="prevQ()" ${quiz.i===0?'disabled style="opacity:.4;cursor:default"':''}>‹ Previous</button>
+    <button class="btn ${advanceClass}" onclick="nextQ()">${advanceLabel}</button>
+  </div>`;
 
   app.innerHTML=`
     <section class="quiz">
@@ -490,7 +506,7 @@ function renderQuiz(ctx){
       <div class="qprog">
         <div class="cnt">${quiz.i+1} / ${quiz.qs.length}</div>
         <div class="track"><div class="fill" style="width:${pct}%"></div></div>
-        <div class="cnt" style="color:var(--green-deep)">${quiz.correct} ✓</div>
+        <div class="cnt" style="color:var(--green-deep)">${correctSoFar} ✓</div>
       </div>
       <div class="qcard">
         <div style="display:flex;gap:8px;align-items:center;margin-bottom:14px">
@@ -500,27 +516,33 @@ function renderQuiz(ctx){
         ${promptHtml}
         <div class="opts">${opts}</div>
         ${explainHtml}
-        ${quiz.answered?`<div class="qnav"><button class="btn btn-green" onclick="nextQ()">${nextLabel}</button></div>`:''}
+        ${qnav}
       </div>
     </section>`;
 }
 
 function answer(k){
-  quiz.answered=true;quiz.picked=k;
-  if(k===quiz.qs[quiz.i].answer) quiz.correct++;
+  if(quiz.answers[quiz.i]!==null&&quiz.answers[quiz.i]!==undefined) return; // locked once answered
+  quiz.answers[quiz.i]=k;
   render();
 }
 function nextQ(){
-  if(quiz.i===quiz.qs.length-1){
-    quiz.done=true;scores[quiz.key]={correct:quiz.correct,total:quiz.qs.length};
-  } else {
-    quiz.i++;quiz.answered=false;quiz.picked=null;
-  }
+  if(quiz.i===quiz.qs.length-1){ finishQuiz(); }
+  else { quiz.i++; render(); }
+}
+function prevQ(){
+  if(quiz.i>0){ quiz.i--; render(); }
+}
+function finishQuiz(){
+  const correct=quiz.answers.reduce((n,a,idx)=>n+(a!==null&&a===quiz.qs[idx].answer?1:0),0);
+  quiz.done=true; scores[quiz.key]={correct,total:quiz.qs.length};
   render();
 }
 
 function renderResult(u){
-  const pct=Math.round((quiz.correct/quiz.qs.length)*100);
+  const correct=quiz.answers.reduce((n,a,idx)=>n+(a!==null&&a===quiz.qs[idx].answer?1:0),0);
+  const total=quiz.qs.length;
+  const pct=Math.round((correct/total)*100);
   let band,msg;
   if(pct>=80){band='var(--good)';msg="Strong grasp of this set. Move on to the next, harder set.";}
   else if(pct>=50){band='var(--gold)';msg="A fair attempt — revisit the Learn section for the concepts you missed, then retry.";}
@@ -528,7 +550,7 @@ function renderResult(u){
   const ctx=quiz.ctx, setIdx=quiz.setIdx, label=quiz.setLabel;
   app.innerHTML=`
     <section class="result">
-      <div class="score">${quiz.correct}<small>/${quiz.qs.length}</small></div>
+      <div class="score">${correct}<small>/${total}</small></div>
       <div class="verdictband" style="background:${band}1f;color:${band}">${pct}% &nbsp;·&nbsp; ${label}</div>
       <h3>${u.title}</h3><p>${msg}</p>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
