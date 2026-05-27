@@ -326,7 +326,193 @@ const DATA = {
               <p><b>How to select:</b> Policies should exhibit a <b>true and fair view</b>. Selection is guided by three principles: <b>Prudence</b> (caution, guard against losses), <b>Substance over Form</b> (economic reality over legal form), and <b>Materiality</b> (significant items need proper treatment).</p>
               <p><b>When to change:</b> Only when required by statute / Accounting Standard, OR when the change gives a truer picture. A change must be quantified and disclosed — you can't just switch quietly.</p>`},
 
-            {example:"Xeta Enterprises values its inventory at 'lower of cost (weighted average) or net realisable value.' This applies Prudence — it does not record an unrealised gain if market rises, but it immediately records a loss if market falls below cost. If next year the company switches to FIFO, it must disclose the change and show the effect on profit/loss, so users of accounts can compare."}
+            {example:"Xeta Enterprises values its inventory at 'lower of cost (weighted average) or net realisable value.' This applies Prudence — it does not record an unrealised gain if market rises, but it immediately records a loss if market falls below cost. If next year the company switches to FIFO, it must disclose the change and show the effect on profit/loss, so users of accounts can compare."},
+
+            /* ── LEARN CARDS: VALUATION PRINCIPLES (CA Foundation Unit 6) ── */
+
+            {h:"Accounting as a measurement discipline — putting numbers on things", kicker:"Valuation Principles · The big idea", html:`
+              <p>Before any transaction is <strong>recorded</strong>, it must be <strong>measured</strong>. In accounting, measurement means assigning a money value to objects and events. Every measurement discipline has three elements (Chambers' definition):</p>
+              <ul>
+                <li><b>Identification</b> — what is being measured? (the machine, the loan, the inventory)</li>
+                <li><b>Scale</b> — money is the scale of measurement (₹ in India). Unlike a metre or kilogram, money is <i>not stable over time</i> — inflation erodes purchasing power, so figures from different years are not perfectly comparable. Nor is money universal — exchange rates fluctuate.</li>
+                <li><b>Valuation principle / Dimension</b> — at which specific amount do we record the item? This is where the four measurement bases come in.</li>
+              </ul>
+              <p>Because money lacks both stability and universal uniformity, accounting is <strong>not an exact measurement discipline</strong> — but it is the most practical one available, kept reliable by its fundamental assumptions (Going Concern, Consistency, Accrual).</p>`},
+
+            {h:"The four measurement bases — one asset, four entirely different values", kicker:"Valuation Principles · Four bases", html:`
+              <p>The same asset can legitimately carry four different values depending on the measurement base chosen. Each has a distinct logic and a typical area of use.</p>
+              <table class="cmp">
+                <tr><th>Measurement Base</th><th>Core idea</th><th>Typical application</th></tr>
+                <tr><td><b>Historical Cost</b></td><td>Actual price paid at acquisition — objective, verifiable, from a completed transaction</td><td>Fixed assets (machinery, land, buildings, furniture)</td></tr>
+                <tr><td><b>Current Cost</b></td><td>What it would cost to buy the same asset <i>right now</i> at today's market prices</td><td>Replacement analysis; inflation-adjusted accounting</td></tr>
+                <tr><td><b>Realisable Value</b></td><td>Cash obtainable by selling the asset <i>today</i> in an orderly, arm's-length sale</td><td>Inventory valuation (lower of cost or NRV)</td></tr>
+                <tr><td><b>Present Value</b></td><td>Today's worth of all <i>future cash flows</i> the asset will generate, discounted at an appropriate rate</td><td>Long-term investments, loans, leases, employee benefits</td></tr>
+              </table>
+              <p>Under the <strong>traditional accounting system</strong>, <b>Historical Cost</b> is the primary base. The other three apply in specific situations prescribed by Accounting Standards. The same machine can show four entirely different figures — none is "wrong"; each answers a different question about value.</p>`},
+
+            {diagram:`<svg viewBox="0 0 700 296" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
+              <text x="350" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#3c4742" font-family="Fraunces, serif">Same machine — four different values on the same date</text>
+              <rect x="260" y="116" width="180" height="56" rx="10" fill="#234f3b"/>
+              <text x="350" y="139" text-anchor="middle" font-size="12" font-weight="600" fill="#f4efe3">Machine (bought 2011)</text>
+              <text x="350" y="157" text-anchor="middle" font-size="11" fill="#e3eee6">original cost ₹8,00,000</text>
+              <rect x="18" y="28" width="168" height="66" rx="9" fill="#e3eee6" stroke="#234f3b" stroke-width="1.5"/>
+              <text x="102" y="50" text-anchor="middle" font-size="10.5" font-weight="700" fill="#234f3b">HISTORICAL COST</text>
+              <text x="102" y="65" text-anchor="middle" font-size="10.5" fill="#3c4742">Acquisition price paid</text>
+              <text x="102" y="83" text-anchor="middle" font-size="16" font-weight="700" fill="#234f3b">₹8,00,000</text>
+              <line x1="186" y1="61" x2="260" y2="138" stroke="#2f6b4f" stroke-width="1.5" stroke-dasharray="5,3"/>
+              <rect x="514" y="28" width="168" height="66" rx="9" fill="#f8f0db" stroke="#b6862c" stroke-width="1.5"/>
+              <text x="598" y="50" text-anchor="middle" font-size="10.5" font-weight="700" fill="#8a6420">CURRENT COST</text>
+              <text x="598" y="65" text-anchor="middle" font-size="10.5" fill="#3c4742">Replace it today</text>
+              <text x="598" y="83" text-anchor="middle" font-size="16" font-weight="700" fill="#8a6420">₹25,00,000</text>
+              <line x1="514" y1="61" x2="440" y2="138" stroke="#b6862c" stroke-width="1.5" stroke-dasharray="5,3"/>
+              <rect x="18" y="202" width="168" height="66" rx="9" fill="#f6e2dc" stroke="#c0492f" stroke-width="1.5"/>
+              <text x="102" y="224" text-anchor="middle" font-size="10.5" font-weight="700" fill="#b23a26">REALISABLE VALUE</text>
+              <text x="102" y="239" text-anchor="middle" font-size="10.5" fill="#3c4742">Sell it today</text>
+              <text x="102" y="257" text-anchor="middle" font-size="16" font-weight="700" fill="#b23a26">₹20,00,000</text>
+              <line x1="186" y1="235" x2="260" y2="172" stroke="#c0492f" stroke-width="1.5" stroke-dasharray="5,3"/>
+              <rect x="514" y="202" width="168" height="66" rx="9" fill="#e8eef8" stroke="#2c4a8a" stroke-width="1.5"/>
+              <text x="598" y="224" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2c4a8a">PRESENT VALUE</text>
+              <text x="598" y="239" text-anchor="middle" font-size="10.5" fill="#3c4742">Future cash inflows</text>
+              <text x="598" y="257" text-anchor="middle" font-size="16" font-weight="700" fill="#2c4a8a">₹4,19,246</text>
+              <line x1="514" y1="235" x2="440" y2="172" stroke="#2c4a8a" stroke-width="1.5" stroke-dasharray="5,3"/>
+            </svg>`, cap:"Four valid values for the same machine on the same date — each answers a different question. Traditional accounting records ₹8,00,000 (historical cost)."},
+
+            {h:"Historical Cost — what you actually paid at acquisition", kicker:"Valuation Principle 1 of 4", html:`
+              <p><b>Historical Cost</b> means recording an asset at the <strong>actual acquisition price</strong> — the cash paid to acquire it, plus all costs incurred to bring it to its usable state (transport, installation, testing, legal fees where applicable).</p>
+              <ul>
+                <li><b>Assets</b>: recorded at cash paid at the time of acquisition.</li>
+                <li><b>Liabilities</b>: recorded at the proceeds received in exchange for the obligation (e.g. a bank loan is entered at the amount actually borrowed, not at any future repayment total).</li>
+              </ul>
+              <p><b>Why it dominates traditional accounting:</b> Historical cost is <strong>objective and verifiable</strong> — it is based on a completed transaction backed by a voucher or invoice. No estimation or subjective judgement is needed.</p>
+              <p><b>Its limitation:</b> It ignores price changes after the acquisition date. A building purchased for ₹50,00,000 in 2005 stays in the books at ₹50,00,000 in 2025 even if its market value is now ₹3,00,00,000. This is why accounts are criticised for <i>ignoring inflation</i>.</p>
+              <p><b>Most common application:</b> Long-term fixed assets — machinery, furniture, land, buildings, vehicles.</p>`},
+
+            {example:"A business buys a machine for ₹7,00,000 and pays ₹1,00,000 for installation. Historical cost = ₹7,00,000 + ₹1,00,000 = ₹8,00,000. This figure stays in the books at ₹8,00,000 regardless of the market price in future years. A bank lending ₹5,00,000 at 10% p.a. — the liability is entered at ₹5,00,000 (proceeds received), not at the total future repayment of principal and interest. Historical cost records what was actually exchanged on the transaction date."},
+
+            {h:"Current Cost — what it would cost to replace it today", kicker:"Valuation Principle 2 of 4", html:`
+              <p><b>Current Cost</b> values an asset at the amount of cash that would have to be paid to acquire <strong>the same or an equivalent asset right now</strong> at current market prices — also called replacement cost.</p>
+              <ul>
+                <li><b>Assets</b>: carried at today's price for buying the equivalent asset new.</li>
+                <li><b>Liabilities</b>: carried at the undiscounted amount currently required to settle them (including any prepayment charges).</li>
+              </ul>
+              <p>Current cost is <strong>more economically relevant during inflation</strong> because it shows what it would actually cost to replace productive capacity. However, it requires research or professional appraisal to determine — unlike historical cost, there is no ready transaction record.</p>
+              <p>A machine bought for ₹7,00,000 in 2011 that would cost ₹25,00,000 to purchase today has a current cost of <b>₹25,00,000</b> on the measurement date.</p>`},
+
+            {h:"Realisable Value — what you would receive if sold today", kicker:"Valuation Principle 3 of 4", html:`
+              <p><b>Realisable Value</b> (also called Net Realisable Value or Settlement Value) measures an asset at the <strong>amount of cash obtainable by selling it today in an orderly disposal</strong> — not a forced or distress sale (haphazard disposal could fetch less).</p>
+              <ul>
+                <li><b>Assets</b>: carried at the amount a willing buyer would pay at arm's length in normal market conditions today.</li>
+                <li><b>Liabilities</b>: carried at their settlement value — the undiscounted amount needed to discharge them normally.</li>
+              </ul>
+              <p>⭐ <strong>Most important application at your level:</strong> <b>Inventories are valued at the lower of cost and net realisable value.</b> If goods cost ₹60,000 but can only be sold for ₹45,000, they are written down to ₹45,000 immediately. This directly applies Conservatism — losses are recognised as soon as they are probable; gains only when actually realised.</p>
+              <p>In the running example: Mr. X's machine (cost ₹7,00,000; replacement ₹25,00,000) can currently be sold for <b>₹20,00,000</b> — its realisable value.</p>`},
+
+            {h:"Present Value — future money, brought back to today", kicker:"Valuation Principle 4 of 4", html:`
+              <p>Present Value rests on the <strong>time value of money</strong>: ₹1,00,000 today is worth more than ₹1,00,000 promised a year from now, because today's money can be invested and grown. A rational person will not exchange ₹1,00,000 today for ₹1,00,000 a year later without compensation for the wait.</p>
+              <p><b>Discounting</b> converts a future sum back to its equivalent value in today's terms. The higher the discount rate, or the further away the future cash flow, the lower its present value.</p>
+              <ul>
+                <li><b>Assets</b>: carried at the present discounted value of all future net cash <i>inflows</i> the asset is expected to generate.</li>
+                <li><b>Liabilities</b>: carried at the present discounted value of future net cash <i>outflows</i> required to settle them.</li>
+              </ul>
+              <p>At a 20% discount rate, ₹1,00,000 receivable one year from now is worth only <b>₹83,333</b> today (= 1,00,000 ÷ 1.20). Ten such annual receipts total ₹10,00,000 in face value, but only <b>₹4,19,246</b> in present-value terms — less than even the original historical cost of the machine.</p>
+              <p><b>Common applications:</b> Long-term investments, bank loans, lease obligations, employee benefit provisions — any situation where the timing of cash flows matters as much as the amounts.</p>`},
+
+            {caseStudy:"Mr. X bought a machine in 2011 for ₹8,00,000 (₹7,00,000 price plus ₹1,00,000 installation). On 1 January 2022, four bases give four different values: Historical Cost = ₹8,00,000 (what was paid in 2011); Current Cost = ₹25,00,000 (cost to buy the same machine today); Realisable Value = ₹20,00,000 (selling price in an orderly sale today); Present Value = ₹4,19,246 (10 years of ₹1,00,000 annual cash flows, discounted at 20% p.a.). Traditional accounting shows ₹8,00,000 in the books (less depreciation charged). Each other figure is valid — it answers a different question: What did it cost? What would it cost to replace? What would I get today? What will it earn?"},
+
+            {h:"Accounting Estimates — reasoned judgement when precision is impossible", kicker:"Accounting Estimates", html:`
+              <p>Many financial statement items cannot be measured with certainty because they depend on <b>future uncertain events</b>. For these, management makes a <strong>reasoned estimate</strong> based on current information and past experience. An estimate is not a guess — it is a careful, informed judgement.</p>
+              <p><b>Common situations requiring estimates:</b></p>
+              <ul>
+                <li><b>Depreciation</b> — requires estimating the asset's useful life and residual value.</li>
+                <li><b>Provision for Bad and Doubtful Debts</b> — what proportion of debtors is unlikely to pay?</li>
+                <li><b>Inventory obsolescence</b> — has any stock become unsaleable, and by how much should it be written down?</li>
+                <li><b>Tax provisions</b> — the exact liability may be disputed or under assessment; a best estimate is recorded.</li>
+                <li><b>Warranty provisions</b> — future claims by customers on goods already sold.</li>
+              </ul>
+              <p><b>Change in estimate:</b> If circumstances change (for example, a machine expected to last 10 years proves obsolete after 6 years due to new technology), the estimate is revised. Such changes apply <strong>prospectively</strong> — they affect the current and future periods only. Past financial statements are <i>not</i> restated. This is the key difference from correcting an accounting error, which may require retrospective restatement.</p>`},
+
+            /* ── LEARN CARDS: ACCOUNTING STANDARDS (CA Foundation Unit 7) ── */
+
+            {h:"Why Accounting Standards are necessary — the problem of non-comparability", kicker:"Accounting Standards · Why they exist", html:`
+              <p>Accounting is called the language of business. But imagine a language where every speaker invents their own grammar. Without agreed rules, companies account for identical transactions in completely different ways — making their financial statements <strong>incomparable and potentially misleading</strong>.</p>
+              <p><b>What can go wrong without standards?</b></p>
+              <ul>
+                <li>Company A depreciates machinery over 5 years; Company B depreciates identical machinery over 15 years — their profits look very different despite identical performance.</li>
+                <li>One firm values closing stock at cost; another at market value — balance sheets are incomparable.</li>
+                <li>Contingent liabilities may be disclosed prominently by one company and omitted by another.</li>
+              </ul>
+              <p>To prevent this, <strong>Accounting Standards (AS)</strong> were created — written policy documents that set uniform rules for how transactions must be recognised, measured, presented and disclosed. In India, the <b>Accounting Standards Board (ASB)</b> of the ICAI, constituted in 1977, frames these standards with reference to International Financial Reporting Standards (IFRS), adapted to India's laws and business environment.</p>`},
+
+            {h:"What Accounting Standards cover — scope and objectives", kicker:"Accounting Standards · Scope &amp; Objectives", html:`
+              <p>Every Accounting Standard deals with four specific issues for the category of transaction it covers:</p>
+              <table class="cmp">
+                <tr><th>Issue covered by AS</th><th>Question it answers</th></tr>
+                <tr><td><b>Recognition</b></td><td>Should this item appear in the financial statements at all? If yes — at what point in time?</td></tr>
+                <tr><td><b>Measurement</b></td><td>At what amount should it be recorded? Which valuation base applies?</td></tr>
+                <tr><td><b>Presentation</b></td><td>In which statement should it appear and in what format?</td></tr>
+                <tr><td><b>Disclosure</b></td><td>What additional information must appear in the notes so users can make informed decisions?</td></tr>
+              </table>
+              <p><b>Objectives of Accounting Standards:</b> To harmonise accounting policies across different enterprises so that financial statements are <strong>comparable, reliable and transparent</strong> and give a true and fair view. Specifically — (i) eliminate non-comparability of financial statements; and (ii) provide a standard set of accounting policies, valuation norms and disclosure requirements.</p>`},
+
+            {h:"Benefits and limitations of Accounting Standards", kicker:"Accounting Standards · Benefits &amp; Limits", html:`
+              <table class="cmp">
+                <tr><th>Benefits ✓</th><th>Limitations ✗</th></tr>
+                <tr>
+                  <td><b>Standardisation of treatments</b> — reduces confusing variations; different entities account for similar transactions the same way, improving reliability.</td>
+                  <td><b>Difficulty of choice</b> — sometimes multiple accounting treatments are each defensible. Choosing one for the standard is not always straightforward and may not suit every situation.</td>
+                </tr>
+                <tr>
+                  <td><b>Additional disclosures</b> — AS can require disclosure of information beyond what the law mandates, giving users a fuller picture of the business.</td>
+                  <td><b>Restricted scope</b> — AS <i>cannot override the statute</i>. They must operate within applicable laws. Where law and AS conflict, the law prevails.</td>
+                </tr>
+                <tr>
+                  <td><b>Comparability</b> — enables meaningful comparison of statements across different companies and across different years for the same company.</td>
+                  <td></td>
+                </tr>
+              </table>
+              <p>⚠️ <strong>Key rule:</strong> Accounting Standards can <i>never override the law</i>. If an applicable statute requires a particular treatment, the AS must comply — not the other way around.</p>`},
+
+            {diagram:`<svg viewBox="0 0 640 386" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
+              <rect x="140" y="4" width="360" height="30" rx="9" fill="#234f3b"/>
+              <text x="320" y="23" text-anchor="middle" font-size="12.5" font-weight="600" fill="#f4efe3">How an Accounting Standard is made in India (ASB)</text>
+              <rect x="120" y="46" width="400" height="28" rx="7" fill="#e3eee6" stroke="#2f6b4f"/>
+              <text x="320" y="65" text-anchor="middle" font-size="11" fill="#234f3b" font-weight="600">1. ASB identifies an area needing a standard</text>
+              <polygon points="320,74 316,82 324,82" fill="#b6862c"/>
+              <rect x="120" y="82" width="400" height="28" rx="7" fill="#e3eee6" stroke="#2f6b4f"/>
+              <text x="320" y="101" text-anchor="middle" font-size="11" fill="#234f3b" font-weight="600">2. Constitute a study group; prepare a preliminary draft</text>
+              <polygon points="320,110 316,118 324,118" fill="#b6862c"/>
+              <rect x="120" y="118" width="400" height="36" rx="7" fill="#f8f0db" stroke="#b6862c"/>
+              <text x="320" y="135" text-anchor="middle" font-size="11" fill="#8a6420" font-weight="600">3. ASB reviews draft; circulate to outside bodies</text>
+              <text x="320" y="149" text-anchor="middle" font-size="10" fill="#8a6420">(SEBI, CBDT, C&amp;AG, DCA, SCOPE etc.) for comments</text>
+              <polygon points="320,154 316,162 324,162" fill="#b6862c"/>
+              <rect x="120" y="162" width="400" height="28" rx="7" fill="#f8f0db" stroke="#b6862c"/>
+              <text x="320" y="181" text-anchor="middle" font-size="11" fill="#8a6420" font-weight="600">4. Meet outside bodies; ascertain their views on the draft</text>
+              <polygon points="320,190 316,198 324,198" fill="#b6862c"/>
+              <rect x="120" y="198" width="400" height="28" rx="7" fill="#f8f0db" stroke="#b6862c"/>
+              <text x="320" y="217" text-anchor="middle" font-size="11" fill="#8a6420" font-weight="600">5. Finalise and issue Exposure Draft (E.D.) for public comments</text>
+              <polygon points="320,226 316,234 324,234" fill="#b6862c"/>
+              <rect x="120" y="234" width="400" height="28" rx="7" fill="#f8f0db" stroke="#b6862c"/>
+              <text x="320" y="253" text-anchor="middle" font-size="11" fill="#8a6420" font-weight="600">6. Consider all comments received on the Exposure Draft</text>
+              <polygon points="320,262 316,270 324,270" fill="#b6862c"/>
+              <rect x="120" y="270" width="400" height="28" rx="7" fill="#e3eee6" stroke="#2f6b4f"/>
+              <text x="320" y="289" text-anchor="middle" font-size="11" fill="#234f3b" font-weight="600">7. Modify draft; submit to ICAI Council for approval</text>
+              <polygon points="320,298 316,306 324,306" fill="#b6862c"/>
+              <rect x="120" y="306" width="400" height="38" rx="9" fill="#234f3b"/>
+              <text x="320" y="323" text-anchor="middle" font-size="12" font-weight="700" fill="#f4efe3">8. Issue the Accounting Standard</text>
+              <text x="320" y="339" text-anchor="middle" font-size="10" fill="#e3eee6">By ICAI (non-companies) or Central Govt (smaller companies)</text>
+              <text x="320" y="373" text-anchor="middle" font-size="11" fill="#3c4742" font-style="italic" font-family="Fraunces, serif">Process is fully consultative — the same area passes through multiple review stages before issue.</text>
+            </svg>`, cap:"Eight-step formulation process: identifying the need → study group → draft → consultation with outside bodies → Exposure Draft → public comment → modification → final issue."},
+
+            {h:"Which Accounting Standards apply to which type of entity?", kicker:"Accounting Standards · Three frameworks in India", html:`
+              <p>India has three distinct sets of accounting standards, applicable based on entity size, nature, and listing status:</p>
+              <table class="cmp">
+                <tr><th>Framework</th><th>Applicable to</th><th>Character</th></tr>
+                <tr><td><b>Ind AS</b> (IFRS-converged)</td><td>All listed companies &amp; NBFCs; unlisted companies/NBFCs with net worth ≥ ₹250 crore</td><td>Based on international IFRS; uses fair value extensively</td></tr>
+                <tr><td><b>AS</b> (Companies Rules, 2021)</td><td>Smaller unlisted companies not covered by Ind AS</td><td>Traditional AS under Companies Act; simpler framework</td></tr>
+                <tr><td><b>AS</b> (prescribed by ICAI)</td><td>All non-company entities — partnerships, sole traders, trusts, societies</td><td>ICAI standards; broadly historical cost based</td></tr>
+              </table>
+              <p><b>Ind AS vs AS:</b> Ind AS are India's converged version of IFRS (adapted — not identical). They use fair value and present value more extensively. Traditional AS are simpler and primarily historical-cost based — which is what you study at Class XI level.</p>
+              <p>For WBCHSE examinations: understand what AS are, why they are needed, their objectives, benefits, limitations, and the formulation process. The individual list of AS numbers (AS 1 through AS 29, Ind AS 1 through 116) is background knowledge only — it is not tested at Class XI.</p>`}
           ],
 
           /* ============================== SETS ============================== */
