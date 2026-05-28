@@ -221,6 +221,24 @@
   .explain-header.ok .verdict{color:var(--good)} .explain-header.no .verdict{color:var(--bad)}
   .explain-header .core{color:var(--ink)}
   .qnav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px}
+  /* ── Topic Index ── */
+  .topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:14px;margin:0 0 8px}
+  .tcard{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:20px 22px;cursor:pointer;transition:transform .18s,box-shadow .18s;text-align:left}
+  .tcard:hover{transform:translateY(-3px);box-shadow:0 6px 22px rgba(0,0,0,.12)}
+  .tc-num{font-size:10px;font-weight:700;color:var(--green);letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
+  .tc-icon{font-size:26px;margin-bottom:8px}
+  .tc-title{font-family:'Fraunces',serif;font-size:16px;color:var(--ink);font-weight:600;line-height:1.3;margin-bottom:7px}
+  .tc-desc{font-size:12px;color:var(--ink-soft);line-height:1.5;margin-bottom:14px}
+  .tc-footer{display:flex;justify-content:space-between;align-items:center}
+  .tc-cnt{font-size:11px;font-weight:600;color:var(--green)}
+  .tc-arrow{font-size:18px;color:var(--gold)}
+  /* ── Topic card nav ── */
+  .topicnav{display:flex;align-items:center;gap:10px;padding:8px 0 14px;border-bottom:1.5px solid var(--line);margin-bottom:6px}
+  .tn-info{flex:1;text-align:center;min-width:0}
+  .tn-icon{font-size:20px;line-height:1}
+  .tn-title{font-size:12.5px;font-weight:700;color:var(--green-deep);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tn-prog{font-size:10.5px;color:var(--ink-soft);margin-top:2px}
+  .topicnav .btn{min-width:86px;font-size:11.5px;padding:7px 11px;white-space:nowrap;flex-shrink:0}
 
   /* result */
   .result{padding:50px 0 90px;text-align:center;animation:fade .4s ease}
@@ -416,17 +434,99 @@ function renderSets(ctx){
     <section class="setlist">${cards}</section>`;
 }
 
+/* ── LEARN ENGINE (topic-indexed) ── */
+function buildTopicGroups(learn){
+  const groups=[];let cur=null;
+  for(const c of learn){
+    if(c.topicStart){
+      cur={id:c.topicStart,title:c.title,icon:c.icon||'',desc:c.desc||'',cards:[]};
+      groups.push(cur);
+    } else if(cur){cur.cards.push(c);}
+  }
+  return groups;
+}
+
+function cardHtml(b){
+  if(b.diagram)   return `<div class="lcard" style="padding:18px"><div class="diagram">${b.diagram}<div class="dcap">${b.cap||''}</div></div></div>`;
+  if(b.example)   return `<div class="lcard" style="padding:18px"><div class="example"><div class="lbl">Worked example</div><p>${b.example}</p></div></div>`;
+  if(b.caseStudy) return `<div class="lcard" style="padding:18px"><div class="casebox"><div class="lbl">Case in point</div><p>${b.caseStudy}</p></div></div>`;
+  return `<div class="lcard">${b.kicker?`<div class="kicker">${b.kicker}</div>`:''}<h3>${b.h}</h3>${b.html}</div>`;
+}
+
+function renderLearnIndex(ctx,s,u,groups){
+  const items=groups.map((g,gi)=>`
+    <div class="tcard" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit},topicId:'${g.id}',cardIdx:0})">
+      <div class="tc-num">Topic ${gi+1}</div>
+      <div class="tc-icon">${g.icon}</div>
+      <div class="tc-title">${g.title}</div>
+      <div class="tc-desc">${g.desc}</div>
+      <div class="tc-footer"><span class="tc-cnt">${g.cards.length} cards</span><span class="tc-arrow">→</span></div>
+    </div>`).join('');
+  app.innerHTML=`
+    <section style="padding:28px 0 4px">
+      <div style="font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:6px">${s.name} &nbsp;·&nbsp; Unit ${ctx.unit+1}</div>
+      <h2 style="font-family:Fraunces;font-size:30px;font-weight:700;color:var(--green-deep);margin-bottom:8px;max-width:24ch">${u.title}</h2>
+      <p style="color:var(--ink-soft);font-size:14px;margin-bottom:22px">Choose a topic to study. Work through the cards, then test yourself with the practice sets.</p>
+    </section>
+    <section class="topic-grid">${items}</section>
+    <div style="text-align:center;padding:26px 0 6px">
+      <button class="btn btn-green" onclick="go('sets',{subj:'${ctx.subj}',unit:${ctx.unit}})">Jump straight to practice sets →</button>
+    </div>`;
+}
+
 function renderLearn(ctx){
-  const u=DATA[ctx.subj].units[ctx.unit];
-  const blocks=(u.topics[0].learn||[]).map(b=>{
-    if(b.diagram)   return `<div class="lcard" style="padding:18px"><div class="diagram">${b.diagram}<div class="dcap">${b.cap||''}</div></div></div>`;
-    if(b.example)   return `<div class="lcard" style="padding:18px"><div class="example"><div class="lbl">Worked example</div><p>${b.example}</p></div></div>`;
-    if(b.caseStudy) return `<div class="lcard" style="padding:18px"><div class="casebox"><div class="lbl">Case in point</div><p>${b.caseStudy}</p></div></div>`;
-    return `<div class="lcard">${b.kicker?`<div class="kicker">${b.kicker}</div>`:''}<h3>${b.h}</h3>${b.html}</div>`;
-  }).join('');
+  const s=DATA[ctx.subj],u=s.units[ctx.unit];
+  const learn=u.topics[0].learn||[];
+  const groups=buildTopicGroups(learn);
+
+  if(groups.length===0 || !ctx.topicId){
+    return groups.length===0
+      ? renderLearnAll(ctx,s,u,learn)
+      : renderLearnIndex(ctx,s,u,groups);
+  }
+
+  const gIdx=groups.findIndex(g=>g.id===ctx.topicId);
+  if(gIdx<0) return renderLearnIndex(ctx,s,u,groups);
+  const grp=groups[gIdx];
+  const i=Math.min(ctx.cardIdx||0, grp.cards.length-1);
+  const b=grp.cards[i];
+  const prevGrp=gIdx>0?groups[gIdx-1]:null;
+  const nextGrp=gIdx<groups.length-1?groups[gIdx+1]:null;
+  const isFirst=(i===0); const isLast=(i===grp.cards.length-1);
+
+  const topicnav=`<div class="topicnav">
+    <button class="btn btn-ghost" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit}})">← Topics</button>
+    <div class="tn-info">
+      <div class="tn-icon">${grp.icon}</div>
+      <div class="tn-title">${grp.title}</div>
+      <div class="tn-prog">Card ${i+1} of ${grp.cards.length}</div>
+    </div>
+    ${nextGrp&&isLast
+      ? `<button class="btn btn-ghost" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit},topicId:'${nextGrp.id}',cardIdx:0})">Next Topic →</button>`
+      : `<div style="min-width:86px"></div>`}
+  </div>`;
+
+  const cardnav=`<div class="qnav" style="margin-top:18px">
+    <button class="btn btn-ghost" ${isFirst?'disabled style="opacity:.4;cursor:default"':''}
+      onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit},topicId:'${grp.id}',cardIdx:${i-1}})">‹ Previous</button>
+    ${isLast && nextGrp
+      ? `<button class="btn btn-green" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit},topicId:'${nextGrp.id}',cardIdx:0})">Next Topic →</button>`
+      : isLast
+        ? `<button class="btn btn-green" onclick="go('sets',{subj:'${ctx.subj}',unit:${ctx.unit}})">Practise Now →</button>`
+        : `<button class="btn btn-green" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit},topicId:'${grp.id}',cardIdx:${i+1}})">Next →</button>`
+    }
+  </div>`;
+
+  app.innerHTML=`
+    <section style="padding:18px 0 0">${topicnav}</section>
+    <section class="learn" style="padding-top:10px">${cardHtml(b)}${cardnav}</section>`;
+}
+
+function renderLearnAll(ctx,s,u,learn){
+  const blocks=learn.filter(b=>!b.topicStart).map(cardHtml).join('');
   app.innerHTML=`
     <section style="padding:30px 0 6px">
-      <div style="font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:6px">${DATA[ctx.subj].name} &nbsp;·&nbsp; Unit ${ctx.unit+1}</div>
+      <div style="font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:6px">${s.name} &nbsp;·&nbsp; Unit ${ctx.unit+1}</div>
       <h2 style="font-family:Fraunces;font-size:32px;font-weight:700;color:var(--green-deep);margin-bottom:4px;max-width:22ch">${u.title}</h2>
       <p style="color:var(--ink-soft);font-size:14px">Read through the concept cards below before attempting the test.</p>
     </section>
