@@ -2082,20 +2082,426 @@ const DATA = {
      ECONOMICS
      ══════════════════════════════════════════════════════════════════════════ */
   economics:{
-    name:"Economics", code:"ECO", accent:"soon",
+    name:"Economics", code:"ECO", accent:"ready",
     units:[
-      {id:"eco-u1", title:"Introduction to Microeconomics", marks:0,
-        syllabus:["Meaning and scope of Economics","Difference between Microeconomics and Macroeconomics","Basic economic problems — what, how, for whom to produce","Central problems of an economy","Production Possibility Curve (PPC)"], topics:[]},
-      {id:"eco-u2", title:"Demand, Supply and Equilibrium Price", marks:0,
-        syllabus:["Meaning of Demand — individual and market demand","Law of Demand — assumptions, exceptions","Determinants of Demand; shifts in demand curve","Meaning of Supply — individual and market supply","Law of Supply — assumptions","Determinants of Supply; shifts in supply curve","Market Equilibrium — determination of equilibrium price and quantity","Effects of shifts in demand and supply on equilibrium"], topics:[]},
-      {id:"eco-u3", title:"Elasticity, Consumer & Production Theory", marks:0,
-        syllabus:["Price Elasticity of Demand — meaning, types, measurement (percentage method)","Factors affecting Elasticity of Demand","Price Elasticity of Supply — meaning and measurement","Theory of Consumer Behaviour — utility, total &amp; marginal utility, Law of DMU","Indifference Curve approach — budget line, consumer equilibrium","Theory of Production — production function","Short-run &amp; Long-run production; Law of Variable Proportions","Returns to Scale","Cost of Production — TC, TFC, TVC, AC, MC","Revenue — TR, AR, MR; AR-MR relationship","Profit — normal and supernormal profit"], topics:[]},
-      {id:"eco-u4", title:"Introduction to Statistics & Data", marks:0,
-        syllabus:["Meaning, scope and importance of Statistics in Economics","Types of data — primary and secondary","Methods of collecting primary data","Sources of secondary data","Sampling methods — random and non-random"], topics:[]},
-      {id:"eco-u5", title:"Representation of Data", marks:0,
-        syllabus:["Classification and tabulation of data","Frequency distribution — discrete and continuous","Diagrammatic representation — bar diagrams, pie charts","Graphic representation — histogram, frequency polygon, ogive"], topics:[]},
-      {id:"eco-u6", title:"Measures of Central Tendency", marks:0,
-        syllabus:["Arithmetic Mean — direct, short-cut and step-deviation methods","Median — individual, discrete and continuous series","Mode — individual, discrete and continuous series","Relationship between Mean, Median and Mode"], topics:[]}
+
+      /* ─── UNIT 1: Microeconomics — Introduction ──────────────────── */
+      {id:"eco-u1", title:"Introduction to Microeconomics", marks:4,
+        syllabus:["The economic problem — scarcity, choice and opportunity cost","Economic systems — free market, command, mixed; invisible hand","Economic growth, development and sustainable development","Indicators of development — income, poverty, employment, inequality, capital"],
+        topics:[{
+          learn:[
+            {topicStart:"eco-u1-problem", title:"The Economic Problem — Scarcity &amp; Choice", icon:"⚖️",
+             desc:"Why scarcity forces every society to make choices — the Production Possibility Curve, opportunity cost and the three fundamental economic questions."},
+
+            {h:"The Economic Problem — Scarcity, Choice and Opportunity Cost", kicker:"Unit 1 · Topic 1",
+             html:`
+              <p>You have ₹500 and a free evening. You could revise for your exam, go to a cricket match, or buy new stationery. You can't do all three. The government has ₹50 trillion and must choose between building hospitals or highways, spending on defence or education. <strong>This tension between unlimited wants and limited resources is the starting point of all economics.</strong></p>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 10px">What is Scarcity?</h3>
+              <div style="background:#e3eee6;border-left:4px solid var(--green-deep);padding:13px 16px;border-radius:8px;margin-bottom:14px">
+                <b style="color:var(--green-deep)">Scarcity</b> means that resources — land, labour, capital and entrepreneurship — are always limited relative to the wants they must satisfy. Scarcity is <i>universal</i>: it affects a student choosing study time, a firm deciding output, and a government allocating a national budget. Scarcity forces choice.
+              </div>
+
+              <h3 style="color:var(--green-deep);margin:18px 0 10px">The Three Fundamental Economic Questions</h3>
+              <table class="cmp">
+                <tr><th>Question</th><th>What it asks</th><th>Indian real-life example</th></tr>
+                <tr><td><b>What to produce?</b></td><td>Which goods and services, and in what quantities?</td><td>Should India produce more electric vehicles or petrol cars? More wheat or more rice?</td></tr>
+                <tr><td><b>How to produce?</b></td><td>Using which combination of inputs — labour-intensive or capital-intensive methods?</td><td>Build a road using hand-held tools and many workers (labour-intensive) or bulldozers and fewer workers (capital-intensive)?</td></tr>
+                <tr><td><b>For whom to produce?</b></td><td>Who gets the goods and services? How is output distributed?</td><td>Should subsidised rice go to all, or only to households below the poverty line?</td></tr>
+              </table>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 10px">Opportunity Cost — The True Cost of Every Choice</h3>
+              <div style="background:#f8f0db;border-left:4px solid #b6862c;padding:13px 16px;border-radius:8px;margin-bottom:14px">
+                <b style="color:#8a6420">Opportunity Cost</b> is the value of the best alternative you give up when you make a choice. It is not just money — it includes time, effort and any other benefit foregone.
+              </div>
+              <p><b>Example:</b> If India spends ₹1,00,000 crore on building fighter jets, the opportunity cost is whatever that money <i>could have built instead</i> — perhaps 200,000 new schools, or 500 new government hospitals. Opportunity cost makes us ask: "Is this the best possible use of this resource?"</p>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 10px">The Production Possibility Curve (PPC)</h3>
+              <p>The PPC (also called the Production Possibility Frontier — PPF) is a graph showing all the maximum possible combinations of two goods that an economy can produce using its available resources and technology fully and efficiently.</p>
+
+              <svg viewBox="0 0 580 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:12px 0" font-family="IBM Plex Sans,sans-serif">
+                <rect x="0" y="0" width="580" height="380" rx="10" fill="#f8f9fa"/>
+                <line x1="80" y1="50" x2="80" y2="318" stroke="#555" stroke-width="2"/>
+                <line x1="80" y1="318" x2="508" y2="318" stroke="#555" stroke-width="2"/>
+                <polygon points="508,314 516,318 508,322" fill="#555"/>
+                <polygon points="76,50 80,42 84,50" fill="#555"/>
+                <text x="522" y="322" font-size="12" fill="#333">x</text>
+                <text x="68" y="38" font-size="12" fill="#333">y</text>
+                <line x1="80" y1="70" x2="76" y2="70" stroke="#888" stroke-width="1"/>
+                <text x="68" y="74" font-size="10" fill="#555" text-anchor="end">400</text>
+                <line x1="80" y1="120" x2="76" y2="120" stroke="#888" stroke-width="1"/>
+                <text x="68" y="124" font-size="10" fill="#555" text-anchor="end">300</text>
+                <line x1="80" y1="170" x2="76" y2="170" stroke="#888" stroke-width="1"/>
+                <text x="68" y="174" font-size="10" fill="#555" text-anchor="end">200</text>
+                <line x1="80" y1="220" x2="76" y2="220" stroke="#888" stroke-width="1"/>
+                <text x="68" y="224" font-size="10" fill="#555" text-anchor="end">100</text>
+                <line x1="180" y1="318" x2="180" y2="322" stroke="#888" stroke-width="1"/>
+                <text x="180" y="334" font-size="10" fill="#555" text-anchor="middle">100</text>
+                <line x1="280" y1="318" x2="280" y2="322" stroke="#888" stroke-width="1"/>
+                <text x="280" y="334" font-size="10" fill="#555" text-anchor="middle">200</text>
+                <line x1="380" y1="318" x2="380" y2="322" stroke="#888" stroke-width="1"/>
+                <text x="380" y="334" font-size="10" fill="#555" text-anchor="middle">300</text>
+                <line x1="480" y1="318" x2="480" y2="322" stroke="#888" stroke-width="1"/>
+                <text x="480" y="334" font-size="10" fill="#555" text-anchor="middle">400</text>
+                <path d="M 80,62 C 200,80 440,250 488,318" fill="none" stroke="#234f3b" stroke-width="3"/>
+                <text x="138" y="144" font-size="13" fill="#234f3b" font-weight="700" font-style="italic">PPC</text>
+                <circle cx="284" cy="174" r="7" fill="#234f3b"/>
+                <rect x="295" y="160" width="140" height="36" rx="6" fill="#e3eee6" stroke="#234f3b" stroke-width="1"/>
+                <text x="365" y="176" text-anchor="middle" font-size="10.5" font-weight="700" fill="#234f3b">A — Efficient</text>
+                <text x="365" y="190" text-anchor="middle" font-size="10" fill="#3c4742">On the PPC (all resources used)</text>
+                <circle cx="200" cy="245" r="7" fill="#c0492f"/>
+                <rect x="212" y="232" width="148" height="36" rx="6" fill="#f6e2dc" stroke="#c0492f" stroke-width="1"/>
+                <text x="286" y="248" text-anchor="middle" font-size="10.5" font-weight="700" fill="#c0492f">B — Inefficient</text>
+                <text x="286" y="262" text-anchor="middle" font-size="10" fill="#3c4742">Inside PPC (wasted resources)</text>
+                <circle cx="390" cy="120" r="7" fill="#b6862c"/>
+                <rect x="265" y="107" width="118" height="36" rx="6" fill="#f8f0db" stroke="#b6862c" stroke-width="1"/>
+                <text x="324" y="123" text-anchor="middle" font-size="10.5" font-weight="700" fill="#8a6420">C — Unattainable</text>
+                <text x="324" y="137" text-anchor="middle" font-size="10" fill="#3c4742">Beyond current capacity</text>
+                <text x="290" y="360" text-anchor="middle" font-size="11" fill="#555" font-weight="600">Consumer Goods (units) →</text>
+                <text x="26" y="185" text-anchor="middle" font-size="11" fill="#555" font-weight="600" transform="rotate(-90,26,185)">← Capital Goods (units)</text>
+                <text x="290" y="16" text-anchor="middle" font-size="12" fill="#234f3b" font-weight="700">Production Possibility Curve</text>
+              </svg>
+
+              <h3 style="color:var(--green-deep);margin:18px 0 10px">Reading the Graph</h3>
+              <ul>
+                <li><b>X-axis</b> measures Consumer Goods output (e.g. food, clothing). <b>Y-axis</b> measures Capital Goods output (e.g. machinery, tools).</li>
+                <li><b>Point A (on the curve)</b> — all resources are fully and efficiently used. Any point on the PPC is efficient.</li>
+                <li><b>Point B (inside the curve)</b> — some resources are unemployed or being wasted (e.g. factories sitting idle, workers without jobs).</li>
+                <li><b>Point C (outside the curve)</b> — currently unattainable with existing resources and technology. This point becomes reachable only if resources grow (more workers, better technology, new capital).</li>
+              </ul>
+
+              <h3 style="color:var(--green-deep);margin:18px 0 10px">Why is the PPC Concave? — Increasing Opportunity Cost</h3>
+              <p>The PPC is <b>bowed outward</b> (concave to the origin) because of the <b>Law of Increasing Opportunity Cost</b>. Resources are not perfectly adaptable — a farmland that grows wheat easily may be poor for making steel. As an economy shifts more and more resources from one good to another, it increasingly uses less-suitable resources for that good, and each additional unit of that good costs more and more of the other.</p>
+              <p>In India: shifting land from rice to cash crops is easy at first (some land suits both). But eventually you're using land that's poorly suited for cash crops, and each extra hectare switched gives you less and less extra output while sacrificing more and more rice.</p>`},
+
+            {topicStart:"eco-u1-systems", title:"Economic Systems — How Societies Answer the Basic Questions", icon:"🏛️",
+             desc:"Free market, command and mixed economies; the invisible hand; laissez-faire; and the broad social goals that every economic system tries to achieve."},
+
+            {h:"Economic Systems — Free Market, Command and Mixed", kicker:"Unit 1 · Topic 2",
+             html:`
+              <p>Every economy faces the same three questions: What, How and For Whom to produce. But different societies answer them very differently — through markets, through governments, or through a combination. The three broad approaches are the <b>Free Market Economy</b>, the <b>Command (Socialist) Economy</b>, and the <b>Mixed Economy</b>.</p>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 10px">Free Market Economy (Capitalism)</h3>
+              <div style="background:#e3eee6;border-left:4px solid var(--green-deep);padding:13px 16px;border-radius:8px;margin-bottom:12px">
+                In a free market economy, <b>prices and profits guide all decisions</b>. Individuals and firms own resources and make decisions based on self-interest. The government plays a minimal role. The economy is driven by the profit motive — businesses produce what consumers are willing to pay for.
+              </div>
+              <p><b>The Invisible Hand</b> — Adam Smith (1776) argued that when individuals pursue their own self-interest in a competitive market, they are led "as if by an invisible hand" to promote the overall good of society. A baker bakes bread not out of charity, but to earn a living — yet the community is fed. This is the invisible hand at work. <b>Laissez-faire</b> (French: "let it be") is the policy of minimal government interference — let markets operate freely.</p>
+
+              <h3 style="color:var(--green-deep);margin:18px 0 10px">Command Economy (Socialism)</h3>
+              <div style="background:#f6e2dc;border-left:4px solid #c0492f;padding:13px 16px;border-radius:8px;margin-bottom:12px">
+                In a command economy, the <b>government owns most resources and makes all major economic decisions</b> through central planning. Individual choices are subordinate to state objectives. The former USSR and Cuba are examples; China, while market-oriented today, retains significant state control.
+              </div>
+
+              <h3 style="color:var(--green-deep);margin:18px 0 10px">Mixed Economy</h3>
+              <div style="background:#f8f0db;border-left:4px solid #b6862c;padding:13px 16px;border-radius:8px;margin-bottom:14px">
+                A mixed economy combines <b>private enterprise with government intervention</b>. Markets operate for most goods, but the government provides public goods (defence, roads), regulates monopolies, redistributes income, and corrects market failures. <b>India is a mixed economy</b> — private companies like Reliance and Tata operate freely, but the government runs railways, banks, and provides food subsidies.
+              </div>
+
+              <table class="cmp">
+                <tr><th>Feature</th><th>Free Market</th><th>Command / Socialist</th><th>Mixed (India)</th></tr>
+                <tr><td><b>Ownership</b></td><td>Private individuals/firms</td><td>State/government</td><td>Both private and public</td></tr>
+                <tr><td><b>Decision-maker</b></td><td>Price signals (supply &amp; demand)</td><td>Central planning authority</td><td>Markets + government policy</td></tr>
+                <tr><td><b>Motive</b></td><td>Profit</td><td>Social welfare</td><td>Both profit and social goals</td></tr>
+                <tr><td><b>Income distribution</b></td><td>Unequal — based on productivity</td><td>More equal — state controls wages</td><td>Some redistribution through taxes and subsidies</td></tr>
+                <tr><td><b>Example</b></td><td>USA (pre-welfare state era)</td><td>Former USSR, Cuba</td><td>India, most democracies</td></tr>
+                <tr><td><b>Main strength</b></td><td>Efficiency, innovation</td><td>Equity, full employment</td><td>Balances efficiency with equity</td></tr>
+                <tr><td><b>Main weakness</b></td><td>Inequality, market failures</td><td>Inefficiency, lack of choice</td><td>Can suffer from both sets of weaknesses</td></tr>
+              </table>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 10px">Broad Social Goals Every Economy Pursues</h3>
+              <table class="cmp">
+                <tr><th>Goal</th><th>What it means</th><th>Example in India</th></tr>
+                <tr><td><b>Efficiency</b></td><td>Getting maximum output from available resources; avoiding waste</td><td>Using all agricultural land productively; reducing idle factory capacity</td></tr>
+                <tr><td><b>Equity</b></td><td>Fair distribution of income and wealth — not necessarily equal, but fair</td><td>Progressive income tax; MGNREGA providing employment to rural poor</td></tr>
+                <tr><td><b>Freedom of Choice</b></td><td>Individuals can decide what to consume, produce or work in</td><td>Indians can choose any career, consume any legal good, start any business</td></tr>
+                <tr><td><b>Economic Growth</b></td><td>Increasing the economy's capacity to produce — moving the PPC outward</td><td>India aims for 7-8% annual GDP growth to create jobs and raise incomes</td></tr>
+                <tr><td><b>Sustainable Development</b></td><td>Meeting current needs without compromising future generations' ability to meet theirs</td><td>Solar energy targets, EV policies, forest conservation laws</td></tr>
+              </table>`},
+
+            {topicStart:"eco-u1-growth", title:"Economic Growth, Development &amp; Sustainability", icon:"📈",
+             desc:"The difference between GDP growth and human development; savings and investment; sustainable development and why India's growth story is more complex than one number suggests."},
+
+            {h:"Economic Growth, Development and Sustainable Development", kicker:"Unit 1 · Topic 3",
+             html:`
+              <p>In 2023-24, India's GDP grew by 8.2% — one of the fastest growth rates in the world. Yet over 220 million Indians still live in multidimensional poverty. GDP growth and human development are related but fundamentally different concepts. Understanding the distinction is one of the most important insights in economics.</p>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 10px">Economic Growth — What It Is and How We Measure It</h3>
+              <div style="background:#e3eee6;border-left:4px solid var(--green-deep);padding:13px 16px;border-radius:8px;margin-bottom:12px">
+                <b>Economic Growth</b> means an increase in an economy's capacity to produce goods and services over time. It is measured by the <b>growth rate of GDP</b> (Gross Domestic Product — the total market value of all goods and services produced in a country in a year) and by <b>per capita income</b> (GDP divided by population).
+              </div>
+              <table class="cmp">
+                <tr><th>Measure</th><th>What it captures</th><th>India's figure (2023-24)</th></tr>
+                <tr><td><b>GDP</b></td><td>Total output of the economy</td><td>≈ ₹293 trillion (approx. $3.7 trillion)</td></tr>
+                <tr><td><b>Per Capita Income</b></td><td>Average income per person (GDP ÷ population)</td><td>≈ ₹2,10,000 per year (≈ $2,500)</td></tr>
+                <tr><td><b>GDP Growth Rate</b></td><td>How fast the economy is expanding</td><td>8.2% (one of the highest globally)</td></tr>
+              </table>
+              <p>On the PPC diagram: <b>economic growth shifts the entire PPC outward</b> — the economy can now produce more of both goods. This happens through increases in resources (more workers, more capital) or improvements in technology.</p>
+
+              <h3 style="color:var(--green-deep);margin:18px 0 10px">Savings and Investment — The Engine of Growth</h3>
+              <p>Growth doesn't happen automatically. It requires <b>investment</b> — spending on new factories, machines, roads and skills. Investment is funded by <b>savings</b>: what households and firms set aside rather than consume today.</p>
+              <ul>
+                <li><b>Savings → Investment → Growth</b>: Higher savings rates allow more funds to be channelled into investment, which expands productive capacity and raises future incomes. India's gross savings rate is approximately 31% of GDP.</li>
+                <li><b>Physical Capital</b>: man-made inputs used in production — machines, buildings, roads, power plants. India's investments in roads, ports and power over the last decade have visibly boosted manufacturing growth.</li>
+                <li><b>Human Capital</b>: the skills, knowledge and health of the workforce. Investment in education (schools, colleges) and healthcare (hospitals, clean water) creates human capital that raises productivity just as physical capital does.</li>
+              </ul>
+
+              <h3 style="color:var(--green-deep);margin:18px 0 10px">Economic Development — The Broader Picture</h3>
+              <div style="background:#f8f0db;border-left:4px solid #b6862c;padding:13px 16px;border-radius:8px;margin-bottom:12px">
+                <b>Economic Development</b> is a broader concept than growth. It refers to improvements in the <b>quality of life</b> — including health, education, reduction in poverty, gender equality, political freedom and environmental sustainability — not just the quantity of output.
+              </div>
+              <table class="cmp">
+                <tr><th>Feature</th><th>Economic Growth</th><th>Economic Development</th></tr>
+                <tr><td><b>What it measures</b></td><td>Increase in GDP / per capita income</td><td>Improvements in living standards, health, education, equality</td></tr>
+                <tr><td><b>Scope</b></td><td>Narrow — quantitative (numbers)</td><td>Broad — quantitative AND qualitative</td></tr>
+                <tr><td><b>Time horizon</b></td><td>Can be short-term</td><td>Long-term structural change</td></tr>
+                <tr><td><b>Can happen without the other?</b></td><td>Yes — growth can occur with widening inequality</td><td>Yes — small improvements in health/education even without rapid GDP growth</td></tr>
+                <tr><td><b>Key indicator</b></td><td>GDP growth rate, per capita income</td><td>Human Development Index (HDI) — combines income, health and education</td></tr>
+                <tr><td><b>India's situation</b></td><td>High growth rate (7-8%)</td><td>HDI rank 134 of 193 countries (2023) — still much to improve</td></tr>
+              </table>
+
+              <h3 style="color:var(--green-deep);margin:18px 0 10px">Sustainable Development</h3>
+              <div style="background:var(--green-deep);padding:13px 16px;border-radius:8px;color:#f4efe3;margin-bottom:12px">
+                <b>Sustainable Development</b> is "development that meets the needs of the present without compromising the ability of future generations to meet their own needs." — Brundtland Commission, 1987
+              </div>
+              <p>Growth that destroys forests, pollutes rivers and depletes resources is not truly "development" — it borrows prosperity from the future. India faces this tension acutely: rapid industrialisation has brought millions out of poverty but also degraded air quality (Delhi's AQI regularly exceeds 400) and stressed water resources.</p>
+              <p>The <b>UN's 17 Sustainable Development Goals (SDGs)</b>, adopted in 2015, set targets for 2030 covering poverty, hunger, health, education, clean energy, climate action, and more. India is signatory to all 17.</p>`},
+
+            {topicStart:"eco-u1-indicators", title:"Indicators of Development — Income, Poverty, Inequality &amp; Beyond", icon:"📊",
+             desc:"Why no single number can measure development; income and per capita income; poverty and the poverty line; unemployment; inequality; human capital; and gender inequality in India."},
+
+            {h:"Indicators of Development — Measuring What Growth Leaves Behind", kicker:"Unit 1 · Topic 4",
+             html:`
+              <p>If someone asks "Is India developed?" you cannot answer with just one number. Per capita income in India is ≈ $2,500 — about 5% of the US average. But India's space agency ISRO successfully landed on the Moon's south pole in 2023. A country that can send spacecraft to the Moon while 230 million people are undernourished is a country of stark contrasts. Development needs many lenses — not just income.</p>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 10px">Income Indicators</h3>
+              <table class="cmp">
+                <tr><th>Indicator</th><th>What it measures</th><th>India's figure</th></tr>
+                <tr><td><b>Gross Domestic Product (GDP)</b></td><td>Total market value of all goods and services produced in India in one year</td><td>≈ $3.7 trillion (5th largest in world, 2024)</td></tr>
+                <tr><td><b>Per Capita Income</b></td><td>GDP divided by total population — the average income per person</td><td>≈ $2,500/year (vs USA $80,000; China $13,000)</td></tr>
+                <tr><td><b>Limitation</b></td><td>Average hides inequality — a country where 1% earns 90% of income has the same average as one with more equal distribution</td><td>India's richest 1% own 40% of national wealth (Oxfam, 2024)</td></tr>
+              </table>
+
+              <h3 style="color:var(--green-deep);margin:18px 0 10px">Poverty</h3>
+              <div style="background:#f6e2dc;border-left:4px solid #c0492f;padding:13px 16px;border-radius:8px;margin-bottom:12px">
+                <b>Poverty</b> means inability to meet basic minimum needs — food, clothing, shelter, healthcare, education. The <b>Poverty Line</b> is a minimum level of income below which a person is considered poor. India's poverty line (Tendulkar Committee) is approximately ₹27/day (rural) and ₹33/day (urban) for consumption expenditure.
+              </div>
+              <ul>
+                <li>The <b>Multidimensional Poverty Index (MPI)</b> goes beyond income, measuring deprivations in health, education and living standards across 10 indicators.</li>
+                <li>India reduced MPI poverty from 24.8% (2015-16) to 11.3% (2022-23) — a significant achievement, but 140+ million people still remain MPI-poor.</li>
+                <li><b>BPL (Below Poverty Line)</b>: India's official category for households in poverty, used to target food subsidies and welfare programmes.</li>
+              </ul>
+
+              <h3 style="color:var(--green-deep);margin:18px 0 10px">Unemployment</h3>
+              <p>Unemployment occurs when people who want work and are able to work cannot find it. Different types of unemployment require different solutions:</p>
+              <table class="cmp">
+                <tr><th>Type</th><th>Cause</th><th>Indian context</th></tr>
+                <tr><td><b>Structural</b></td><td>Mismatch between workers' skills and available jobs (e.g. factory workers replaced by machines)</td><td>IT automation replacing routine banking jobs</td></tr>
+                <tr><td><b>Cyclical</b></td><td>Falls in overall demand during economic downturns</td><td>Job losses during COVID-19 (2020-21)</td></tr>
+                <tr><td><b>Seasonal</b></td><td>Work only available in certain seasons</td><td>Agricultural workers idle outside harvest season</td></tr>
+                <tr><td><b>Disguised</b></td><td>More people employed in a job than actually needed; marginal product = zero</td><td>4 family members working a farm that needs only 2</td></tr>
+                <tr><td><b>Frictional</b></td><td>Temporary unemployment while switching jobs</td><td>An IT professional between jobs who is searching for better opportunities</td></tr>
+              </table>
+
+              <h3 style="color:var(--green-deep);margin:18px 0 10px">Inequality and the Gini Coefficient</h3>
+              <p><b>Inequality</b> measures how unevenly income or wealth is distributed. The <b>Gini Coefficient</b> ranges from 0 (perfect equality — everyone earns the same) to 1 (perfect inequality — one person owns everything). India's Gini for income is approximately 0.35, but for wealth it approaches 0.65 — reflecting extreme concentration of assets.</p>
+
+              <h3 style="color:var(--green-deep);margin:18px 0 10px">Physical Capital vs Human Capital</h3>
+              <ul>
+                <li><b>Physical Capital</b>: Man-made resources used in production — roads, factories, ports, power plants, machinery. India's National Infrastructure Pipeline (2019-25) targets ₹111 trillion in physical capital investment.</li>
+                <li><b>Human Capital</b>: The skills, knowledge, health and capabilities of people. Investments in schooling, vocational training, and healthcare build human capital. A healthy, educated worker is more productive than an unhealthy, unskilled one.</li>
+              </ul>
+
+              <h3 style="color:var(--green-deep);margin:18px 0 10px">Gender Inequality</h3>
+              <p>Gender inequality in development is about more than women's income — it includes access to education, healthcare, legal rights, and participation in economic and political life.</p>
+              <table class="cmp">
+                <tr><th>Indicator</th><th>India</th><th>Note</th></tr>
+                <tr><td><b>Female Literacy Rate</b></td><td>70.3%</td><td>vs Male 84.7% (Census 2011; improving but gap persists)</td></tr>
+                <tr><td><b>Female Labour Force Participation</b></td><td>≈ 24%</td><td>One of the lowest in the world; male LFPR ≈ 76%</td></tr>
+                <tr><td><b>Gender Development Index (GDI)</b></td><td>0.849</td><td>India ranks 108 out of 166 countries (2023)</td></tr>
+                <tr><td><b>Gender Pay Gap</b></td><td>≈ 35%</td><td>Women earn about 65 paise for every ₹1 men earn for similar work</td></tr>
+              </table>
+
+              <h3 style="color:var(--green-deep);margin:18px 0 10px">Development Indicators — A Multi-Dimensional View</h3>
+              <table class="cmp">
+                <tr><th>Indicator</th><th>India</th><th>Why it matters</th></tr>
+                <tr><td><b>HDI Rank</b></td><td>134/193 (2023)</td><td>Human Development Index combines income + education + health</td></tr>
+                <tr><td><b>Life Expectancy</b></td><td>70.8 years</td><td>Measures quality of healthcare; China: 78, Japan: 84</td></tr>
+                <tr><td><b>Mean Years of Schooling</b></td><td>6.7 years</td><td>Average years of education adults have received</td></tr>
+                <tr><td><b>MPI Poverty</b></td><td>11.3%</td><td>% of population suffering multiple deprivations simultaneously</td></tr>
+                <tr><td><b>Per Capita Income (PPP)</b></td><td>$8,379</td><td>Adjusted for what money actually buys in India</td></tr>
+              </table>`}
+          ],
+          sets:[
+            {label:"Set 1 — Foundation", mix:"15/9/6", questions:[]},
+            {label:"Set 2", mix:"14/9/7", questions:[]},
+            {label:"Set 3", mix:"13/9/8", questions:[]},
+            {label:"Set 4", mix:"12/9/9", questions:[]},
+            {label:"Set 5", mix:"11/9/10",questions:[]},
+            {label:"Set 6", mix:"10/9/11",questions:[]},
+            {label:"Set 7", mix:"10/9/11",questions:[]},
+            {label:"Set 8", mix:"9/9/12", questions:[]},
+            {label:"Set 9", mix:"9/9/12", questions:[]},
+            {label:"Set 10",mix:"9/9/12", questions:[]}
+          ]
+        }]
+      },
+
+      /* ─── UNIT 2: Consumer Behaviour ─────────────────────────── */
+      {id:"eco-u2", title:"Demand, Supply and Consumer Behaviour", marks:8,
+        syllabus:["Demand and Supply; Equilibrium Price; Invisible Hand; Laissez-faire","Price Elasticity of Demand; Income Elasticity; Cross-Price Elasticity","Elasticity of Supply; Comparative Statics","Cardinal Utility and Law of Diminishing Marginal Utility","Indifference Curve Analysis; Budget Constraint; Consumer Equilibrium","Price Ceiling and Price Floor"],
+        topics:[{
+          learn:[
+            {topicStart:"eco-u2-demand", title:"Demand, Supply and Market Equilibrium", icon:"📉",
+             desc:"Demand and supply curves; why they slope the way they do; equilibrium price; the invisible hand; and how markets clear."},
+            {h:"Demand, Supply and Market Equilibrium", kicker:"Unit 2 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Law of Demand (with demand curve graph — what goes on each axis, why it slopes downward, what shifts the curve); Law of Supply (supply curve — why it slopes upward); Market Equilibrium (where they intersect — the equilibrium price and quantity); and the Invisible Hand concept.</p></div>`},
+            {topicStart:"eco-u2-elasticity", title:"Price, Income and Cross-Price Elasticity of Demand", icon:"↔️",
+             desc:"How sensitive demand is to price changes — the critical concept that determines whether a price rise raises or lowers total revenue."},
+            {h:"Elasticity of Demand", kicker:"Unit 2 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Price Elasticity (elastic/inelastic/unit elastic — with graphs of differently sloped demand curves); Income Elasticity (normal vs inferior goods); Cross-Price Elasticity (substitutes vs complements); and numerical problems on elasticity measurement.</p></div>`},
+            {topicStart:"eco-u2-supply-elasticity", title:"Elasticity of Supply and Comparative Statics", icon:"↕️",
+             desc:"How quickly producers respond to price changes; and what happens to equilibrium when demand or supply shifts (Price Ceiling, Price Floor)."},
+            {h:"Supply Elasticity and Comparative Statics", kicker:"Unit 2 · Topic 3", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Elasticity of Supply with numerical problems; Comparative Statics — how shifts in demand/supply change equilibrium; Price Ceiling (maximum price — why it creates shortage); Price Floor (minimum price — why it creates surplus) with real Indian examples (MSP for wheat, rent control).</p></div>`},
+            {topicStart:"eco-u2-utility", title:"Cardinal Utility and the Law of Diminishing Marginal Utility", icon:"🧠",
+             desc:"How economists measure satisfaction; why the first slice of pizza gives more pleasure than the fifth; and consumer equilibrium using marginal utility analysis."},
+            {h:"Cardinal Utility Theory", kicker:"Unit 2 · Topic 4", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Utility and Marginal Utility; Total Utility vs Marginal Utility curves (with graph — why MU curve slopes downward); Law of Diminishing Marginal Utility with real examples; Consumer Equilibrium (MU/Price ratio equilisation); and derivation of the demand curve from MU analysis.</p></div>`},
+            {topicStart:"eco-u2-indifference", title:"Indifference Curve Analysis and Consumer Equilibrium", icon:"🔄",
+             desc:"The ordinal approach to consumer behaviour — indifference curves, their properties, the budget line, and how a rational consumer maximises utility."},
+            {h:"Indifference Curve Analysis", kicker:"Unit 2 · Topic 5", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Indifference Curves and the Indifference Map (with graph — axes, what each IC represents, why they're convex); Budget Constraint / Budget Line (income and relative prices); Consumer Equilibrium (tangency of IC and budget line); Shifts in budget line; and Income and Substitution Effects.</p></div>`}
+          ],
+          sets:[
+            {label:"Set 1 — Foundation", mix:"15/9/6", questions:[]},
+            {label:"Set 2", mix:"14/9/7", questions:[]},
+            {label:"Set 3", mix:"13/9/8", questions:[]},
+            {label:"Set 4", mix:"12/9/9", questions:[]},
+            {label:"Set 5", mix:"11/9/10",questions:[]},
+            {label:"Set 6", mix:"10/9/11",questions:[]},
+            {label:"Set 7", mix:"10/9/11",questions:[]},
+            {label:"Set 8", mix:"9/9/12", questions:[]},
+            {label:"Set 9", mix:"9/9/12", questions:[]},
+            {label:"Set 10",mix:"9/9/12", questions:[]}
+          ]
+        }]
+      },
+
+      /* ─── UNIT 3: Producer Behaviour ─────────────────────────── */
+      {id:"eco-u3", title:"Producer Behaviour — Production, Cost and Revenue", marks:8,
+        syllabus:["Short-run and Long-run Production Function; Law of Variable Proportions","Returns to Scale; Economies and Diseconomies of Scale","Concepts of Cost: STC, TVC, TFC, SAC, SMC, LTC, LAC, LMC, Implicit Cost, Opportunity Cost","Concepts of Revenue and Profit: TR, AR, MR, and the AR-MR relationship"],
+        topics:[{
+          learn:[
+            {topicStart:"eco-u3-production", title:"Production Function — Short Run and Long Run", icon:"🏭",
+             desc:"What a production function is; short-run vs long-run; total product, average product and marginal product; and the Law of Variable Proportions with its three stages."},
+            {h:"Production Function and Law of Variable Proportions", kicker:"Unit 3 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: The Production Function (Q = f(L, K)); Short Run vs Long Run; Total Product (TP), Average Product (AP), Marginal Product (MP) with graphs; Law of Variable Proportions — three stages with TP, AP, MP curves on the same graph, explaining WHY AP and MP first rise then fall.</p></div>`},
+            {topicStart:"eco-u3-returns", title:"Returns to Scale and Economies of Scale", icon:"📐",
+             desc:"What happens when ALL inputs are increased proportionally — increasing, constant and decreasing returns to scale; and why large firms often have lower costs per unit."},
+            {h:"Returns to Scale and Economies of Scale", kicker:"Unit 3 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Returns to Scale — Increasing, Constant, Decreasing (IRS, CRS, DRS) with PPC-style graphs; Economies of Scale — why larger firms have lower average costs; Types: internal vs external economies; Diseconomies of Scale — when firms become too large. Real Indian examples (Reliance Industries, AMUL).</p></div>`},
+            {topicStart:"eco-u3-cost", title:"Concepts of Cost — STC, SAC, SMC, LTC, LAC, LMC", icon:"💰",
+             desc:"Fixed vs variable costs; how short-run and long-run average cost curves behave; the U-shape of SAC and the L-shape of LAC; and what opportunity cost and implicit cost really mean."},
+            {h:"Concepts of Cost", kicker:"Unit 3 · Topic 3", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: TFC, TVC, STC; AFC, AVC, SAC, SMC — with graphs showing their shapes and relationships; WHY SAC is U-shaped (LAC of Variable Proportions); LTC, LAC, LMC — the Long-Run Envelope Curve; Opportunity Cost (economic cost vs accounting cost); Implicit Costs (owner's own inputs).</p></div>`},
+            {topicStart:"eco-u3-revenue", title:"Revenue and Profit — TR, AR, MR and the Profit Motive", icon:"📊",
+             desc:"Total Revenue, Average Revenue and Marginal Revenue; how they relate to price and elasticity; the concept of profit; normal profit vs supernormal profit."},
+            {h:"Revenue and Profit", kicker:"Unit 3 · Topic 4", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: TR, AR, MR — definitions and relationships; AR = Price (under perfect competition); MR curve lies below AR curve (with graph) under monopoly; The AR-MR relationship and elasticity; Gross Profit and Net Profit; Normal Profit vs Supernormal Profit; Profit as the return to entrepreneurship.</p></div>`}
+          ],
+          sets:[
+            {label:"Set 1 — Foundation", mix:"15/9/6", questions:[]},
+            {label:"Set 2", mix:"14/9/7", questions:[]},
+            {label:"Set 3", mix:"13/9/8", questions:[]},
+            {label:"Set 4", mix:"12/9/9", questions:[]},
+            {label:"Set 5", mix:"11/9/10",questions:[]},
+            {label:"Set 6", mix:"10/9/11",questions:[]},
+            {label:"Set 7", mix:"10/9/11",questions:[]},
+            {label:"Set 8", mix:"9/9/12", questions:[]},
+            {label:"Set 9", mix:"9/9/12", questions:[]},
+            {label:"Set 10",mix:"9/9/12", questions:[]}
+          ]
+        }]
+      },
+
+      /* ─── UNIT 4: Introduction to Statistics & Data ───────────── */
+      {id:"eco-u4", title:"Introduction to Statistics and Data", marks:4,
+        syllabus:["Meaning, scope and importance of Statistics in Economics","Types of Data: Primary vs Secondary; Time Series vs Cross-Section; Qualitative vs Quantitative","Features of a Good Questionnaire","Data Sources for the Indian Economy"],
+        topics:[{
+          learn:[
+            {topicStart:"eco-u4-stats", title:"Meaning, Scope and Importance of Statistics", icon:"🔢",
+             desc:"What Statistics means in Economics; why data is the foundation of economic analysis; and how statistical tools help answer economic questions."},
+            {h:"Meaning, Scope and Importance of Statistics", kicker:"Unit 4 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Dual meaning of Statistics (plural data vs singular method); Scope in Economics and Commerce; Importance — how GDP growth rates, inflation, unemployment figures are all statistical outputs; Limitations of Statistics (averages hide inequality, data can be manipulated).</p></div>`},
+            {topicStart:"eco-u4-types", title:"Types of Data and Data Collection Methods", icon:"📋",
+             desc:"Primary vs secondary data; time series vs cross-section data; qualitative vs quantitative; and how to design a good questionnaire."},
+            {h:"Types of Data and Collection Methods", kicker:"Unit 4 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Primary Data (original, collected first-hand) vs Secondary Data (already collected by others); Time Series data (same variable across time — India's GDP from 2000-2024) vs Cross-Section data (same time, different units — GDP of 10 states in 2023); Qualitative vs Quantitative; Features of a Good Questionnaire; Data Sources for Indian Economy (NSO, RBI, PLFS, Census).</p></div>`}
+          ],
+          sets:[
+            {label:"Set 1 — Foundation", mix:"12/6/4", questions:[]},
+            {label:"Set 2", mix:"12/6/4", questions:[]},
+            {label:"Set 3", mix:"11/6/5", questions:[]},
+            {label:"Set 4", mix:"10/7/5", questions:[]},
+            {label:"Set 5", mix:"10/7/5", questions:[]}
+          ]
+        }]
+      },
+
+      /* ─── UNIT 5: Representation of Data ─────────────────────── */
+      {id:"eco-u5", title:"Organisation and Representation of Data", marks:8,
+        syllabus:["Classification of Data: Continuous and Discrete Variables; frequency distributions","Textual and Tabular Presentation of Data","Graphical Representation: Bar Chart, Histogram, Frequency Polygon","Pie Chart, Ogive (Cumulative Frequency Curve), Arithmetic Line Graph"],
+        topics:[{
+          learn:[
+            {topicStart:"eco-u5-classify", title:"Classification of Data and Frequency Distributions", icon:"🗂️",
+             desc:"Discrete vs continuous variables; how to organise raw data into frequency distributions; class intervals, class boundaries and class midpoints."},
+            {h:"Classification and Frequency Distribution", kicker:"Unit 5 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Discrete Variables (countable — number of children) vs Continuous Variables (measurable — height, weight, income); Frequency Distribution Tables for both; Class Width, Class Midpoint, Class Boundaries; Relative and Cumulative Frequency; how to construct a good frequency table from raw data.</p></div>`},
+            {topicStart:"eco-u5-tabular", title:"Textual and Tabular Presentation of Data", icon:"📄",
+             desc:"Presenting data in words and in well-structured tables; the components of a good statistical table; and why tabular form is more efficient than textual description."},
+            {h:"Textual and Tabular Presentation", kicker:"Unit 5 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Textual Presentation (data described in words — limitations); Tabular Presentation — parts of a table (title, stub, caption, body, footnote); Attributes of a Good Table; Constructing frequency tables; Bivariate frequency tables.</p></div>`},
+            {topicStart:"eco-u5-graphs", title:"Bar Charts, Histograms and Frequency Polygon", icon:"📊",
+             desc:"How to construct and read bar charts, histograms and frequency polygons — and the crucial difference between a bar chart and a histogram."},
+            {h:"Bar Charts, Histograms and Frequency Polygon", kicker:"Unit 5 · Topic 3", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Simple, Multiple and Subdivided Bar Charts (with fully labelled SVG examples); Histogram — why bars touch (continuous data); Frequency Polygon — connecting midpoints; Frequency Bar Diagram; The KEY difference: Bar Chart is for discrete/categorical data; Histogram is for continuous data grouped in class intervals.</p></div>`},
+            {topicStart:"eco-u5-piechart", title:"Pie Charts, Ogive and Line Graphs", icon:"🥧",
+             desc:"Circular representation of parts; the cumulative frequency curve and how to use it to find median and quartiles graphically; and arithmetic line graphs for time series."},
+            {h:"Pie Charts, Ogive and Arithmetic Line Graph", kicker:"Unit 5 · Topic 4", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Pie Chart construction (degrees = percentage × 3.6); Ogive — Less-than and More-than Ogive curves; reading Median, Q1, Q3 graphically from the Ogive; Arithmetic Line Graph (time series — India's GDP growth over years); Multiple Line Graphs; Frequency Curve (smoothed histogram).</p></div>`}
+          ],
+          sets:[
+            {label:"Set 1 — Foundation", mix:"15/9/6", questions:[]},
+            {label:"Set 2", mix:"14/9/7", questions:[]},
+            {label:"Set 3", mix:"13/9/8", questions:[]},
+            {label:"Set 4", mix:"12/9/9", questions:[]},
+            {label:"Set 5", mix:"11/9/10",questions:[]},
+            {label:"Set 6", mix:"10/9/11",questions:[]},
+            {label:"Set 7", mix:"10/9/11",questions:[]},
+            {label:"Set 8", mix:"9/9/12", questions:[]},
+            {label:"Set 9", mix:"9/9/12", questions:[]},
+            {label:"Set 10",mix:"9/9/12", questions:[]}
+          ]
+        }]
+      },
+
+      /* ─── UNIT 6: Measures of Central Tendency ───────────────── */
+      {id:"eco-u6", title:"Measures of Central Tendency", marks:8,
+        syllabus:["Arithmetic Mean — direct, short-cut and step-deviation methods for individual, discrete and continuous series","Geometric Mean — calculation and uses","Median — individual, discrete and continuous series; Partition Values — Quartiles, Deciles, Percentiles (definition only)","Mode — individual, discrete and continuous series; Relationship between Mean, Median and Mode"],
+        topics:[{
+          learn:[
+            {topicStart:"eco-u6-mean", title:"Arithmetic Mean — Calculation and Properties", icon:"➕",
+             desc:"The most widely used average — three methods for calculating AM for individual, discrete and continuous frequency series; properties and merits/demerits."},
+            {h:"Arithmetic Mean", kicker:"Unit 6 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: AM for Individual Series (direct method); AM for Discrete Frequency Series; AM for Continuous Frequency Series — Direct, Short-Cut (Assumed Mean) and Step-Deviation methods (with worked examples); Properties of AM; Merits and Demerits; Combined Mean formula.</p></div>`},
+            {topicStart:"eco-u6-geometric", title:"Geometric Mean — Calculation and Uses", icon:"✖️",
+             desc:"When to use geometric mean instead of arithmetic mean — particularly for growth rates, index numbers and ratios."},
+            {h:"Geometric Mean", kicker:"Unit 6 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: GM definition and calculation (nth root of product of n values); Log method for calculation; GM for grouped data; Uses of GM — average growth rates, index numbers; Merits and demerits; Real example: average annual GDP growth rate calculation using GM vs AM.</p></div>`},
+            {topicStart:"eco-u6-median", title:"Median, Quartiles, Deciles and Percentiles", icon:"📍",
+             desc:"The positional average; calculating median for all three series types; partition values; and how to find them graphically using the Ogive."},
+            {h:"Median, Quartiles, Deciles and Percentiles", kicker:"Unit 6 · Topic 3", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Median — the middle value concept; formula for Individual, Discrete and Continuous series; Interpolation formula for continuous series; Quartiles Q1 and Q3; Deciles and Percentiles (definition and formula only); Graphical determination using Ogive; Merits and demerits of Median vs Mean.</p></div>`},
+            {topicStart:"eco-u6-mode", title:"Mode and Comparison of Averages", icon:"🏆",
+             desc:"The most frequently occurring value; modal class and interpolation; empirical relationship between Mean, Median and Mode; when to use which average."},
+            {h:"Mode and Comparison of Averages", kicker:"Unit 6 · Topic 4", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Mode — most frequently occurring value; Modal class identification; Interpolation formula for continuous series; Mode for Individual and Discrete series; Empirical Relationship: Mode = 3 Median − 2 Mean; Comparison of AM, GM, Median, Mode — when to use each; Advantages and Disadvantages of Mode.</p></div>`}
+          ],
+          sets:[
+            {label:"Set 1 — Foundation", mix:"15/9/6", questions:[]},
+            {label:"Set 2", mix:"14/9/7", questions:[]},
+            {label:"Set 3", mix:"13/9/8", questions:[]},
+            {label:"Set 4", mix:"12/9/9", questions:[]},
+            {label:"Set 5", mix:"11/9/10",questions:[]},
+            {label:"Set 6", mix:"10/9/11",questions:[]},
+            {label:"Set 7", mix:"10/9/11",questions:[]},
+            {label:"Set 8", mix:"9/9/12", questions:[]},
+            {label:"Set 9", mix:"9/9/12", questions:[]},
+            {label:"Set 10",mix:"9/9/12", questions:[]}
+          ]
+        }]
+      }
     ]
   },
 
