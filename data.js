@@ -1560,16 +1560,514 @@ const DATA = {
      COSTING & TAXATION
      ══════════════════════════════════════════════════════════════════════════ */
   costing:{
-    name:"Costing & Taxation", code:"C&T", accent:"soon",
+    name:"Costing & Taxation", code:"C&T", accent:"ready",
     units:[
-      {id:"ct-u1", title:"Introduction to Cost Accounting", marks:0,
-        syllabus:["Meaning, objectives and importance of Cost Accounting","Difference between Financial Accounting and Cost Accounting","Cost concepts — cost unit, cost centre"], topics:[]},
-      {id:"ct-u2", title:"Classification of Cost & Cost Sheet", marks:0,
-        syllabus:["Classification of Cost — by nature, function, behaviour and controllability","Fixed, Variable and Semi-variable costs","Preparation of Cost Sheet — format and components","Prime Cost, Works Cost, Cost of Production, Cost of Goods Sold, Total Cost"], topics:[]},
-      {id:"ct-u3", title:"Introduction to Taxation & Income Tax Basics", marks:0,
-        syllabus:["Introduction — meaning and types of taxes (direct and indirect)","Basic concepts and definitions under the Income Tax Act","Previous Year and Assessment Year","Gross Total Income and Total Income","Incomes which do not form part of Total Income (exempted incomes)"], topics:[]},
-      {id:"ct-u4", title:"Residential Status and Incidence of Tax", marks:0,
-        syllabus:["Determination of Residential Status — Resident, Non-Resident, Not Ordinarily Resident","Rules for Individual, HUF, Company","Incidence of Tax based on Residential Status","Scope of Total Income for different residential statuses"], topics:[]}
+
+      /* ── UNIT 1 ──────────────────────────────────────────────── */
+      {id:"ct-u1", title:"Introduction to Cost Accounting", marks:5,
+        syllabus:["Meaning, objectives and importance of Cost Accounting","Difference between Financial Accounting and Cost Accounting","Cost concepts — cost unit, cost centre"],
+        topics:[{
+          learn:[
+
+            {topicStart:"meaning-objectives", title:"Meaning, Objectives & Importance", icon:"📊",
+             desc:"Definitions of Cost, Costing and Cost Accounting; seven objectives; key features; advantages; limitations; and the steps for installing a costing system."},
+
+            {h:"Meaning, Objectives and Importance of Cost Accounting",
+             kicker:"Unit 1 · Topic 1",
+             html:`
+              <p>Cost Accounting emerged as manufacturing grew too complex for Financial Accounting alone to guide management decisions. Financial Accounting tells you <i>whether</i> you made a profit; Cost Accounting tells you <i>why</i> — and what you can do about it. Every production decision — what to make, how much to charge, where to cut waste — depends on accurate cost information.</p>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 12px">Core Definitions</h3>
+              <div style="display:grid;gap:10px;margin-bottom:20px">
+                <div style="background:#e3eee6;border-left:4px solid var(--green-deep);padding:13px 16px;border-radius:8px">
+                  <b style="color:var(--green-deep)">Cost</b> — The amount of expenditure (actual or notional) incurred on, or attributable to, a given thing or activity. It is the monetary measure of resources consumed to achieve a specific objective — producing a unit of output, running a department or delivering a service.
+                </div>
+                <div style="background:#f8f0db;border-left:4px solid #b6862c;padding:13px 16px;border-radius:8px">
+                  <b style="color:#8a6420">Costing</b> — The technique and process of <i>ascertaining costs</i>. It involves the application of accounting and costing principles, methods and techniques to determine the cost of a product, job, service or process. Costing is the <i>method</i>; Cost Accounting is the broader <i>system</i>.
+                </div>
+                <div style="background:var(--green-deep);padding:13px 16px;border-radius:8px;color:#f4efe3">
+                  <b>Cost Accounting</b> — "The process of accounting for cost from the point at which expenditure is incurred or committed to the establishment of its ultimate relationship with cost centres and cost units." <span style="opacity:.8;font-size:13px">— CIMA (Chartered Institute of Management Accountants)</span><br>
+                  <span style="font-size:13px;opacity:.85;margin-top:6px;display:block">In practice: a specialised branch of accounting that records, classifies, analyses and interprets cost information to enable management to control costs, fix prices, measure efficiency and make informed decisions.</span>
+                </div>
+              </div>
+
+              <svg viewBox="0 0 700 90" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:4px 0 20px" font-family="IBM Plex Sans,sans-serif">
+                <rect x="10" y="20" width="160" height="50" rx="9" fill="#e3eee6" stroke="#234f3b" stroke-width="1.5"/>
+                <text x="90" y="41" text-anchor="middle" font-size="12" font-weight="700" fill="#234f3b">COST</text>
+                <text x="90" y="57" text-anchor="middle" font-size="10" fill="#3c4742">Money value of</text>
+                <text x="90" y="70" text-anchor="middle" font-size="10" fill="#3c4742">resources used</text>
+                <polygon points="175,45 185,41 185,49" fill="#b6862c"/>
+                <rect x="190" y="20" width="160" height="50" rx="9" fill="#f8f0db" stroke="#b6862c" stroke-width="1.5"/>
+                <text x="270" y="41" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6420">COSTING</text>
+                <text x="270" y="57" text-anchor="middle" font-size="10" fill="#3c4742">Technique of</text>
+                <text x="270" y="70" text-anchor="middle" font-size="10" fill="#3c4742">ascertaining costs</text>
+                <polygon points="355,45 365,41 365,49" fill="#b6862c"/>
+                <rect x="370" y="10" width="320" height="70" rx="9" fill="#234f3b"/>
+                <text x="530" y="35" text-anchor="middle" font-size="12" font-weight="700" fill="#f4efe3">COST ACCOUNTING</text>
+                <text x="530" y="52" text-anchor="middle" font-size="10" fill="#e3eee6">Full system: recording, classifying,</text>
+                <text x="530" y="66" text-anchor="middle" font-size="10" fill="#e3eee6">analysing and interpreting cost data</text>
+              </svg>
+
+              <h3 style="color:var(--green-deep);margin:0 0 12px">Objectives of Cost Accounting</h3>
+              <table class="cmp">
+                <tr><th>#</th><th>Objective</th><th>What it enables management to do</th></tr>
+                <tr><td><b>1</b></td><td><b>Ascertainment of Cost</b></td><td>Calculate the total cost and cost per unit of every product or service produced</td></tr>
+                <tr><td><b>2</b></td><td><b>Cost Control</b></td><td>Compare actual costs against budgets or standards; investigate and act on variances</td></tr>
+                <tr><td><b>3</b></td><td><b>Cost Reduction</b></td><td>Permanently lower cost per unit through better methods, materials and process improvements</td></tr>
+                <tr><td><b>4</b></td><td><b>Fixation of Selling Price</b></td><td>Determine a price that covers all costs and generates the required profit margin</td></tr>
+                <tr><td><b>5</b></td><td><b>Measuring Efficiency</b></td><td>Evaluate the performance of departments, machines and individual workers</td></tr>
+                <tr><td><b>6</b></td><td><b>Decision Making</b></td><td>Supply data for make-or-buy, expansion, shutdown, product-mix and pricing decisions</td></tr>
+                <tr><td><b>7</b></td><td><b>Inventory Valuation</b></td><td>Correctly value raw materials, work-in-progress and finished goods for the Balance Sheet</td></tr>
+              </table>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 12px">Features of Cost Accounting</h3>
+              <ul>
+                <li><b>Systematic and continuous</b> — Costs are tracked from the moment expenditure is committed through every stage of production, not just at year-end.</li>
+                <li><b>Analytical in nature</b> — Breaks total cost into its components (material, labour, overhead) and studies each element separately for control purposes.</li>
+                <li><b>Historical AND prospective</b> — Records actual past costs but also prepares budgets, standard costs and projections for future planning.</li>
+                <li><b>Uses both monetary and non-monetary data</b> — Tracks units of output, machine hours, labour hours and kg of material alongside rupee figures.</li>
+                <li><b>Primarily for internal use</b> — Designed to serve management at all levels; not intended for external stakeholders or statutory disclosure.</li>
+                <li><b>Cost per unit focus</b> — Unlike Financial Accounting which reports business-wide totals, Cost Accounting computes the cost of producing one unit of output.</li>
+              </ul>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 12px">Advantages of Cost Accounting</h3>
+              <table class="cmp">
+                <tr><th>Area</th><th>Advantage</th></tr>
+                <tr><td><b>Pricing</b></td><td>Provides the cost floor for setting selling prices; essential for tendering and government contract quotations</td></tr>
+                <tr><td><b>Control &amp; Efficiency</b></td><td>Identifies wasteful expenditure in materials, labour and overheads; reveals inefficient processes</td></tr>
+                <tr><td><b>Decision Making</b></td><td>Supports make-or-buy choices, product-line profitability analysis and capacity expansion decisions</td></tr>
+                <tr><td><b>Inventory Valuation</b></td><td>Accurately values closing stock and work-in-progress for Balance Sheet and profit calculation</td></tr>
+                <tr><td><b>Budgeting</b></td><td>Provides actual cost data needed to prepare realistic future budgets and standard cost targets</td></tr>
+                <tr><td><b>Wage Systems</b></td><td>Facilitates incentive wage schemes (piece rates, productivity bonuses) linked to measured output costs</td></tr>
+                <tr><td><b>Checking Financial Accounts</b></td><td>Reconciliation of costing profits with financial profits helps detect errors and omissions in both systems</td></tr>
+              </table>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 12px">Limitations of Cost Accounting</h3>
+              <ul>
+                <li><b>Expensive to install and operate</b> — Requires trained staff, elaborate records, specialised forms and additional administrative expenditure.</li>
+                <li><b>Lack of uniformity</b> — No single universally accepted system; different businesses adopt different methods, making inter-firm comparison difficult.</li>
+                <li><b>Based on estimates</b> — Many cost elements (overheads, depreciation, pre-determined rates) rely on assumptions rather than precise figures.</li>
+                <li><b>Results differ from Financial Accounts</b> — Different treatment of items like notional costs, opening/closing stock and non-cost items leads to different profit figures requiring reconciliation.</li>
+                <li><b>Not suitable for all businesses</b> — Very small or service businesses may find the cost of running the system exceeds the benefit it provides.</li>
+              </ul>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 12px">Steps for Installation of a Costing System</h3>
+              <ol>
+                <li><b>Study the organisation</b> — Understand its structure, size, products/services, production process and management information needs.</li>
+                <li><b>Define objectives clearly</b> — Specify whether the system is primarily for cost control, price fixation, budgeting or all three.</li>
+                <li><b>Select the appropriate costing method</b> — Choose Job Costing, Process Costing, Contract Costing, Batch Costing or another method suited to the business.</li>
+                <li><b>Design cost classification and codes</b> — Create a systematic numbering system for cost elements, cost centres and cost units.</li>
+                <li><b>Establish cost centres</b> — Define production cost centres (where goods are made) and service cost centres (which support production).</li>
+                <li><b>Create forms and records</b> — Design material requisitions, time sheets, overhead absorption sheets, cost ledgers and cost statements.</li>
+                <li><b>Train personnel</b> — Brief all relevant staff — from storekeeper to department supervisor — on the purpose, forms and procedures.</li>
+                <li><b>Introduce the system gradually</b> — Pilot in one section or department first; review, refine and then extend across the organisation.</li>
+              </ol>`},
+
+            {topicStart:"fa-vs-ca", title:"Financial Accounting vs Cost Accounting", icon:"⚖️",
+             desc:"Why both systems exist, who uses each, and an eleven-point comparison of their scope, purpose, legal status, data type and orientation."},
+
+            {h:"Difference between Financial Accounting and Cost Accounting",
+             kicker:"Unit 1 · Topic 2",
+             html:`
+              <p>Financial Accounting and Cost Accounting are complementary branches of the same discipline — but they serve fundamentally different purposes, audiences and time horizons. A manufacturing company needs <b>both</b>: Financial Accounting to report overall results to shareholders, creditors and the government; Cost Accounting to guide internal decisions about production, pricing, efficiency and control.</p>
+
+              <svg viewBox="0 0 700 140" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:16px 0" font-family="IBM Plex Sans,sans-serif">
+                <rect x="10" y="10" width="200" height="120" rx="10" fill="#e3eee6" stroke="#234f3b" stroke-width="1.5"/>
+                <text x="110" y="34" text-anchor="middle" font-size="12" font-weight="700" fill="#234f3b">FINANCIAL ACCOUNTING</text>
+                <text x="110" y="52" text-anchor="middle" font-size="10" fill="#3c4742">Records ALL transactions</text>
+                <text x="110" y="66" text-anchor="middle" font-size="10" fill="#3c4742">Reports: P&amp;L, Balance Sheet</text>
+                <text x="110" y="80" text-anchor="middle" font-size="10" fill="#3c4742">Users: Shareholders, Banks,</text>
+                <text x="110" y="93" text-anchor="middle" font-size="10" fill="#3c4742">Creditors, Tax Authorities</text>
+                <text x="110" y="110" text-anchor="middle" font-size="10" fill="#234f3b" font-weight="600">→ External reporting</text>
+                <rect x="250" y="50" width="200" height="40" rx="9" fill="#234f3b"/>
+                <text x="350" y="67" text-anchor="middle" font-size="11" font-weight="700" fill="#f4efe3">BUSINESS</text>
+                <text x="350" y="81" text-anchor="middle" font-size="10" fill="#e3eee6">Transactions &amp; Operations</text>
+                <line x1="210" y1="70" x2="250" y2="70" stroke="#234f3b" stroke-width="1.5" marker-end="url(#arr)"/>
+                <line x1="450" y1="70" x2="490" y2="70" stroke="#b6862c" stroke-width="1.5" marker-end="url(#arr2)"/>
+                <rect x="490" y="10" width="200" height="120" rx="10" fill="#f8f0db" stroke="#b6862c" stroke-width="1.5"/>
+                <text x="590" y="34" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6420">COST ACCOUNTING</text>
+                <text x="590" y="52" text-anchor="middle" font-size="10" fill="#3c4742">Analyses production costs</text>
+                <text x="590" y="66" text-anchor="middle" font-size="10" fill="#3c4742">Reports: Cost sheets, Variances</text>
+                <text x="590" y="80" text-anchor="middle" font-size="10" fill="#3c4742">Users: Management,</text>
+                <text x="590" y="93" text-anchor="middle" font-size="10" fill="#3c4742">Supervisors, Decision-makers</text>
+                <text x="590" y="110" text-anchor="middle" font-size="10" fill="#8a6420" font-weight="600">→ Internal reporting</text>
+                <defs>
+                  <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#234f3b"/></marker>
+                  <marker id="arr2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#b6862c"/></marker>
+                </defs>
+              </svg>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 12px">Detailed Comparison</h3>
+              <table class="cmp">
+                <tr><th>Basis</th><th>Financial Accounting</th><th>Cost Accounting</th></tr>
+                <tr><td><b>Primary Purpose</b></td><td>Record overall financial performance; prepare Profit &amp; Loss Account and Balance Sheet</td><td>Ascertain, control and reduce costs; provide data for internal management decisions</td></tr>
+                <tr><td><b>Primary Users</b></td><td>External stakeholders — shareholders, creditors, banks, government, tax authorities</td><td>Internal management — directors, department heads, supervisors and decision-makers</td></tr>
+                <tr><td><b>Legal Requirement</b></td><td>Compulsory under the Companies Act 2013 for all registered companies</td><td>Voluntary; not legally mandated (though strongly advisable for manufacturing firms)</td></tr>
+                <tr><td><b>Frequency</b></td><td>Typically once a year — annual accounts</td><td>Continuous and frequent — daily, weekly, monthly cost reports as required</td></tr>
+                <tr><td><b>Scope of Coverage</b></td><td>All business transactions — trading, financing and investing activities of the whole entity</td><td>Production and operating activities only; focuses on the cost of goods made and sold</td></tr>
+                <tr><td><b>Level of Detail</b></td><td>Aggregate — shows totals for the business as a whole; no per-unit breakdown</td><td>Granular — shows cost per unit, per department, per process, per batch or per order</td></tr>
+                <tr><td><b>Stock Valuation</b></td><td>Lower of cost or net realisable value (Conservatism principle)</td><td>At cost only — direct material + direct labour + direct overheads</td></tr>
+                <tr><td><b>Nature of Data</b></td><td>Monetary data only (rupee figures)</td><td>Both monetary and non-monetary (units, hours, kg, machine time)</td></tr>
+                <tr><td><b>Time Orientation</b></td><td>Historical — records what happened in the past accounting period</td><td>Historical AND prospective — records past costs AND prepares budgets and standard costs for the future</td></tr>
+                <tr><td><b>Statutory Audit</b></td><td>Mandatory statutory audit by a Chartered Accountant</td><td>No statutory audit requirement; internal cost audit is optional</td></tr>
+                <tr><td><b>Profit Measurement</b></td><td>Overall profit or loss for the entire business entity</td><td>Profitability of individual products, jobs, departments, processes or contracts</td></tr>
+              </table>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 12px">The Relationship Between the Two Systems</h3>
+              <p>The two systems are <b>complementary, not competing</b>. Both are essential for a complete financial picture. Their relationship is confirmed by regular <b>reconciliation</b> — any difference between the profit reported by Cost Accounting and the profit in Financial Accounts is explained by:</p>
+              <ul>
+                <li>Differences in opening and closing stock valuation methods</li>
+                <li>Notional costs included in Cost Accounts but excluded from Financial Accounts (e.g. notional rent, notional interest)</li>
+                <li>Non-cost items in Financial Accounts excluded from Cost Accounts (e.g. dividends received, interest on investments, donations)</li>
+                <li>Different treatment of depreciation rates or methods</li>
+              </ul>
+              <p>A well-managed business reconciles both sets of figures regularly to maintain accuracy and consistency across its reporting systems.</p>`},
+
+            {topicStart:"cost-concepts", title:"Cost Concepts — Cost Unit, Cost Centre", icon:"🏭",
+             desc:"Definitions of Cost Unit and Cost Centre; industry examples of cost units; four types of cost centres; and the key distinction between the two concepts."},
+
+            {h:"Cost Concepts — Cost Unit and Cost Centre",
+             kicker:"Unit 1 · Topic 3",
+             html:`
+              <p>Before a costing system can function, two fundamental building blocks must be defined: <b>what</b> are you costing (the Cost Unit) and <b>where</b> are you collecting costs against (the Cost Centre). Every cost accounting system is built around these two concepts.</p>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 12px">Cost Unit</h3>
+              <div style="background:#e3eee6;border-left:4px solid var(--green-deep);padding:13px 16px;border-radius:8px;margin-bottom:16px">
+                <b style="color:var(--green-deep)">Definition:</b> A Cost Unit is a unit of product, service or time in relation to which costs are ascertained or expressed. It is the basic measure of output for which cost per unit is calculated. The choice of cost unit depends on the nature of the business and what is most practical and meaningful in that industry.
+              </div>
+
+              <table class="cmp">
+                <tr><th>Industry / Business</th><th>Cost Unit Used</th></tr>
+                <tr><td>Brick manufacturing</td><td>Per 1,000 bricks</td></tr>
+                <tr><td>Steel / Cement / Coal</td><td>Per tonne</td></tr>
+                <tr><td>Electricity generation</td><td>Per kilowatt hour (kWh)</td></tr>
+                <tr><td>Hospital</td><td>Per patient day / per bed per day</td></tr>
+                <tr><td>Hotel</td><td>Per room per night</td></tr>
+                <tr><td>Road / Rail transport</td><td>Per passenger-kilometre or per tonne-kilometre</td></tr>
+                <tr><td>Printing press</td><td>Per 1,000 impressions or per ream</td></tr>
+                <tr><td>Automobile manufacturer</td><td>Per vehicle</td></tr>
+                <tr><td>Textile / Weaving</td><td>Per metre of cloth</td></tr>
+                <tr><td>Sugar mill</td><td>Per quintal of sugar</td></tr>
+                <tr><td>Chemical plant</td><td>Per litre or per kg of chemical</td></tr>
+                <tr><td>Advertising agency</td><td>Per campaign or per client</td></tr>
+              </table>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 12px">Cost Centre</h3>
+              <div style="background:#f8f0db;border-left:4px solid #b6862c;padding:13px 16px;border-radius:8px;margin-bottom:16px">
+                <b style="color:#8a6420">Definition:</b> A Cost Centre is a location, person, or item of equipment (or a group of these) for which costs may be ascertained and used for the purpose of cost control. It is the smallest organisational unit for which cost data is collected separately — an accountability point where costs accumulate before being charged to products or services.
+              </div>
+
+              <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:8px 0 16px" font-family="IBM Plex Sans,sans-serif">
+                <rect x="260" y="8" width="180" height="36" rx="9" fill="#234f3b"/>
+                <text x="350" y="30" text-anchor="middle" font-size="13" font-weight="700" fill="#f4efe3">COST CENTRES</text>
+                <line x1="350" y1="44" x2="175" y2="80" stroke="#234f3b" stroke-width="1.5"/>
+                <line x1="350" y1="44" x2="525" y2="80" stroke="#b6862c" stroke-width="1.5"/>
+                <rect x="60" y="80" width="230" height="34" rx="8" fill="#2f6b4f"/>
+                <text x="175" y="101" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">By Person / Location</text>
+                <rect x="410" y="80" width="230" height="34" rx="8" fill="#b6862c"/>
+                <text x="525" y="101" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">By Function</text>
+                <line x1="120" y1="114" x2="120" y2="148" stroke="#2f6b4f" stroke-width="1.5"/>
+                <line x1="230" y1="114" x2="230" y2="148" stroke="#2f6b4f" stroke-width="1.5"/>
+                <line x1="470" y1="114" x2="470" y2="148" stroke="#b6862c" stroke-width="1.5"/>
+                <line x1="580" y1="114" x2="580" y2="148" stroke="#b6862c" stroke-width="1.5"/>
+                <rect x="40" y="148" width="160" height="52" rx="8" fill="#e3eee6" stroke="#2f6b4f"/>
+                <text x="120" y="168" text-anchor="middle" font-size="11" font-weight="700" fill="#234f3b">Personal</text>
+                <text x="120" y="184" text-anchor="middle" font-size="9.5" fill="#3c4742">Relates to a person</text>
+                <text x="120" y="196" text-anchor="middle" font-size="9.5" fill="#3c4742">e.g. Foreman's section</text>
+                <rect x="150" y="148" width="160" height="52" rx="8" fill="#e3eee6" stroke="#2f6b4f"/>
+                <text x="230" y="168" text-anchor="middle" font-size="11" font-weight="700" fill="#234f3b">Impersonal</text>
+                <text x="230" y="184" text-anchor="middle" font-size="9.5" fill="#3c4742">Location or machine</text>
+                <text x="230" y="196" text-anchor="middle" font-size="9.5" fill="#3c4742">e.g. Boiler house, Machine 5</text>
+                <rect x="390" y="148" width="160" height="52" rx="8" fill="#f8f0db" stroke="#b6862c"/>
+                <text x="470" y="168" text-anchor="middle" font-size="11" font-weight="700" fill="#8a6420">Production</text>
+                <text x="470" y="184" text-anchor="middle" font-size="9.5" fill="#3c4742">Where goods are made</text>
+                <text x="470" y="196" text-anchor="middle" font-size="9.5" fill="#3c4742">e.g. Machining shop</text>
+                <rect x="500" y="148" width="160" height="52" rx="8" fill="#f8f0db" stroke="#b6862c"/>
+                <text x="580" y="168" text-anchor="middle" font-size="11" font-weight="700" fill="#8a6420">Service</text>
+                <text x="580" y="184" text-anchor="middle" font-size="9.5" fill="#3c4742">Supports production</text>
+                <text x="580" y="196" text-anchor="middle" font-size="9.5" fill="#3c4742">e.g. Canteen, Maintenance</text>
+              </svg>
+
+              <table class="cmp">
+                <tr><th>Type</th><th>Basis</th><th>Description</th><th>Examples</th></tr>
+                <tr><td><b>Personal Cost Centre</b></td><td>Person</td><td>Relates to a person or group of persons responsible for a cost area</td><td>A foreman supervising the welding section; the Production Manager's department</td></tr>
+                <tr><td><b>Impersonal Cost Centre</b></td><td>Location / Equipment</td><td>Relates to a physical location or item of equipment — not tied to a specific person</td><td>Boiler house, Machine No. 3, Stores department, Paint shop</td></tr>
+                <tr><td><b>Production Cost Centre</b></td><td>Function</td><td>Where actual manufacturing, processing or assembly of the product takes place; directly adds value</td><td>Machining shop, Assembly line, Pressing department, Welding bay</td></tr>
+                <tr><td><b>Service Cost Centre</b></td><td>Function</td><td>Provides support services to production centres; costs are eventually absorbed into products via allocation</td><td>Canteen, Maintenance department, Power house, Transport, Quality control lab</td></tr>
+              </table>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 12px">Key Distinction — Cost Unit vs Cost Centre</h3>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px">
+                <div style="background:#e3eee6;padding:14px 16px;border-radius:8px;border-top:3px solid var(--green-deep)">
+                  <b style="color:var(--green-deep);font-size:13px">COST CENTRE</b><br>
+                  <span style="font-size:13px">The <i>location or activity</i> against which costs are <b>collected</b>. Answers: "Where is this cost being incurred?"</span><br>
+                  <span style="font-size:12px;color:#3c4742;margin-top:6px;display:block">Example in a cement factory: the Kiln Department</span>
+                </div>
+                <div style="background:#f8f0db;padding:14px 16px;border-radius:8px;border-top:3px solid #b6862c">
+                  <b style="color:#8a6420;font-size:13px">COST UNIT</b><br>
+                  <span style="font-size:13px">The <i>unit of output</i> for which cost is <b>calculated</b>. Answers: "What is the cost of producing one of these?"</span><br>
+                  <span style="font-size:12px;color:#3c4742;margin-top:6px;display:block">Example in a cement factory: one tonne of cement</span>
+                </div>
+              </div>
+              <p style="margin-top:14px">Costs are first collected against <b>Cost Centres</b>, then divided by the number of <b>Cost Units</b> produced to arrive at the <b>cost per unit</b> — the fundamental output of any costing system.</p>`}
+
+          ],
+          sets:[
+            {label:"Set 1 — Foundation", mix:"15/9/6", questions:[
+
+              /* ── 15 EASY ── */
+              {type:"standard",diff:"E",
+               q:"Cost Accounting is primarily designed to serve:",
+               options:["External shareholders and creditors","Government tax authorities","Internal management at all levels","The general public"],
+               answer:2,
+               explain:"Cost Accounting is an internal management tool. Its reports — cost sheets, variance analyses, departmental cost summaries — are produced for management to control costs, fix prices and make decisions. External users are served by Financial Accounting.",
+               optionExplains:["External shareholders are served by Financial Accounting, not Cost Accounting.","Tax authorities use financial accounts and tax returns — not cost accounting reports.","Correct. Cost Accounting is designed for internal management use at all levels.","General public disclosure is the domain of published financial statements, not cost accounts."]},
+
+              {type:"standard",diff:"E",
+               q:"Which of the following BEST defines 'Costing'?",
+               options:["The process of preparing a Profit and Loss Account","The technique and process of ascertaining costs","The system of recording all business transactions","The method of preparing the Balance Sheet"],
+               answer:1,
+               explain:"Costing refers specifically to the technique and process of ascertaining (finding out) the cost of a product, job, service or process. It is the methodology; Cost Accounting is the broader system that includes recording, classifying and interpreting costs.",
+               optionExplains:["Preparing a P&L Account is part of Financial Accounting, not Costing.","Correct. Costing = technique and process of ascertaining costs.","Recording all business transactions is bookkeeping / Financial Accounting.","Preparing a Balance Sheet is a Financial Accounting function."]},
+
+              {type:"standard",diff:"E",
+               q:"Which of the following is NOT an objective of Cost Accounting?",
+               options:["Ascertainment of cost per unit","Preparation of statutory financial statements","Cost control and cost reduction","Fixation of selling price"],
+               answer:1,
+               explain:"Preparation of statutory financial statements (P&L Account, Balance Sheet) is the objective of Financial Accounting, not Cost Accounting. Cost Accounting is primarily an internal management tool focused on cost ascertainment, control, reduction and decision support.",
+               optionExplains:["Cost ascertainment is a primary objective of Cost Accounting.","Correct. Statutory financial statements are produced by Financial Accounting, not Cost Accounting.","Cost control and reduction are core objectives of Cost Accounting.","Fixing selling prices using cost data is a key objective of Cost Accounting."]},
+
+              {type:"standard",diff:"E",
+               q:"The definition 'the process of accounting for cost from the point at which expenditure is incurred to its relationship with cost centres and cost units' was given by:",
+               options:["ICAI (Institute of Chartered Accountants of India)","CIMA (Chartered Institute of Management Accountants)","ASB (Accounting Standards Board)","Companies Act, 2013"],
+               answer:1,
+               explain:"This is CIMA's (Chartered Institute of Management Accountants) official definition of Cost Accounting, widely used in textbooks and professional accounting courses.",
+               optionExplains:["ICAI issues Financial Accounting and Auditing standards — not this specific definition of Cost Accounting.","Correct. CIMA's definition of Cost Accounting is the most widely accepted one.","ASB is responsible for issuing Accounting Standards for Financial Accounting.","The Companies Act governs company law and financial reporting requirements."]},
+
+              {type:"standard",diff:"E",
+               q:"Financial Accounting is legally compulsory under:",
+               options:["Cost Accounting Records Rules","Companies Act 2013","Income Tax Act 1961","CIMA Guidelines"],
+               answer:1,
+               explain:"Financial Accounting and the preparation of financial statements is mandatory for all registered companies under the Companies Act 2013. Cost Accounting, by contrast, is generally voluntary (though Cost Audit may be mandated in some industries).",
+               optionExplains:["Cost Accounting Records Rules relate to Cost Audit for specific industries, not routine Financial Accounting.","Correct. The Companies Act 2013 mandates Financial Accounting and statutory audit for companies.","The Income Tax Act governs taxation, not the requirement to maintain Financial Accounts.","CIMA is a professional body — it does not create legal mandates for Indian companies."]},
+
+              {type:"standard",diff:"E",
+               q:"Which of the following is the cost unit used in the electricity generation industry?",
+               options:["Per tonne","Per kilowatt hour (kWh)","Per passenger-kilometre","Per room per night"],
+               answer:1,
+               explain:"In electricity generation, costs are calculated and expressed per kilowatt hour (kWh) — the standard unit of electrical energy. Different industries use different cost units appropriate to their type of output.",
+               optionExplains:["Per tonne is used for steel, cement and coal — not electricity.","Correct. Per kilowatt hour (kWh) is the cost unit for electricity generation.","Per passenger-kilometre is the cost unit for transport (road/rail).","Per room per night is the cost unit for hotels."]},
+
+              {type:"standard",diff:"E",
+               q:"A Cost Centre is defined as:",
+               options:["A unit of product for which cost is calculated","A location, person or equipment for which costs are ascertained for cost control","The total cost of production for a period","The profit earned by a department"],
+               answer:1,
+               explain:"A Cost Centre is a location, person or item of equipment (or group of these) for which costs may be ascertained and used for cost control. It is an accountability point where costs are collected before being charged to products.",
+               optionExplains:["A unit of product for which cost is calculated is a Cost UNIT, not a Cost Centre.","Correct. A Cost Centre is a location/person/equipment where costs are collected for control purposes.","Total production cost is a figure, not a cost centre.","Profit earned by a department is a Profit Centre concept, not a Cost Centre."]},
+
+              {type:"standard",diff:"E",
+               q:"The machining shop in a factory where products are manufactured is an example of a:",
+               options:["Service cost centre","Personal cost centre","Production cost centre","Impersonal profit centre"],
+               answer:2,
+               explain:"A Production Cost Centre is where actual manufacturing, processing or assembly takes place — where value is directly added to the product. The machining shop, assembly line and pressing department are classic examples.",
+               optionExplains:["Service cost centres provide support (maintenance, canteen) — they don't directly make products.","Personal cost centres relate to a person responsible for costs — machining shop is a location, not a person.","Correct. The machining shop is a Production Cost Centre — where goods are directly manufactured.","Impersonal profit centre is not a standard cost accounting classification."]},
+
+              {type:"standard",diff:"E",
+               q:"The canteen department of a factory is an example of a:",
+               options:["Production cost centre","Personal cost centre","Service cost centre","Profit centre"],
+               answer:2,
+               explain:"A Service Cost Centre provides support services to production centres — it does not directly manufacture anything. The canteen, maintenance department, power house and stores are service cost centres whose costs are eventually absorbed into products via overhead allocation.",
+               optionExplains:["Production centres directly make goods — the canteen does not.","Personal cost centres relate to a named person responsible for costs — canteen is a location.","Correct. Canteen is a Service Cost Centre — it supports production but does not directly produce goods.","A profit centre generates revenue; a canteen is a cost centre."]},
+
+              {type:"standard",diff:"E",
+               q:"Which of the following is an ADVANTAGE of Cost Accounting?",
+               options:["It eliminates the need for Financial Accounting","It provides data for fixing selling prices","It is inexpensive to install and operate","It requires no trained staff"],
+               answer:1,
+               explain:"One key advantage of Cost Accounting is that it provides the cost data needed to fix appropriate selling prices — covering all costs and generating the required profit margin. This is essential for tendering, quotations and pricing decisions.",
+               optionExplains:["Cost Accounting does not replace Financial Accounting — both are needed.","Correct. Cost Accounting provides cost-based data for pricing, tenders and quotations.","Cost Accounting is generally expensive to install — this is a limitation, not an advantage.","Trained staff are indeed required — this is another limitation of Cost Accounting."]},
+
+              {type:"standard",diff:"E",
+               q:"Which of the following is a LIMITATION of Cost Accounting?",
+               options:["It helps in cost control","It assists in decision-making","Results may differ from Financial Accounting profit figures","It provides data for wage incentive schemes"],
+               answer:2,
+               explain:"A key limitation is that Cost Accounting profit may differ from Financial Accounting profit due to different treatment of opening/closing stock, notional costs and non-cost items. This requires reconciliation and can cause confusion.",
+               optionExplains:["Helping in cost control is an advantage, not a limitation.","Assisting decision-making is an advantage.","Correct. Different profit figures from Cost and Financial Accounting is a limitation requiring reconciliation.","Providing wage incentive data is an advantage."]},
+
+              {type:"standard",diff:"E",
+               q:"Cost Accounting covers which aspect of a business's activities?",
+               options:["All business transactions including financing and investing","Only production and operating activities","Only financing activities (loans, share capital)","Only the Balance Sheet items"],
+               answer:1,
+               explain:"Cost Accounting focuses on production and operating activities — the cost of manufacturing goods, running processes and delivering services. It does not cover financing activities (borrowings, share issues) or investment activities, which are dealt with in Financial Accounting.",
+               optionExplains:["All transactions (financing, investing, operating) are covered by Financial Accounting, not Cost Accounting.","Correct. Cost Accounting focuses on production and operating costs only.","Financing activities are outside the scope of Cost Accounting.","Balance Sheet items are produced by Financial Accounting."]},
+
+              {type:"standard",diff:"E",
+               q:"In a factory with a Foreman's section, the Cost Centre that relates to a person responsible for that section is called:",
+               options:["Production Cost Centre","Service Cost Centre","Personal Cost Centre","Impersonal Cost Centre"],
+               answer:2,
+               explain:"A Personal Cost Centre relates to a specific person or group of persons responsible for a cost area — such as a foreman's section or a department manager's area of responsibility. This allows cost responsibility to be linked to an individual.",
+               optionExplains:["Production Cost Centres relate to manufacturing locations, not specifically to named persons.","Service Cost Centres are functional support centres, not person-based.","Correct. Personal Cost Centres are person-based — linked to an individual responsible for costs.","Impersonal Cost Centres relate to locations or equipment, not persons."]},
+
+              {type:"standard",diff:"E",
+               q:"For a cement manufacturing company, the appropriate cost unit would be:",
+               options:["Per kilowatt hour","Per patient day","Per tonne of cement","Per 1,000 bricks"],
+               answer:2,
+               explain:"In the cement industry, costs are measured and expressed per tonne of cement produced. The cost unit must be practical, meaningful and commonly used in the industry — tonne is the universal measure for bulk materials like cement, steel and coal.",
+               optionExplains:["Per kilowatt hour is the electricity industry cost unit.","Per patient day is the hospital industry cost unit.","Correct. Per tonne is the standard cost unit for cement (and other bulk materials).","Per 1,000 bricks is the brick manufacturing cost unit."]},
+
+              {type:"standard",diff:"E",
+               q:"The boiler house of a factory (which generates steam for the production process) is an example of a:",
+               options:["Personal Cost Centre","Production Cost Centre","Service Cost Centre that is also an Impersonal Cost Centre","Cost Unit"],
+               answer:2,
+               explain:"The boiler house is both a Service Cost Centre (it provides steam to production departments — it does not directly make the product) AND an Impersonal Cost Centre (it relates to a physical location/equipment, not to a specific named person).",
+               optionExplains:["Personal Cost Centres relate to persons — the boiler house is a location/equipment.","Production centres directly manufacture goods — the boiler house supports production but does not produce the final product.","Correct. Boiler house = Service (supports production) + Impersonal (location/equipment-based).","A Cost Unit is the unit of output (e.g. per tonne) — the boiler house is a Cost Centre."]},
+
+              /* ── 9 MODERATE ── */
+              {type:"standard",diff:"M",
+               q:"A factory has the following departments: (i) Assembly line (ii) Quality testing lab (iii) Canteen (iv) Power house. Which combination correctly classifies them as Production and Service Cost Centres?",
+               options:["Production: (i) and (ii); Service: (iii) and (iv)","Production: (i) only; Service: (ii), (iii) and (iv)","Production: (i), (ii) and (iii); Service: (iv) only","Production: (i), (iii) and (iv); Service: (ii) only"],
+               answer:1,
+               explain:"The Assembly Line directly manufactures the product — it is a Production Cost Centre. Quality testing, canteen and power house all SUPPORT production without directly making the product — they are Service Cost Centres. Note: Quality testing (while important) does not directly add value to the product; it supports the production process.",
+               optionExplains:["Quality testing is a Service Centre (support function), not Production.","Correct. Assembly line = Production. Quality lab, canteen and power house = Service.","Canteen and quality testing are service functions, not production.","Power house is a Service Centre; assembly line is Production."]},
+
+              {type:"standard",diff:"M",
+               q:"Which step comes FIRST in the installation of a costing system?",
+               options:["Designing cost forms and records","Training the personnel","Studying the organisation's structure, products and production process","Establishing cost centres"],
+               answer:2,
+               explain:"The very first step must be to thoroughly study the organisation — its structure, size, products, production process, management needs and objectives. Without understanding the business, it is impossible to design an appropriate costing method or establish meaningful cost centres.",
+               optionExplains:["Designing forms comes after the method is selected and cost centres are established — not first.","Training staff comes near the end — after the system is designed and ready to implement.","Correct. Studying the organisation is always the first step — you cannot design a system without understanding the business.","Establishing cost centres comes after the costing method is selected, not as the first step."]},
+
+              {type:"standard",diff:"M",
+               q:"The profit shown by Cost Accounts differs from the profit shown by Financial Accounts. The MAIN reason for this difference is:",
+               options:["Cost Accounting ignores all expenses","Financial Accounting is prepared on Cash Basis","Different treatment of items like stock valuation, notional costs and non-cost items","Cost Accounting always shows higher profit than Financial Accounting"],
+               answer:2,
+               explain:"The difference between Cost Accounting profit and Financial Accounting profit arises from: (a) different opening/closing stock valuation methods; (b) notional costs included in Cost Accounts but not in Financial Accounts; (c) non-cost items (dividends received, donations) in Financial Accounts but excluded from Cost Accounts; (d) different depreciation rates/methods.",
+               optionExplains:["Cost Accounting does not ignore expenses — it records all production-related costs.","Financial Accounting uses Accrual Basis, not Cash Basis (for companies).","Correct. The difference stems from different treatment of stock, notional costs and non-cost items.","Cost Accounting profit can be higher or lower than Financial profit — there is no fixed direction."]},
+
+              {type:"standard",diff:"M",
+               q:"A hotel charges costs per room per night. In Cost Accounting terms, 'per room per night' is the hotel's:",
+               options:["Cost Centre","Cost of Production","Cost Unit","Variable Cost"],
+               answer:2,
+               explain:"'Per room per night' is the Cost Unit for the hotel — the unit of service in relation to which costs are ascertained and expressed. The hotel's departments (housekeeping, front desk, kitchen) would be its Cost Centres.",
+               optionExplains:["Cost Centre is the location (e.g., housekeeping department) — not the unit of measurement.","Cost of Production is a total figure, not the unit measurement basis.","Correct. Per room per night = the Cost Unit for a hotel — the unit of service output.","Variable Cost is a cost behaviour classification, not a measurement unit."]},
+
+              {type:"assertion",diff:"M",
+               assertion:"Cost Accounting is mandatory for all companies registered under the Companies Act 2013.",
+               reason:"Companies Act 2013 requires companies to maintain books of account and prepare financial statements.",
+               options:["Both A and R are true and R correctly explains A","Both A and R are true but R does NOT explain A","A is false but R is true","Both A and R are false"],
+               answer:2,
+               explain:"R is TRUE — Companies Act 2013 does require companies to maintain books of account and prepare financial statements. A is FALSE — the mandatory requirement is for FINANCIAL Accounting, not Cost Accounting. Cost Accounting is generally voluntary (Cost Audit may be mandated for specific industries under the Companies Act, but this is not universal).",
+               optionExplains:["A is false — Cost Accounting is not universally mandatory under the Companies Act.","A is still false.","Correct. R is true (CA 2013 mandates financial statements); A is false (Cost Accounting is voluntary).","R is true — CA 2013 does require books of account."]},
+
+              {type:"matching",diff:"M",
+               q:"Match each industry to its correct cost unit:",
+               columnA:["(i) Brick manufacturing","(ii) Road transport","(iii) Hospital","(iv) Textile mill"],
+               columnB:["(a) Per patient day","(b) Per passenger-kilometre or per tonne-km","(c) Per 1,000 bricks","(d) Per metre of cloth"],
+               options:["i-c, ii-b, iii-a, iv-d","i-a, ii-c, iii-b, iv-d","i-d, ii-a, iii-c, iv-b","i-c, ii-a, iii-d, iv-b"],
+               answer:0,
+               explain:"Brick manufacturing → per 1,000 bricks (c). Road transport → per passenger-km or tonne-km (b). Hospital → per patient day (a). Textile → per metre of cloth (d). Each industry's cost unit reflects its primary unit of output.",
+               optionExplains:["Correct. Bricks-c, Transport-b, Hospital-a, Textile-d — each matches industry practice.","Wrong: Hospital is not per passenger-km; that is transport.","Wrong: Textile is not measured per patient day.","Wrong: Transport is not per 1,000 bricks."]},
+
+              {type:"standard",diff:"M",
+               q:"Which of the following BEST explains why Cost Accounting uses non-monetary data in addition to monetary data?",
+               options:["Because Financial Accounting is more reliable for monetary data","To measure efficiency and productivity in physical terms — e.g. output per hour, kg of material used per unit","To replace monetary information with physical information","Because non-monetary data is required by the Companies Act"],
+               answer:1,
+               explain:"Cost Accounting uses non-monetary data (units, hours, kg) alongside monetary figures because efficiency and productivity are best measured in physical terms. Knowing that 10 kg of material was used per unit produced (not just its rupee cost) allows comparisons across periods, even when prices change.",
+               optionExplains:["Financial Accounting reliability is not the reason — both systems have their own purpose.","Correct. Non-monetary data enables physical measurement of efficiency, independent of price fluctuations.","Non-monetary data supplements, not replaces, monetary information.","Companies Act does not mandate non-monetary data collection in Cost Accounts."]},
+
+              {type:"standard",diff:"M",
+               q:"The objective of Cost Accounting that involves comparing actual expenditure with budgeted or standard expenditure and investigating differences is:",
+               options:["Cost Ascertainment","Cost Reduction","Cost Control","Decision Making"],
+               answer:2,
+               explain:"Cost Control involves setting pre-determined targets (budgets or standards) and comparing actual costs against them. When actual costs exceed the target, a variance arises which is investigated and corrective action is taken. Cost Reduction goes further — it permanently lowers the cost base, not just monitors it.",
+               optionExplains:["Cost Ascertainment is finding out what the cost IS — not comparing against a target.","Cost Reduction is permanently lowering costs — a step beyond monitoring.","Correct. Cost Control = compare actual vs standard/budget, investigate variances, take corrective action.","Decision Making uses cost data to make choices, not specifically the budget vs actual comparison."]},
+
+              {type:"standard",diff:"M",
+               q:"Which of the following is a feature that DISTINGUISHES Cost Accounting from Financial Accounting in terms of reporting frequency?",
+               options:["Cost Accounting reports only annually like Financial Accounting","Cost Accounting provides continuous, frequent reports (daily/weekly/monthly) as required by management","Cost Accounting reports are prepared only at the end of each quarter","Cost Accounting and Financial Accounting have the same reporting frequency"],
+               answer:1,
+               explain:"Unlike Financial Accounting which is typically an annual exercise, Cost Accounting provides continuous, frequent reports — daily output costs, weekly material usage, monthly departmental cost summaries — whenever management needs them for control and decision-making.",
+               optionExplains:["Cost Accounting is not limited to annual reports — it is continuous.","Correct. Cost Accounting produces reports as frequently as management requires — daily to monthly.","Quarterly is more frequent than Financial Accounting but still not the correct description.","They have different frequencies — FA is annual; CA is continuous."]},
+
+              /* ── 6 VERY HARD ── */
+              {type:"assertion",diff:"VH",
+               assertion:"Cost Accounting covers all business transactions including financing (loans, share capital) and investing activities, just like Financial Accounting.",
+               reason:"Both Cost Accounting and Financial Accounting are branches of accounting and therefore have the same scope.",
+               options:["Both A and R are true and R correctly explains A","Both A and R are true but R does NOT explain A","A is false but R is true","Both A and R are false"],
+               answer:3,
+               explain:"BOTH are FALSE. A is false — Cost Accounting covers only production and operating activities. It does NOT cover financing activities (loans, debentures, share capital) or investing activities. These are recorded only in Financial Accounting. R is also false — although both are branches of accounting, they have fundamentally different scopes; being branches of the same discipline does not mean identical scope.",
+               optionExplains:["Both A and R are false — Cost Accounting's scope is narrower.","Both are false.","A is also false, not just R.","Correct. A is false (Cost Accounting has narrower scope); R is false (same branch ≠ same scope)."]},
+
+              {type:"case",diff:"VH",
+               passage:"Sunrise Cement Ltd. has the following departments and units: (i) Kiln Department where limestone is processed into clinker; (ii) Grinding Mill where clinker is ground into cement powder; (iii) Quality Control Lab that tests every batch; (iv) Canteen serving 500 workers; (v) Power House generating electricity for all departments. The company produces cement in bags of 50 kg each.",
+               q:"Which option correctly identifies the Cost Unit AND correctly classifies ALL five departments?",
+               options:["Cost Unit: per 50-kg bag; Production: (i)(ii); Service: (iii)(iv)(v)","Cost Unit: per tonne; Production: (i)(ii)(iii); Service: (iv)(v)","Cost Unit: per 50-kg bag; Production: (i)(ii)(iii)(iv); Service: (v)","Cost Unit: per tonne; Production: (i)(ii); Service: (iii)(iv)(v)"],
+               answer:3,
+               explain:"Cost Unit for cement = per tonne (the standard industry measure, not per bag). Production Cost Centres = Kiln (i) and Grinding Mill (ii) — both directly transform raw material into the product. Service Cost Centres = Quality Control Lab (iii), Canteen (iv) and Power House (v) — all support production without directly adding to the product. Quality control, while vital, is a support function.",
+               optionExplains:["Per 50-kg bag is not the standard cost unit; per tonne is. Also QC lab is Service not Production.","Per tonne is correct but QC lab should be Service, not Production.","Per 50-kg bag is incorrect; QC lab and canteen are Service, not Production.","Correct. Cost Unit = per tonne; Production = Kiln + Grinding Mill; Service = QC Lab + Canteen + Power House."]},
+
+              {type:"matching",diff:"VH",
+               q:"Match each objective of Cost Accounting to its correct practical application:",
+               columnA:["(i) Cost Ascertainment","(ii) Cost Control","(iii) Decision Making","(iv) Inventory Valuation"],
+               columnB:["(a) Comparing actual material cost per unit with the standard rate of ₹50/kg and investigating why actual was ₹58/kg","(b) Calculating whether it is cheaper to manufacture a component internally or buy it from an outside supplier","(c) Determining that the cost of producing one refrigerator is ₹12,500","(d) Computing the value of 200 units of finished goods at ₹12,500 each for the Balance Sheet"],
+               options:["i-c, ii-a, iii-b, iv-d","i-a, ii-c, iii-d, iv-b","i-d, ii-b, iii-a, iv-c","i-c, ii-b, iii-a, iv-d"],
+               answer:0,
+               explain:"Cost Ascertainment (i) = finding the cost per unit — ₹12,500 per refrigerator (c). Cost Control (ii) = comparing actual vs standard and investigating variances — ₹58 vs ₹50/kg (a). Decision Making (iii) = make-or-buy analysis (b). Inventory Valuation (iv) = computing stock value for Balance Sheet using cost per unit (d).",
+               optionExplains:["Correct. Each objective maps precisely to its practical application.","Wrong — Ascertainment is not about variance analysis; Control is not per-unit costing.","Wrong — Inventory Valuation is not about make-or-buy; Decision Making is not about variances.","Wrong — Cost Control in option D is about make-or-buy, which is Decision Making."]},
+
+              {type:"assertion",diff:"VH",
+               assertion:"In Cost Accounting, the profit earned by a business will always be higher than the profit shown in Financial Accounting for the same period.",
+               reason:"Cost Accounting excludes non-cost items like dividend income and donation expenses that reduce profit in Financial Accounting.",
+               options:["Both A and R are true and R correctly explains A","Both A and R are true but R does NOT explain A","A is false but R is true","Both A and R are false"],
+               answer:2,
+               explain:"R is TRUE — Cost Accounting does exclude non-cost items. Dividend income (not a production cost revenue) and donations (not a production cost) are kept out of Cost Accounts. A is FALSE — excluding non-cost income (like dividends) would actually LOWER cost accounting profit relative to financial profit, not raise it. The direction of the difference depends on the specific items: if notional costs are large, Cost Accounting profit would be LOWER. There is no fixed rule that Cost Accounting profit is always higher.",
+               optionExplains:["A is false — no fixed direction; R is partially true but does not correctly validate A.","A is false regardless.","Correct. R is true (non-cost items are excluded); A is false (no rule that CA profit > FA profit always).","R is true — non-cost items are excluded from Cost Accounts."]},
+
+              {type:"case",diff:"VH",
+               passage:"Precision Tools Ltd. is setting up a new costing system. The Finance Manager lists the following steps in random order: (P) Train all departmental supervisors on filling in time sheets and material requisitions. (Q) Decide that Process Costing is most appropriate for the continuous production of steel washers. (R) Study the factory layout, product range and production flow. (S) Establish the machining department, grinding department and maintenance department as cost centres. (T) Design the material requisition forms, job cards and cost ledger.",
+               q:"Which sequence CORRECTLY represents the order in which a costing system should be installed?",
+               options:["P → Q → R → S → T","R → Q → S → T → P","Q → R → S → P → T","R → S → Q → T → P"],
+               answer:1,
+               explain:"Correct sequence: (R) Study the organisation FIRST → (Q) Select the costing method (Process Costing for continuous production) → (S) Establish Cost Centres (machining, grinding, maintenance) → (T) Design forms and records → (P) Train personnel last. This mirrors the 8-step installation process: understand, decide method, set up cost centres, create records, then train.",
+               optionExplains:["Training (P) cannot come before understanding the business (R) and designing the system.","Correct. R (study) → Q (select method) → S (set up cost centres) → T (design forms) → P (train staff).","Selecting a method (Q) before studying the organisation (R) is premature.","(R → S → Q → T → P) places cost centre establishment before method selection — method should be chosen first."]}
+
+            ,
+
+              {type:"assertion",diff:"VH",
+               assertion:"A Cost Centre and a Cost Unit refer to the same concept — both are used to calculate the cost per unit of output in a costing system.",
+               reason:"Every costing system must identify the unit of output (Cost Unit) and the accountability point for collecting costs (Cost Centre) as two separate and distinct building blocks.",
+               options:["Both A and R are true and R correctly explains A","Both A and R are true but R does NOT explain A","A is false but R is true","Both A and R are false"],
+               answer:2,
+               explain:"R is TRUE — every costing system does require both a Cost Unit (what is being costed) and a Cost Centre (where costs are collected) as distinct concepts. A is FALSE — Cost Centre and Cost Unit are fundamentally different concepts. A Cost Centre is a location/person/equipment where costs are collected for control; a Cost Unit is the unit of output for which cost per unit is calculated. In a cement factory: the Kiln Department is the Cost Centre; one tonne of cement is the Cost Unit.",
+               optionExplains:["A is false — they are different concepts, not the same.","A is still false.","Correct. R is true (both are essential but distinct building blocks); A is false (they are NOT the same concept).","R is true — identifying both is a requirement of every costing system."]}
+
+            ]},
+            {label:"Set 2", mix:"14/9/7", questions:[]},
+            {label:"Set 3", mix:"13/9/8", questions:[]},
+            {label:"Set 4", mix:"12/9/9", questions:[]},
+            {label:"Set 5", mix:"12/9/9", questions:[]},
+            {label:"Set 6", mix:"11/9/10", questions:[]},
+            {label:"Set 7", mix:"10/9/11", questions:[]},
+            {label:"Set 8", mix:"10/9/11", questions:[]},
+            {label:"Set 9", mix:"9/9/12",  questions:[]},
+            {label:"Set 10",mix:"9/9/12",  questions:[]}
+          ]
+        }]
+      },
+
+      /* ── UNIT 2 ──────────────────────────────────────────────── */
+      {id:"ct-u2", title:"Classification of Cost & Cost Sheet", marks:15,
+        syllabus:["Element-Based Classification: Raw Materials, Labour, Other Expenses, Overhead, Prime Cost","Function-Based Classification: Factory Cost, Administration Cost, Selling Cost, Distribution Cost, R&D Cost","Behaviour-Based Classification: Fixed Cost, Variable Cost, Semi-variable Cost; distinctions between Fixed and Variable","Preparation of Cost Sheet: definition, basic components, practical problems (excluding cost estimation)"],
+        topics:[]},
+
+      /* ── UNIT 3 ──────────────────────────────────────────────── */
+      {id:"ct-u3", title:"Introduction to Taxation", marks:10,
+        syllabus:["Brief history of Income Tax in India; Direct Tax vs Indirect Tax","Basic concepts: Previous Year, Assessment Year, Assessee, Person, Sources of Income","Heads of Income; Gross Total Income; Total Income","Incomes not forming part of Total Income — Section 10 exemptions: HUF member receipts, partnership profit share, LIC proceeds, MP/MLA allowances, awards, local authority income, dividend, units, long-term capital gains on equity"],
+        topics:[]},
+
+      /* ── UNIT 4 ──────────────────────────────────────────────── */
+      {id:"ct-u4", title:"Residential Status and Incidence of Tax", marks:10,
+        syllabus:["Determination of Residential Status — Resident (Ordinarily Resident), Resident but Not Ordinarily Resident, Non-Resident","Conditions under Sections 6(1) and 6(6) for Individual Assessee","Scope of Total Income based on Residential Status","Incidence of Tax: what income is taxable for each residential status"],
+        topics:[]}
     ]
   },
 
