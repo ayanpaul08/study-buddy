@@ -1591,21 +1591,24 @@ const DATA = {
                 </div>
               </div>
 
-              <svg viewBox="0 0 700 90" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:4px 0 20px" font-family="IBM Plex Sans,sans-serif">
-                <rect x="10" y="20" width="160" height="50" rx="9" fill="#e3eee6" stroke="#234f3b" stroke-width="1.5"/>
-                <text x="90" y="41" text-anchor="middle" font-size="12" font-weight="700" fill="#234f3b">COST</text>
-                <text x="90" y="57" text-anchor="middle" font-size="10" fill="#3c4742">Money value of</text>
-                <text x="90" y="70" text-anchor="middle" font-size="10" fill="#3c4742">resources used</text>
-                <polygon points="175,45 185,41 185,49" fill="#b6862c"/>
-                <rect x="190" y="20" width="160" height="50" rx="9" fill="#f8f0db" stroke="#b6862c" stroke-width="1.5"/>
-                <text x="270" y="41" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6420">COSTING</text>
-                <text x="270" y="57" text-anchor="middle" font-size="10" fill="#3c4742">Technique of</text>
-                <text x="270" y="70" text-anchor="middle" font-size="10" fill="#3c4742">ascertaining costs</text>
-                <polygon points="355,45 365,41 365,49" fill="#b6862c"/>
-                <rect x="370" y="10" width="320" height="70" rx="9" fill="#234f3b"/>
-                <text x="530" y="35" text-anchor="middle" font-size="12" font-weight="700" fill="#f4efe3">COST ACCOUNTING</text>
-                <text x="530" y="52" text-anchor="middle" font-size="10" fill="#e3eee6">Full system: recording, classifying,</text>
-                <text x="530" y="66" text-anchor="middle" font-size="10" fill="#e3eee6">analysing and interpreting cost data</text>
+              <svg viewBox="0 0 700 108" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:4px 0 20px" font-family="IBM Plex Sans,sans-serif">
+                <rect x="10" y="10" width="160" height="88" rx="9" fill="#e3eee6" stroke="#234f3b" stroke-width="1.5"/>
+                <text x="90" y="38" text-anchor="middle" font-size="12" font-weight="700" fill="#234f3b">COST</text>
+                <text x="90" y="56" text-anchor="middle" font-size="10" fill="#3c4742">Money value of</text>
+                <text x="90" y="71" text-anchor="middle" font-size="10" fill="#3c4742">resources consumed</text>
+                <line x1="172" y1="54" x2="185" y2="54" stroke="#b6862c" stroke-width="2"/>
+                <polygon points="185,50 194,54 185,58" fill="#b6862c"/>
+                <rect x="196" y="10" width="160" height="88" rx="9" fill="#f8f0db" stroke="#b6862c" stroke-width="1.5"/>
+                <text x="276" y="38" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6420">COSTING</text>
+                <text x="276" y="56" text-anchor="middle" font-size="10" fill="#3c4742">Technique of</text>
+                <text x="276" y="71" text-anchor="middle" font-size="10" fill="#3c4742">ascertaining costs</text>
+                <line x1="358" y1="54" x2="371" y2="54" stroke="#b6862c" stroke-width="2"/>
+                <polygon points="371,50 380,54 371,58" fill="#b6862c"/>
+                <rect x="382" y="4" width="310" height="100" rx="9" fill="#234f3b"/>
+                <text x="537" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#f4efe3">COST ACCOUNTING</text>
+                <text x="537" y="48" text-anchor="middle" font-size="10" fill="#e3eee6">Full system: recording, classifying,</text>
+                <text x="537" y="63" text-anchor="middle" font-size="10" fill="#e3eee6">analysing and interpreting cost data</text>
+                <text x="537" y="78" text-anchor="middle" font-size="10" fill="#e3eee6">for management decisions</text>
               </svg>
 
               <h3 style="color:var(--green-deep);margin:0 0 12px">Objectives of Cost Accounting</h3>
@@ -1652,7 +1655,7 @@ const DATA = {
               </ul>
 
               <h3 style="color:var(--green-deep);margin:20px 0 12px">Steps for Installation of a Costing System</h3>
-              <ol>
+              <ul>
                 <li><b>Study the organisation</b> — Understand its structure, size, products/services, production process and management information needs.</li>
                 <li><b>Define objectives clearly</b> — Specify whether the system is primarily for cost control, price fixation, budgeting or all three.</li>
                 <li><b>Select the appropriate costing method</b> — Choose Job Costing, Process Costing, Contract Costing, Batch Costing or another method suited to the business.</li>
@@ -1661,7 +1664,7 @@ const DATA = {
                 <li><b>Create forms and records</b> — Design material requisitions, time sheets, overhead absorption sheets, cost ledgers and cost statements.</li>
                 <li><b>Train personnel</b> — Brief all relevant staff — from storekeeper to department supervisor — on the purpose, forms and procedures.</li>
                 <li><b>Introduce the system gradually</b> — Pilot in one section or department first; review, refine and then extend across the organisation.</li>
-              </ol>`},
+              </ul>`},
 
             {topicStart:"fa-vs-ca", title:"Financial Accounting vs Cost Accounting", icon:"⚖️",
              desc:"Why both systems exist, who uses each, and an eleven-point comparison of their scope, purpose, legal status, data type and orientation."},
@@ -1757,35 +1760,39 @@ const DATA = {
                 <b style="color:#8a6420">Definition:</b> A Cost Centre is a location, person, or item of equipment (or a group of these) for which costs may be ascertained and used for the purpose of cost control. It is the smallest organisational unit for which cost data is collected separately — an accountability point where costs accumulate before being charged to products or services.
               </div>
 
-              <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:8px 0 16px" font-family="IBM Plex Sans,sans-serif">
-                <rect x="260" y="8" width="180" height="36" rx="9" fill="#234f3b"/>
-                <text x="350" y="30" text-anchor="middle" font-size="13" font-weight="700" fill="#f4efe3">COST CENTRES</text>
-                <line x1="350" y1="44" x2="175" y2="80" stroke="#234f3b" stroke-width="1.5"/>
-                <line x1="350" y1="44" x2="525" y2="80" stroke="#b6862c" stroke-width="1.5"/>
-                <rect x="60" y="80" width="230" height="34" rx="8" fill="#2f6b4f"/>
-                <text x="175" y="101" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">By Person / Location</text>
-                <rect x="410" y="80" width="230" height="34" rx="8" fill="#b6862c"/>
-                <text x="525" y="101" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">By Function</text>
-                <line x1="120" y1="114" x2="120" y2="148" stroke="#2f6b4f" stroke-width="1.5"/>
-                <line x1="230" y1="114" x2="230" y2="148" stroke="#2f6b4f" stroke-width="1.5"/>
-                <line x1="470" y1="114" x2="470" y2="148" stroke="#b6862c" stroke-width="1.5"/>
-                <line x1="580" y1="114" x2="580" y2="148" stroke="#b6862c" stroke-width="1.5"/>
-                <rect x="40" y="148" width="160" height="52" rx="8" fill="#e3eee6" stroke="#2f6b4f"/>
-                <text x="120" y="168" text-anchor="middle" font-size="11" font-weight="700" fill="#234f3b">Personal</text>
-                <text x="120" y="184" text-anchor="middle" font-size="9.5" fill="#3c4742">Relates to a person</text>
-                <text x="120" y="196" text-anchor="middle" font-size="9.5" fill="#3c4742">e.g. Foreman's section</text>
-                <rect x="150" y="148" width="160" height="52" rx="8" fill="#e3eee6" stroke="#2f6b4f"/>
-                <text x="230" y="168" text-anchor="middle" font-size="11" font-weight="700" fill="#234f3b">Impersonal</text>
-                <text x="230" y="184" text-anchor="middle" font-size="9.5" fill="#3c4742">Location or machine</text>
-                <text x="230" y="196" text-anchor="middle" font-size="9.5" fill="#3c4742">e.g. Boiler house, Machine 5</text>
-                <rect x="390" y="148" width="160" height="52" rx="8" fill="#f8f0db" stroke="#b6862c"/>
-                <text x="470" y="168" text-anchor="middle" font-size="11" font-weight="700" fill="#8a6420">Production</text>
-                <text x="470" y="184" text-anchor="middle" font-size="9.5" fill="#3c4742">Where goods are made</text>
-                <text x="470" y="196" text-anchor="middle" font-size="9.5" fill="#3c4742">e.g. Machining shop</text>
-                <rect x="500" y="148" width="160" height="52" rx="8" fill="#f8f0db" stroke="#b6862c"/>
-                <text x="580" y="168" text-anchor="middle" font-size="11" font-weight="700" fill="#8a6420">Service</text>
-                <text x="580" y="184" text-anchor="middle" font-size="9.5" fill="#3c4742">Supports production</text>
-                <text x="580" y="196" text-anchor="middle" font-size="9.5" fill="#3c4742">e.g. Canteen, Maintenance</text>
+              <svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:8px 0 16px" font-family="IBM Plex Sans,sans-serif">
+                <rect x="280" y="8" width="200" height="36" rx="9" fill="#234f3b"/>
+                <text x="380" y="30" text-anchor="middle" font-size="13" font-weight="700" fill="#f4efe3">COST CENTRES</text>
+                <line x1="380" y1="44" x2="183" y2="60" stroke="#234f3b" stroke-width="1.5"/>
+                <line x1="380" y1="44" x2="577" y2="60" stroke="#b6862c" stroke-width="1.5"/>
+                <rect x="20" y="60" width="326" height="34" rx="8" fill="#2f6b4f"/>
+                <text x="183" y="81" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">By Person / Location</text>
+                <rect x="414" y="60" width="326" height="34" rx="8" fill="#b6862c"/>
+                <text x="577" y="81" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">By Function</text>
+                <line x1="183" y1="94" x2="97" y2="110" stroke="#2f6b4f" stroke-width="1.5"/>
+                <line x1="183" y1="94" x2="269" y2="110" stroke="#2f6b4f" stroke-width="1.5"/>
+                <line x1="577" y1="94" x2="491" y2="110" stroke="#b6862c" stroke-width="1.5"/>
+                <line x1="577" y1="94" x2="663" y2="110" stroke="#b6862c" stroke-width="1.5"/>
+                <rect x="20" y="110" width="154" height="78" rx="8" fill="#e3eee6" stroke="#2f6b4f"/>
+                <text x="97" y="132" text-anchor="middle" font-size="11" font-weight="700" fill="#234f3b">Personal</text>
+                <text x="97" y="149" text-anchor="middle" font-size="9.5" fill="#3c4742">Relates to a person</text>
+                <text x="97" y="164" text-anchor="middle" font-size="9.5" fill="#3c4742">e.g. Foreman's</text>
+                <text x="97" y="178" text-anchor="middle" font-size="9.5" fill="#3c4742">section</text>
+                <rect x="192" y="110" width="154" height="78" rx="8" fill="#e3eee6" stroke="#2f6b4f"/>
+                <text x="269" y="132" text-anchor="middle" font-size="11" font-weight="700" fill="#234f3b">Impersonal</text>
+                <text x="269" y="149" text-anchor="middle" font-size="9.5" fill="#3c4742">Location or equipment</text>
+                <text x="269" y="164" text-anchor="middle" font-size="9.5" fill="#3c4742">e.g. Boiler house,</text>
+                <text x="269" y="178" text-anchor="middle" font-size="9.5" fill="#3c4742">Machine No. 5</text>
+                <rect x="414" y="110" width="154" height="78" rx="8" fill="#f8f0db" stroke="#b6862c"/>
+                <text x="491" y="132" text-anchor="middle" font-size="11" font-weight="700" fill="#8a6420">Production</text>
+                <text x="491" y="149" text-anchor="middle" font-size="9.5" fill="#3c4742">Where goods are made</text>
+                <text x="491" y="164" text-anchor="middle" font-size="9.5" fill="#3c4742">e.g. Machining shop,</text>
+                <text x="491" y="178" text-anchor="middle" font-size="9.5" fill="#3c4742">Assembly line</text>
+                <rect x="586" y="110" width="154" height="78" rx="8" fill="#f8f0db" stroke="#b6862c"/>
+                <text x="663" y="132" text-anchor="middle" font-size="11" font-weight="700" fill="#8a6420">Service</text>
+                <text x="663" y="149" text-anchor="middle" font-size="9.5" fill="#3c4742">Supports production</text>
+                <text x="663" y="164" text-anchor="middle" font-size="9.5" fill="#3c4742">e.g. Canteen,</text>
+                <text x="663" y="178" text-anchor="middle" font-size="9.5" fill="#3c4742">Maintenance dept</text>
               </svg>
 
               <table class="cmp">

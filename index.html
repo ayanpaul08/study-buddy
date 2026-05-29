@@ -507,8 +507,12 @@ function renderLearn(ctx){
   </div>`;
 
   const cardnav=`<div class="qnav" style="margin-top:18px">
-    <button class="btn btn-ghost" ${isFirst?'disabled style="opacity:.4;cursor:default"':''}
-      onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit},topicId:'${grp.id}',cardIdx:${i-1}})">‹ Previous</button>
+    ${(isFirst&&!prevGrp)
+      ?`<button class="btn btn-ghost" disabled style="opacity:.4;cursor:default">‹ Previous</button>`
+      :isFirst&&prevGrp
+        ?`<button class="btn btn-ghost" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit},topicId:'${prevGrp.id}',cardIdx:${prevGrp.cards.length-1}})">← Prev Topic</button>`
+        :`<button class="btn btn-ghost" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit},topicId:'${grp.id}',cardIdx:${i-1}})">‹ Previous</button>`
+    }
     ${isLast && nextGrp
       ? `<button class="btn btn-green" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit},topicId:'${nextGrp.id}',cardIdx:0})">Next Topic →</button>`
       : isLast
