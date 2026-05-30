@@ -2178,20 +2178,20 @@ const DATA = {
                 <circle cx="421" cy="113" r="9" fill="#234f3b" stroke="white" stroke-width="2.5"/>
                 <text x="425" y="110" font-size="10" fill="#234f3b" font-weight="700">D</text>
                 <line x1="413" y1="107" x2="302" y2="84" stroke="#234f3b" stroke-width="1" stroke-dasharray="3,2"/>
-                <rect x="160" y="66" width="140" height="38" rx="7" fill="#e3eee6" stroke="#234f3b" stroke-width="1.2"/>
-                <text x="230" y="83" text-anchor="middle" font-size="10.5" font-weight="700" fill="#234f3b">D — Efficient</text>
-                <text x="230" y="97" text-anchor="middle" font-size="9.5" fill="#3c4742">On the PPC: all resources</text>
-                <text x="230" y="108" text-anchor="middle" font-size="9.5" fill="#3c4742">fully and efficiently used</text>
+                <rect x="160" y="66" width="140" height="56" rx="7" fill="#e3eee6" stroke="#234f3b" stroke-width="1.2"/>
+                <text x="230" y="84" text-anchor="middle" font-size="10.5" font-weight="700" fill="#234f3b">D — Efficient</text>
+                <text x="230" y="99" text-anchor="middle" font-size="9.5" fill="#3c4742">On the PPC: all resources</text>
+                <text x="230" y="113" text-anchor="middle" font-size="9.5" fill="#3c4742">fully and efficiently used</text>
                 <circle cx="268" cy="220" r="9" fill="#c0492f" stroke="white" stroke-width="2.5"/>
                 <text x="272" y="217" font-size="10" fill="#c0492f" font-weight="700">H</text>
                 <line x1="260" y1="228" x2="180" y2="258" stroke="#c0492f" stroke-width="1" stroke-dasharray="3,2"/>
-                <rect x="100" y="248" width="156" height="38" rx="7" fill="#f6e2dc" stroke="#c0492f" stroke-width="1.2"/>
+                <rect x="100" y="248" width="156" height="48" rx="7" fill="#f6e2dc" stroke="#c0492f" stroke-width="1.2"/>
                 <text x="178" y="265" text-anchor="middle" font-size="10.5" font-weight="700" fill="#c0492f">H — Inefficient</text>
                 <text x="178" y="279" text-anchor="middle" font-size="9.5" fill="#3c4742">Inside PPC: resources idle</text>
                 <circle cx="492" cy="72" r="9" fill="#b6862c" stroke="white" stroke-width="2.5"/>
                 <text x="496" y="69" font-size="10" fill="#b6862c" font-weight="700">G</text>
                 <line x1="484" y1="72" x2="427" y2="52" stroke="#b6862c" stroke-width="1" stroke-dasharray="3,2"/>
-                <rect x="305" y="36" width="118" height="38" rx="7" fill="#f8f0db" stroke="#b6862c" stroke-width="1.2"/>
+                <rect x="305" y="36" width="118" height="48" rx="7" fill="#f8f0db" stroke="#b6862c" stroke-width="1.2"/>
                 <text x="364" y="53" text-anchor="middle" font-size="10.5" font-weight="700" fill="#8a6420">G — Unattainable</text>
                 <text x="364" y="67" text-anchor="middle" font-size="9.5" fill="#3c4742">Beyond current capacity</text>
                 <text x="30" y="388" font-size="10" fill="#888" font-style="italic">Based on a hypothetical example for illustration; actual India data would differ.</text>
@@ -2377,7 +2377,231 @@ const DATA = {
               </table>`}
           ],
           sets:[
-            {label:"Set 1 — Foundation", mix:"15/9/6", questions:[]},
+            {label:"Set 1 — Foundation", mix:"15/9/6", questions:[
+
+                /* ── 15 EASY ── */
+                {type:"standard",diff:"E",
+                 q:"Scarcity in economics means:",
+                 options:["A temporary shortage of goods caused by supply chain disruptions","The government's failure to provide essential public services to all citizens","Resources are always limited relative to the unlimited wants they must satisfy","Prices of goods rise so high that most people cannot afford them"],
+                 answer:2,
+                 explain:"Scarcity is the fundamental economic problem — resources (land, labour, capital, entrepreneurship) are always finite, while human wants are unlimited. This forces every individual, firm and government to make choices. Scarcity is universal and permanent.",
+                 optionExplains:["Supply chain disruptions cause temporary shortages — that is a market problem, not the definition of scarcity in economic theory.","Government service failures are a policy concern, not the economic definition of scarcity.","Correct. Scarcity = limited resources vs unlimited wants. This forces choice and is the starting point of all economics.","High prices are a market outcome, not the definition of scarcity; even wealthy people face scarcity of time and attention."]},
+
+                {type:"standard",diff:"E",
+                 q:"Which of the following is NOT one of the three basic economic questions every society must answer?",
+                 options:["What to produce?","How to produce?","When to produce?","For whom to produce?"],
+                 answer:2,
+                 explain:"The three universal economic questions are: What to produce? (which goods and in what quantities), How to produce? (labour-intensive or capital-intensive methods) and For whom to produce? (who receives the output). 'When to produce?' is not one of the fundamental economic problems.",
+                 optionExplains:["'What to produce?' is the first fundamental economic question.","'How to produce?' is the second fundamental economic question.","Correct. 'When to produce?' is not a fundamental economic question — the three basic ones are What, How, and For Whom.","'For whom to produce?' is the third fundamental economic question."]},
+
+                {type:"standard",diff:"E",
+                 q:"The opportunity cost of making a choice is best described as:",
+                 options:["The total money paid for the chosen option","The value of the next best alternative that was given up","The profit or benefit earned from the chosen option","The government tax imposed on the transaction"],
+                 answer:1,
+                 explain:"Opportunity cost is the value of the best alternative foregone when a choice is made. It is not necessarily a money cost — it includes time, enjoyment or any other benefit sacrificed. Every choice has an opportunity cost because resources are scarce.",
+                 optionExplains:["The money paid is the financial cost, not the opportunity cost — opportunity cost is the best alternative given up.","Correct. Opportunity cost = the value of the best alternative sacrificed when a decision is made.","The benefit of the chosen option is the gain, not the opportunity cost; OC is what you give up, not what you get.","Government taxes are a separate financial concept, unrelated to opportunity cost."]},
+
+                {type:"standard",diff:"E",
+                 q:"A point ON the Production Possibility Curve (PPC) represents:",
+                 options:["A level of production that is currently unattainable with existing resources","Efficient production — all available resources are fully and productively employed","Inefficient production — some resources are lying idle or wasted","The maximum output of only one of the two goods"],
+                 answer:1,
+                 explain:"Any point on the PPC represents a production combination where ALL resources are fully and efficiently employed. The economy cannot produce more of one good without giving up some of the other. This is the definition of productive efficiency on the frontier.",
+                 optionExplains:["Unattainable points lie OUTSIDE the PPC, not on it.","Correct. Points ON the PPC are efficient — all resources are employed and there is no waste; output of one can only rise if the other falls.","Inefficient points (idle resources) lie INSIDE the PPC, not on it.","The PPC shows combinations of TWO goods — not just one. All points on the curve involve producing some of each."]},
+
+                {type:"standard",diff:"E",
+                 q:"A point INSIDE the Production Possibility Curve (PPC) indicates:",
+                 options:["Inefficient production — resources are idle or being wasted","The maximum possible production of both goods simultaneously","Production beyond what the economy can currently achieve","A situation of perfect resource allocation between two goods"],
+                 answer:0,
+                 explain:"Points inside the PPC represent underutilisation — some resources (labour, land, capital) are idle, unemployed or being used wastefully. The economy could produce more of one or both goods by using those resources. This is productive inefficiency.",
+                 optionExplains:["Correct. Inside the PPC = inefficient — some resources are not being used; moving to the PPC (outward) would improve output without extra resources.","Maximum possible production lies ON the PPC, not inside it.","Points beyond current capacity lie OUTSIDE the PPC, not inside.","Perfect resource allocation would place the economy ON the PPC, not inside it."]},
+
+                {type:"standard",diff:"E",
+                 q:"The Production Possibility Curve shifts OUTWARD when:",
+                 options:["The government raises taxes on businesses","Some resources remain unemployed during an economic slowdown","Technology improves or the economy acquires additional productive resources","The economy shifts production from one good to the other"],
+                 answer:2,
+                 explain:"An outward shift of the PPC means the economy can now produce more of BOTH goods — its productive capacity has grown. This happens through technological progress, growth in the workforce, new capital investment, or better education and skills. This outward shift IS economic growth.",
+                 optionExplains:["Higher taxes may reduce investment and could actually shift the PPC inward — not outward.","Unemployed resources mean the economy operates INSIDE the current PPC; the frontier itself does not move.","Correct. Better technology or more resources (labour, capital) shifts the entire PPC outward — enabling more of both goods.","Switching production between goods moves the operating point ALONG the existing PPC — it does not shift the curve itself."]},
+
+                {type:"standard",diff:"E",
+                 q:"In a free market economy, decisions about what, how and for whom to produce are primarily guided by:",
+                 options:["Central government planning committees and five-year plans","Price signals in markets and the profit motive of producers and consumers","International trade agreements and foreign investment policies","Labour unions negotiating on behalf of workers in each industry"],
+                 answer:1,
+                 explain:"In a free market economy, there is no central authority dictating production. Instead, price signals (rising prices signal scarcity; falling prices signal surplus) and the profit motive guide producers to make what consumers demand and consumers to signal what they value. This is the invisible hand mechanism.",
+                 optionExplains:["Central planning committees characterise command economies (e.g. USSR), not free markets.","Correct. Price signals and profit motive are the decentralised coordinators in a free market — no single authority needed.","Trade agreements affect international commerce; domestic production decisions in free markets are driven by prices and profits.","Labour unions influence wages but don't guide the economy-wide 'what, how, for whom' decisions in a free market."]},
+
+                {type:"standard",diff:"E",
+                 q:"Adam Smith's concept of the 'invisible hand' argues that:",
+                 options:["Governments must intervene in markets to prevent firms from exploiting consumers","Markets always fail without strict regulation and price controls","When individuals pursue their own self-interest in competitive markets, they unintentionally promote the overall welfare of society","International trade is always more beneficial to a nation than domestic production"],
+                 answer:2,
+                 explain:"Adam Smith (1776, 'The Wealth of Nations') argued that individuals pursuing profit in competitive markets are guided 'as if by an invisible hand' to serve society — a baker bakes for profit but feeds the community. This is the core argument for decentralised markets over central planning.",
+                 optionExplains:["Smith argued the OPPOSITE — that markets, not governments, coordinate best when competition is present.","The invisible hand is an argument FOR market efficiency, not for the need of regulation.","Correct. Smith's invisible hand: individual self-interest + competitive markets → social benefit, without deliberate coordination.","Comparative advantage relates to international trade; the invisible hand is about domestic market coordination."]},
+
+                {type:"standard",diff:"E",
+                 q:"'Laissez-faire' as an economic policy means:",
+                 options:["Minimal government interference — let markets operate freely and set their own prices","Complete government ownership of all major industries and resources","Equal redistribution of all income and wealth among all citizens","Strict regulation of international trade to protect domestic industries"],
+                 answer:0,
+                 explain:"Laissez-faire (French: 'let it be/let it do') is the policy of minimal government intervention in economic affairs. The belief is that free markets, guided by price signals and competition, will produce better outcomes than government interference. This complements Adam Smith's invisible hand argument.",
+                 optionExplains:["Correct. Laissez-faire = leave markets alone; government's role is minimal (protection of property rights and contracts, not more).","Government ownership of all industries describes a command/socialist economy — the opposite of laissez-faire.","Equal redistribution of income is a social welfare or socialist goal — incompatible with laissez-faire.","Trade protection (tariffs, quotas) is government interference — the opposite of laissez-faire."]},
+
+                {type:"standard",diff:"E",
+                 q:"The concept of Sustainable Development was formally defined by:",
+                 options:["The World Bank Commission in a 1980 report on global poverty","Adam Smith in 'The Wealth of Nations' (1776)","The Brundtland Commission in its 1987 report 'Our Common Future'","The IMF Advisory Council in its 2000 Millennium Development Goals"],
+                 answer:2,
+                 explain:"The Brundtland Commission (World Commission on Environment and Development, 1987) gave the most widely used definition: 'Development that meets the needs of the present without compromising the ability of future generations to meet their own needs.' This balanced growth with environmental responsibility.",
+                 optionExplains:["The World Bank Commission addressed poverty but did not define Sustainable Development in 1980.","Adam Smith wrote about markets in 1776 — long before the environmental concerns that gave rise to Sustainable Development.","Correct. Brundtland Commission (1987) — 'Our Common Future' — defined Sustainable Development in the framework used worldwide.","The Millennium Development Goals (2000) were UN targets, not the original definition of Sustainable Development."]},
+
+                {type:"standard",diff:"E",
+                 q:"Per Capita Income of an economy is calculated as:",
+                 options:["Total Government Revenue ÷ Total Population","Gross Domestic Product (GDP) ÷ Total Population","National Savings × Average Interest Rate","Total Exports − Total Imports"],
+                 answer:1,
+                 explain:"Per Capita Income = GDP ÷ Total Population. It gives the average income per person if the national income were divided equally. India's per capita income (2023-24) is approximately ₹2,10,000 (≈$2,500) — much lower than developed nations despite India's large total GDP.",
+                 optionExplains:["Government revenue divided by population gives per capita tax burden — not per capita income.","Correct. GDP ÷ Population = Per Capita Income. A simple but important measure of average living standards.","National Savings × Interest Rate gives investment income — unrelated to per capita income formula.","Exports − Imports = Trade Balance, which is very different from per capita income."]},
+
+                {type:"standard",diff:"E",
+                 q:"Which of the following is an example of HUMAN capital?",
+                 options:["A new automated packaging machine installed in a factory","A 500-km national highway connecting two cities","The solar power plant built under India's renewable energy programme","The technical skills and medical training of a nurse working in a government hospital"],
+                 answer:3,
+                 explain:"Human capital refers to the knowledge, skills, health and capabilities of people — built through education, training and healthcare. A nurse's medical training is a classic example. Human capital raises productivity just as physical capital does, but it resides in people rather than machines or buildings.",
+                 optionExplains:["Automated machinery is Physical Capital — a man-made tool of production, not embedded in a person.","A highway is Physical Capital (infrastructure) — not human capital.","A solar power plant is Physical Capital — energy infrastructure used in production.","Correct. Medical training is Human Capital — skills and knowledge embedded in a person that raise their productivity."]},
+
+                {type:"standard",diff:"E",
+                 q:"Which of the following is an example of PHYSICAL capital?",
+                 options:["Roads, bridges, factories and machinery used to produce goods and services","The education, health and skills of the working population","The savings deposited in bank accounts by households","Forest resources and mineral deposits owned by the state"],
+                 answer:0,
+                 explain:"Physical capital refers to man-made inputs used in production — machinery, buildings, infrastructure, tools and equipment. It is distinct from human capital (people's skills) and natural capital (land, forests, minerals). Investment in physical capital (factories, roads, power plants) directly expands an economy's productive capacity.",
+                 optionExplains:["Correct. Roads, factories and machinery are Physical Capital — man-made productive assets used to produce other goods/services.","Education, health and skills of workers are Human Capital — embedded in people, not in physical assets.","Savings in banks are financial capital — not the physical productive assets used in production.","Forests and minerals are Natural Capital — not man-made and therefore not classified as physical capital."]},
+
+                {type:"standard",diff:"E",
+                 q:"Economic Growth of a country is primarily measured by:",
+                 options:["The level of government spending on welfare programmes","The number of new businesses and start-ups registered each year","The growth rate of Gross Domestic Product (GDP) and changes in per capita income","The volume and value of goods exported to other countries each year"],
+                 answer:2,
+                 explain:"Economic Growth refers to the increase in an economy's productive capacity over time, measured by the rate of growth in GDP and in per capita income (GDP ÷ population). India's 8.2% GDP growth in 2023-24 is the primary measure of its economic growth performance.",
+                 optionExplains:["Government welfare spending is a policy tool; it affects growth but doesn't measure it.","New business registrations reflect entrepreneurship but are too narrow and indirect a measure of economy-wide growth.","Correct. GDP growth rate is the standard measure of Economic Growth — it shows how much total output has expanded.","Export volumes measure trade performance, not overall Economic Growth (which includes domestic production too)."]},
+
+                {type:"standard",diff:"E",
+                 q:"The Human Development Index (HDI) measures development along which three dimensions?",
+                 options:["GDP growth rate, inflation rate and unemployment rate","Per capita income, education (mean and expected years of schooling) and health (life expectancy at birth)","Trade balance, foreign investment and government debt","Income inequality, gender equality and environmental sustainability"],
+                 answer:1,
+                 explain:"The UNDP's Human Development Index (HDI) measures: (1) Income — per capita GNI (PPP); (2) Education — average years of schooling (adults) and expected years of schooling (children); (3) Health — life expectancy at birth. India's HDI rank is 134 out of 193 (2023), highlighting that high GDP growth has not automatically produced high human development.",
+                 optionExplains:["GDP growth, inflation and unemployment are macroeconomic indicators — not the HDI's three dimensions.","Correct. HDI = Income + Education + Health. These three together capture human wellbeing better than income alone.","Trade balance, FDI and debt are economic indicators — not HDI dimensions.","Inequality and environment are measured by other indices (Inequality-adjusted HDI, SDGs) — not the basic HDI."]},
+
+                /* ── 9 MODERATE ── */
+                {type:"standard",diff:"M",
+                 q:"The Production Possibility Curve is bowed outward (concave to the origin) because of the:",
+                 options:["Law of Diminishing Returns to Scale in all production processes","Law of Increasing Opportunity Cost — as more of one good is produced, the opportunity cost per unit rises progressively","Principle of Comparative Advantage between the two goods produced","Law of Supply: as output rises, marginal cost always falls"],
+                 answer:1,
+                 explain:"The PPC is concave because resources are NOT perfectly adaptable. The first resources shifted from Steel to Wheat are those best suited for wheat. As more resources shift, increasingly ill-suited resources are used, making each extra unit of wheat costlier in steel sacrificed. From our example: gaining 100 units of wheat costs 20 steel early on but 200 steel at the margin — rising OC bends the curve outward.",
+                 optionExplains:["Diminishing returns to scale refers to what happens when ALL inputs change proportionally — relevant to the shape of production functions, but not the standard explanation for PPC concavity.","Correct. Increasing opportunity cost — caused by resource non-adaptability — is the definitive explanation for the outward bow of the PPC.","Comparative advantage applies to international trade between two countries, not to the shape of a single country's PPC.","Law of Supply relates to producers' price-output decisions; marginal cost actually RISES (not falls) as output increases — and is not the explanation for PPC concavity."]},
+
+                {type:"standard",diff:"M",
+                 q:"Which statement BEST distinguishes Economic Development from Economic Growth?",
+                 options:["Economic Development is a short-term concept; Economic Growth refers to long-run structural change","Economic Growth only covers industrial expansion; Economic Development only covers agriculture","Economic Development is broader — it encompasses improvements in education, health, poverty reduction, equality and quality of life, not just a rise in GDP","Economic Growth and Economic Development are identical concepts — they differ only in the academic tradition that uses them"],
+                 answer:2,
+                 explain:"Economic Growth = increase in GDP (quantitative). Economic Development = Growth PLUS qualitative improvements: better health, more education, reduced poverty, greater equality, more freedom. India's 8%+ growth with HDI rank 134/193 shows these can diverge sharply. Development is the richer concept.",
+                 optionExplains:["Growth can be short or long-term; Development is explicitly long-term — but this is NOT the best or most accurate distinction.","Neither concept is limited to one sector — both cover the whole economy.","Correct. Development is GDP growth PLUS improvements in human wellbeing, equity, health and education — a multidimensional concept.","They are fundamentally different: Growth is one dimension (output); Development is multidimensional (output + quality of life)."]},
+
+                {type:"assertion",diff:"M",
+                 assertion:"In a free market economy guided by the invisible hand, income and wealth are distributed equitably among all members of society because competitive markets reward everyone fairly.",
+                 reason:"When individuals pursue profit in competitive markets, resources flow to their most productive uses, improving overall economic efficiency.",
+                 options:["Both A and R are true and R correctly explains A","Both A and R are true but R does NOT explain A","A is false but R is true","Both A and R are false"],
+                 answer:2,
+                 explain:"R is TRUE — competitive markets do improve resource allocation efficiency through the price mechanism. A is FALSE — free markets promote efficiency, not equity. Income distribution in market economies is determined by ownership of resources and productivity, which leads to inequality. India's top 1% own 40% of national wealth despite rapid market-driven growth. Equity requires government intervention (taxes, transfers, public services).",
+                 optionExplains:["A is false; equity is not guaranteed by free markets — this option would require A to be correct.","A is still false — free markets are about efficiency, not equitable distribution.","Correct. R is true (markets = efficient resource allocation); A is false (markets do NOT ensure equitable distribution — they typically produce inequality).","R is true — competitive markets do promote productive efficiency through price signals and profit incentives."]},
+
+                {type:"standard",diff:"M",
+                 q:"India is described as a MIXED economy because:",
+                 options:["Its GDP comes equally from agriculture, industry and services — a mix of sectors","It combines private enterprise (Reliance, Tata, startups) with significant government ownership (railways, PSU banks), regulation and social welfare programmes","It mixes free-market capitalism from the USA with central planning from China","Its economy includes both formal (registered) and informal (unregistered) business sectors"],
+                 answer:1,
+                 explain:"A mixed economy is one where both private markets AND government intervention coexist. In India: private firms drive most industrial and service output, but the government owns railways, several banks, ONGC, Air India (until privatised), and provides food, fuel and fertiliser subsidies, MGNREGA employment and public healthcare — classic mixed economy features.",
+                 optionExplains:["Sector composition (agriculture/industry/services) describes an economy's structure, not why it's 'mixed' in the political-economic sense.","Correct. India is mixed because private enterprise and government ownership/regulation/welfare coexist — neither pure market nor pure command.","India has its own unique model — not simply a mix of the US and Chinese systems.","Having formal and informal sectors describes India's labour market duality, not the mixed economy concept."]},
+
+                {type:"standard",diff:"M",
+                 q:"A student spends Saturday studying Economics instead of attending a cricket match she values very much. What is the opportunity cost of her choice to study?",
+                 options:["The enjoyment and experience she sacrificed by missing the cricket match","The price of the Economics textbook she used while studying","The exam marks she hopes to gain from her study session","There is no opportunity cost — studying is always the rational choice"],
+                 answer:0,
+                 explain:"Opportunity cost is the value of the BEST ALTERNATIVE FOREGONE. The student's best alternative was the cricket match. Her opportunity cost is the enjoyment, entertainment and social experience she gave up by not going. Note that opportunity cost is not the money cost but the value of the next best option sacrificed.",
+                 optionExplains:["Correct. The opportunity cost = the cricket match experience foregone — the best alternative she gave up by choosing to study.","The textbook cost is an accounting cost (money spent), not the opportunity cost of how she spent her time.","The expected marks are the BENEFIT of studying — not the cost. Opportunity cost is what is given up, not what is gained.","Every choice has an opportunity cost — even studying has a cost (the cricket match missed). There is no cost-free choice when resources (like time) are scarce."]},
+
+                {type:"standard",diff:"M",
+                 q:"India's GDP grew at 8.2% in 2023-24 — among the fastest globally — yet its HDI rank is 134 out of 193 countries. Which explanation is MOST consistent with these facts?",
+                 options:["India's GDP growth figures must be significantly overstated by measurement errors","The HDI is a flawed and politically biased measure that cannot be applied to developing countries","Rapid GDP growth can coexist with a low HDI rank if growth benefits are concentrated among the wealthy and are not matched by proportionate improvements in health, education and poverty reduction for the majority","HDI and GDP always move in exactly opposite directions for emerging market economies"],
+                 answer:2,
+                 explain:"This is the fundamental lesson of the Growth vs Development distinction. India's growth has been real, but its benefits have been unevenly distributed — the richest 1% own 40% of national wealth. Life expectancy (70.8 years), mean years of schooling (6.7) and MPI poverty figures all lag behind GDP performance. Growth without equitable development leaves HDI rank low.",
+                 optionExplains:["GDP growth is independently verified by multiple agencies — measurement error at this scale is implausible.","The HDI, developed by Mahbub ul Haq and Amartya Sen for UNDP, is a widely validated and respected index used by all 193 UN member states.","Correct. GDP can rise sharply while HDI lags if growth is concentrated (inequality) and not translated into health/education improvements for the majority.","There is no such mechanical inverse relationship; many countries show both high GDP and high HDI."]},
+
+                {type:"standard",diff:"M",
+                 q:"Using the PPC data where at Wheat = 300 million tonnes, maximum Steel output = 360 million tonnes, which production combination lies OUTSIDE the PPC and is currently unattainable?",
+                 options:["(300 wheat, 300 steel) — steel output is below the PPC maximum at that wheat level","(200 wheat, 400 steel) — at wheat=200, max steel is 440; 400 is below that maximum","(100 wheat, 450 steel) — at wheat=100, max steel is 480; 450 is below that maximum","(300 wheat, 400 steel) — at wheat=300, max steel is only 360; requesting 400 steel exceeds the frontier"],
+                 answer:3,
+                 explain:"At wheat=300, the maximum steel the economy can produce is 360 million tonnes. Combination (300, 400) requires 400 steel — which is 40 more than the maximum possible. This point lies beyond the current PPC and is unattainable with existing resources and technology. All other options lie inside or on the PPC.",
+                 optionExplains:["(300, 300): At wheat=300, max steel=360. 300 < 360 → inside the PPC (inefficient, not unattainable).","(200, 400): At wheat=200, max steel=440. 400 < 440 → inside the PPC (inefficient, achievable but wasteful).","(100, 450): At wheat=100, max steel=480. 450 < 480 → inside the PPC (inefficient, not unattainable).","Correct. (300, 400): At wheat=300, max steel=360. Demanding 400 steel while producing 300 wheat exceeds the frontier — unattainable."]},
+
+                {type:"standard",diff:"M",
+                 q:"India's MGNREGA provides 100 days of guaranteed paid work per year to rural households. Which type of unemployment does this programme PRIMARILY address?",
+                 options:["Cyclical unemployment caused by economy-wide recessions and falling aggregate demand","Frictional unemployment among educated professionals switching between white-collar jobs","Seasonal and structural unemployment in rural areas where agricultural work is unavailable year-round","Disguised unemployment in India's formal urban manufacturing sector"],
+                 answer:2,
+                 explain:"MGNREGA targets rural labour. Agricultural workers face SEASONAL unemployment (no work between harvest and planting seasons) and STRUCTURAL unemployment (traditional farming skills not matching new economy needs). By guaranteeing 100 days of work, MGNREGA provides a safety net for these workers during off-season and transition periods. Rural disguised unemployment is also partly addressed.",
+                 optionExplains:["Cyclical unemployment is addressed by macroeconomic stimulus (fiscal/monetary policy) — MGNREGA is rural-focused, not a business-cycle tool.","Frictional unemployment among educated professionals is temporary and voluntary; MGNREGA targets unskilled rural poor.","Correct. MGNREGA primarily addresses seasonal unemployment (between agricultural seasons) and provides rural livelihood support year-round.","Disguised urban manufacturing unemployment is a different sector and problem — MGNREGA is specifically a rural employment guarantee."]},
+
+                {type:"assertion",diff:"M",
+                 assertion:"Sustainable Development means maximising current economic production and consumption to ensure the highest material living standards for people alive today, trusting that future generations will find their own technological solutions to resource depletion.",
+                 reason:"The Brundtland Commission (1987) defined Sustainable Development as development that meets the needs of the present without compromising the ability of future generations to meet their own needs.",
+                 options:["Both A and R are true and R correctly explains A","Both A and R are true but R does NOT explain A","A is false but R is true","Both A and R are false"],
+                 answer:2,
+                 explain:"R is TRUE — the Brundtland definition is exactly as stated: meeting present needs without compromising future generations' ability to meet theirs. A is FALSE — Sustainable Development explicitly rejects maximising current consumption at the expense of the future. The Brundtland definition requires balance between present and future, not maximisation for the present alone.",
+                 optionExplains:["A is false — maximising current consumption at future generations' expense is the OPPOSITE of Sustainable Development.","A is still false — R accurately defines Sustainable Development and directly contradicts A.","Correct. R is the accurate Brundtland definition; A misrepresents Sustainable Development by suggesting unlimited current maximisation.","R is true — the Brundtland (1987) definition is accurately stated."]},
+
+                /* ── 6 VERY HARD ── */
+                {type:"case",diff:"VH",
+                 passage:"An economy produces only Wheat and Steel. Using all resources fully and efficiently, it can produce: A(0 wheat, 500 steel), B(100,480), C(200,440), D(300,360), E(400,200), F(450,0). The economy currently operates at Point P = (200 wheat, 300 steel). A planner proposes moving to Point Q = (300 wheat, 400 steel).",
+                 q:"Which option CORRECTLY identifies Point P, Point Q, and the opportunity cost of moving from Point B to Point D along this PPC?",
+                 options:["P is efficient; Q is attainable with current resources; OC from B to D = 0.4 steel per wheat unit","P is inefficient (inside PPC); Q is unattainable (outside PPC); OC from B to D = 0.6 steel per wheat unit","P is unattainable; Q is efficient; OC from B to D = 1.2 steel per wheat unit","P is inefficient; Q is unattainable; OC from B to D = 1.0 steel per wheat unit"],
+                 answer:1,
+                 explain:"Point P (200,300): at wheat=200, maximum steel=440. Since 300 < 440, Point P is INSIDE the PPC → inefficient (resources wasted). Point Q (300,400): at wheat=300, maximum steel=360. Since 400 > 360, Point Q is OUTSIDE the PPC → unattainable with current resources. OC from B(100,480) to D(300,360): Wheat gained = 300−100 = 200 units; Steel lost = 480−360 = 120 units. OC per unit of wheat = 120 ÷ 200 = 0.6 units of steel per wheat unit.",
+                 optionExplains:["P is not efficient (it's inside, not on, the PPC); Q cannot be attained with current resources since it exceeds the frontier at wheat=300.","Correct. P(200,300) is inside (max steel at wheat=200 is 440); Q(300,400) is outside (max steel at wheat=300 is 360); OC = 120÷200 = 0.6.","P is not unattainable (it's reachable, just inefficient — inside the PPC, not outside); and the OC calculation of 1.2 is incorrect.","The OC of 1.0 is wrong; correct calculation: wheat gained=200, steel lost=120, OC=0.6 steel per wheat unit."]},
+
+                {type:"assertion",diff:"VH",
+                 assertion:"Economic Growth and Economic Development always occur simultaneously — whenever a country's GDP grows, its human development indicators (health, education, poverty) automatically improve in proportion.",
+                 reason:"Increases in national income (GDP) provide governments with additional tax revenue that can be directed towards education, healthcare and social programmes, thereby raising human development outcomes.",
+                 options:["Both A and R are true and R correctly explains A","Both A and R are true but R does NOT explain A","A is false but R is true","Both A and R are false"],
+                 answer:3,
+                 explain:"BOTH A and R are FALSE. A is false: India's 8%+ growth with HDI rank 134/193 is definitive evidence that growth and development frequently diverge. Countries can grow their GDP while widening inequality and neglecting health/education. R is also false: higher GDP does NOT automatically produce better human development — it depends on HOW income is distributed and WHETHER governments actually direct revenue to social spending. In India, the richest 1% own 40% of wealth, showing that GDP gains need not reach the majority.",
+                 optionExplains:["Both A and R are false — growth and development do not automatically co-move, and higher GDP does not automatically fund social improvements.","A is still false even if we granted R some truth; they cannot both be true.","A is false (India's data decisively contradicts it); R is also false because higher GDP does not automatically translate to human development.","Correct. A is false (India disproves automatic co-movement); R is false (GDP growth doesn't automatically fund social development — it depends on distribution and policy choices)."]},
+
+                {type:"matching",diff:"VH",
+                 q:"Match each scenario to the correct type of unemployment:",
+                 columnA:["(1) A senior accountant's job is eliminated because AI software now handles all tax return processing automatically","(2) A sugarcane cutter in Maharashtra has no work during the five months between harvest and the next planting season","(3) A fresh MBA graduate takes 8 weeks searching for a position she considers suitable before accepting an offer","(4) In a family of five, all members work a 2-acre farm plot that agricultural experts say needs only two workers to operate efficiently"],
+                 columnB:["(a) Disguised Unemployment — more workers employed than needed; marginal product ≈ zero","(b) Frictional Unemployment — temporary gap between jobs, usually voluntary","(c) Structural Unemployment — technology or industry change eliminates certain skills","(d) Seasonal Unemployment — work only available in specific periods of the year"],
+                 options:["1-c, 2-d, 3-b, 4-a","1-d, 2-c, 3-a, 4-b","1-c, 2-a, 3-d, 4-b","1-b, 2-d, 3-c, 4-a"],
+                 answer:0,
+                 explain:"(1) AI replacing the accountant's role = Structural Unemployment — a change in technology has made certain skills redundant. (2) No work between harvest seasons = Seasonal Unemployment — dependent on agricultural calendar. (3) Graduate searching for the right job = Frictional Unemployment — a normal, temporary transition between school and work. (4) Five people doing the work of two = Disguised Unemployment — the extra workers add zero (or near-zero) marginal output; removing them would not reduce total production.",
+                 optionExplains:["Correct. Structural (1-c), Seasonal (2-d), Frictional (3-b), Disguised (4-a) — each matches the economic definition precisely.","Wrong — seasonal work is not structural, and frictional is not disguised.","Wrong — the accountant's situation is structural (technology change), not agricultural; and 3 is frictional, not seasonal.","Wrong — structural unemployment is technology-driven, not voluntary job-searching (that's frictional)."]},
+
+                {type:"assertion",diff:"VH",
+                 assertion:"The Production Possibility Curve is concave to the origin (bowed outward) specifically because of the Law of Increasing Opportunity Cost — as more of one good is produced, the opportunity cost of each additional unit rises.",
+                 reason:"Resources are not perfectly adaptable between different uses; as an economy shifts more resources from producing one good to another, it increasingly uses resources that are ill-suited for the new good, making each successive unit progressively more expensive in terms of the other good sacrificed.",
+                 options:["Both A and R are true and R correctly explains A","Both A and R are true but R does NOT explain A","A is false but R is true","Both A and R are false"],
+                 answer:0,
+                 explain:"BOTH A and R are TRUE and R correctly explains A. The Law of Increasing Opportunity Cost (A) IS the reason for the PPC's concave shape. R accurately explains WHY this law holds: resources are heterogeneous — land suited for wheat production is not equally good for steel, and vice versa. The first units shifted are those best adapted; later units are progressively less suited, driving up the opportunity cost. From our data: gaining 100 wheat costs 20 steel early (B→C) but 200 steel at the margin (E→F).",
+                 optionExplains:["Correct. Both are true and R is the causal mechanism for A: resource non-adaptability → increasing opportunity cost → concave PPC.","R does explain A — this option would require R to be true but not explanatory, which is not the case here.","A is true — the PPC IS concave because of increasing opportunity cost.","Both are true — neither A nor R is false."]},
+
+                {type:"case",diff:"VH",
+                 passage:"Country X and Country Y both had identical per capita GDPs of $5,000 in 2000. By 2024: Country X has grown per capita GDP to $15,000, but its Gini coefficient rose from 0.30 to 0.62 (extreme inequality), female labour force participation remains at 15%, and life expectancy increased by only 3 years. Country Y grew per capita GDP to $9,000, but Gini fell to 0.26, female labour force participation rose from 20% to 58%, and life expectancy improved by 14 years.",
+                 q:"Which conclusion is MOST justified from this evidence?",
+                 options:["Country X achieved superior Economic Development because its per capita GDP is higher","Country Y achieved superior Economic Development — development encompasses equity, gender inclusion, health and wellbeing, not just income","It is impossible to compare development across countries since all indicators are subjective","Per capita income is the only valid measure of development; all other indicators are unreliable"],
+                 answer:1,
+                 explain:"Economic Development is multidimensional — it includes equity (Gini), gender inclusion (female labour force participation), health (life expectancy) and income together. Country Y's lower but more equitably distributed income, alongside dramatic gains in gender participation and life expectancy, represents superior human development. Country X's high GDP growth has been captured by the wealthy (Gini=0.62), with minimal progress in health and gender inclusion — high growth, low development.",
+                 optionExplains:["Per capita GDP alone does not define Economic Development; Country X's extreme inequality, low female participation and modest health gains mean most people's lives have not improved proportionately.","Correct. Country Y's balanced progress on income, equity, gender and health represents genuine Economic Development — all dimensions improving together.","Comparison IS possible using HDI and other multi-dimensional indices — this is precisely what international development economics does.","Modern development economics has long established that income alone is insufficient; Sen's Capabilities Approach, HDI and MPI all validate multidimensional measurement."]},
+
+                {type:"assertion",diff:"VH",
+                 assertion:"India operates as a command economy in which the central government makes all major economic decisions about production, distribution and pricing through five-year plans, with no meaningful role for private markets.",
+                 reason:"A socialist or command economy, by concentrating economic decisions in the state, ensures equitable distribution of resources and automatically eliminates market failures such as monopoly power and information asymmetry.",
+                 options:["Both A and R are true and R correctly explains A","Both A and R are true but R does NOT explain A","A is false but R is true","Both A and R are false"],
+                 answer:3,
+                 explain:"BOTH A and R are FALSE. A is clearly false — India is a MIXED economy. Private firms like Reliance, Tata, Infosys, and millions of small businesses drive most of India's output. India abandoned comprehensive central planning after 1991 reforms; five-year plans were replaced by indicative planning and eventually discontinued. R is also false — command economies do NOT automatically eliminate market failures; instead they create their own inefficiencies (misallocation of resources, information problems, lack of innovation) as seen in the collapse of USSR-style command economies.",
+                 optionExplains:["Both A and R are false — India is not a command economy, and command economies do not automatically solve market failures.","Both are still false — independent of each other's truth value.","A is false (India is a mixed economy, not command); R is also false (command economies create their own inefficiencies rather than eliminating all market failures).","Correct. A is false (India = mixed economy, major private sector since 1991); R is false (command economies generate significant inefficiencies, not efficiency)."]}
+
+              ]},
             {label:"Set 2", mix:"14/9/7", questions:[]},
             {label:"Set 3", mix:"13/9/8", questions:[]},
             {label:"Set 4", mix:"12/9/9", questions:[]},
