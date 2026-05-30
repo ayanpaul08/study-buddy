@@ -412,7 +412,7 @@ const DATA = {
               <p>Nominal accounts are closed at the end of each accounting year — their balances transfer to the Profit and Loss Account. Personal and Real accounts are carried forward to the next year (they appear in the Balance Sheet).</p>`},
             {diagram:`<svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
               <text x="350" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#3c4742" font-family="Fraunces, serif">The Golden Rules of Debit and Credit</text>
-              <rect x="10" y="36" width="200" height="172" rx="10" fill="#e3eee6" stroke="#234f3b" stroke-width="1.5"/>
+              <rect x="10" y="36" width="200" height="182" rx="10" fill="#e3eee6" stroke="#234f3b" stroke-width="1.5"/>
               <text x="110" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#234f3b">Personal Account</text>
               <text x="110" y="78" text-anchor="middle" font-size="10.5" fill="#3c4742">Accounts of persons,</text>
               <text x="110" y="91" text-anchor="middle" font-size="10.5" fill="#3c4742">firms and companies</text>
@@ -422,7 +422,7 @@ const DATA = {
               <text x="110" y="157" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">Credit the Giver</text>
               <text x="110" y="196" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">e.g. Bought from Suresh on credit:</text>
               <text x="110" y="207" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">Debit Purchases, Credit Suresh</text>
-              <rect x="250" y="36" width="200" height="172" rx="10" fill="#f8f0db" stroke="#b6862c" stroke-width="1.5"/>
+              <rect x="250" y="36" width="200" height="182" rx="10" fill="#f8f0db" stroke="#b6862c" stroke-width="1.5"/>
               <text x="350" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6420">Real Account</text>
               <text x="350" y="78" text-anchor="middle" font-size="10.5" fill="#3c4742">Accounts of tangible</text>
               <text x="350" y="91" text-anchor="middle" font-size="10.5" fill="#3c4742">and intangible assets</text>
@@ -432,7 +432,7 @@ const DATA = {
               <text x="350" y="157" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">Credit what Goes Out</text>
               <text x="350" y="196" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">e.g. Bought machinery for cash:</text>
               <text x="350" y="207" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">Debit Machinery, Credit Cash</text>
-              <rect x="490" y="36" width="200" height="172" rx="10" fill="#f6e2dc" stroke="#c0492f" stroke-width="1.5"/>
+              <rect x="490" y="36" width="200" height="182" rx="10" fill="#f6e2dc" stroke="#c0492f" stroke-width="1.5"/>
               <text x="590" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#b23a26">Nominal Account</text>
               <text x="590" y="78" text-anchor="middle" font-size="10.5" fill="#3c4742">Accounts of expenses,</text>
               <text x="590" y="91" text-anchor="middle" font-size="10.5" fill="#3c4742">losses, incomes, gains</text>
@@ -2095,84 +2095,129 @@ const DATA = {
 
             {h:"The Economic Problem — Scarcity, Choice and Opportunity Cost", kicker:"Unit 1 · Topic 1",
              html:`
-              <p>You have ₹500 and a free evening. You could revise for your exam, go to a cricket match, or buy new stationery. You can't do all three. The government has ₹50 trillion and must choose between building hospitals or highways, spending on defence or education. <strong>This tension between unlimited wants and limited resources is the starting point of all economics.</strong></p>
+              <p>You have ₹500 and a free Saturday. You could buy textbooks, watch a cricket match, or buy stationery. You can do one — not all three. India's government has ₹50 trillion and must choose between hospitals and highways, between defence and education. <strong>This tension between unlimited wants and limited resources is the starting point of all economics.</strong></p>
 
-              <h3 style="color:var(--green-deep);margin:20px 0 10px">What is Scarcity?</h3>
+              <h3 style="color:var(--green-deep);margin:20px 0 10px">Scarcity — The Core Problem</h3>
               <div style="background:#e3eee6;border-left:4px solid var(--green-deep);padding:13px 16px;border-radius:8px;margin-bottom:14px">
-                <b style="color:var(--green-deep)">Scarcity</b> means that resources — land, labour, capital and entrepreneurship — are always limited relative to the wants they must satisfy. Scarcity is <i>universal</i>: it affects a student choosing study time, a firm deciding output, and a government allocating a national budget. Scarcity forces choice.
+                <b style="color:var(--green-deep)">Scarcity</b> means resources — land, labour, capital, entrepreneurship — are always limited relative to the wants they must satisfy. Scarcity forces every individual, firm and government to make <b>choices</b>. Economics is the study of those choices.
               </div>
 
               <h3 style="color:var(--green-deep);margin:18px 0 10px">The Three Fundamental Economic Questions</h3>
               <table class="cmp">
                 <tr><th>Question</th><th>What it asks</th><th>Indian real-life example</th></tr>
-                <tr><td><b>What to produce?</b></td><td>Which goods and services, and in what quantities?</td><td>Should India produce more electric vehicles or petrol cars? More wheat or more rice?</td></tr>
-                <tr><td><b>How to produce?</b></td><td>Using which combination of inputs — labour-intensive or capital-intensive methods?</td><td>Build a road using hand-held tools and many workers (labour-intensive) or bulldozers and fewer workers (capital-intensive)?</td></tr>
-                <tr><td><b>For whom to produce?</b></td><td>Who gets the goods and services? How is output distributed?</td><td>Should subsidised rice go to all, or only to households below the poverty line?</td></tr>
+                <tr><td><b>What to produce?</b></td><td>Which goods, in what quantities?</td><td>More electric vehicles or petrol cars? More wheat or more rice?</td></tr>
+                <tr><td><b>How to produce?</b></td><td>Labour-intensive or capital-intensive?</td><td>Build a road with bulldozers (few workers) or hand tools (many workers)?</td></tr>
+                <tr><td><b>For whom to produce?</b></td><td>Who gets the output?</td><td>Subsidised food rations — to all citizens, or only BPL households?</td></tr>
               </table>
 
               <h3 style="color:var(--green-deep);margin:20px 0 10px">Opportunity Cost — The True Cost of Every Choice</h3>
               <div style="background:#f8f0db;border-left:4px solid #b6862c;padding:13px 16px;border-radius:8px;margin-bottom:14px">
-                <b style="color:#8a6420">Opportunity Cost</b> is the value of the best alternative you give up when you make a choice. It is not just money — it includes time, effort and any other benefit foregone.
+                <b style="color:#8a6420">Opportunity Cost</b> is the value of the best alternative you give up when you make a choice. When India spends ₹1,00,000 crore building fighter jets, the opportunity cost is what that money <i>could have built instead</i> — perhaps 200,000 new schools or 500 new hospitals. Every choice has a cost; the opportunity cost makes that cost visible.
               </div>
-              <p><b>Example:</b> If India spends ₹1,00,000 crore on building fighter jets, the opportunity cost is whatever that money <i>could have built instead</i> — perhaps 200,000 new schools, or 500 new government hospitals. Opportunity cost makes us ask: "Is this the best possible use of this resource?"</p>
 
               <h3 style="color:var(--green-deep);margin:20px 0 10px">The Production Possibility Curve (PPC)</h3>
-              <p>The PPC (also called the Production Possibility Frontier — PPF) is a graph showing all the maximum possible combinations of two goods that an economy can produce using its available resources and technology fully and efficiently.</p>
+              <p>The PPC — also called the <b>Production Possibility Frontier (PPF)</b> — is a graph showing all the maximum possible combinations of two goods that an economy can produce when it uses <i>all</i> its available resources fully and efficiently. Think of it as the economy's "best it can do" boundary.</p>
+              <p>To understand it concretely, suppose India can deploy all its resources towards producing only two things: <b>Wheat</b> (food for people) or <b>Steel</b> (material for factories and infrastructure). If the government shifted all resources to steel, it could produce 500 million tonnes of steel but zero wheat. If it devoted everything to wheat, it gets 450 million tonnes of wheat but zero steel. Between these extremes lies a range of possible combinations — shown in the table and graph below.</p>
 
-              <svg viewBox="0 0 580 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:12px 0" font-family="IBM Plex Sans,sans-serif">
-                <rect x="0" y="0" width="580" height="380" rx="10" fill="#f8f9fa"/>
-                <line x1="80" y1="50" x2="80" y2="318" stroke="#555" stroke-width="2"/>
-                <line x1="80" y1="318" x2="508" y2="318" stroke="#555" stroke-width="2"/>
-                <polygon points="508,314 516,318 508,322" fill="#555"/>
-                <polygon points="76,50 80,42 84,50" fill="#555"/>
-                <text x="522" y="322" font-size="12" fill="#333">x</text>
-                <text x="68" y="38" font-size="12" fill="#333">y</text>
-                <line x1="80" y1="70" x2="76" y2="70" stroke="#888" stroke-width="1"/>
-                <text x="68" y="74" font-size="10" fill="#555" text-anchor="end">400</text>
-                <line x1="80" y1="120" x2="76" y2="120" stroke="#888" stroke-width="1"/>
-                <text x="68" y="124" font-size="10" fill="#555" text-anchor="end">300</text>
-                <line x1="80" y1="170" x2="76" y2="170" stroke="#888" stroke-width="1"/>
-                <text x="68" y="174" font-size="10" fill="#555" text-anchor="end">200</text>
-                <line x1="80" y1="220" x2="76" y2="220" stroke="#888" stroke-width="1"/>
-                <text x="68" y="224" font-size="10" fill="#555" text-anchor="end">100</text>
-                <line x1="180" y1="318" x2="180" y2="322" stroke="#888" stroke-width="1"/>
-                <text x="180" y="334" font-size="10" fill="#555" text-anchor="middle">100</text>
-                <line x1="280" y1="318" x2="280" y2="322" stroke="#888" stroke-width="1"/>
-                <text x="280" y="334" font-size="10" fill="#555" text-anchor="middle">200</text>
-                <line x1="380" y1="318" x2="380" y2="322" stroke="#888" stroke-width="1"/>
-                <text x="380" y="334" font-size="10" fill="#555" text-anchor="middle">300</text>
-                <line x1="480" y1="318" x2="480" y2="322" stroke="#888" stroke-width="1"/>
-                <text x="480" y="334" font-size="10" fill="#555" text-anchor="middle">400</text>
-                <path d="M 80,62 C 200,80 440,250 488,318" fill="none" stroke="#234f3b" stroke-width="3"/>
-                <text x="138" y="144" font-size="13" fill="#234f3b" font-weight="700" font-style="italic">PPC</text>
-                <circle cx="284" cy="174" r="7" fill="#234f3b"/>
-                <rect x="295" y="160" width="140" height="36" rx="6" fill="#e3eee6" stroke="#234f3b" stroke-width="1"/>
-                <text x="365" y="176" text-anchor="middle" font-size="10.5" font-weight="700" fill="#234f3b">A — Efficient</text>
-                <text x="365" y="190" text-anchor="middle" font-size="10" fill="#3c4742">On the PPC (all resources used)</text>
-                <circle cx="200" cy="245" r="7" fill="#c0492f"/>
-                <rect x="212" y="232" width="148" height="36" rx="6" fill="#f6e2dc" stroke="#c0492f" stroke-width="1"/>
-                <text x="286" y="248" text-anchor="middle" font-size="10.5" font-weight="700" fill="#c0492f">B — Inefficient</text>
-                <text x="286" y="262" text-anchor="middle" font-size="10" fill="#3c4742">Inside PPC (wasted resources)</text>
-                <circle cx="390" cy="120" r="7" fill="#b6862c"/>
-                <rect x="265" y="107" width="118" height="36" rx="6" fill="#f8f0db" stroke="#b6862c" stroke-width="1"/>
-                <text x="324" y="123" text-anchor="middle" font-size="10.5" font-weight="700" fill="#8a6420">C — Unattainable</text>
-                <text x="324" y="137" text-anchor="middle" font-size="10" fill="#3c4742">Beyond current capacity</text>
-                <text x="290" y="360" text-anchor="middle" font-size="11" fill="#555" font-weight="600">Consumer Goods (units) →</text>
-                <text x="26" y="185" text-anchor="middle" font-size="11" fill="#555" font-weight="600" transform="rotate(-90,26,185)">← Capital Goods (units)</text>
-                <text x="290" y="16" text-anchor="middle" font-size="12" fill="#234f3b" font-weight="700">Production Possibility Curve</text>
+              <table class="cmp" style="margin-bottom:16px">
+                <tr><th>Point</th><th>Wheat (mn tonnes)</th><th>Steel (mn tonnes)</th><th>Opportunity cost of 100 more wheat</th></tr>
+                <tr><td><b>A</b></td><td>0</td><td>500</td><td>—</td></tr>
+                <tr><td><b>B</b></td><td>100</td><td>480</td><td>Give up 20 mn t of steel</td></tr>
+                <tr><td><b>C</b></td><td>200</td><td>440</td><td>Give up 40 mn t of steel</td></tr>
+                <tr><td><b>D</b></td><td>300</td><td>360</td><td>Give up 80 mn t of steel</td></tr>
+                <tr><td><b>E</b></td><td>400</td><td>200</td><td>Give up 160 mn t of steel</td></tr>
+                <tr><td><b>F</b></td><td>450</td><td>0</td><td>Give up 200 mn t of steel</td></tr>
+              </table>
+
+              <p>Notice: each time you produce 100 more tonnes of wheat, you sacrifice <i>more and more</i> steel — 20, then 40, then 80, then 160. This rising sacrifice is called <b>increasing opportunity cost</b> and it is why the PPC curves outward (is concave).</p>
+
+              <svg viewBox="0 0 620 410" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:12px 0 4px" font-family="IBM Plex Sans,sans-serif">
+                <rect x="0" y="0" width="620" height="410" rx="10" fill="#f8f9fb"/>
+                <text x="310" y="18" text-anchor="middle" font-size="12" font-weight="700" fill="#234f3b">Production Possibility Curve — Wheat vs. Steel</text>
+                <line x1="80" y1="269" x2="592" y2="269" stroke="#e0e5e0" stroke-width="1" stroke-dasharray="4,3"/>
+                <line x1="80" y1="205" x2="592" y2="205" stroke="#e0e5e0" stroke-width="1" stroke-dasharray="4,3"/>
+                <line x1="80" y1="141" x2="592" y2="141" stroke="#e0e5e0" stroke-width="1" stroke-dasharray="4,3"/>
+                <line x1="80" y1="77" x2="592" y2="77" stroke="#e0e5e0" stroke-width="1" stroke-dasharray="4,3"/>
+                <line x1="193" y1="27" x2="193" y2="333" stroke="#e0e5e0" stroke-width="1" stroke-dasharray="4,3"/>
+                <line x1="308" y1="27" x2="308" y2="333" stroke="#e0e5e0" stroke-width="1" stroke-dasharray="4,3"/>
+                <line x1="421" y1="27" x2="421" y2="333" stroke="#e0e5e0" stroke-width="1" stroke-dasharray="4,3"/>
+                <line x1="534" y1="27" x2="534" y2="333" stroke="#e0e5e0" stroke-width="1" stroke-dasharray="4,3"/>
+                <line x1="80" y1="333" x2="598" y2="333" stroke="#333" stroke-width="2"/>
+                <polygon points="598,329 606,333 598,337" fill="#333"/>
+                <line x1="80" y1="333" x2="80" y2="22" stroke="#333" stroke-width="2"/>
+                <polygon points="76,22 80,14 84,22" fill="#333"/>
+                <line x1="80" y1="269" x2="74" y2="269" stroke="#555" stroke-width="1.5"/>
+                <text x="68" y="273" text-anchor="end" font-size="10" fill="#444">100</text>
+                <line x1="80" y1="205" x2="74" y2="205" stroke="#555" stroke-width="1.5"/>
+                <text x="68" y="209" text-anchor="end" font-size="10" fill="#444">200</text>
+                <line x1="80" y1="141" x2="74" y2="141" stroke="#555" stroke-width="1.5"/>
+                <text x="68" y="145" text-anchor="end" font-size="10" fill="#444">300</text>
+                <line x1="80" y1="77" x2="74" y2="77" stroke="#555" stroke-width="1.5"/>
+                <text x="68" y="81" text-anchor="end" font-size="10" fill="#444">400</text>
+                <line x1="80" y1="27" x2="74" y2="27" stroke="#555" stroke-width="1.5"/>
+                <text x="68" y="31" text-anchor="end" font-size="10" fill="#444">500</text>
+                <line x1="193" y1="333" x2="193" y2="339" stroke="#555" stroke-width="1.5"/>
+                <text x="193" y="351" text-anchor="middle" font-size="10" fill="#444">100</text>
+                <line x1="308" y1="333" x2="308" y2="339" stroke="#555" stroke-width="1.5"/>
+                <text x="308" y="351" text-anchor="middle" font-size="10" fill="#444">200</text>
+                <line x1="421" y1="333" x2="421" y2="339" stroke="#555" stroke-width="1.5"/>
+                <text x="421" y="351" text-anchor="middle" font-size="10" fill="#444">300</text>
+                <line x1="534" y1="333" x2="534" y2="339" stroke="#555" stroke-width="1.5"/>
+                <text x="534" y="351" text-anchor="middle" font-size="10" fill="#444">400</text>
+                <line x1="591" y1="333" x2="591" y2="339" stroke="#555" stroke-width="1.5"/>
+                <text x="591" y="351" text-anchor="middle" font-size="10" fill="#444">450</text>
+                <text x="345" y="368" text-anchor="middle" font-size="11.5" fill="#234f3b" font-weight="600">Wheat Production (million tonnes)</text>
+                <text x="22" y="183" text-anchor="middle" font-size="11.5" fill="#234f3b" font-weight="600" transform="rotate(-90,22,183)">Steel Production (million tonnes)</text>
+                <text x="72" y="348" font-size="11" fill="#444" text-anchor="end">O</text>
+                <path d="M 80,27 C 135,28 185,35 193,37 C 201,39 300,61 308,63 C 316,65 413,111 421,113 C 429,115 526,213 534,215 C 542,217 588,330 591,333" fill="none" stroke="#234f3b" stroke-width="3.5" stroke-linecap="round"/>
+                <circle cx="80" cy="27" r="4" fill="#234f3b"/><text x="85" y="24" font-size="9.5" fill="#234f3b" font-weight="700">A</text>
+                <circle cx="193" cy="37" r="4" fill="#234f3b"/><text x="198" y="34" font-size="9.5" fill="#234f3b" font-weight="700">B</text>
+                <circle cx="308" cy="63" r="4" fill="#234f3b"/><text x="313" y="60" font-size="9.5" fill="#234f3b" font-weight="700">C</text>
+                <circle cx="534" cy="215" r="4" fill="#234f3b"/><text x="539" y="226" font-size="9.5" fill="#234f3b" font-weight="700">E</text>
+                <circle cx="591" cy="333" r="4" fill="#234f3b"/><text x="548" y="330" font-size="9.5" fill="#234f3b" font-weight="700">F</text>
+                <circle cx="421" cy="113" r="9" fill="#234f3b" stroke="white" stroke-width="2.5"/>
+                <text x="425" y="110" font-size="10" fill="#234f3b" font-weight="700">D</text>
+                <line x1="413" y1="107" x2="302" y2="84" stroke="#234f3b" stroke-width="1" stroke-dasharray="3,2"/>
+                <rect x="160" y="66" width="140" height="38" rx="7" fill="#e3eee6" stroke="#234f3b" stroke-width="1.2"/>
+                <text x="230" y="83" text-anchor="middle" font-size="10.5" font-weight="700" fill="#234f3b">D — Efficient</text>
+                <text x="230" y="97" text-anchor="middle" font-size="9.5" fill="#3c4742">On the PPC: all resources</text>
+                <text x="230" y="108" text-anchor="middle" font-size="9.5" fill="#3c4742">fully and efficiently used</text>
+                <circle cx="268" cy="220" r="9" fill="#c0492f" stroke="white" stroke-width="2.5"/>
+                <text x="272" y="217" font-size="10" fill="#c0492f" font-weight="700">H</text>
+                <line x1="260" y1="228" x2="180" y2="258" stroke="#c0492f" stroke-width="1" stroke-dasharray="3,2"/>
+                <rect x="100" y="248" width="156" height="38" rx="7" fill="#f6e2dc" stroke="#c0492f" stroke-width="1.2"/>
+                <text x="178" y="265" text-anchor="middle" font-size="10.5" font-weight="700" fill="#c0492f">H — Inefficient</text>
+                <text x="178" y="279" text-anchor="middle" font-size="9.5" fill="#3c4742">Inside PPC: resources idle</text>
+                <circle cx="492" cy="72" r="9" fill="#b6862c" stroke="white" stroke-width="2.5"/>
+                <text x="496" y="69" font-size="10" fill="#b6862c" font-weight="700">G</text>
+                <line x1="484" y1="72" x2="427" y2="52" stroke="#b6862c" stroke-width="1" stroke-dasharray="3,2"/>
+                <rect x="305" y="36" width="118" height="38" rx="7" fill="#f8f0db" stroke="#b6862c" stroke-width="1.2"/>
+                <text x="364" y="53" text-anchor="middle" font-size="10.5" font-weight="700" fill="#8a6420">G — Unattainable</text>
+                <text x="364" y="67" text-anchor="middle" font-size="9.5" fill="#3c4742">Beyond current capacity</text>
+                <text x="30" y="388" font-size="10" fill="#888" font-style="italic">Based on a hypothetical example for illustration; actual India data would differ.</text>
               </svg>
 
-              <h3 style="color:var(--green-deep);margin:18px 0 10px">Reading the Graph</h3>
-              <ul>
-                <li><b>X-axis</b> measures Consumer Goods output (e.g. food, clothing). <b>Y-axis</b> measures Capital Goods output (e.g. machinery, tools).</li>
-                <li><b>Point A (on the curve)</b> — all resources are fully and efficiently used. Any point on the PPC is efficient.</li>
-                <li><b>Point B (inside the curve)</b> — some resources are unemployed or being wasted (e.g. factories sitting idle, workers without jobs).</li>
-                <li><b>Point C (outside the curve)</b> — currently unattainable with existing resources and technology. This point becomes reachable only if resources grow (more workers, better technology, new capital).</li>
-              </ul>
+              <h3 style="color:var(--green-deep);margin:20px 0 10px">Reading the Graph — Three Types of Points</h3>
+              <table class="cmp">
+                <tr><th>Point</th><th>Location</th><th>What it means</th><th>Indian example</th></tr>
+                <tr><td><b>D</b> (green)</td><td>ON the PPC</td><td>Efficient — all resources are fully and productively employed; impossible to produce more of one good without producing less of the other</td><td>All land, workers and factories operating at full capacity</td></tr>
+                <tr><td><b>H</b> (red)</td><td>INSIDE the PPC</td><td>Inefficient — some resources are idle, wasted or poorly used; economy is producing less than it could with the same resources</td><td>Factories shut down during a recession; farmers without seeds; workers unemployed</td></tr>
+                <tr><td><b>G</b> (gold)</td><td>OUTSIDE the PPC</td><td>Currently unattainable — no combination of existing resources can produce this output level with current technology</td><td>India today cannot produce 362 mn t of wheat AND 422 mn t of steel simultaneously</td></tr>
+              </table>
 
-              <h3 style="color:var(--green-deep);margin:18px 0 10px">Why is the PPC Concave? — Increasing Opportunity Cost</h3>
-              <p>The PPC is <b>bowed outward</b> (concave to the origin) because of the <b>Law of Increasing Opportunity Cost</b>. Resources are not perfectly adaptable — a farmland that grows wheat easily may be poor for making steel. As an economy shifts more and more resources from one good to another, it increasingly uses less-suitable resources for that good, and each additional unit of that good costs more and more of the other.</p>
-              <p>In India: shifting land from rice to cash crops is easy at first (some land suits both). But eventually you're using land that's poorly suited for cash crops, and each extra hectare switched gives you less and less extra output while sacrificing more and more rice.</p>`},
+              <h3 style="color:var(--green-deep);margin:20px 0 10px">Why Is the PPC Curved (Concave)? — Increasing Opportunity Cost</h3>
+              <p>Look again at the data table. Going from A to B (first 100 units of wheat) costs only 20 units of steel. But going from E to F (the last 50 units of wheat) costs 200 units of steel — a much higher sacrifice. Why?</p>
+              <p>Because <b>resources are not perfectly adaptable</b>. The first resources shifted from steel to wheat production are those best suited for wheat — fertile land, agricultural workers. As you shift more and more resources, you eventually use land and workers poorly suited for farming. Their contribution to wheat output is small while their cost in lost steel is huge. This law of <b>increasing opportunity cost</b> bends the PPC outward into its characteristic concave shape.</p>
+              <p>A <b>straight-line PPC</b> would only occur if resources were perfectly interchangeable between both goods — which is never true in practice.</p>
+
+              <h3 style="color:var(--green-deep);margin:18px 0 10px">Economic Growth — Shifting the PPC Outward</h3>
+              <p>The PPC shifts <b>outward</b> (to the right and upward) when an economy gains more resources or improves its technology — allowing it to produce more of both goods simultaneously. This outward shift is <b>economic growth</b>:</p>
+              <ul>
+                <li>New technology (e.g. better seeds, more efficient steel furnaces)</li>
+                <li>More workers or better-educated workers (human capital)</li>
+                <li>Investment in new machinery and infrastructure (physical capital)</li>
+              </ul>
+              <p>What was yesterday's "unattainable" point G can become tomorrow's "on the PPC" point D — if the economy invests and grows. For India, hitting 7–8% annual GDP growth is the policy goal of continuously expanding this frontier.</p>`},
 
             {topicStart:"eco-u1-systems", title:"Economic Systems — How Societies Answer the Basic Questions", icon:"🏛️",
              desc:"Free market, command and mixed economies; the invisible hand; laissez-faire; and the broad social goals that every economic system tries to achieve."},
