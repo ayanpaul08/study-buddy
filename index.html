@@ -268,13 +268,13 @@
 <body>
 <header>
   <div class="bar">
-    <div class="crest" onclick="go('home')">V</div>
+    <div class="crest" onclick="reset('home')" style="font-size:11px;font-weight:700;letter-spacing:.04em;min-width:52px;cursor:pointer">Home</div>
     <div class="brand">
       <h1>Study Buddy</h1>
       <div class="ai">powered by AI &nbsp;·&nbsp; WBCHSE Class XI Commerce</div>
     </div>
     <div class="spacer"></div>
-    <div id="crumb" class="crumb hide" onclick="back()">‹ Back</div>
+    <div id="crumb" class="crumb hide" onclick="reset('home')" style="cursor:pointer">Home</div>
   </div>
 </header>
 
@@ -400,7 +400,7 @@ function renderSubject(key){
       <p style="color:var(--ink-soft);font-size:14px;margin-bottom:24px">Select a unit to learn the concept or jump straight into practice questions.</p>
     </section>
     <section class="units">${units}
-      ${s.accent==='soon'?`<div class="note">📝 <b>Content for this subject is being prepared.</b> Check back soon — units will be unlocked as they are added.</div>`:''}
+      ${s.accent==='soon'?`<div class="note"><b>Content for this subject is being prepared.</b> Check back soon — units will be unlocked as they are added.</div>`:''}
     </section>`;
 }
 
@@ -457,10 +457,9 @@ function renderLearnIndex(ctx,s,u,groups){
   const items=groups.map((g,gi)=>`
     <div class="tcard" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit},topicId:'${g.id}',cardIdx:0})">
       <div class="tc-num">Topic ${gi+1}</div>
-      <div class="tc-icon">${g.icon}</div>
       <div class="tc-title">${g.title}</div>
       <div class="tc-desc">${g.desc}</div>
-      <div class="tc-footer"><span class="tc-cnt">${g.cards.length} cards</span><span class="tc-arrow">→</span></div>
+      <div class="tc-footer"><span class="tc-cnt">Click to study →</span><span class="tc-arrow">→</span></div>
     </div>`).join('');
   app.innerHTML=`
     <section style="padding:28px 0 4px">
@@ -497,9 +496,8 @@ function renderLearn(ctx){
   const topicnav=`<div class="topicnav">
     <button class="btn btn-ghost" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit}})">← Topics</button>
     <div class="tn-info">
-      <div class="tn-icon">${grp.icon}</div>
       <div class="tn-title">${grp.title}</div>
-      <div class="tn-prog">Card ${i+1} of ${grp.cards.length}</div>
+      <div class="tn-prog">Topic ${gIdx+1} of ${groups.length}</div>
     </div>
     ${nextGrp&&isLast
       ? `<button class="btn btn-ghost" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit},topicId:'${nextGrp.id}',cardIdx:0})">Next Topic →</button>`
@@ -508,7 +506,7 @@ function renderLearn(ctx){
 
   const cardnav=`<div class="qnav" style="margin-top:18px">
     ${(isFirst&&!prevGrp)
-      ?`<button class="btn btn-ghost" disabled style="opacity:.4;cursor:default">‹ Previous</button>`
+      ?`<button class="btn btn-ghost" onclick="reset('home')">Home</button>`
       :isFirst&&prevGrp
         ?`<button class="btn btn-ghost" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit},topicId:'${prevGrp.id}',cardIdx:${prevGrp.cards.length-1}})">← Prev Topic</button>`
         :`<button class="btn btn-ghost" onclick="go('learn',{subj:'${ctx.subj}',unit:${ctx.unit},topicId:'${grp.id}',cardIdx:${i-1}})">‹ Previous</button>`

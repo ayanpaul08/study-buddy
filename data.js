@@ -42,670 +42,421 @@ const DATA = {
           /* ============================== LEARN ============================== */
           learn:[
 
-            /* ── ACCOUNTING — MEANING, OBJECTIVES & USERS ── */
-            {topicStart:"accounting", title:"Accounting — Meaning, Objectives & Users", icon:"📊", desc:"What accounting is, who uses it, its objectives, limitations and three sub-fields of accounting."},
-            {h:"Why do we even need Accounting?", kicker:"Unit 1 · The big idea", html:`
-              <p>Every person and every organisation carries out <strong>economic activities</strong> — earning money and spending it. A shopkeeper buys goods and sells them; a school collects fees and pays teachers; even the Government raises taxes and spends on roads.</p>
-              <p>These activities happen through <b>transactions</b> and <b>events</b>:</p>
-              <ul>
-                <li>A <b>transaction</b> is a dealing — buying goods, paying rent, taking a loan.</li>
-                <li>An <b>event</b> is a <i>result</i> of transactions — earning a profit, having stock left over at year-end.</li>
-              </ul>
-              <p>Everyone wants to <strong>keep a record</strong> of these and know the result. Accounting is the discipline built to do exactly that. Because it tells the financial story of a business, it is called the <strong>"language of business."</strong></p>`},
-            {example:"A trader invests ₹2,00,000 in a stationery shop. In January he buys goods for ₹1,15,000, sells goods for ₹1,47,000, pays shop rent ₹5,000, and still has goods worth ₹15,000 left. Did he gain? Sales ₹1,47,000 + Closing stock ₹15,000 = ₹1,62,000; less Goods bought ₹1,15,000 + Rent ₹5,000 = ₹1,20,000. Surplus = ₹42,000. Here buying/selling goods, investing money and paying rent are TRANSACTIONS; earning the ₹42,000 surplus and having stock in hand are EVENTS."},
-            {h:"What is Accounting? — The definition", kicker:"Meaning", html:`
-              <p>The classic 1961 definition (AICPA) says:</p>
-              <p style="border-left:3px solid var(--gold);padding-left:14px;font-style:italic;color:var(--ink)">"Accounting is the <b>art of recording, classifying and summarising</b> in a significant manner and in terms of money, transactions and events which are, in part at least, of a financial character, and <b>interpreting</b> the results thereof."</p>
-              <p>Modern accounting goes one step further and adds <b>communicating</b> the result to users. So the full modern process is:</p>
-              <p><strong>Identifying → Recording → Classifying → Summarising → Analysing → Interpreting → Communicating.</strong></p>
-              <p>Two conditions matter: a transaction is recorded only if (1) it can be measured in <b>money</b>, and (2) it has a <b>financial character</b>. Opening a new branch is an event with no financial character; the business done by that branch has financial character.</p>`},
-            {diagram:`<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-              <rect x="250" y="6" width="200" height="34" rx="9" fill="#234f3b"/>
-              <text x="350" y="28" text-anchor="middle" font-size="14" font-weight="600" fill="#f4efe3">Procedure of Accounting</text>
-              <line x1="170" y1="40" x2="170" y2="60" stroke="#b6862c" stroke-width="2"/><line x1="530" y1="40" x2="530" y2="60" stroke="#b6862c" stroke-width="2"/><line x1="170" y1="40" x2="530" y2="40" stroke="#b6862c" stroke-width="2"/>
-              <rect x="60" y="60" width="220" height="30" rx="7" fill="#e3eee6" stroke="#2f6b4f"/><text x="170" y="80" text-anchor="middle" font-size="12.5" font-weight="600" fill="#234f3b">Generating financial information</text>
-              <rect x="420" y="60" width="220" height="30" rx="7" fill="#f8f0db" stroke="#b6862c"/><text x="530" y="80" text-anchor="middle" font-size="12.5" font-weight="600" fill="#8a6420">Using financial information</text>
-              ${['Recording','Classifying','Summarising'].map((t,i)=>`<rect x="${30+i*88}" y="110" width="80" height="40" rx="7" fill="#fbf8f0" stroke="#2f6b4f"/><text x="${70+i*88}" y="134" text-anchor="middle" font-size="11.5" fill="#234f3b">${t}</text>`).join('')}
-              ${['Analysing','Interpreting','Communicating'].map((t,i)=>`<rect x="${390+i*100}" y="110" width="92" height="40" rx="7" fill="#fbf8f0" stroke="#b6862c"/><text x="${436+i*100}" y="134" text-anchor="middle" font-size="11" fill="#8a6420">${t}</text>`).join('')}
-              <text x="350" y="185" text-anchor="middle" font-size="12" fill="#3c4742" font-style="italic" font-family="Fraunces">Book-keeping = Recording + Classifying + Summarising (+ Trial Balance)</text>
-              <text x="350" y="208" text-anchor="middle" font-size="12" fill="#3c4742" font-style="italic" font-family="Fraunces">Accounting = the above PLUS Analysing, Interpreting &amp; Communicating</text>
-            </svg>`, cap:"Accounting has two halves — generating the information, and then actually using it."},
-            {h:"Book-keeping vs Accounting vs Accountancy", kicker:"Don't confuse these three", html:`
-              <p>Students mix these up constantly. The trick: they are <b>three nested circles</b>, from narrowest to widest.</p>
-              <table class="cmp">
-                <tr><th>Term</th><th>What it does</th><th>Scope</th></tr>
-                <tr><td><b>Book-keeping</b></td><td>Only <i>records</i> transactions (the clerical, routine stage)</td><td>Narrowest</td></tr>
-                <tr><td><b>Accounting</b></td><td>Recording <i>plus</i> classifying, summarising, analysing, interpreting, communicating</td><td>Wider</td></tr>
-                <tr><td><b>Accountancy</b></td><td>The entire body of knowledge, principles &amp; rules that govern accounting</td><td>Widest</td></tr>
-              </table>
-              <p>Remember: <strong>Accounting starts where book-keeping ends.</strong></p>`},
-            {diagram:`<svg viewBox="0 0 420 240" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-              <rect x="20" y="14" width="380" height="212" rx="12" fill="#e3eee6" stroke="#234f3b" stroke-width="1.5"/>
-              <text x="210" y="36" text-anchor="middle" font-size="15" font-weight="700" fill="#234f3b" font-family="Fraunces">ACCOUNTANCY</text>
-              <rect x="70" y="52" width="280" height="150" rx="10" fill="#f8f0db" stroke="#b6862c" stroke-width="1.5"/>
-              <text x="210" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#8a6420" font-family="Fraunces">ACCOUNTING</text>
-              <rect x="125" y="92" width="170" height="92" rx="8" fill="#fbf8f0" stroke="#c0492f" stroke-width="1.5"/>
-              <text x="210" y="130" text-anchor="middle" font-size="13" font-weight="700" fill="#b23a26" font-family="Fraunces">BOOK-</text>
-              <text x="210" y="150" text-anchor="middle" font-size="13" font-weight="700" fill="#b23a26" font-family="Fraunces">KEEPING</text>
-            </svg>`, cap:"Each term contains the one inside it. Book-keeping is a part of accounting, which is a part of accountancy."},
-            {h:"Objectives & Functions of Accounting", kicker:"What accounting is FOR", html:`
-              <p><b>Objectives</b> (the goals):</p>
-              <ul>
-                <li><b>Systematic recording</b> of all transactions (this is book-keeping).</li>
-                <li><b>Ascertain results</b> — profit or loss — via the Profit &amp; Loss Account.</li>
-                <li><b>Ascertain financial position</b> — what the business owns and owes — via the Balance Sheet.</li>
-                <li><b>Provide information</b> to users for rational decision-making.</li>
-                <li><b>Know the solvency position</b> — can the business pay its dues in the short and long run.</li>
-              </ul>
-              <p><b>Functions</b> (what it actually performs): Measurement, Forecasting, Decision-making, Comparison &amp; Evaluation, Control, and Government Regulation &amp; Taxation.</p>`},
-            {h:"Who uses accounting information?", kicker:"Internal vs External users", html:`
-              <p>Users split into two groups by whether they sit <i>inside</i> or <i>outside</i> the business — and each wants the information for a different reason.</p>`},
-            {diagram:`<svg viewBox="0 0 680 250" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-              <rect x="255" y="6" width="170" height="34" rx="9" fill="#234f3b"/><text x="340" y="28" text-anchor="middle" font-size="13.5" font-weight="600" fill="#f4efe3">Users of Accounts</text>
-              <line x1="160" y1="40" x2="160" y2="62" stroke="#b6862c" stroke-width="2"/><line x1="520" y1="40" x2="520" y2="62" stroke="#b6862c" stroke-width="2"/><line x1="160" y1="40" x2="520" y2="40" stroke="#b6862c" stroke-width="2"/>
-              <rect x="70" y="62" width="180" height="32" rx="8" fill="#e3eee6" stroke="#2f6b4f"/><text x="160" y="83" text-anchor="middle" font-size="13" font-weight="600" fill="#234f3b">INTERNAL</text>
-              <rect x="430" y="62" width="180" height="32" rx="8" fill="#f8f0db" stroke="#b6862c"/><text x="520" y="83" text-anchor="middle" font-size="13" font-weight="600" fill="#8a6420">EXTERNAL</text>
-              ${['Owners / Proprietors','Management','Employees'].map((t,i)=>`<text x="160" y="${118+i*26}" text-anchor="middle" font-size="12" fill="#3c4742">• ${t}</text>`).join('')}
-              ${['Investors','Lenders (banks)','Suppliers / Creditors','Customers','Government &amp; agencies','Public'].map((t,i)=>`<text x="520" y="${116+i*22}" text-anchor="middle" font-size="11.5" fill="#3c4742">• ${t}</text>`).join('')}
-            </svg>`, cap:"Owners, managers and employees are inside; everyone else looks in from outside."},
-            {h:"Sub-fields of Accounting", kicker:"The branches", html:`
-              <table class="cmp">
-                <tr><th>Sub-field</th><th>Purpose</th><th>Looks at</th></tr>
-                <tr><td><b>Financial Accounting</b></td><td>Record past transactions; prepare P&amp;L and Balance Sheet</td><td>The past, whole business</td></tr>
-                <tr><td><b>Cost Accounting</b></td><td>Ascertain &amp; control cost of products/services</td><td>Costs, in detail</td></tr>
-                <tr><td><b>Management Accounting</b></td><td>Provide information to managers for planning &amp; decisions</td><td>The future</td></tr>
-              </table>
-              <p>Two newer branches also exist: <b>Social Responsibility Accounting</b> (accounting for social costs &amp; benefits) and <b>Human Resource Accounting</b> (valuing people).</p>`},
-            {h:"Limitations of Accounting", kicker:"Where it falls short", html:`
-              <p>Accounts are useful but <b>not perfect</b>. Key limitations:</p>
-              <ul>
-                <li>Things <b>not measurable in money</b> (staff loyalty, skill) are ignored, even if very valuable.</li>
-                <li>The Balance Sheet shows the position on <b>one past date</b>, not the future.</li>
-                <li>It <b>ignores price-level changes</b> (inflation) — assets stay at old cost.</li>
-                <li>Accounting principles sometimes <b>conflict</b> with each other.</li>
-                <li>Many figures depend on the accountant's <b>personal judgement</b> (e.g. depreciation method, provision for doubtful debts).</li>
-                <li>Different policies for the same item open the door to <b>manipulation</b>.</li>
-              </ul>`},
-            /* ── BASIC ACCOUNTING TERMS ── */
-            {topicStart:"terms", title:"Basic Accounting Terms", icon:"🔤", desc:"Capital, drawings, assets, liabilities, goods, stock, discount, debtors, creditors, receipts and expenditure."},
-            {h:"Capital, Drawings, and the owner's financial stake", kicker:"Basic Accounting Terms · Owner's stake", html:`
-              <p>Every business has an owner (or owners) who invest resources into it. These concepts define the financial relationship between the owner and the business — remember, under the <b>Business Entity Concept</b>, the business and the owner are treated as completely separate.</p>
-              <ul>
-                <li><b>Capital:</b> The amount invested by the owner in the business — cash, goods, or any asset brought in. From the business's viewpoint, capital is what the business <i>owes back</i> to the owner and is therefore treated as an internal liability (also called Owner's Equity or Proprietor's Fund).</li>
-                <li><b>Drawings:</b> Any cash, goods, or asset taken out of the business by the owner for personal use. Drawings reduce capital. They are NOT an expense of the business — they are a withdrawal of the owner's stake.</li>
-                <li><b>Net Worth:</b> Capital + Profits earned − Losses − Drawings = the true net stake of the owner in the business at any point.</li>
-              </ul>
-              <p><b>Formula for closing capital:</b> Closing Capital = Opening Capital + Fresh Capital Introduced + Net Profit − Net Loss − Drawings.</p>
-              <p><b>Example:</b> Ramesh starts a business with ₹5,00,000 cash. He takes ₹20,000 worth of goods for home use in June. The ₹20,000 is Drawings — it reduces his capital to ₹4,80,000 (before any profit or loss). If the business earns ₹80,000 profit, closing capital = ₹4,80,000 + ₹80,000 = ₹5,60,000.</p>`},
-            {h:"Assets — what the business owns and controls", kicker:"Basic Accounting Terms · Assets", html:`
-              <p>An <b>asset</b> is any resource owned or controlled by the business that is expected to provide future economic benefit. Assets are broadly divided into Fixed (Non-current) and Current Assets.</p>
-              <table class="cmp">
-                <tr><th colspan="2">Fixed / Non-current Assets — held for long-term use; NOT for resale</th></tr>
-                <tr><td><b>Tangible</b></td><td>Have physical existence — land, buildings, machinery, vehicles, furniture, equipment</td></tr>
-                <tr><td><b>Intangible</b></td><td>No physical form but carry real value — goodwill, patents, trademarks, copyrights, brand names</td></tr>
-                <tr><td><b>Wasting / Depleting</b></td><td>Natural resources that physically diminish as they are used — mines, oil and gas wells, quarries, timber forests</td></tr>
-                <tr><td><b>Fictitious</b></td><td>Not real assets — losses or expenses that cannot be written off at once and are carried forward temporarily — preliminary expenses, discount on issue of shares. Written off gradually over future years.</td></tr>
-                <tr><th colspan="2">Current Assets — expected to be converted to cash or consumed within one year</th></tr>
-                <tr><td colspan="2">Inventories (stock), Debtors (trade receivables), Cash and bank balance, Short-term investments, Bills receivable, Prepaid expenses, Accrued income</td></tr>
-              </table>
-              <p>⭐ <strong>Key rule:</strong> The same item can be a fixed asset for one business and stock (goods) for another. A car is a fixed asset for a transport company — but for a car dealer, it is stock-in-trade.</p>`},
-            {h:"Liabilities — what the business owes to outside parties", kicker:"Basic Accounting Terms · Liabilities", html:`
-              <p>A <b>liability</b> is an obligation — a legal duty to pay money, goods, or services to an external party — arising from a past transaction or event.</p>
-              <table class="cmp">
-                <tr><th>Type</th><th>Meaning</th><th>Examples</th></tr>
-                <tr><td><b>Long-term (Non-current) Liabilities</b></td><td>Repayable after more than one year</td><td>Term loans from banks, debentures, mortgage loans, long-term bonds</td></tr>
-                <tr><td><b>Current (Short-term) Liabilities</b></td><td>Repayable within one year</td><td>Trade creditors, bills payable, bank overdraft, outstanding expenses, short-term loans, income received in advance</td></tr>
-                <tr><td><b>Contingent Liability</b></td><td>A possible obligation that may arise depending on a future uncertain event</td><td>A court case that may go against the business; a guarantee given on behalf of a third party</td></tr>
-              </table>
-              <p><b>Capital vs Liabilities:</b> Capital (owner's equity) is sometimes called an <i>internal liability</i> — the business owes it to the owner. External liabilities (loans, creditors) are owed to outsiders. The <b>Accounting Equation</b> captures this: <strong>Assets = Capital + Liabilities</strong> — everything the business owns is financed either by the owner or by outsiders.</p>`},
-            {h:"Goods, Stock, Purchases, Sales, Debtors and Creditors", kicker:"Basic Accounting Terms · Trading vocabulary", html:`
-              <p>These six terms form the core vocabulary of any trading business. Getting them right is essential for understanding all future journal entries and financial statements.</p>
-              <table class="cmp">
-                <tr><th>Term</th><th>Meaning</th><th>Key point</th></tr>
-                <tr><td><b>Goods</b></td><td>Items in which the business trades — bought and sold as the main business activity</td><td>What is "goods" for one business may be a fixed asset for another. A computer is goods for a computer dealer; a fixed asset for an accountant.</td></tr>
-                <tr><td><b>Stock (Inventory)</b></td><td>Value of unsold goods at the end of an accounting period</td><td>Opening Stock = start of period; Closing Stock = end of period</td></tr>
-                <tr><td><b>Purchases</b></td><td>Goods bought for resale (or raw materials for production)</td><td>Cash Purchase — paid immediately; Credit Purchase — paid later, creates a Creditor</td></tr>
-                <tr><td><b>Sales</b></td><td>Goods sold to customers</td><td>Cash Sale — received immediately; Credit Sale — received later, creates a Debtor</td></tr>
-                <tr><td><b>Debtors (Trade Receivables)</b></td><td>Persons who owe money to the business — they bought goods on credit from us</td><td>Debtors are a <i>current asset</i> — the business expects to collect this money</td></tr>
-                <tr><td><b>Creditors (Trade Payables)</b></td><td>Persons to whom the business owes money — we bought goods on credit from them</td><td>Creditors are a <i>current liability</i> — the business must pay this amount</td></tr>
-              </table>`},
-            {h:"Trade Discount and Cash Discount — two very different reductions", kicker:"Basic Accounting Terms · Discount", html:`
-              <p>Both discounts reduce the amount paid, but they arise at different times and are treated very differently in the books of account.</p>
-              <table class="cmp">
-                <tr><th></th><th>Trade Discount</th><th>Cash Discount</th></tr>
-                <tr><td><b>When given</b></td><td>At the time of sale — deducted from the list price on the invoice</td><td>After the sale — given for prompt / early payment</td></tr>
-                <tr><td><b>Purpose</b></td><td>To encourage bulk buying, or to give dealers a margin to sell at MRP</td><td>To encourage quick settlement of dues</td></tr>
-                <tr><td><b>Recorded in books?</b></td><td>❌ NO — only the net price (after discount) is entered. The discount itself never appears in any account.</td><td>✅ YES — the full invoice amount and the discount are both recorded. Discount Allowed is an expense for the seller; Discount Received is income for the buyer.</td></tr>
-                <tr><td><b>Example</b></td><td>List price ₹10,000 less 20% trade discount = invoice at ₹8,000 (only ₹8,000 enters the books)</td><td>If the ₹8,000 invoice is paid within 10 days, 2% cash discount = ₹160. Books show: invoice ₹8,000, discount allowed ₹160, cash received ₹7,840.</td></tr>
-              </table>
-              <p><b>Memory aid:</b> Trade discount is a price reduction before the sale is recorded. Cash discount is a reward after the sale is recorded, for paying quickly.</p>`},
-            {h:"Revenue, Income, Profit, Loss, Bad Debts, Voucher and more", kicker:"Basic Accounting Terms · More key terms", html:`
-              <p>These terms complete the core vocabulary of accounting. Each has a precise meaning that differs from everyday usage.</p>
-              <table class="cmp">
-                <tr><th>Term</th><th>Meaning</th></tr>
-                <tr><td><b>Revenue</b></td><td>Income earned from the normal, recurring business operations — sales, fees, commission received, rent received. Recurring in nature.</td></tr>
-                <tr><td><b>Income</b></td><td>A broader term covering all earnings — includes both revenue from operations and other income (gain on sale of asset, interest received).</td></tr>
-                <tr><td><b>Profit</b></td><td>The surplus when revenue exceeds expenses. Gross Profit = Revenue − Cost of Goods Sold. Net Profit = Gross Profit − all other operating expenses.</td></tr>
-                <tr><td><b>Loss</b></td><td>The deficit when expenses exceed revenue. Reduces owner's capital.</td></tr>
-                <tr><td><b>Gain</b></td><td>A one-off, incidental profit not from the main business operations — e.g. profit on sale of old machinery. Non-recurring.</td></tr>
-                <tr><td><b>Bad Debts</b></td><td>Amounts owed by debtors that are irrecoverable and must be written off as a loss (expense).</td></tr>
-                <tr><td><b>Voucher</b></td><td>A written document that serves as evidence for a business transaction — the source document for every journal entry. Examples: invoice, receipt, cheque counterfoil, debit/credit note.</td></tr>
-                <tr><td><b>Solvent / Insolvent</b></td><td>Solvent: the business can meet all its financial obligations (assets &gt; liabilities). Insolvent: cannot meet obligations (liabilities &gt; assets).</td></tr>
-              </table>`},
+            /* ── TOPIC 1: ACCOUNTING — MEANING, OBJECTIVES & USERS ── */
+            {topicStart:"accounting", title:"Accounting — Meaning, Objectives & Users", icon:"", desc:"What accounting is, who uses it, its objectives, limitations and the three sub-fields."},
+            {h:"Accounting — Meaning, Objectives & Users", kicker:"Unit 1 · Topic 1", html:`
+              <p>Accounting is a systematic process of <strong>identifying, measuring, recording, classifying, summarising, interpreting and communicating</strong> financial information to its users so that informed judgements and decisions can be made.</p>
+              <p>The <em>American Institute of Certified Public Accountants (AICPA)</em> defined it as "the art of recording, classifying, and summarising in a significant manner and in terms of money, transactions and events which are, in part at least, of a financial character, and interpreting the results thereof."</p>
 
-            {h:"Capital vs Revenue Expenditure", kicker:"Basic Accounting Terms · Spending", html:`
-              <p>Every rupee a business spends must be classified as either <b>capital</b> or <b>revenue</b>. Getting this wrong distorts both the profit figure and the Balance Sheet.</p>
-              <table class="cmp">
-                <tr><th></th><th>Capital Expenditure</th><th>Revenue Expenditure</th></tr>
-                <tr><td><b>Benefit period</b></td><td>More than one accounting period</td><td>Current accounting period only</td></tr>
-                <tr><td><b>Purpose</b></td><td>Enhance / increase capacity</td><td>Maintain earning capacity</td></tr>
-                <tr><td><b>Shown in</b></td><td>Balance Sheet (as asset)</td><td>Profit &amp; Loss Account (as expense)</td></tr>
-                <tr><td><b>Examples</b></td><td>Purchase of machine, building, vehicle</td><td>Salary, rent, repairs, stationery</td></tr>
-              </table>
-              <p><b>Key test:</b> Does the spending create an asset or lasting benefit beyond this year? If yes → capital. If it is just for running the business this year → revenue.</p>`},
-            {diagram:`<svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-              <rect x="230" y="8" width="220" height="36" rx="10" fill="#234f3b"/><text x="340" y="31" text-anchor="middle" font-size="14" font-weight="600" fill="#f4efe3">A rupee spent by the business</text>
-              <line x1="190" y1="44" x2="190" y2="70" stroke="#b6862c" stroke-width="2"/><line x1="490" y1="44" x2="490" y2="70" stroke="#b6862c" stroke-width="2"/><line x1="190" y1="44" x2="490" y2="44" stroke="#b6862c" stroke-width="2"/>
-              <rect x="50" y="70" width="280" height="40" rx="9" fill="#e3eee6" stroke="#2f6b4f"/><text x="190" y="95" text-anchor="middle" font-size="13" font-weight="600" fill="#234f3b">CAPITAL EXPENDITURE</text>
-              <rect x="370" y="70" width="280" height="40" rx="9" fill="#f8f0db" stroke="#b6862c"/><text x="510" y="95" text-anchor="middle" font-size="13" font-weight="600" fill="#8a6420">REVENUE EXPENDITURE</text>
-              <text x="190" y="130" text-anchor="middle" font-size="12" fill="#3c4742">→ Asset side of Balance Sheet</text>
-              <text x="190" y="148" text-anchor="middle" font-size="12" fill="#3c4742">→ Depreciated over useful life</text>
-              <text x="190" y="166" text-anchor="middle" font-size="12" fill="#3c4742">→ Benefit lasts many years</text>
-              <text x="510" y="130" text-anchor="middle" font-size="12" fill="#3c4742">→ Charged to P&amp;L this year</text>
-              <text x="510" y="148" text-anchor="middle" font-size="12" fill="#3c4742">→ Fully written off now</text>
-              <text x="510" y="166" text-anchor="middle" font-size="12" fill="#3c4742">→ Benefit expires this year</text>
-            </svg>`, cap:"The same money test — enduring benefit = capital; this-year-only benefit = revenue."},
-            {h:"Tricky cases in Capital vs Revenue", kicker:"Where students go wrong", html:`
-              <ul>
-                <li><b>Overhaul of second-hand machinery on purchase</b> → <b>Capital</b>. It puts the asset in working condition; without it the asset couldn't be used. It's part of the cost.</li>
-                <li><b>Major repairs that increase capacity</b> → <b>Capital</b>. They enhance, not merely maintain.</li>
-                <li><b>Routine maintenance / replacing worn-out parts</b> → <b>Revenue</b>. It maintains, not enhances.</li>
-                <li><b>Legal fee to acquire property</b> → <b>Capital</b>. It's part of the cost of the asset.</li>
-                <li><b>Legal fee to defend a suit about ownership</b> → <b>Revenue</b>. No new asset is created; it just maintains what you already have.</li>
-                <li><b>License to start a factory / cinema</b> → <b>Capital</b>. Without it you can't operate at all.</li>
-                <li><b>Temporary huts built during construction</b> → <b>Capital</b>. They are incidental to constructing the main asset.</li>
-                <li><b>Nature of business matters</b>: For a furniture dealer, buying furniture = Revenue. For any other business, buying furniture = Capital.</li>
-              </ul>`},
-            {example:"Best Tech Solutions buys and sells computers. It buys 20 computers for resale @ ₹20,000 each = ₹4,00,000 → REVENUE expenditure (trading goods). It also buys 1 computer @ ₹24,000 for its accountant → CAPITAL expenditure (enduring benefit for office operations). The same item — a computer — is treated differently based on the purpose it serves."},
-            {caseStudy:"Good Pictures Ltd. builds a cinema hall. (1) Second-hand furniture ₹9,000 + repainting ₹1,000 + wages for installation ₹200 → ALL capitalised as ₹10,200 (total cost to bring asset to usable state). (2) Cinema license ₹20,000 → Capital; fine ₹1,000 for rule violation → Revenue; renewal fee ₹2,000 for next year → Revenue, but prepaid (asset). (3) Fire insurance ₹1,000 paid 1 Oct for 1 year → half is current expense, half is prepaid. (4) Temporary huts ₹1,200 → Capital (incidental to construction). The golden thread: anything needed to build and ready the asset = capital."},
-            {h:"Capital vs Revenue Receipts", kicker:"Money coming IN", html:`
-              <p>Receipts also split into two types:</p>
-              <table class="cmp">
-                <tr><th></th><th>Capital Receipt</th><th>Revenue Receipt</th></tr>
-                <tr><td><b>Nature</b></td><td>From sale of assets, loans, owner's capital</td><td>From normal business operations</td></tr>
-                <tr><td><b>Recurrence</b></td><td>Non-recurring</td><td>Recurring</td></tr>
-                <tr><td><b>Shown in</b></td><td>Balance Sheet (liability/capital side); only profit/loss on disposal goes to P&amp;L</td><td>P&amp;L Account — credited as income</td></tr>
-                <tr><td><b>Examples</b></td><td>Sale of machine, loan from bank, share capital, insurance claim for asset damaged</td><td>Sales revenue, interest earned, rent received</td></tr>
-              </table>
-              <p>Key: Revenue receipts are credited directly to P&amp;L. Capital receipts are NOT — only the profit or loss on them is taken to P&amp;L.</p>`},
-            {example:"A machine costing ₹90,000 is sold for ₹92,000. The ₹92,000 is a capital receipt — it is NOT credited to P&L. Instead: Sale Proceeds ₹92,000 − Cost ₹90,000 = Profit ₹2,000 only is credited to P&L. The full ₹92,000 is not income."},
-            {h:"Deferred Revenue Expenditure", kicker:"The in-between", html:`
-              <p>Some expenditure is revenue in nature — it does not create a fixed asset — but its benefit lasts more than one year. These are called <b>Deferred Revenue Expenditures</b>. They are shown in the Balance Sheet temporarily and written off over the years of benefit.</p>
-              <ul>
-                <li>Heavy advertising campaign on launch of a product → benefit spreads over 3-5 years.</li>
-                <li>Preliminary (formation) expenses of a company.</li>
-                <li>Discount on issue of shares or debentures.</li>
-              </ul>
-              <p>They are <b>not assets</b> in the true sense (no physical existence, no resale value), but they are deferred and amortised because matching demands it.</p>`},
-            {h:"Contingent Assets & Contingent Liabilities", kicker:"Basic Accounting Terms · Uncertainty", html:`
-              <p>Some items are <b>not yet real</b> — they depend on a future uncertain event. These are contingent items.</p>
-              <p><b>Contingent Asset</b> — a <i>possible</i> asset that arises from past events, whose existence will be confirmed only when one or more uncertain future events occur (or don't occur). The classic example: a lawsuit the business has filed against someone — if it wins, an asset materialises.</p>
-              <p>⚠️ <b>Prudence says: do NOT recognise a contingent asset</b> in the books. Disclose it in the Board's report only if inflow is probable. If it becomes virtually certain, only then recognise it.</p>
-              <p><b>Contingent Liability</b> — a <i>possible</i> obligation arising from past events that may or may not crystallise depending on uncertain future events. Examples: a lawsuit filed against the business, a guarantee given for a third party's loan, bills discounted but not yet matured.</p>
-              <p>⚠️ <b>Do NOT record it in the Balance Sheet. Disclose it in Notes to Accounts</b> (unless outflow is remote). If it later becomes probable, it becomes a Provision.</p>`},
-            {diagram:`<svg viewBox="0 0 680 230" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-              <rect x="0" y="8" width="330" height="214" rx="12" fill="#e3eee6" stroke="#2f6b4f" stroke-width="1.5"/>
-              <text x="165" y="32" text-anchor="middle" font-size="14" font-weight="700" fill="#234f3b" font-family="Fraunces">LIABILITIES</text>
-              <text x="165" y="54" text-anchor="middle" font-size="12" fill="#3c4742">Present financial obligation</text>
-              <text x="165" y="70" text-anchor="middle" font-size="12" fill="#3c4742">from past events</text>
-              <text x="165" y="90" text-anchor="middle" font-size="12" fill="#2f6b4f" font-weight="600">✓ Recognised in Balance Sheet</text>
-              <text x="165" y="110" text-anchor="middle" font-size="12" fill="#3c4742">Amount known / reliably estimated</text>
-              <text x="165" y="140" text-anchor="middle" font-size="13" font-weight="700" fill="#234f3b" font-family="Fraunces">PROVISION</text>
-              <text x="165" y="158" text-anchor="middle" font-size="12" fill="#3c4742">Present liability, uncertain amount</text>
-              <text x="165" y="174" text-anchor="middle" font-size="12" fill="#3c4742">but reliably estimable</text>
-              <text x="165" y="192" text-anchor="middle" font-size="12" fill="#2f6b4f" font-weight="600">✓ Recognised in Balance Sheet</text>
-              <rect x="350" y="8" width="330" height="214" rx="12" fill="#f8f0db" stroke="#b6862c" stroke-width="1.5"/>
-              <text x="515" y="32" text-anchor="middle" font-size="14" font-weight="700" fill="#8a6420" font-family="Fraunces">CONTINGENT LIABILITY</text>
-              <text x="515" y="54" text-anchor="middle" font-size="12" fill="#3c4742">Possible obligation — uncertain</text>
-              <text x="515" y="70" text-anchor="middle" font-size="12" fill="#3c4742">whether it will arise at all</text>
-              <text x="515" y="90" text-anchor="middle" font-size="12" fill="#b84030" font-weight="600">✗ NOT in Balance Sheet</text>
-              <text x="515" y="110" text-anchor="middle" font-size="12" fill="#2f6b4f" font-weight="600">✓ Disclosed in Notes to Accounts</text>
-              <text x="515" y="140" text-anchor="middle" font-size="12" fill="#3c4742">Examples: lawsuits against business,</text>
-              <text x="515" y="158" text-anchor="middle" font-size="12" fill="#3c4742">third-party guarantees,</text>
-              <text x="515" y="174" text-anchor="middle" font-size="12" fill="#3c4742">bills discounted not yet matured</text>
-            </svg>`, cap:"Liability vs Provision = recognised. Contingent Liability = not recognised, only disclosed."},
-            {caseStudy:"Alpha Ltd. is fined by the Central Excise Officer. The company appeals. Case A — management thinks it will probably LOSE the appeal: they create a PROVISION in the Balance Sheet. Case B — management thinks it will probably WIN: they do not create a provision but DISCLOSE a contingent liability in the notes. The same event; the treatment depends entirely on the probability of outflow."},
-            /* ── GAAP & BASIC ACCOUNTING CONCEPTS ── */
-            {topicStart:"gaap", title:"GAAP & Basic Accounting Concepts", icon:"📐", desc:"Generally Accepted Accounting Principles, the 12 fundamental concepts, accounting policies and qualitative characteristics."},
-            {h:"GAAP — why we need agreed rules", kicker:"Theory base begins", html:`
-              <p>Imagine giving the same books to five accountants and getting <b>five different profit figures</b>. Chaos. To prevent this, accounting follows <strong>Generally Accepted Accounting Principles (GAAP)</strong> — a common set of rules so that statements are uniform, consistent and comparable.</p>
-              <p>GAAP is made of three things used almost interchangeably:</p>
-              <ul>
-                <li><b>Concepts</b> — basic assumptions (e.g. the business is separate from its owner).</li>
-                <li><b>Principles</b> — doctrines guiding practice.</li>
-                <li><b>Conventions</b> — customs that grew out of long practice.</li>
-              </ul>
-              <p>In India, companies follow <b>Accounting Standards (AS)</b> or <b>Ind AS</b>; globally, <b>IFRS</b>.</p>`},
-            {h:"The Accounting Concepts — overview", kicker:"The 12 you must know", html:`
-              <p>These are the backbone of the theory base. Learn the one-line idea of each, then the examples below make them click.</p>
-              <ul>
-                <li><b>Entity</b> — business is separate from its owner.</li>
-                <li><b>Money Measurement</b> — record only what can be measured in money.</li>
-                <li><b>Periodicity</b> — measure performance for fixed periods (usually 1 year).</li>
-                <li><b>Accrual</b> — record revenue/expense when it is earned/incurred, not when cash moves.</li>
-                <li><b>Matching</b> — match expenses against the revenue they helped earn.</li>
-                <li><b>Going Concern</b> — assume the business will continue for the foreseeable future.</li>
-                <li><b>Cost</b> — record assets at their historical (purchase) cost.</li>
-                <li><b>Realisation</b> — record a gain only when it is actually realised.</li>
-                <li><b>Dual Aspect</b> — every transaction has two equal effects (basis of double entry).</li>
-                <li><b>Conservatism / Prudence</b> — don't anticipate profit; provide for all possible losses.</li>
-                <li><b>Consistency</b> — use the same methods year after year so figures compare.</li>
-                <li><b>Materiality</b> — only items significant enough to affect decisions need full disclosure.</li>
-              </ul>`},
-            {diagram:`<svg viewBox="0 0 680 290" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-              <rect x="270" y="125" width="140" height="40" rx="10" fill="#234f3b"/><text x="340" y="150" text-anchor="middle" font-size="13" font-weight="600" fill="#f4efe3">Concepts</text>
-              ${[['Entity',0],['Money Measurement',1],['Periodicity',2],['Accrual',3],['Matching',4],['Going Concern',5],['Cost',6],['Realisation',7],['Dual Aspect',8],['Conservatism',9],['Consistency',10],['Materiality',11]].map(([t,i])=>{
-                const ang=(-90+i*30)*Math.PI/180; const cx=340+220*Math.cos(ang); const cy=145+118*Math.sin(ang);
-                const col=['#2d6b4a','#a07228','#7b3f9e','#2a4f8f','#b84030','#1e7a72'][i%6];
-                return `<line x1="340" y1="145" x2="${cx}" y2="${cy}" stroke="${col}" stroke-width="1.2" opacity=".5"/><rect x="${cx-58}" y="${cy-13}" width="116" height="26" rx="13" fill="#fbf8f0" stroke="${col}" stroke-width="1.4"/><text x="${cx}" y="${cy+4}" text-anchor="middle" font-size="11" font-weight="600" fill="${col}">${t}</text>`;
-              }).join('')}
-            </svg>`, cap:"The twelve concepts radiate from one idea: make accounts uniform, reliable and comparable."},
-            {h:"Entity & Money Measurement", kicker:"The two basic concepts", html:`
-              <p><b>Business Entity:</b> the business and its owner are <i>separate</i>. This is exactly why, when an owner takes money out for personal use, we call it <b>Drawings</b> and reduce his capital — instead of treating it as a business expense.</p>
-              <p><b>Money Measurement:</b> only money-measurable items are recorded. A factory's loyal, skilled workforce is hugely valuable but <i>cannot</i> appear in the books. Also, everything must be in one currency — you cannot add "₹50 lakhs + 1 lakh Euro" until you convert.</p>`},
-            {example:"Mr. X starts a business with ₹7,00,000 and buys machinery for ₹5,00,000, keeping ₹2,00,000 cash. The business OWES Mr. X ₹7,00,000 (his capital). Now he spends ₹5,000 from business funds on family expenses. By the Entity concept this is NOT a business expense — it is Drawings. Revised Capital = ₹7,00,000 − ₹5,000 = ₹6,95,000; Cash = ₹1,95,000."},
-            {h:"Going Concern, Periodicity & Cost", kicker:"Valuation trio", html:`
-              <p><b>Going Concern:</b> we assume the business will keep running. That is <i>why</i> we value a machine at cost and depreciate it over years instead of at its forced-sale value — we are not about to sell it.</p>
-              <p><b>Periodicity:</b> a business has an indefinite life, but we cannot wait 100 years to measure performance. So we slice time into <b>accounting periods</b> (usually 1 April–31 March in India). This makes words like "accrued" and "outstanding" meaningful.</p>
-              <p><b>Cost Concept:</b> assets are recorded at <b>historical (acquisition) cost</b>, not market value — because cost is objective and verifiable. A plot bought in 1995 for ₹2,000 still shows ₹2,000, even if it is worth ₹1,00,000 today.</p>`},
-            {h:"Accrual, Matching & Realisation", kicker:"How profit is really measured", html:`
-              <p><b>Accrual:</b> record revenue when <i>earned</i> and expense when <i>incurred</i> — regardless of when cash is received or paid. (The alternative, recording only on cash movement, is the <b>Cash basis</b>.)</p>
-              <p><b>Matching:</b> from a period's revenue, deduct only the expenses that <i>helped earn that revenue</i>. So if you bought 10,000 units but sold 8,000, only the cost of 8,000 is matched against this year's sales.</p>
-              <p><b>Realisation:</b> a gain is counted only when it actually <i>materialises</i> (e.g. the sale is made), never on mere expectation.</p>
-              <p>Together: <strong>Periodic Profit = Periodic Revenue − Matched Expenses.</strong></p>`},
-            {example:"Mr. P.K. buys 10,000 garments @ ₹100 (=₹10,00,000) and sells 8,000 @ ₹150 (=₹12,00,000) in the year. Rent is ₹3,000/month (paid for 11 months only). PROFIT is NOT cash-based. Revenue accrued = ₹12,00,000. Matched cost of goods sold = 8,000 × ₹100 = ₹8,00,000 (NOT all 10,000). Rent expense for 12 months = ₹36,000 (NOT the ₹33,000 paid). Profit = 12,00,000 − 8,00,000 − 36,000 = ₹3,64,000. The unsold 2,000 units (₹2,00,000) become closing stock, an asset."},
-            {h:"Dual Aspect — the heart of double entry", kicker:"The accounting equation", html:`
-              <p>Every transaction has <b>two equal sides</b>. Buy a machine for cash → machinery up, cash down by the same amount. This gives the <strong>Accounting Equation</strong>:</p>
-              <p style="text-align:center;font-family:'IBM Plex Mono';font-size:17px;color:var(--green-deep);font-weight:600;margin:14px 0">Assets = Liabilities + Capital</p>
-              <p>Rearranged: <span class="mono">Capital = Assets − Liabilities</span>. The two sides of a Balance Sheet are <i>always</i> equal precisely because of this concept.</p>`},
-            {diagram:`<svg viewBox="0 0 660 130" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-              <rect x="40" y="45" width="170" height="48" rx="10" fill="#e3eee6" stroke="#2f6b4f" stroke-width="1.6"/><text x="125" y="68" text-anchor="middle" font-size="15" font-weight="700" fill="#234f3b" font-family="Fraunces">ASSETS</text><text x="125" y="84" text-anchor="middle" font-size="10" fill="#3c4742">what the business owns</text>
-              <text x="240" y="76" text-anchor="middle" font-size="30" font-weight="700" fill="#b6862c">=</text>
-              <rect x="280" y="45" width="160" height="48" rx="10" fill="#f8f0db" stroke="#b6862c" stroke-width="1.6"/><text x="360" y="68" text-anchor="middle" font-size="15" font-weight="700" fill="#8a6420" font-family="Fraunces">LIABILITIES</text><text x="360" y="84" text-anchor="middle" font-size="10" fill="#3c4742">owed to outsiders</text>
-              <text x="470" y="76" text-anchor="middle" font-size="30" font-weight="700" fill="#b6862c">+</text>
-              <rect x="500" y="45" width="150" height="48" rx="10" fill="#f6e2dc" stroke="#c0492f" stroke-width="1.6"/><text x="575" y="68" text-anchor="middle" font-size="15" font-weight="700" fill="#b23a26" font-family="Fraunces">CAPITAL</text><text x="575" y="84" text-anchor="middle" font-size="10" fill="#3c4742">owed to the owner</text>
-            </svg>`, cap:"The equation that must always balance — the basis of the Balance Sheet."},
-            {caseStudy:"Opening Balance Sheet: Capital ₹1,50,000 + Bank Loan ₹75,000 + Other Loan ₹75,000 = Machinery ₹2,00,000 + Cash ₹1,00,000 (both sides ₹3,00,000). Now a machine is bought for ₹50,000 on credit. TWO effects: Machinery rises to ₹2,50,000 AND Creditors rise by ₹50,000. New total on both sides = ₹3,50,000 — still balanced. That is the dual aspect in action."},
-            {h:"Conservatism, Consistency & Materiality", kicker:"The three conventions", html:`
-              <p><b>Conservatism (Prudence):</b> never anticipate a profit, but provide for every possible loss. This is the origin of the golden rule — <b>stock is valued at cost or market price, whichever is lower.</b></p>
-              <p><b>Consistency:</b> once you choose a method (say, a depreciation method), stick with it year after year — otherwise figures can't be compared. You may change only for a strong reason (a new Accounting Standard, the law, or a truer picture).</p>
-              <p><b>Materiality:</b> only items big enough to influence a decision need full disclosure. A ₹200 calculator can be written off fully in one year even though it lasts longer — the amount is too small to matter.</p>`},
-            {caseStudy:"Mr. X has 10 computers costing ₹20,000 each, which he expects to sell at ₹25,000. Can he record the ₹5,000 expected profit each? NO — Prudence forbids recording unrealised gains. But before sale, the market price falls to ₹17,000. Now he MUST recognise the ₹3,000 loss per computer immediately, even though no sale has happened. Profits wait; losses don't."},
-            {h:"Fundamental Assumptions & Qualitative Characteristics", kicker:"The finishing layer", html:`
-              <p><b>Three fundamental accounting assumptions</b> are presumed to be followed unless stated otherwise: <b>Going Concern, Consistency, Accrual.</b> If any is NOT followed, that fact must be disclosed.</p>
-              <p><b>Qualitative characteristics</b> are what make financial statements useful. The four principal ones:</p>
-              <ul>
-                <li><b>Understandability</b> — clear to a reasonably informed user.</li>
-                <li><b>Relevance</b> — helps users evaluate past/present/future; affected by <b>materiality</b>.</li>
-                <li><b>Reliability</b> — free from material error and bias; supported by <b>faithful representation, substance over form, neutrality, prudence</b> and <b>completeness</b>.</li>
-                <li><b>Comparability</b> — can be compared across time and across firms.</li>
-              </ul>`},
-            {h:"Accounting Policies", kicker:"Accounting Standards & Policies", html:`
-              <p><b>Accounting Policies</b> are the specific principles, bases, conventions, rules and practices an enterprise applies when preparing its financial statements. Different enterprises can choose different methods — and within one enterprise, the method chosen is its policy.</p>
-              <p><b>Common areas where policies differ:</b></p>
-              <ul>
-                <li><b>Valuation of Inventories</b> — FIFO, Weighted Average, Specific Identification</li>
-                <li><b>Depreciation method</b> — SLM, WDV, Units of Production</li>
-                <li><b>Valuation of Investments</b> — at cost, at lower of cost or market value</li>
-              </ul>
-              <p><b>How to select:</b> Policies should exhibit a <b>true and fair view</b>. Selection is guided by three principles: <b>Prudence</b> (caution, guard against losses), <b>Substance over Form</b> (economic reality over legal form), and <b>Materiality</b> (significant items need proper treatment).</p>
-              <p><b>When to change:</b> Only when required by statute / Accounting Standard, OR when the change gives a truer picture. A change must be quantified and disclosed — you can't just switch quietly.</p>`},
-            {example:"Xeta Enterprises values its inventory at 'lower of cost (weighted average) or net realisable value.' This applies Prudence — it does not record an unrealised gain if market rises, but it immediately records a loss if market falls below cost. If next year the company switches to FIFO, it must disclose the change and show the effect on profit/loss, so users of accounts can compare."},
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Objectives of Accounting</h3>
+              <table class="cmp"><thead><tr><th>#</th><th>Objective</th><th>What it means</th></tr></thead><tbody>
+                <tr><td>1</td><td>Systematic record of transactions</td><td>Every financial transaction is recorded in books of account in a clear, chronological manner.</td></tr>
+                <tr><td>2</td><td>Ascertain profit or loss</td><td>At the end of the period the income statement shows whether the firm earned a profit or suffered a loss.</td></tr>
+                <tr><td>3</td><td>Ascertain financial position</td><td>The Balance Sheet reveals what the firm owns (assets) and owes (liabilities) at a point in time.</td></tr>
+                <tr><td>4</td><td>Provide information to users</td><td>Stakeholders use the accounts to make investment, credit, and management decisions.</td></tr>
+                <tr><td>5</td><td>Assist management</td><td>Accounting data helps in planning, controlling, and decision-making.</td></tr>
+              </tbody></table>
 
-            /* ── SYSTEM OF ACCOUNTING ── */
-            {topicStart:"system", title:"System of Accounting", icon:"⚖️", desc:"The accounting equation, double entry vs single entry, types of accounts and the three golden rules of debit and credit."},
-            {h:"The Accounting Equation — the foundation of Double Entry", kicker:"System of Accounting · The bedrock", html:`
-              <p>Every business transaction can be explained by one fundamental equation:</p>
-              <div style="text-align:center;font-size:20px;font-weight:700;color:#234f3b;margin:18px 0;letter-spacing:.02em">Assets = Capital + Liabilities</div>
-              <p>This equation is always in balance. Every transaction changes one or more of the three elements, but the equation always remains equal. This self-balancing property is the foundation of the <b>Double Entry System</b>.</p>
-              <table class="cmp">
-                <tr><th>Transaction</th><th>Effect</th><th>Equation stays balanced?</th></tr>
-                <tr><td>Owner invests ₹5,00,000 cash</td><td>Cash ↑ ₹5L, Capital ↑ ₹5L</td><td>✓ Both sides increase equally</td></tr>
-                <tr><td>Buy machinery on credit ₹2,00,000</td><td>Machinery ↑ ₹2L, Creditor ↑ ₹2L</td><td>✓ Asset and liability increase equally</td></tr>
-                <tr><td>Repay ₹50,000 of loan in cash</td><td>Cash ↓ ₹50K, Loan ↓ ₹50K</td><td>✓ Asset and liability decrease equally</td></tr>
-                <tr><td>Pay rent ₹10,000 cash</td><td>Cash ↓ ₹10K, Capital ↓ ₹10K (profit reduces)</td><td>✓ Asset decreases, Capital decreases equally</td></tr>
-              </table>
-              <p>The equation also shows the two sources of financing for every asset the business owns — either the owner funded it (Capital) or outsiders did (Liabilities).</p>`},
-            {h:"Double Entry System — recording both sides of every transaction", kicker:"System of Accounting · Double Entry", html:`
-              <p>The <b>Double Entry System</b>, developed in 15th-century Italy and systematised by Luca Pacioli (1494), is the universally accepted method of bookkeeping. It is based on one simple principle:</p>
-              <div style="text-align:center;font-size:15px;font-weight:700;color:#234f3b;margin:16px 0">Every transaction has TWO equal and opposite effects.<br>For every Debit, there is an equal Credit.</div>
-              <p>Each transaction is recorded in at least two accounts — one account is <b>debited</b> and another is <b>credited</b> by the same amount. Over all transactions, total debits must equal total credits.</p>
-              <p><b>Advantages of Double Entry System:</b></p>
-              <ul>
-                <li><b>Complete record:</b> Both aspects of every transaction are recorded — nothing is missed.</li>
-                <li><b>Self-checking (Trial Balance):</b> If total debits = total credits, the books are arithmetically correct.</li>
-                <li><b>Profit or loss:</b> Can be accurately determined by preparing a Profit and Loss Account.</li>
-                <li><b>Financial position:</b> A Balance Sheet showing assets, liabilities and capital can be prepared at any time.</li>
-                <li><b>Fraud detection:</b> The internal check through balancing makes manipulation harder to conceal.</li>
-                <li><b>Universal:</b> Suitable for businesses of all sizes and types — from a sole trader to a multinational.</li>
-              </ul>`},
-            {h:"Single Entry System — incomplete records and their drawbacks", kicker:"System of Accounting · Single Entry", html:`
-              <p>The <b>Single Entry System</b> is not really a system at all — it is a loose, inconsistent approach to record-keeping that does not follow the principles of Double Entry. It typically maintains only a cash book and personal accounts (debtors and creditors); there is no systematic record of assets and liabilities.</p>
-              <table class="cmp">
-                <tr><th>Feature</th><th>Single Entry</th><th>Double Entry</th></tr>
-                <tr><td>Completeness</td><td>Incomplete — records only cash and some personal accounts</td><td>Complete — records both aspects of every transaction</td></tr>
-                <tr><td>Trial Balance</td><td>Cannot be prepared — no way to check arithmetic accuracy</td><td>Can be prepared — total debits = total credits</td></tr>
-                <tr><td>Profit determination</td><td>Only an estimate (using Statement of Affairs method)</td><td>Accurate — from Profit and Loss Account</td></tr>
-                <tr><td>Financial position</td><td>Cannot prepare a proper Balance Sheet</td><td>Full Balance Sheet can be prepared</td></tr>
-                <tr><td>Fraud and error</td><td>Easy to conceal — no internal check</td><td>Harder to conceal — self-balancing system</td></tr>
-                <tr><td>Used by</td><td>Very small traders prioritising simplicity</td><td>All properly managed businesses</td></tr>
-              </table>
-              <p>Single entry is also called <i>incomplete records</i>. It is not recognised as acceptable for tax purposes or under the Companies Act.</p>`},
-            {h:"Types of Accounts — Personal, Real, and Nominal", kicker:"System of Accounting · Types of accounts", html:`
-              <p>Every account in accounting falls into one of three categories. Understanding the type of account is the key to applying the correct rule of debit and credit.</p>
-              <table class="cmp">
-                <tr><th>Type</th><th>What it represents</th><th>Examples</th></tr>
-                <tr><td><b>Personal Account</b></td><td>Accounts of persons — individuals, firms, companies, and institutions</td><td>Ramesh's Account, SBI Loan Account, Capital Account, Drawings Account, Debtors, Creditors, Outstanding Expenses A/c, Prepaid Expenses A/c</td></tr>
-                <tr><td><b>Real Account</b></td><td>Accounts of tangible things (assets you can touch) and intangible things (assets you cannot touch)</td><td>Cash A/c, Machinery A/c, Land A/c, Stock A/c (tangible); Goodwill A/c, Patents A/c, Trademarks A/c (intangible)</td></tr>
-                <tr><td><b>Nominal Account</b></td><td>Accounts of expenses, losses, incomes, and gains — these do not represent real persons or real things; they exist only for the accounting period</td><td>Rent A/c, Salaries A/c, Interest Paid A/c (expenses); Sales A/c, Commission Received A/c, Discount Received A/c (income)</td></tr>
-              </table>
-              <p>Nominal accounts are closed at the end of each accounting year — their balances transfer to the Profit and Loss Account. Personal and Real accounts are carried forward to the next year (they appear in the Balance Sheet).</p>`},
-            {diagram:`<svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-              <text x="350" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#3c4742" font-family="Fraunces, serif">The Golden Rules of Debit and Credit</text>
-              <rect x="10" y="36" width="200" height="182" rx="10" fill="#e3eee6" stroke="#234f3b" stroke-width="1.5"/>
-              <text x="110" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#234f3b">Personal Account</text>
-              <text x="110" y="78" text-anchor="middle" font-size="10.5" fill="#3c4742">Accounts of persons,</text>
-              <text x="110" y="91" text-anchor="middle" font-size="10.5" fill="#3c4742">firms and companies</text>
-              <rect x="30" y="105" width="160" height="28" rx="6" fill="#234f3b"/>
-              <text x="110" y="123" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">Debit the Receiver</text>
-              <rect x="30" y="139" width="160" height="28" rx="6" fill="#2f6b4f"/>
-              <text x="110" y="157" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">Credit the Giver</text>
-              <text x="110" y="196" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">e.g. Bought from Suresh on credit:</text>
-              <text x="110" y="207" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">Debit Purchases, Credit Suresh</text>
-              <rect x="250" y="36" width="200" height="182" rx="10" fill="#f8f0db" stroke="#b6862c" stroke-width="1.5"/>
-              <text x="350" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6420">Real Account</text>
-              <text x="350" y="78" text-anchor="middle" font-size="10.5" fill="#3c4742">Accounts of tangible</text>
-              <text x="350" y="91" text-anchor="middle" font-size="10.5" fill="#3c4742">and intangible assets</text>
-              <rect x="270" y="105" width="160" height="28" rx="6" fill="#b6862c"/>
-              <text x="350" y="123" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">Debit what Comes In</text>
-              <rect x="270" y="139" width="160" height="28" rx="6" fill="#8a6420"/>
-              <text x="350" y="157" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">Credit what Goes Out</text>
-              <text x="350" y="196" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">e.g. Bought machinery for cash:</text>
-              <text x="350" y="207" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">Debit Machinery, Credit Cash</text>
-              <rect x="490" y="36" width="200" height="182" rx="10" fill="#f6e2dc" stroke="#c0492f" stroke-width="1.5"/>
-              <text x="590" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#b23a26">Nominal Account</text>
-              <text x="590" y="78" text-anchor="middle" font-size="10.5" fill="#3c4742">Accounts of expenses,</text>
-              <text x="590" y="91" text-anchor="middle" font-size="10.5" fill="#3c4742">losses, incomes, gains</text>
-              <rect x="510" y="105" width="160" height="28" rx="6" fill="#c0492f"/>
-              <text x="590" y="123" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">Debit Expenses &amp; Losses</text>
-              <rect x="510" y="139" width="160" height="28" rx="6" fill="#a03825"/>
-              <text x="590" y="157" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f4efe3">Credit Incomes &amp; Gains</text>
-              <text x="590" y="196" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">e.g. Paid rent ₹5,000 cash:</text>
-              <text x="590" y="207" text-anchor="middle" font-size="10" fill="#3c4742" font-style="italic">Debit Rent A/c, Credit Cash</text>
-            </svg>`, cap:"The Three Golden Rules — memorise these and you can record any transaction correctly. Personal: Receiver / Giver. Real: In / Out. Nominal: Expense-Loss / Income-Gain."},
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Users of Accounting Information</h3>
+              <table class="cmp"><thead><tr><th>Category</th><th>Who</th><th>What they need to know</th></tr></thead><tbody>
+                <tr><td><strong>Internal</strong></td><td>Owners / Shareholders</td><td>Profitability, return on investment</td></tr>
+                <tr><td></td><td>Management</td><td>Cost control, pricing, budgets</td></tr>
+                <tr><td></td><td>Employees</td><td>Job security, wages, bonus prospects</td></tr>
+                <tr><td><strong>External</strong></td><td>Creditors &amp; Suppliers</td><td>Ability to repay debts on time</td></tr>
+                <tr><td></td><td>Banks &amp; Lenders</td><td>Creditworthiness before granting loans</td></tr>
+                <tr><td></td><td>Government &amp; Tax Authorities</td><td>Accurate income for taxation; policy decisions</td></tr>
+                <tr><td></td><td>Investors (potential)</td><td>Future profitability and risk</td></tr>
+                <tr><td></td><td>Consumers</td><td>Whether the firm is financially sound and fair</td></tr>
+              </tbody></table>
 
-            /* ── BASIS OF ACCOUNTING ── */
-            {topicStart:"basis", title:"Basis of Accounting", icon:"📅", desc:"Cash basis vs accrual basis — when to recognise income and expenses, and why the accrual basis gives a truer picture."},
-            {h:"Cash Basis of Accounting — record only when cash actually moves", kicker:"Basis of Accounting · Cash basis", html:`
-              <p>Under the <b>Cash Basis of Accounting</b>, transactions are recorded only when cash is physically received or paid — not when income is earned or expense is incurred.</p>
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Limitations of Accounting</h3>
               <ul>
-                <li><b>Income</b> is recognised only when cash is <i>received</i>, regardless of when it was earned.</li>
-                <li><b>Expense</b> is recognised only when cash is <i>paid</i>, regardless of when it was incurred.</li>
+                <li><strong>Records only monetary transactions</strong> — non-monetary events (employee morale, brand reputation) are ignored.</li>
+                <li><strong>Based on historical cost</strong> — assets shown at original cost, not current market value.</li>
+                <li><strong>Affected by personal judgements</strong> — choices like depreciation method or bad-debt provisions involve estimates.</li>
+                <li><strong>Ignores price-level changes</strong> — inflation makes comparisons over years misleading.</li>
+                <li><strong>Window dressing</strong> — accounts can be manipulated to present a rosier picture.</li>
+                <li><strong>Not an exact science</strong> — several alternative methods exist for the same item.</li>
               </ul>
-              <p><b>Consequence:</b> There are no debtors (credit sales go unrecorded until cash arrives), no creditors (credit purchases go unrecorded until paid), no outstanding expenses, and no prepaid items.</p>
-              <p><b>Where it is used:</b> Small unorganised businesses, individual professionals (doctors, lawyers, consultants), certain government accounts, and not-for-profit organisations.</p>
-              <p><b>Limitations:</b></p>
-              <ul>
-                <li>Does NOT match income and expenses to the correct accounting period — gives a distorted picture of performance.</li>
-                <li>A business can show a loss simply because customers paid late, even if it traded profitably.</li>
-                <li>NOT permitted under the Companies Act or GAAP for corporate financial reporting.</li>
-                <li>Easy to manipulate profit by delaying or accelerating payments.</li>
-              </ul>`},
-            {h:"Accrual Basis of Accounting — record when earned or incurred, not when paid", kicker:"Basis of Accounting · Accrual basis", html:`
-              <p>Under the <b>Accrual Basis of Accounting</b>, transactions are recorded when they occur economically — when income is <i>earned</i> and expenses are <i>incurred</i> — regardless of when cash moves.</p>
-              <ul>
-                <li><b>Income</b> is recognised when it is <i>earned</i> (the service is performed or goods delivered), even if cash has not yet been received.</li>
-                <li><b>Expense</b> is recognised when it is <i>incurred</i> (the resource is used or benefit consumed), even if cash has not yet been paid.</li>
-              </ul>
-              <p><b>What accrual basis creates in the accounts:</b></p>
-              <ul>
-                <li><b>Debtors</b> — sales made on credit (earned but not yet received in cash)</li>
-                <li><b>Creditors</b> — purchases made on credit (incurred but not yet paid)</li>
-                <li><b>Outstanding Expenses</b> — expenses incurred but not yet paid (e.g. unpaid salaries)</li>
-                <li><b>Prepaid Expenses</b> — cash paid in advance for future benefits (e.g. rent paid 3 months early)</li>
-                <li><b>Accrued Income</b> — income earned but not yet received (e.g. interest due but not credited)</li>
-                <li><b>Income Received in Advance</b> — cash received for a service not yet performed</li>
-              </ul>
-              <p>Accrual basis is one of the three <b>Fundamental Accounting Assumptions</b> (along with Going Concern and Consistency). It is mandated by the Companies Act, AS 1, and all accepted accounting standards. It gives a <strong>true and fair view</strong> of the business's actual performance for the period.</p>`},
-            {h:"Cash vs Accrual — the same business, two different profit figures", kicker:"Basis of Accounting · The critical difference", html:`
-              <p>The two bases can produce very different profit figures from the same set of underlying transactions. Consider a business in the month of March:</p>
-              <ul>
-                <li>Goods sold worth ₹1,00,000 — cash received ₹60,000 in March; ₹40,000 still due from debtors</li>
-                <li>Expenses incurred ₹70,000 — cash paid ₹55,000 in March; ₹15,000 still outstanding to creditors</li>
-              </ul>
-              <table class="cmp">
-                <tr><th></th><th>Cash Basis</th><th>Accrual Basis</th></tr>
-                <tr><td><b>Revenue recognised</b></td><td>₹60,000 (cash received only)</td><td>₹1,00,000 (all goods delivered)</td></tr>
-                <tr><td><b>Expenses recognised</b></td><td>₹55,000 (cash paid only)</td><td>₹70,000 (all expenses incurred)</td></tr>
-                <tr><td><b>Profit for March</b></td><td>₹5,000</td><td>₹30,000</td></tr>
-              </table>
-              <p>Which figure truly represents March's performance? The <b>accrual figure of ₹30,000</b> — because the business earned ₹1,00,000 of revenue and incurred ₹70,000 of costs in March, regardless of when cash moved. The cash basis figure of ₹5,000 reflects the timing of cash flows, not the economic reality of the period.</p>
-              <p>This is why the <b>Matching Concept</b> (match expenses of a period to the income of the same period) and the <b>Accrual Concept</b> work hand in hand — both require the accrual basis to function correctly.</p>`},
 
-            /* ── VALUATION PRINCIPLES & ACCOUNTING ESTIMATES ── */
-            {topicStart:"valuation", title:"Valuation Principles & Accounting Estimates", icon:"💰", desc:"Historical cost, current cost, realisable value and present value — plus how accounting estimates work in practice."},
-            {h:"Accounting as a measurement discipline — putting numbers on things", kicker:"Valuation Principles · The big idea", html:`
-              <p>Before any transaction is <strong>recorded</strong>, it must be <strong>measured</strong>. In accounting, measurement means assigning a money value to objects and events. Every measurement discipline has three elements (Chambers' definition):</p>
-              <ul>
-                <li><b>Identification</b> — what is being measured? (the machine, the loan, the inventory)</li>
-                <li><b>Scale</b> — money is the scale of measurement (₹ in India). Unlike a metre or kilogram, money is <i>not stable over time</i> — inflation erodes purchasing power, so figures from different years are not perfectly comparable. Nor is money universal — exchange rates fluctuate.</li>
-                <li><b>Valuation principle / Dimension</b> — at which specific amount do we record the item? This is where the four measurement bases come in.</li>
-              </ul>
-              <p>Because money lacks both stability and universal uniformity, accounting is <strong>not an exact measurement discipline</strong> — but it is the most practical one available, kept reliable by its fundamental assumptions (Going Concern, Consistency, Accrual).</p>`},
-            {h:"The four measurement bases — one asset, four entirely different values", kicker:"Valuation Principles · Four bases", html:`
-              <p>The same asset can legitimately carry four different values depending on the measurement base chosen. Each has a distinct logic and a typical area of use.</p>
-              <table class="cmp">
-                <tr><th>Measurement Base</th><th>Core idea</th><th>Typical application</th></tr>
-                <tr><td><b>Historical Cost</b></td><td>Actual price paid at acquisition — objective, verifiable, from a completed transaction</td><td>Fixed assets (machinery, land, buildings, furniture)</td></tr>
-                <tr><td><b>Current Cost</b></td><td>What it would cost to buy the same asset <i>right now</i> at today's market prices</td><td>Replacement analysis; inflation-adjusted accounting</td></tr>
-                <tr><td><b>Realisable Value</b></td><td>Cash obtainable by selling the asset <i>today</i> in an orderly, arm's-length sale</td><td>Inventory valuation (lower of cost or NRV)</td></tr>
-                <tr><td><b>Present Value</b></td><td>Today's worth of all <i>future cash flows</i> the asset will generate, discounted at an appropriate rate</td><td>Long-term investments, loans, leases, employee benefits</td></tr>
-              </table>
-              <p>Under the <strong>traditional accounting system</strong>, <b>Historical Cost</b> is the primary base. The other three apply in specific situations prescribed by Accounting Standards. The same machine can show four entirely different figures — none is "wrong"; each answers a different question about value.</p>`},
-            {diagram:`<svg viewBox="0 0 700 296" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-              <text x="350" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#3c4742" font-family="Fraunces, serif">Same machine — four different values on the same date</text>
-              <rect x="260" y="116" width="180" height="56" rx="10" fill="#234f3b"/>
-              <text x="350" y="139" text-anchor="middle" font-size="12" font-weight="600" fill="#f4efe3">Machine (bought 2011)</text>
-              <text x="350" y="157" text-anchor="middle" font-size="11" fill="#e3eee6">original cost ₹8,00,000</text>
-              <rect x="18" y="28" width="168" height="66" rx="9" fill="#e3eee6" stroke="#234f3b" stroke-width="1.5"/>
-              <text x="102" y="50" text-anchor="middle" font-size="10.5" font-weight="700" fill="#234f3b">HISTORICAL COST</text>
-              <text x="102" y="65" text-anchor="middle" font-size="10.5" fill="#3c4742">Acquisition price paid</text>
-              <text x="102" y="83" text-anchor="middle" font-size="16" font-weight="700" fill="#234f3b">₹8,00,000</text>
-              <line x1="186" y1="61" x2="260" y2="138" stroke="#2f6b4f" stroke-width="1.5" stroke-dasharray="5,3"/>
-              <rect x="514" y="28" width="168" height="66" rx="9" fill="#f8f0db" stroke="#b6862c" stroke-width="1.5"/>
-              <text x="598" y="50" text-anchor="middle" font-size="10.5" font-weight="700" fill="#8a6420">CURRENT COST</text>
-              <text x="598" y="65" text-anchor="middle" font-size="10.5" fill="#3c4742">Replace it today</text>
-              <text x="598" y="83" text-anchor="middle" font-size="16" font-weight="700" fill="#8a6420">₹25,00,000</text>
-              <line x1="514" y1="61" x2="440" y2="138" stroke="#b6862c" stroke-width="1.5" stroke-dasharray="5,3"/>
-              <rect x="18" y="202" width="168" height="66" rx="9" fill="#f6e2dc" stroke="#c0492f" stroke-width="1.5"/>
-              <text x="102" y="224" text-anchor="middle" font-size="10.5" font-weight="700" fill="#b23a26">REALISABLE VALUE</text>
-              <text x="102" y="239" text-anchor="middle" font-size="10.5" fill="#3c4742">Sell it today</text>
-              <text x="102" y="257" text-anchor="middle" font-size="16" font-weight="700" fill="#b23a26">₹20,00,000</text>
-              <line x1="186" y1="235" x2="260" y2="172" stroke="#c0492f" stroke-width="1.5" stroke-dasharray="5,3"/>
-              <rect x="514" y="202" width="168" height="66" rx="9" fill="#e8eef8" stroke="#2c4a8a" stroke-width="1.5"/>
-              <text x="598" y="224" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2c4a8a">PRESENT VALUE</text>
-              <text x="598" y="239" text-anchor="middle" font-size="10.5" fill="#3c4742">Future cash inflows</text>
-              <text x="598" y="257" text-anchor="middle" font-size="16" font-weight="700" fill="#2c4a8a">₹4,19,246</text>
-              <line x1="514" y1="235" x2="440" y2="172" stroke="#2c4a8a" stroke-width="1.5" stroke-dasharray="5,3"/>
-            </svg>`, cap:"Four valid values for the same machine on the same date — each answers a different question. Traditional accounting records ₹8,00,000 (historical cost)."},
-            {h:"Historical Cost — what you actually paid at acquisition", kicker:"Valuation Principle 1 of 4", html:`
-              <p><b>Historical Cost</b> means recording an asset at the <strong>actual acquisition price</strong> — the cash paid to acquire it, plus all costs incurred to bring it to its usable state (transport, installation, testing, legal fees where applicable).</p>
-              <ul>
-                <li><b>Assets</b>: recorded at cash paid at the time of acquisition.</li>
-                <li><b>Liabilities</b>: recorded at the proceeds received in exchange for the obligation (e.g. a bank loan is entered at the amount actually borrowed, not at any future repayment total).</li>
-              </ul>
-              <p><b>Why it dominates traditional accounting:</b> Historical cost is <strong>objective and verifiable</strong> — it is based on a completed transaction backed by a voucher or invoice. No estimation or subjective judgement is needed.</p>
-              <p><b>Its limitation:</b> It ignores price changes after the acquisition date. A building purchased for ₹50,00,000 in 2005 stays in the books at ₹50,00,000 in 2025 even if its market value is now ₹3,00,00,000. This is why accounts are criticised for <i>ignoring inflation</i>.</p>
-              <p><b>Most common application:</b> Long-term fixed assets — machinery, furniture, land, buildings, vehicles.</p>`},
-            {example:"A business buys a machine for ₹7,00,000 and pays ₹1,00,000 for installation. Historical cost = ₹7,00,000 + ₹1,00,000 = ₹8,00,000. This figure stays in the books at ₹8,00,000 regardless of the market price in future years. A bank lending ₹5,00,000 at 10% p.a. — the liability is entered at ₹5,00,000 (proceeds received), not at the total future repayment of principal and interest. Historical cost records what was actually exchanged on the transaction date."},
-            {h:"Current Cost — what it would cost to replace it today", kicker:"Valuation Principle 2 of 4", html:`
-              <p><b>Current Cost</b> values an asset at the amount of cash that would have to be paid to acquire <strong>the same or an equivalent asset right now</strong> at current market prices — also called replacement cost.</p>
-              <ul>
-                <li><b>Assets</b>: carried at today's price for buying the equivalent asset new.</li>
-                <li><b>Liabilities</b>: carried at the undiscounted amount currently required to settle them (including any prepayment charges).</li>
-              </ul>
-              <p>Current cost is <strong>more economically relevant during inflation</strong> because it shows what it would actually cost to replace productive capacity. However, it requires research or professional appraisal to determine — unlike historical cost, there is no ready transaction record.</p>
-              <p>A machine bought for ₹7,00,000 in 2011 that would cost ₹25,00,000 to purchase today has a current cost of <b>₹25,00,000</b> on the measurement date.</p>`},
-            {h:"Realisable Value — what you would receive if sold today", kicker:"Valuation Principle 3 of 4", html:`
-              <p><b>Realisable Value</b> (also called Net Realisable Value or Settlement Value) measures an asset at the <strong>amount of cash obtainable by selling it today in an orderly disposal</strong> — not a forced or distress sale (haphazard disposal could fetch less).</p>
-              <ul>
-                <li><b>Assets</b>: carried at the amount a willing buyer would pay at arm's length in normal market conditions today.</li>
-                <li><b>Liabilities</b>: carried at their settlement value — the undiscounted amount needed to discharge them normally.</li>
-              </ul>
-              <p>⭐ <strong>Most important application at your level:</strong> <b>Inventories are valued at the lower of cost and net realisable value.</b> If goods cost ₹60,000 but can only be sold for ₹45,000, they are written down to ₹45,000 immediately. This directly applies Conservatism — losses are recognised as soon as they are probable; gains only when actually realised.</p>
-              <p>In the running example: Mr. X's machine (cost ₹7,00,000; replacement ₹25,00,000) can currently be sold for <b>₹20,00,000</b> — its realisable value.</p>`},
-            {h:"Present Value — future money, brought back to today", kicker:"Valuation Principle 4 of 4", html:`
-              <p>Present Value rests on the <strong>time value of money</strong>: ₹1,00,000 today is worth more than ₹1,00,000 promised a year from now, because today's money can be invested and grown. A rational person will not exchange ₹1,00,000 today for ₹1,00,000 a year later without compensation for the wait.</p>
-              <p><b>Discounting</b> converts a future sum back to its equivalent value in today's terms. The higher the discount rate, or the further away the future cash flow, the lower its present value.</p>
-              <ul>
-                <li><b>Assets</b>: carried at the present discounted value of all future net cash <i>inflows</i> the asset is expected to generate.</li>
-                <li><b>Liabilities</b>: carried at the present discounted value of future net cash <i>outflows</i> required to settle them.</li>
-              </ul>
-              <p>At a 20% discount rate, ₹1,00,000 receivable one year from now is worth only <b>₹83,333</b> today (= 1,00,000 ÷ 1.20). Ten such annual receipts total ₹10,00,000 in face value, but only <b>₹4,19,246</b> in present-value terms — less than even the original historical cost of the machine.</p>
-              <p><b>Common applications:</b> Long-term investments, bank loans, lease obligations, employee benefit provisions — any situation where the timing of cash flows matters as much as the amounts.</p>`},
-            {caseStudy:"Mr. X bought a machine in 2011 for ₹8,00,000 (₹7,00,000 price plus ₹1,00,000 installation). On 1 January 2022, four bases give four different values: Historical Cost = ₹8,00,000 (what was paid in 2011); Current Cost = ₹25,00,000 (cost to buy the same machine today); Realisable Value = ₹20,00,000 (selling price in an orderly sale today); Present Value = ₹4,19,246 (10 years of ₹1,00,000 annual cash flows, discounted at 20% p.a.). Traditional accounting shows ₹8,00,000 in the books (less depreciation charged). Each other figure is valid — it answers a different question: What did it cost? What would it cost to replace? What would I get today? What will it earn?"},
-            {h:"Accounting Estimates — reasoned judgement when precision is impossible", kicker:"Accounting Estimates", html:`
-              <p>Many financial statement items cannot be measured with certainty because they depend on <b>future uncertain events</b>. For these, management makes a <strong>reasoned estimate</strong> based on current information and past experience. An estimate is not a guess — it is a careful, informed judgement.</p>
-              <p><b>Common situations requiring estimates:</b></p>
-              <ul>
-                <li><b>Depreciation</b> — requires estimating the asset's useful life and residual value.</li>
-                <li><b>Provision for Bad and Doubtful Debts</b> — what proportion of debtors is unlikely to pay?</li>
-                <li><b>Inventory obsolescence</b> — has any stock become unsaleable, and by how much should it be written down?</li>
-                <li><b>Tax provisions</b> — the exact liability may be disputed or under assessment; a best estimate is recorded.</li>
-                <li><b>Warranty provisions</b> — future claims by customers on goods already sold.</li>
-              </ul>
-              <p><b>Change in estimate:</b> If circumstances change (for example, a machine expected to last 10 years proves obsolete after 6 years due to new technology), the estimate is revised. Such changes apply <strong>prospectively</strong> — they affect the current and future periods only. Past financial statements are <i>not</i> restated. This is the key difference from correcting an accounting error, which may require retrospective restatement.</p>`},
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">The Three Sub-fields of Accounting</h3>
+              <table class="cmp"><thead><tr><th>Sub-field</th><th>Focus</th><th>Audience</th></tr></thead><tbody>
+                <tr><td><strong>Financial Accounting</strong></td><td>Record all transactions; prepare final accounts (P&amp;L, Balance Sheet)</td><td>External users</td></tr>
+                <tr><td><strong>Cost Accounting</strong></td><td>Determine cost of products/services; control costs</td><td>Internal management</td></tr>
+                <tr><td><strong>Management Accounting</strong></td><td>Interpret financial data for planning and decision-making</td><td>Internal management</td></tr>
+              </tbody></table>
 
-            /* ── ACCOUNTING STANDARDS (AS & IND AS) ── */
-            {topicStart:"standards", title:"Accounting Standards (AS & Ind AS)", icon:"📋", desc:"Why standards exist, what they cover, their objectives, benefits, limitations, the formulation process and India's three frameworks."},
-            {h:"Why Accounting Standards are necessary — the problem of non-comparability", kicker:"Accounting Standards · Why they exist", html:`
-              <p>Accounting is called the language of business. But imagine a language where every speaker invents their own grammar. Without agreed rules, companies account for identical transactions in completely different ways — making their financial statements <strong>incomparable and potentially misleading</strong>.</p>
-              <p><b>What can go wrong without standards?</b></p>
-              <ul>
-                <li>Company A depreciates machinery over 5 years; Company B depreciates identical machinery over 15 years — their profits look very different despite identical performance.</li>
-                <li>One firm values closing stock at cost; another at market value — balance sheets are incomparable.</li>
-                <li>Contingent liabilities may be disclosed prominently by one company and omitted by another.</li>
-              </ul>
-              <p>To prevent this, <strong>Accounting Standards (AS)</strong> were created — written policy documents that set uniform rules for how transactions must be recognised, measured, presented and disclosed. In India, the <b>Accounting Standards Board (ASB)</b> of the ICAI, constituted in 1977, frames these standards with reference to International Financial Reporting Standards (IFRS), adapted to India's laws and business environment.</p>`},
-            {h:"What Accounting Standards cover — scope and objectives", kicker:"Accounting Standards · Scope &amp; Objectives", html:`
-              <p>Every Accounting Standard deals with four specific issues for the category of transaction it covers:</p>
-              <table class="cmp">
-                <tr><th>Issue covered by AS</th><th>Question it answers</th></tr>
-                <tr><td><b>Recognition</b></td><td>Should this item appear in the financial statements at all? If yes — at what point in time?</td></tr>
-                <tr><td><b>Measurement</b></td><td>At what amount should it be recorded? Which valuation base applies?</td></tr>
-                <tr><td><b>Presentation</b></td><td>In which statement should it appear and in what format?</td></tr>
-                <tr><td><b>Disclosure</b></td><td>What additional information must appear in the notes so users can make informed decisions?</td></tr>
-              </table>
-              <p><b>Objectives of Accounting Standards:</b> To harmonise accounting policies across different enterprises so that financial statements are <strong>comparable, reliable and transparent</strong> and give a true and fair view. Specifically — (i) eliminate non-comparability of financial statements; and (ii) provide a standard set of accounting policies, valuation norms and disclosure requirements.</p>`},
-            {h:"Benefits and limitations of Accounting Standards", kicker:"Accounting Standards · Benefits &amp; Limits", html:`
-              <table class="cmp">
-                <tr><th>Benefits ✓</th><th>Limitations ✗</th></tr>
-                <tr>
-                  <td><b>Standardisation of treatments</b> — reduces confusing variations; different entities account for similar transactions the same way, improving reliability.</td>
-                  <td><b>Difficulty of choice</b> — sometimes multiple accounting treatments are each defensible. Choosing one for the standard is not always straightforward and may not suit every situation.</td>
-                </tr>
-                <tr>
-                  <td><b>Additional disclosures</b> — AS can require disclosure of information beyond what the law mandates, giving users a fuller picture of the business.</td>
-                  <td><b>Restricted scope</b> — AS <i>cannot override the statute</i>. They must operate within applicable laws. Where law and AS conflict, the law prevails.</td>
-                </tr>
-                <tr>
-                  <td><b>Comparability</b> — enables meaningful comparison of statements across different companies and across different years for the same company.</td>
-                  <td></td>
-                </tr>
-              </table>
-              <p>⚠️ <strong>Key rule:</strong> Accounting Standards can <i>never override the law</i>. If an applicable statute requires a particular treatment, the AS must comply — not the other way around.</p>`},
-            {diagram:`<svg viewBox="0 0 640 386" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-              <rect x="140" y="4" width="360" height="30" rx="9" fill="#234f3b"/>
-              <text x="320" y="23" text-anchor="middle" font-size="12.5" font-weight="600" fill="#f4efe3">How an Accounting Standard is made in India (ASB)</text>
-              <rect x="120" y="46" width="400" height="28" rx="7" fill="#e3eee6" stroke="#2f6b4f"/>
-              <text x="320" y="65" text-anchor="middle" font-size="11" fill="#234f3b" font-weight="600">1. ASB identifies an area needing a standard</text>
-              <polygon points="320,74 316,82 324,82" fill="#b6862c"/>
-              <rect x="120" y="82" width="400" height="28" rx="7" fill="#e3eee6" stroke="#2f6b4f"/>
-              <text x="320" y="101" text-anchor="middle" font-size="11" fill="#234f3b" font-weight="600">2. Constitute a study group; prepare a preliminary draft</text>
-              <polygon points="320,110 316,118 324,118" fill="#b6862c"/>
-              <rect x="120" y="118" width="400" height="36" rx="7" fill="#f8f0db" stroke="#b6862c"/>
-              <text x="320" y="135" text-anchor="middle" font-size="11" fill="#8a6420" font-weight="600">3. ASB reviews draft; circulate to outside bodies</text>
-              <text x="320" y="149" text-anchor="middle" font-size="10" fill="#8a6420">(SEBI, CBDT, C&amp;AG, DCA, SCOPE etc.) for comments</text>
-              <polygon points="320,154 316,162 324,162" fill="#b6862c"/>
-              <rect x="120" y="162" width="400" height="28" rx="7" fill="#f8f0db" stroke="#b6862c"/>
-              <text x="320" y="181" text-anchor="middle" font-size="11" fill="#8a6420" font-weight="600">4. Meet outside bodies; ascertain their views on the draft</text>
-              <polygon points="320,190 316,198 324,198" fill="#b6862c"/>
-              <rect x="120" y="198" width="400" height="28" rx="7" fill="#f8f0db" stroke="#b6862c"/>
-              <text x="320" y="217" text-anchor="middle" font-size="11" fill="#8a6420" font-weight="600">5. Finalise and issue Exposure Draft (E.D.) for public comments</text>
-              <polygon points="320,226 316,234 324,234" fill="#b6862c"/>
-              <rect x="120" y="234" width="400" height="28" rx="7" fill="#f8f0db" stroke="#b6862c"/>
-              <text x="320" y="253" text-anchor="middle" font-size="11" fill="#8a6420" font-weight="600">6. Consider all comments received on the Exposure Draft</text>
-              <polygon points="320,262 316,270 324,270" fill="#b6862c"/>
-              <rect x="120" y="270" width="400" height="28" rx="7" fill="#e3eee6" stroke="#2f6b4f"/>
-              <text x="320" y="289" text-anchor="middle" font-size="11" fill="#234f3b" font-weight="600">7. Modify draft; submit to ICAI Council for approval</text>
-              <polygon points="320,298 316,306 324,306" fill="#b6862c"/>
-              <rect x="120" y="306" width="400" height="38" rx="9" fill="#234f3b"/>
-              <text x="320" y="323" text-anchor="middle" font-size="12" font-weight="700" fill="#f4efe3">8. Issue the Accounting Standard</text>
-              <text x="320" y="339" text-anchor="middle" font-size="10" fill="#e3eee6">By ICAI (non-companies) or Central Govt (smaller companies)</text>
-              <text x="320" y="373" text-anchor="middle" font-size="11" fill="#3c4742" font-style="italic" font-family="Fraunces, serif">Process is fully consultative — the same area passes through multiple review stages before issue.</text>
-            </svg>`, cap:"Eight-step formulation process: identifying the need → study group → draft → consultation with outside bodies → Exposure Draft → public comment → modification → final issue."},
-            {h:"Which Accounting Standards apply to which type of entity?", kicker:"Accounting Standards · Three frameworks in India", html:`
-              <p>India has three distinct sets of accounting standards, applicable based on entity size, nature, and listing status:</p>
-              <table class="cmp">
-                <tr><th>Framework</th><th>Applicable to</th><th>Character</th></tr>
-                <tr><td><b>Ind AS</b> (IFRS-converged)</td><td>All listed companies &amp; NBFCs; unlisted companies/NBFCs with net worth ≥ ₹250 crore</td><td>Based on international IFRS; uses fair value extensively</td></tr>
-                <tr><td><b>AS</b> (Companies Rules, 2021)</td><td>Smaller unlisted companies not covered by Ind AS</td><td>Traditional AS under Companies Act; simpler framework</td></tr>
-                <tr><td><b>AS</b> (prescribed by ICAI)</td><td>All non-company entities — partnerships, sole traders, trusts, societies</td><td>ICAI standards; broadly historical cost based</td></tr>
-              </table>
-              <p><b>Ind AS vs AS:</b> Ind AS are India's converged version of IFRS (adapted — not identical). They use fair value and present value more extensively. Traditional AS are simpler and primarily historical-cost based — which is what you study at Class XI level.</p>
-              <p>For WBCHSE examinations: understand what AS are, why they are needed, their objectives, benefits, limitations, and the formulation process. The individual list of AS numbers (AS 1 through AS 29, Ind AS 1 through 116) is background knowledge only — it is not tested at Class XI.</p>`},
+              <div class="example"><div class="lbl">Worked example</div>
+                <p>Riya opens a bakery. She records all cash purchases of flour and sugar (financial accounting), calculates the cost per cake (cost accounting), and uses monthly profit reports to decide whether to open a second outlet (management accounting). All three sub-fields serve her — but for different purposes.</p>
+              </div>
+            `},
 
+            /* ── TOPIC 2: BASIC ACCOUNTING TERMS ── */
+            {topicStart:"terms", title:"Basic Accounting Terms", icon:"", desc:"Capital, drawings, assets, liabilities, revenue, expenses and all the key vocabulary of accounting."},
+            {h:"Basic Accounting Terms", kicker:"Unit 1 · Topic 2", html:`
+              <p>A shared vocabulary is essential in accounting. Below are the key terms you must know for Class XI and the board exam.</p>
 
-            /* ── GOODS AND SERVICES TAX (GST) ── */
-            {topicStart:"gst", title:"Goods and Services Tax (GST)", icon:"🏷️", desc:"India's unified indirect tax from July 2017 — its dual structure, seven characteristics and key advantages."},
-            {h:"GST — India's unified indirect tax and what it replaced", kicker:"GST · Introduction &amp; Structure", html:`
-              <p>The <b>Goods and Services Tax (GST)</b> is a comprehensive, multi-stage, destination-based indirect tax introduced in India on <strong>1 July 2017</strong>. It replaced a complex web of central and state taxes that had created a cascading (tax-on-tax) burden and fragmented India's national market.</p>
-              <p><b>Taxes replaced by GST:</b></p>
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Business Entity &amp; Transaction</h3>
               <ul>
-                <li><i>Central taxes replaced:</i> Central Excise Duty, Service Tax, Central Sales Tax (CST), Additional Customs Duty, Countervailing Duty</li>
-                <li><i>State taxes replaced:</i> State VAT, Octroi, Entry Tax, Luxury Tax, Entertainment Tax, Purchase Tax</li>
+                <li><strong>Business Entity</strong> — The business is treated as a separate person from its owner. Personal transactions of the owner are kept out of the business books.</li>
+                <li><strong>Transaction</strong> — Any event that can be expressed in money and that changes the financial position of the business (e.g., buying goods for ₹5,000).</li>
+                <li><strong>Event</strong> — A happening that may or may not result in a financial transaction (e.g., signing a contract — the event; paying under it — the transaction).</li>
               </ul>
-              <p><b>Dual GST Structure</b> (reflecting India's federal system — both Centre and States have taxing powers):</p>
-              <table class="cmp">
-                <tr><th>Type</th><th>Levied by</th><th>When it applies</th></tr>
-                <tr><td><b>CGST</b> (Central GST)</td><td>Central Government</td><td>Intra-state transactions (within the same state) — levied alongside SGST</td></tr>
-                <tr><td><b>SGST</b> (State GST)</td><td>State Government</td><td>Intra-state transactions — levied alongside CGST</td></tr>
-                <tr><td><b>IGST</b> (Integrated GST)</td><td>Central Government</td><td>Inter-state transactions (between two different states) and imports</td></tr>
-              </table>
-              <p>For example: a trader in West Bengal selling to a buyer in West Bengal pays CGST + SGST. The same trader selling to a buyer in Maharashtra pays IGST instead.</p>`},
-            {h:"Characteristics of GST", kicker:"GST · Characteristics", html:`
-              <p>GST has several defining features that distinguish it from the old indirect tax system:</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Capital &amp; Drawings</h3>
+              <table class="cmp"><thead><tr><th>Term</th><th>Meaning</th><th>Effect on Capital</th></tr></thead><tbody>
+                <tr><td><strong>Capital</strong></td><td>Amount invested by the owner into the business; also called Owner's Equity or Net Worth. Capital = Assets − Liabilities.</td><td>—</td></tr>
+                <tr><td><strong>Additional Capital</strong></td><td>Fresh funds introduced by the owner during the year.</td><td>Increases capital</td></tr>
+                <tr><td><strong>Drawings</strong></td><td>Cash or goods withdrawn by the owner for personal use.</td><td>Decreases capital</td></tr>
+                <tr><td><strong>Net Profit</strong></td><td>Surplus of income over expenses during the period.</td><td>Increases capital</td></tr>
+                <tr><td><strong>Net Loss</strong></td><td>Surplus of expenses over income during the period.</td><td>Decreases capital</td></tr>
+              </tbody></table>
+              <p style="margin-top:8px"><strong>Closing Capital Formula:</strong> Closing Capital = Opening Capital + Additional Capital + Net Profit − Drawings (or − Net Loss instead of + Net Profit)</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Assets</h3>
+              <p>Assets are economic resources owned or controlled by the business that are expected to provide future economic benefit.</p>
+              <table class="cmp"><thead><tr><th>Type</th><th>Meaning</th><th>Examples</th></tr></thead><tbody>
+                <tr><td><strong>Fixed Assets</strong></td><td>Held for long-term use; not for resale; also called Non-current Assets.</td><td>Land, Building, Machinery, Vehicles</td></tr>
+                <tr><td><strong>Current Assets</strong></td><td>Expected to be converted to cash within one year.</td><td>Cash, Debtors, Stock, Prepaid expenses</td></tr>
+                <tr><td><strong>Liquid Assets</strong></td><td>Cash or near-cash (quickly convertible).</td><td>Cash, Bank balance, Short-term investments</td></tr>
+                <tr><td><strong>Tangible Assets</strong></td><td>Have physical existence.</td><td>Building, Furniture, Stock</td></tr>
+                <tr><td><strong>Intangible Assets</strong></td><td>No physical form but have value.</td><td>Goodwill, Patents, Trademarks, Copyrights</td></tr>
+                <tr><td><strong>Fictitious Assets</strong></td><td>Not real assets; deferred losses or expenses shown on the asset side.</td><td>Preliminary expenses, Discount on issue of shares</td></tr>
+                <tr><td><strong>Wasting Assets</strong></td><td>Natural resources that deplete with use.</td><td>Mines, Quarries, Oil wells</td></tr>
+              </tbody></table>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Liabilities</h3>
+              <p>Liabilities are obligations owed by the business to outsiders that require future payment.</p>
+              <table class="cmp"><thead><tr><th>Type</th><th>Meaning</th><th>Examples</th></tr></thead><tbody>
+                <tr><td><strong>Long-term / Non-current</strong></td><td>Payable after more than one year.</td><td>Long-term bank loans, Debentures</td></tr>
+                <tr><td><strong>Current / Short-term</strong></td><td>Payable within one year.</td><td>Creditors, Bank overdraft, Outstanding expenses</td></tr>
+                <tr><td><strong>Contingent Liabilities</strong></td><td>Potential obligations depending on a future event; NOT recorded in books — shown as a note.</td><td>Pending court case, Bills discounted</td></tr>
+              </tbody></table>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Debtors, Creditors &amp; Trade Payables</h3>
               <ul>
-                <li><b>Comprehensive:</b> Covers both goods and services under a single tax — unlike the old system where goods and services were taxed separately under different laws.</li>
-                <li><b>Multi-stage:</b> GST is levied at every stage of the supply chain — from manufacturer to wholesaler to retailer. However, each stage only pays tax on the <i>value it adds</i>, not on the full price (because of ITC).</li>
-                <li><b>Destination-based:</b> Tax revenue goes to the state where goods or services are <i>consumed</i> (the destination), not where they are produced or manufactured. This is fair to consuming states.</li>
-                <li><b>Dual structure:</b> Both the Centre (CGST/IGST) and the States (SGST) levy GST simultaneously — a feature designed for India's federal system.</li>
-                <li><b>Input Tax Credit (ITC):</b> At each stage, the registered dealer can claim a credit for the GST already paid by the previous stage. This eliminates the cascading effect (tax on tax) that existed under the old VAT-plus-excise-plus-service-tax structure.</li>
-                <li><b>Technology-driven:</b> Administered through the GSTN (GST Network) portal — registration, filing, and payment are all done online.</li>
-                <li><b>Threshold-based:</b> Small businesses below a turnover threshold are exempt from GST registration (currently ₹20 lakh for services; ₹40 lakh for goods in most states).</li>
-              </ul>`},
-            {h:"Advantages of GST", kicker:"GST · Advantages", html:`
-              <p>GST brought significant benefits to businesses, consumers, and the government alike:</p>
+                <li><strong>Debtors (Trade Receivables)</strong> — Persons or firms who owe money to the business for goods/services sold on credit. They are current assets.</li>
+                <li><strong>Creditors (Trade Payables)</strong> — Persons or firms to whom the business owes money for goods/services purchased on credit. They are current liabilities.</li>
+              </ul>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Revenue, Income &amp; Expenses</h3>
+              <table class="cmp"><thead><tr><th>Term</th><th>Meaning</th></tr></thead><tbody>
+                <tr><td><strong>Revenue</strong></td><td>Gross income earned from the main business activities (sales, fees, commission earned).</td></tr>
+                <tr><td><strong>Income</strong></td><td>Broader term — all earnings including revenue and non-operating gains (rent received, interest received).</td></tr>
+                <tr><td><strong>Expense</strong></td><td>Cost incurred to earn revenue in the current period. Examples: rent, salaries, electricity.</td></tr>
+                <tr><td><strong>Expenditure</strong></td><td>Spending that may relate to current period (expense) or future periods (capital expenditure, prepaid expense).</td></tr>
+                <tr><td><strong>Profit</strong></td><td>Revenue − Expenses (when positive).</td></tr>
+                <tr><td><strong>Loss</strong></td><td>Expenses − Revenue (when expenses exceed revenue).</td></tr>
+              </tbody></table>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Purchases, Sales &amp; Stock</h3>
+              <table class="cmp"><thead><tr><th>Term</th><th>Meaning</th></tr></thead><tbody>
+                <tr><td><strong>Purchases</strong></td><td>Goods bought by the business for resale or production. Can be cash or credit.</td></tr>
+                <tr><td><strong>Sales</strong></td><td>Goods sold to customers. Can be cash or credit.</td></tr>
+                <tr><td><strong>Goods</strong></td><td>Items in which the business deals (trades). Same items are "purchases" when bought and "sales" when sold.</td></tr>
+                <tr><td><strong>Opening Stock</strong></td><td>Unsold stock at the beginning of the accounting period.</td></tr>
+                <tr><td><strong>Closing Stock</strong></td><td>Unsold stock at the end of the accounting period; carried forward as Opening Stock for the next year.</td></tr>
+                <tr><td><strong>Returns Inward</strong></td><td>Goods returned by customers (Sales Returns). Reduces sales.</td></tr>
+                <tr><td><strong>Returns Outward</strong></td><td>Goods returned to suppliers (Purchase Returns). Reduces purchases.</td></tr>
+              </tbody></table>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Discount</h3>
+              <table class="cmp"><thead><tr><th></th><th>Trade Discount</th><th>Cash Discount</th></tr></thead><tbody>
+                <tr><td><strong>Purpose</strong></td><td>Encourage bulk purchases; given on list price</td><td>Encourage prompt payment</td></tr>
+                <tr><td><strong>When given</strong></td><td>At time of sale</td><td>When payment is made early</td></tr>
+                <tr><td><strong>Recorded in books?</strong></td><td>No — invoice shows net price only</td><td>Yes — recorded as Discount Allowed (expense) or Discount Received (income)</td></tr>
+              </tbody></table>
+
+              <div class="example"><div class="lbl">Worked example</div>
+                <p>Ajay sells goods listed at ₹10,000 with 10% trade discount and 2% cash discount. Invoice price = ₹10,000 − ₹1,000 = <strong>₹9,000</strong> (trade discount not recorded). If the buyer pays within 7 days: cash discount = ₹9,000 × 2% = ₹180. Ajay records: Cash received = ₹8,820; Discount Allowed = ₹180.</p>
+              </div>
+            `},
+
+            /* ── TOPIC 3: GAAP & BASIC ACCOUNTING CONCEPTS ── */
+            {topicStart:"gaap", title:"GAAP & Basic Accounting Concepts", icon:"", desc:"The 15 fundamental concepts and conventions that form the foundation of accounting practice."},
+            {h:"GAAP & Basic Accounting Concepts", kicker:"Unit 1 · Topic 3", html:`
+              <p><strong>GAAP (Generally Accepted Accounting Principles)</strong> are the standard frameworks, concepts, conventions and guidelines that guide how accountants record and report financial information. They ensure consistency, comparability, and reliability across firms and periods.</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">1. Business Entity Concept</h3>
+              <p>The business is treated as a <strong>separate legal entity</strong> from its owner(s). Personal transactions of the proprietor are not mixed with business transactions. The business "owes" capital to the owner.</p>
+              <div class="example"><div class="lbl">Application</div><p>If Meera withdraws ₹20,000 cash for personal use, this is recorded as Drawings (not an expense). It reduces capital, not profit.</p></div>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">2. Money Measurement Concept</h3>
+              <p>Only transactions that can be <strong>expressed in monetary terms</strong> are recorded. Non-monetary events (disputes, reputation, morale) are ignored, even if highly significant.</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">3. Going Concern Concept</h3>
+              <p>It is assumed that the business will <strong>continue to operate indefinitely</strong> into the future unless there is strong evidence to the contrary. This justifies showing assets at cost rather than forced-sale (liquidation) value.</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">4. Accounting Period Concept</h3>
+              <p>The indefinite life of the business is divided into <strong>regular, equal time periods</strong> (usually 12 months) called accounting periods, so that periodic reports can be prepared and performance assessed. In India, the financial year runs 1 April to 31 March.</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">5. Historical Cost (Cost) Concept</h3>
+              <p>Assets are initially recorded at their <strong>original acquisition cost</strong> (not market value). This provides an objective, verifiable basis for measurement. Over time, depreciation reduces the book value of fixed assets.</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">6. Dual Aspect Concept</h3>
+              <p>Every transaction has <strong>two effects</strong> — a debit and a credit of equal amount. This maintains the accounting equation: <strong>Assets = Liabilities + Capital (Owner's Equity)</strong>. This is the foundation of double-entry bookkeeping.</p>
+              <div class="example"><div class="lbl">Application</div><p>Bought machinery for ₹50,000 cash: Machinery (asset) ↑ by ₹50,000; Cash (asset) ↓ by ₹50,000. Both sides of the equation remain balanced.</p></div>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">7. Revenue Recognition (Realisation) Concept</h3>
+              <p>Revenue is recognised <strong>when it is earned</strong> (goods are delivered or service is rendered), NOT when cash is received. For credit sales, revenue is recorded at the time of sale even if payment comes later.</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">8. Accrual Concept</h3>
+              <p>Income and expenses are recognised in the period in which they are <strong>earned or incurred</strong>, regardless of when cash changes hands. This is the basis of mercantile/accrual accounting.</p>
+              <div class="example"><div class="lbl">Application</div><p>Salary of ₹40,000 for March due on 31 March but paid on 5 April: the expense is recorded in March's accounts as Outstanding Salary (a current liability).</p></div>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">9. Matching Concept</h3>
+              <p>Expenses must be matched against the <strong>revenue they helped generate</strong> in the same accounting period. All costs incurred to earn the period's revenue — whether paid or not — are deducted from that period's revenue.</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">10. Objectivity (Verifiable Evidence) Concept</h3>
+              <p>Accounting entries must be based on <strong>objective, verifiable evidence</strong> — documentary proof such as invoices, receipts, contracts, and vouchers. This reduces personal bias.</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">11. Full Disclosure Concept</h3>
+              <p>All <strong>material information</strong> relevant to users must be disclosed in the financial statements — either in the main statements or in the notes to accounts. Nothing significant should be hidden.</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">12. Consistency Concept</h3>
+              <p>Once an accounting method is adopted, it should be <strong>applied consistently</strong> from period to period. Changes in method should be disclosed with the reason and effect on financial statements.</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">13. Conservatism (Prudence) Concept</h3>
+              <p>"<strong>Anticipate no profit, but provide for all possible losses.</strong>" When in doubt, assets and income should not be overstated, and liabilities and losses should not be understated. Example: stock is valued at Cost or Net Realisable Value, whichever is lower.</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">14. Materiality Concept</h3>
+              <p>Only items that are <strong>significant enough to influence decisions</strong> of users need to be separately disclosed. Trivial items may be grouped or ignored for the sake of clarity (e.g., pens bought for office use are expensed immediately, not capitalised).</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">15. Timeliness</h3>
+              <p>Financial information must be provided to users <strong>within a relevant time frame</strong>. Information that arrives too late loses its usefulness for decision-making, even if accurate.</p>
+
+              <div class="casebox"><div class="lbl">Case in point</div>
+                <p>A firm uses SLM depreciation for five years consistently (Consistency concept). Mid-year, it discovers a machine is worth ₹60,000 more than book value — it does NOT write it up (Conservatism). However, the increased market value is noted in the annual report (Full Disclosure). These three concepts work together to produce reliable, comparable accounts.</p>
+              </div>
+            `},
+
+            /* ── TOPIC 4: SYSTEM OF ACCOUNTING ── */
+            {topicStart:"system", title:"System of Accounting", icon:"", desc:"Single entry, double entry, golden rules, accounting equation and types of accounts."},
+            {h:"System of Accounting", kicker:"Unit 1 · Topic 4", html:`
+              <h3 style="color:var(--green-deep);margin:10px 0 10px;padding-top:0">Single Entry System</h3>
+              <p>Under single entry, only <strong>one aspect</strong> of a transaction is recorded (usually the cash or personal account effect). It is incomplete, unscientific and not suitable for large businesses.</p>
+              <table class="cmp"><thead><tr><th>Advantages</th><th>Disadvantages</th></tr></thead><tbody>
+                <tr><td>Simple and inexpensive</td><td>Incomplete records — no nominal or real accounts</td></tr>
+                <tr><td>Suitable for very small traders</td><td>Profit cannot be accurately ascertained</td></tr>
+                <tr><td>Less clerical work</td><td>No Trial Balance possible; errors undetected</td></tr>
+                <tr><td></td><td>Not acceptable to banks, tax authorities or courts</td></tr>
+              </tbody></table>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Double Entry System</h3>
+              <p>Every transaction is recorded in <strong>two accounts</strong> — one is debited and another is credited for the same amount. This system is complete, scientific, and self-balancing.</p>
+              <p><strong>Key features:</strong> Every debit has a corresponding credit · The Trial Balance checks arithmetical accuracy · Complete information for final accounts · Detects and prevents errors and frauds.</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Types of Accounts</h3>
+              <table class="cmp"><thead><tr><th>Type</th><th>Meaning</th><th>Examples</th></tr></thead><tbody>
+                <tr><td><strong>Personal Account</strong></td><td>Accounts of persons, firms, companies, banks</td><td>Ram's A/c, Bank A/c, Capital A/c, Drawings A/c</td></tr>
+                <tr><td><strong>Real Account</strong></td><td>Accounts of tangible and intangible assets</td><td>Cash A/c, Machinery A/c, Goodwill A/c, Stock A/c</td></tr>
+                <tr><td><strong>Nominal Account</strong></td><td>Accounts of expenses, losses, incomes and gains</td><td>Salary A/c, Rent A/c, Sales A/c, Commission Received A/c</td></tr>
+              </tbody></table>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Golden Rules of Debit and Credit</h3>
+              <table class="cmp"><thead><tr><th>Type of Account</th><th>Debit (Dr)</th><th>Credit (Cr)</th></tr></thead><tbody>
+                <tr><td><strong>Personal Account</strong></td><td>The Receiver</td><td>The Giver</td></tr>
+                <tr><td><strong>Real Account</strong></td><td>What comes in</td><td>What goes out</td></tr>
+                <tr><td><strong>Nominal Account</strong></td><td>Expenses &amp; Losses</td><td>Incomes &amp; Gains</td></tr>
+              </tbody></table>
+
+              <div class="example"><div class="lbl">Applying the Golden Rules</div>
+                <p><strong>Transaction:</strong> Paid salary ₹25,000 in cash.<br>
+                Salary A/c → Nominal → Expense → <strong>Debit</strong> ₹25,000<br>
+                Cash A/c → Real → Goes out → <strong>Credit</strong> ₹25,000</p>
+                <p><strong>Transaction:</strong> Purchased furniture ₹30,000 on credit from Raj Furniture.<br>
+                Furniture A/c → Real → Comes in → <strong>Debit</strong> ₹30,000<br>
+                Raj Furniture A/c → Personal → Giver → <strong>Credit</strong> ₹30,000</p>
+              </div>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">The Accounting Equation</h3>
+              <p style="font-size:18px;font-weight:700;text-align:center;color:var(--green-deep);padding:14px;background:var(--green-soft);border-radius:10px;margin:10px 0">Assets = Liabilities + Capital (Owner's Equity)</p>
+              <p>This equation is always in balance. Every transaction changes two or more elements but the equation remains balanced (Dual Aspect Concept).</p>
+              <table class="cmp"><thead><tr><th>Transaction</th><th>Effect</th><th>Equation stays balanced?</th></tr></thead><tbody>
+                <tr><td>Owner invests ₹1,00,000 cash</td><td>Cash (A) ↑ ₹1,00,000; Capital (C) ↑ ₹1,00,000</td><td>Yes</td></tr>
+                <tr><td>Bought goods for ₹20,000 cash</td><td>Stock (A) ↑ ₹20,000; Cash (A) ↓ ₹20,000</td><td>Yes</td></tr>
+                <tr><td>Borrowed ₹50,000 from bank</td><td>Cash (A) ↑ ₹50,000; Loan (L) ↑ ₹50,000</td><td>Yes</td></tr>
+                <tr><td>Sold goods (cost ₹8,000) for ₹12,000 cash</td><td>Cash ↑ ₹12,000; Stock ↓ ₹8,000; Profit/Capital ↑ ₹4,000</td><td>Yes</td></tr>
+              </tbody></table>
+            `},
+
+            /* ── TOPIC 5: BASIS OF ACCOUNTING ── */
+            {topicStart:"basis", title:"Basis of Accounting", icon:"", desc:"Cash basis, accrual (mercantile) basis, and hybrid basis — how and when transactions are recorded."},
+            {h:"Basis of Accounting", kicker:"Unit 1 · Topic 5", html:`
+              <p>The <strong>basis of accounting</strong> determines <em>when</em> revenues and expenses are recognised — at the time of cash movement, or when they are earned/incurred regardless of cash.</p>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 10px;padding-top:0">1. Cash Basis of Accounting</h3>
+              <p>Under cash basis, transactions are recorded <strong>only when cash is actually received or paid</strong>. Revenues are recorded when cash comes in; expenses when cash goes out.</p>
+              <table class="cmp"><thead><tr><th>Advantages</th><th>Disadvantages</th></tr></thead><tbody>
+                <tr><td>Simple — no adjustments needed</td><td>Profit/loss is not a true measure of performance</td></tr>
+                <tr><td>Easy to verify — every entry has a cash receipt/payment</td><td>Accrued income &amp; outstanding expenses are ignored</td></tr>
+                <tr><td>Suitable for professionals (doctors, lawyers) who record fees when received</td><td>Does not match revenues with related expenses</td></tr>
+                <tr><td></td><td>Not recognised by the Companies Act or Income Tax Act for most businesses</td></tr>
+              </tbody></table>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">2. Accrual (Mercantile) Basis of Accounting</h3>
+              <p>Under the accrual basis, income is recognised <strong>when it is earned</strong> and expenses when they are <strong>incurred</strong>, regardless of when cash changes hands. This is the most widely used basis and is required by the Companies Act for companies.</p>
+              <table class="cmp"><thead><tr><th>Advantages</th><th>Disadvantages</th></tr></thead><tbody>
+                <tr><td>Shows true and fair profit/loss for the period</td><td>More complex — requires adjustments for outstanding/prepaid items</td></tr>
+                <tr><td>Matches revenues with the expenses that produced them</td><td>Involves estimates which may be inaccurate</td></tr>
+                <tr><td>Recognised by Companies Act 2013 and required by Accounting Standards</td><td>Requires skilled bookkeepers</td></tr>
+                <tr><td>Allows comparison across periods and firms</td><td>Cash position may not be clear from profit figure alone</td></tr>
+              </tbody></table>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">3. Hybrid (Mixed) Basis</h3>
+              <p>A <strong>combination</strong> of cash and accrual: income may be recorded on cash basis while expenses are recorded on accrual basis, or vice versa. This can lead to inconsistencies and is generally not recommended for formal financial reporting.</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Comparison: Cash vs Accrual</h3>
+              <table class="cmp"><thead><tr><th>Aspect</th><th>Cash Basis</th><th>Accrual Basis</th></tr></thead><tbody>
+                <tr><td>When is revenue recognised?</td><td>When cash received</td><td>When earned (sale/service complete)</td></tr>
+                <tr><td>When is expense recognised?</td><td>When cash paid</td><td>When incurred (benefit received)</td></tr>
+                <tr><td>Adjustments needed?</td><td>No</td><td>Yes (outstanding, prepaid, accruals)</td></tr>
+                <tr><td>Legal requirement for companies?</td><td>No</td><td>Yes — Companies Act 2013</td></tr>
+                <tr><td>Reflects true financial position?</td><td>No</td><td>Yes</td></tr>
+                <tr><td>Common users</td><td>Small traders, professionals</td><td>Companies, large businesses</td></tr>
+              </tbody></table>
+
+              <div class="example"><div class="lbl">Worked example</div>
+                <p><strong>Scenario:</strong> A firm earns ₹1,20,000 in sales for March. Of this, ₹80,000 is received in March and ₹40,000 will be received in April. Salary of ₹30,000 for March is paid on 5 April.</p>
+                <p><strong>Cash basis profit for March:</strong> Revenue = ₹80,000 (received); Expense = ₹0 (not paid yet). Profit = ₹80,000.</p>
+                <p><strong>Accrual basis profit for March:</strong> Revenue = ₹1,20,000 (earned); Expense = ₹30,000 (incurred). Profit = ₹90,000.</p>
+                <p>The accrual basis gives a truer picture of March's performance.</p>
+              </div>
+            `},
+
+            /* ── TOPIC 6: VALUATION PRINCIPLES ── */
+            {topicStart:"valuation", title:"Valuation Principles & Accounting Estimates", icon:"", desc:"How assets and liabilities are measured — cost concept, NRV, depreciation, provisions and estimates."},
+            {h:"Valuation Principles & Accounting Estimates", kicker:"Unit 1 · Topic 6", html:`
+              <p>Valuation is the process of assigning monetary amounts to the elements of financial statements. Several principles guide how assets and liabilities should be measured and reported.</p>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 10px;padding-top:0">Historical Cost Principle</h3>
+              <p>Assets are recorded at their <strong>original purchase cost</strong> at the date of acquisition, including all costs to bring the asset to its intended use (purchase price + freight + installation). Market value changes are NOT reflected in the books under historical cost accounting.</p>
+              <div class="example"><div class="lbl">Application</div><p>A machine purchased for ₹5,00,000 two years ago has a current market value of ₹7,50,000. It remains on the books at ₹5,00,000 less accumulated depreciation — NOT at market value.</p></div>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Valuation of Stock (Inventory)</h3>
+              <p>Stock is valued at <strong>Cost or Net Realisable Value (NRV), whichever is lower</strong> (Conservatism concept). This prevents overstatement of assets and profit.</p>
               <ul>
-                <li><b>Eliminates the cascading effect:</b> Under the old system, taxes were levied on taxes — a manufacturer's excise duty became part of the cost on which VAT was charged, and so on. GST's ITC mechanism ensures tax is paid only on value added, not on previously taxed amounts.</li>
-                <li><b>Unified national market:</b> A single tax across all states removes the patchwork of state-level taxes, check-posts, and entry barriers that slowed down inter-state trade. India effectively becomes one common market.</li>
-                <li><b>Reduced tax burden on consumers:</b> Eliminating cascading typically reduces the effective tax rate on final goods, lowering prices for consumers.</li>
-                <li><b>Simplified compliance:</b> One tax (instead of 17+ central and state taxes), one registration (valid across India), and unified returns — less paperwork and lower compliance costs for businesses.</li>
-                <li><b>Wider tax base:</b> Many businesses that were outside the tax net (operating under exemption thresholds of old taxes) are now brought into the system, increasing government revenue.</li>
-                <li><b>Transparency and reduced corruption:</b> The fully electronic GSTN system reduces human interface, making tax evasion harder and reducing opportunities for harassment or bribery at checkpoints.</li>
-                <li><b>Boost to Make in India:</b> By removing tax-on-tax, Indian manufactured goods become more cost-competitive both domestically and in export markets.</li>
-              </ul>`},
-          
+                <li><strong>Cost</strong> = Purchase price + Freight + Import duties − Trade discounts</li>
+                <li><strong>NRV</strong> = Estimated selling price − Estimated costs of completion and selling</li>
+              </ul>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Depreciation</h3>
+              <p>Depreciation is the <strong>systematic allocation of the cost of a fixed tangible asset</strong> over its useful life. It reflects the consumption of economic benefits and must be charged to match against the revenues the asset helps generate (Matching concept).</p>
+              <table class="cmp"><thead><tr><th>Method</th><th>Formula</th><th>Nature</th></tr></thead><tbody>
+                <tr><td><strong>Straight Line Method (SLM / Fixed Instalment)</strong></td><td>Depreciation = (Cost − Scrap Value) ÷ Useful Life</td><td>Equal depreciation every year</td></tr>
+                <tr><td><strong>Written Down Value Method (WDV / Diminishing Balance)</strong></td><td>Depreciation = WDV at start of year × Rate %</td><td>Higher charge in early years; decreasing over time</td></tr>
+              </tbody></table>
+              <div class="example"><div class="lbl">SLM example</div><p>Machine: Cost ₹1,00,000 · Scrap ₹10,000 · Life 9 years. Annual depreciation = (₹1,00,000 − ₹10,000) ÷ 9 = <strong>₹10,000 per year</strong>. Book value reduces by ₹10,000 each year.</p></div>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Provisions &amp; Reserves</h3>
+              <table class="cmp"><thead><tr><th>Aspect</th><th>Provision</th><th>Reserve</th></tr></thead><tbody>
+                <tr><td><strong>Nature</strong></td><td>Created for a known or probable liability/loss of uncertain amount</td><td>Appropriation from profit for strengthening the firm</td></tr>
+                <tr><td><strong>Compulsory?</strong></td><td>Yes — must be created if liability is likely</td><td>Discretionary (except statutory reserves)</td></tr>
+                <tr><td><strong>Effect on profit</strong></td><td>Charged to P&amp;L; reduces profit</td><td>Appropriated from profit after tax</td></tr>
+                <tr><td><strong>Examples</strong></td><td>Provision for Bad Debts, Provision for Depreciation</td><td>General Reserve, Capital Reserve, Dividend Equalisation Reserve</td></tr>
+              </tbody></table>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Provision for Bad &amp; Doubtful Debts</h3>
+              <p>At year end, it is likely that some debtors will not pay. A <strong>provision for bad debts</strong> is created as a charge to the P&amp;L account, and deducted from debtors on the Balance Sheet. This applies the Prudence (Conservatism) concept.</p>
+              <p>Example: Debtors = ₹2,00,000; provision rate = 5%. Provision = ₹10,000. Balance Sheet shows Debtors at ₹1,90,000 (net of provision).</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Accounting Estimates</h3>
+              <p>Some items cannot be measured precisely and require <strong>management estimates</strong>:</p>
+              <ul>
+                <li>Useful life of fixed assets (for depreciation)</li>
+                <li>Residual (scrap) value of assets</li>
+                <li>Percentage of debtors likely to default (bad debt provision)</li>
+                <li>Warranty provision on products sold</li>
+              </ul>
+              <p>Estimates are revised when new information is available; the change is recognised prospectively (in the current and future periods).</p>
+            `},
+
+            /* ── TOPIC 7: ACCOUNTING STANDARDS ── */
+            {topicStart:"standards", title:"Accounting Standards (AS & Ind AS)", icon:"", desc:"Why standards exist, the role of ICAI's ASB, key Indian AS, and the shift to Ind AS / IFRS."},
+            {h:"Accounting Standards (AS & Ind AS)", kicker:"Unit 1 · Topic 7", html:`
+              <p><strong>Accounting Standards (AS)</strong> are written documents issued by authoritative bodies that set the rules for how financial transactions should be recognised, measured, and disclosed in financial statements. They reduce the diversity of accounting practices and ensure comparability.</p>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 10px;padding-top:0">Need for Accounting Standards</h3>
+              <ul>
+                <li><strong>Uniformity</strong> — all firms follow the same rules, making cross-company comparisons meaningful.</li>
+                <li><strong>Reliability and Transparency</strong> — users can trust that financial statements present a true and fair view.</li>
+                <li><strong>Prevents manipulation</strong> — reduces the scope for window dressing.</li>
+                <li><strong>International recognition</strong> — standards aligned to IFRS aid foreign investment.</li>
+                <li><strong>Legal basis</strong> — Companies Act 2013 mandates compliance with notified accounting standards.</li>
+              </ul>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Accounting Standards Board (ASB)</h3>
+              <p>The <strong>Institute of Chartered Accountants of India (ICAI)</strong> established the ASB in 1977 to formulate accounting standards for India. The ASB issues Accounting Standards (AS) for non-company entities and has issued 32 standards to date.</p>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Key Accounting Standards (Indian AS)</h3>
+              <table class="cmp"><thead><tr><th>AS No.</th><th>Title</th><th>Key Requirement</th></tr></thead><tbody>
+                <tr><td><strong>AS 1</strong></td><td>Disclosure of Accounting Policies</td><td>Disclose all significant accounting policies in notes; any change must be disclosed.</td></tr>
+                <tr><td><strong>AS 2</strong></td><td>Valuation of Inventories</td><td>Inventories valued at lower of cost or NRV; FIFO or Weighted Average cost formula.</td></tr>
+                <tr><td><strong>AS 6</strong></td><td>Depreciation Accounting</td><td>Depreciation must be charged on all depreciable assets; method and rates disclosed.</td></tr>
+                <tr><td><strong>AS 9</strong></td><td>Revenue Recognition</td><td>Revenue recognised when risks/rewards transferred and amount can be measured reliably.</td></tr>
+                <tr><td><strong>AS 10</strong></td><td>Property, Plant &amp; Equipment</td><td>Fixed assets carried at cost less accumulated depreciation.</td></tr>
+                <tr><td><strong>AS 13</strong></td><td>Accounting for Investments</td><td>Investments classified as current or long-term; valuation rules for each.</td></tr>
+                <tr><td><strong>AS 26</strong></td><td>Intangible Assets</td><td>Recognised only if identifiable, controlled, and future economic benefits probable.</td></tr>
+              </tbody></table>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Ind AS (Indian Accounting Standards)</h3>
+              <p>From 2015, India has been converging its accounting standards with <strong>IFRS (International Financial Reporting Standards)</strong>. The <strong>Ministry of Corporate Affairs (MCA)</strong> has notified 41 Ind AS for certain categories of companies. Ind AS are more principle-based and closer to IFRS than the older Indian AS.</p>
+              <table class="cmp"><thead><tr><th>Aspect</th><th>AS (Old)</th><th>Ind AS (IFRS-aligned)</th></tr></thead><tbody>
+                <tr><td>Basis</td><td>Rule-based</td><td>Principle-based</td></tr>
+                <tr><td>Valuation</td><td>Mainly historical cost</td><td>Fair value permitted in many cases</td></tr>
+                <tr><td>Applicability</td><td>Non-listed companies, SMEs</td><td>Listed &amp; large companies (phased rollout)</td></tr>
+                <tr><td>Global recognition</td><td>Limited</td><td>Accepted internationally</td></tr>
+              </tbody></table>
+            `},
+
+            /* ── TOPIC 8: GOODS AND SERVICES TAX (GST) ── */
+            {topicStart:"gst", title:"Goods and Services Tax (GST)", icon:"", desc:"India's indirect tax regime — CGST, SGST, IGST, input tax credit and its effect on accounting."},
+            {h:"Goods and Services Tax (GST)", kicker:"Unit 1 · Topic 8", html:`
+              <p><strong>GST (Goods and Services Tax)</strong> is a <em>destination-based, multi-stage, comprehensive indirect tax</em> levied on the supply of goods and services in India. It replaced multiple central and state taxes (VAT, Service Tax, Excise Duty, etc.) and was implemented on <strong>1 July 2017</strong> under the 101st Constitutional Amendment.</p>
+
+              <h3 style="color:var(--green-deep);margin:20px 0 10px;padding-top:0">Components of GST</h3>
+              <table class="cmp"><thead><tr><th>Component</th><th>Full Form</th><th>When applicable</th><th>Revenue goes to</th></tr></thead><tbody>
+                <tr><td><strong>CGST</strong></td><td>Central Goods and Services Tax</td><td>Intra-state supply (same state)</td><td>Central Government</td></tr>
+                <tr><td><strong>SGST</strong></td><td>State Goods and Services Tax</td><td>Intra-state supply (same state)</td><td>State Government</td></tr>
+                <tr><td><strong>IGST</strong></td><td>Integrated Goods and Services Tax</td><td>Inter-state supply (different states) &amp; imports</td><td>Central Govt (then apportioned)</td></tr>
+                <tr><td><strong>UTGST</strong></td><td>Union Territory GST</td><td>Supply within Union Territories without legislature</td><td>Central Government</td></tr>
+              </tbody></table>
+
+              <div class="example"><div class="lbl">Application — Intra vs Inter-state</div>
+                <p><strong>Intra-state:</strong> A seller in West Bengal sells goods worth ₹1,00,000 + 18% GST to a buyer in West Bengal. Taxes: CGST 9% = ₹9,000 + SGST 9% = ₹9,000. Total price = ₹1,18,000.</p>
+                <p><strong>Inter-state:</strong> Same seller sells to a buyer in Maharashtra. Tax: IGST 18% = ₹18,000. Total price = ₹1,18,000.</p>
+              </div>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">GST Tax Slabs</h3>
+              <table class="cmp"><thead><tr><th>Rate</th><th>Category</th><th>Examples</th></tr></thead><tbody>
+                <tr><td><strong>0% (Exempt)</strong></td><td>Essential items</td><td>Fresh fruits, vegetables, milk, bread, books, eggs</td></tr>
+                <tr><td><strong>5%</strong></td><td>Basic necessities</td><td>Packaged food, edible oil, sugar, tea, coffee, medicines</td></tr>
+                <tr><td><strong>12%</strong></td><td>Standard goods</td><td>Fruit juice, processed food, business class flights, frozen meat</td></tr>
+                <tr><td><strong>18%</strong></td><td>Most goods and services</td><td>Soaps, hair oil, IT services, restaurants (AC), financial services</td></tr>
+                <tr><td><strong>28%</strong></td><td>Luxury and demerit goods</td><td>Cars, motorcycles, tobacco, aerated drinks, luxury hotels</td></tr>
+              </tbody></table>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Input Tax Credit (ITC)</h3>
+              <p><strong>Input Tax Credit</strong> allows a registered business to deduct the GST it paid on purchases (inputs) from the GST it collects on sales (output tax). This prevents <em>cascading effect</em> (tax on tax).</p>
+              <div class="example"><div class="lbl">ITC illustration</div>
+                <p>Manufacturer A buys raw materials for ₹10,00,000 + CGST ₹90,000 + SGST ₹90,000 (18% GST on intra-state). A sells finished goods for ₹15,00,000 + CGST ₹1,35,000 + SGST ₹1,35,000.</p>
+                <p>ITC available = ₹90,000 CGST + ₹90,000 SGST = ₹1,80,000.</p>
+                <p>Net GST payable = (₹1,35,000+₹1,35,000) − ₹1,80,000 = <strong>₹90,000</strong> (₹45,000 CGST + ₹45,000 SGST).</p>
+              </div>
+
+              <h3 style="color:var(--green-deep);margin:24px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Effect of GST on Accounting</h3>
+              <ul>
+                <li><strong>GST is NOT an expense</strong> for a GST-registered buyer — it is a recoverable tax (shown as "Input GST / CGST / SGST Receivable" — a current asset).</li>
+                <li><strong>GST collected on sales</strong> is a liability ("Output GST / CGST / SGST Payable") — the business collects it on behalf of the government.</li>
+                <li><strong>Net GST payable</strong> (Output − Input) is remitted to the government.</li>
+                <li>Purchase and Sales accounts are recorded at <strong>exclusive of GST price</strong> (GST is shown separately).</li>
+              </ul>
+
+              <div class="casebox"><div class="lbl">Case in point</div>
+                <p>Before GST, Kavya's textile firm paid excise duty on production, then VAT on sale, and the buyer paid service tax on delivery — taxes stacked on each other. With GST, Kavya pays 5% on fabric purchase (CGST 2.5% + SGST 2.5%), claims full ITC, and only remits the net tax on her value addition. Her compliance simplified from 11 different returns to 3 monthly GSTR filings. This is the core benefit of GST — seamless credit chain and single national market.</p>
+              </div>
+            `}
+
           ],
 
           /* ============================== SETS ============================== */
@@ -1508,7 +1259,7 @@ const DATA = {
                  passage:"Meera & Co.'s Balance Sheet as on 31 March 2024 shows Total Assets ₹20,00,000 and Total Liabilities (excluding Capital) ₹8,00,000. During the year, Meera introduced additional capital of ₹1,50,000, suffered a net loss of ₹2,00,000 and withdrew ₹1,00,000 as drawings.",
                  q:"What was Meera's Opening Capital at the start of the year (1 April 2023)?",
                  options:["₹14,50,000","₹12,00,000","₹13,50,000","₹11,50,000"],
-                 answer:0,
+                 answer:2,
                  explain:"Closing Capital = Total Assets − Total Liabilities = ₹20,00,000 − ₹8,00,000 = ₹12,00,000. Using: Closing Capital = Opening Capital + Additional Capital − Net Loss − Drawings → ₹12,00,000 = Opening Capital + ₹1,50,000 − ₹2,00,000 − ₹1,00,000 → ₹12,00,000 = Opening Capital − ₹1,50,000 → Opening Capital = ₹13,50,000.",
                  optionExplains:["₹14,50,000 — arithmetic error; recalculate: 12L + 2L + 1L − 1.5L = 13.5L.","₹12,00,000 is the CLOSING capital, not opening.","Correct. Opening = Closing − Additional + Loss + Drawings = ₹12,00,000 − ₹1,50,000 + ₹2,00,000 + ₹1,00,000 = ₹13,50,000.","₹11,50,000 — incorrect calculation."]}
 
@@ -1569,7 +1320,7 @@ const DATA = {
         topics:[{
           learn:[
 
-            {topicStart:"meaning-objectives", title:"Meaning, Objectives & Importance", icon:"📊",
+            {topicStart:"meaning-objectives", title:"Meaning, Objectives & Importance", icon:"",
              desc:"Definitions of Cost, Costing and Cost Accounting; seven objectives; key features; advantages; limitations; and the steps for installing a costing system."},
 
             {h:"Meaning, Objectives and Importance of Cost Accounting",
@@ -1666,7 +1417,7 @@ const DATA = {
                 <li><b>Introduce the system gradually</b> — Pilot in one section or department first; review, refine and then extend across the organisation.</li>
               </ul>`},
 
-            {topicStart:"fa-vs-ca", title:"Financial Accounting vs Cost Accounting", icon:"⚖️",
+            {topicStart:"fa-vs-ca", title:"Financial Accounting vs Cost Accounting", icon:"",
              desc:"Why both systems exist, who uses each, and an eleven-point comparison of their scope, purpose, legal status, data type and orientation."},
 
             {h:"Difference between Financial Accounting and Cost Accounting",
@@ -1726,7 +1477,7 @@ const DATA = {
               </ul>
               <p>A well-managed business reconciles both sets of figures regularly to maintain accuracy and consistency across its reporting systems.</p>`},
 
-            {topicStart:"cost-concepts", title:"Cost Concepts — Cost Unit, Cost Centre", icon:"🏭",
+            {topicStart:"cost-concepts", title:"Cost Concepts — Cost Unit, Cost Centre", icon:"",
              desc:"Definitions of Cost Unit and Cost Centre; industry examples of cost units; four types of cost centres; and the key distinction between the two concepts."},
 
             {h:"Cost Concepts — Cost Unit and Cost Centre",
@@ -2090,7 +1841,7 @@ const DATA = {
         syllabus:["The economic problem — scarcity, choice and opportunity cost","Economic systems — free market, command, mixed; invisible hand","Economic growth, development and sustainable development","Indicators of development — income, poverty, employment, inequality, capital"],
         topics:[{
           learn:[
-            {topicStart:"eco-u1-problem", title:"The Economic Problem — Scarcity &amp; Choice", icon:"⚖️",
+            {topicStart:"eco-u1-problem", title:"The Economic Problem — Scarcity &amp; Choice", icon:"",
              desc:"Why scarcity forces every society to make choices — the Production Possibility Curve, opportunity cost and the three fundamental economic questions."},
 
             {h:"The Economic Problem — Scarcity, Choice and Opportunity Cost", kicker:"Unit 1 · Topic 1",
@@ -2219,7 +1970,7 @@ const DATA = {
               </ul>
               <p>What was yesterday's "unattainable" point G can become tomorrow's "on the PPC" point D — if the economy invests and grows. For India, hitting 7–8% annual GDP growth is the policy goal of continuously expanding this frontier.</p>`},
 
-            {topicStart:"eco-u1-systems", title:"Economic Systems — How Societies Answer the Basic Questions", icon:"🏛️",
+            {topicStart:"eco-u1-systems", title:"Economic Systems — How Societies Answer the Basic Questions", icon:"",
              desc:"Free market, command and mixed economies; the invisible hand; laissez-faire; and the broad social goals that every economic system tries to achieve."},
 
             {h:"Economic Systems — Free Market, Command and Mixed", kicker:"Unit 1 · Topic 2",
@@ -2263,7 +2014,7 @@ const DATA = {
                 <tr><td><b>Sustainable Development</b></td><td>Meeting current needs without compromising future generations' ability to meet theirs</td><td>Solar energy targets, EV policies, forest conservation laws</td></tr>
               </table>`},
 
-            {topicStart:"eco-u1-growth", title:"Economic Growth, Development &amp; Sustainability", icon:"📈",
+            {topicStart:"eco-u1-growth", title:"Economic Growth, Development &amp; Sustainability", icon:"",
              desc:"The difference between GDP growth and human development; savings and investment; sustainable development and why India's growth story is more complex than one number suggests."},
 
             {h:"Economic Growth, Development and Sustainable Development", kicker:"Unit 1 · Topic 3",
@@ -2311,7 +2062,7 @@ const DATA = {
               <p>Growth that destroys forests, pollutes rivers and depletes resources is not truly "development" — it borrows prosperity from the future. India faces this tension acutely: rapid industrialisation has brought millions out of poverty but also degraded air quality (Delhi's AQI regularly exceeds 400) and stressed water resources.</p>
               <p>The <b>UN's 17 Sustainable Development Goals (SDGs)</b>, adopted in 2015, set targets for 2030 covering poverty, hunger, health, education, clean energy, climate action, and more. India is signatory to all 17.</p>`},
 
-            {topicStart:"eco-u1-indicators", title:"Indicators of Development — Income, Poverty, Inequality &amp; Beyond", icon:"📊",
+            {topicStart:"eco-u1-indicators", title:"Indicators of Development — Income, Poverty, Inequality &amp; Beyond", icon:"",
              desc:"Why no single number can measure development; income and per capita income; poverty and the poverty line; unemployment; inequality; human capital; and gender inequality in India."},
 
             {h:"Indicators of Development — Measuring What Growth Leaves Behind", kicker:"Unit 1 · Topic 4",
@@ -2620,21 +2371,21 @@ const DATA = {
         syllabus:["Demand and Supply; Equilibrium Price; Invisible Hand; Laissez-faire","Price Elasticity of Demand; Income Elasticity; Cross-Price Elasticity","Elasticity of Supply; Comparative Statics","Cardinal Utility and Law of Diminishing Marginal Utility","Indifference Curve Analysis; Budget Constraint; Consumer Equilibrium","Price Ceiling and Price Floor"],
         topics:[{
           learn:[
-            {topicStart:"eco-u2-demand", title:"Demand, Supply and Market Equilibrium", icon:"📉",
+            {topicStart:"eco-u2-demand", title:"Demand, Supply and Market Equilibrium", icon:"",
              desc:"Demand and supply curves; why they slope the way they do; equilibrium price; the invisible hand; and how markets clear."},
-            {h:"Demand, Supply and Market Equilibrium", kicker:"Unit 2 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Law of Demand (with demand curve graph — what goes on each axis, why it slopes downward, what shifts the curve); Law of Supply (supply curve — why it slopes upward); Market Equilibrium (where they intersect — the equilibrium price and quantity); and the Invisible Hand concept.</p></div>`},
-            {topicStart:"eco-u2-elasticity", title:"Price, Income and Cross-Price Elasticity of Demand", icon:"↔️",
+            {h:"Demand, Supply and Market Equilibrium", kicker:"Unit 2 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Law of Demand (with demand curve graph — what goes on each axis, why it slopes downward, what shifts the curve); Law of Supply (supply curve — why it slopes upward); Market Equilibrium (where they intersect — the equilibrium price and quantity); and the Invisible Hand concept.</p></div>`},
+            {topicStart:"eco-u2-elasticity", title:"Price, Income and Cross-Price Elasticity of Demand", icon:"",
              desc:"How sensitive demand is to price changes — the critical concept that determines whether a price rise raises or lowers total revenue."},
-            {h:"Elasticity of Demand", kicker:"Unit 2 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Price Elasticity (elastic/inelastic/unit elastic — with graphs of differently sloped demand curves); Income Elasticity (normal vs inferior goods); Cross-Price Elasticity (substitutes vs complements); and numerical problems on elasticity measurement.</p></div>`},
-            {topicStart:"eco-u2-supply-elasticity", title:"Elasticity of Supply and Comparative Statics", icon:"↕️",
+            {h:"Elasticity of Demand", kicker:"Unit 2 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Price Elasticity (elastic/inelastic/unit elastic — with graphs of differently sloped demand curves); Income Elasticity (normal vs inferior goods); Cross-Price Elasticity (substitutes vs complements); and numerical problems on elasticity measurement.</p></div>`},
+            {topicStart:"eco-u2-supply-elasticity", title:"Elasticity of Supply and Comparative Statics", icon:"",
              desc:"How quickly producers respond to price changes; and what happens to equilibrium when demand or supply shifts (Price Ceiling, Price Floor)."},
-            {h:"Supply Elasticity and Comparative Statics", kicker:"Unit 2 · Topic 3", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Elasticity of Supply with numerical problems; Comparative Statics — how shifts in demand/supply change equilibrium; Price Ceiling (maximum price — why it creates shortage); Price Floor (minimum price — why it creates surplus) with real Indian examples (MSP for wheat, rent control).</p></div>`},
-            {topicStart:"eco-u2-utility", title:"Cardinal Utility and the Law of Diminishing Marginal Utility", icon:"🧠",
+            {h:"Supply Elasticity and Comparative Statics", kicker:"Unit 2 · Topic 3", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Elasticity of Supply with numerical problems; Comparative Statics — how shifts in demand/supply change equilibrium; Price Ceiling (maximum price — why it creates shortage); Price Floor (minimum price — why it creates surplus) with real Indian examples (MSP for wheat, rent control).</p></div>`},
+            {topicStart:"eco-u2-utility", title:"Cardinal Utility and the Law of Diminishing Marginal Utility", icon:"",
              desc:"How economists measure satisfaction; why the first slice of pizza gives more pleasure than the fifth; and consumer equilibrium using marginal utility analysis."},
-            {h:"Cardinal Utility Theory", kicker:"Unit 2 · Topic 4", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Utility and Marginal Utility; Total Utility vs Marginal Utility curves (with graph — why MU curve slopes downward); Law of Diminishing Marginal Utility with real examples; Consumer Equilibrium (MU/Price ratio equilisation); and derivation of the demand curve from MU analysis.</p></div>`},
-            {topicStart:"eco-u2-indifference", title:"Indifference Curve Analysis and Consumer Equilibrium", icon:"🔄",
+            {h:"Cardinal Utility Theory", kicker:"Unit 2 · Topic 4", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Utility and Marginal Utility; Total Utility vs Marginal Utility curves (with graph — why MU curve slopes downward); Law of Diminishing Marginal Utility with real examples; Consumer Equilibrium (MU/Price ratio equilisation); and derivation of the demand curve from MU analysis.</p></div>`},
+            {topicStart:"eco-u2-indifference", title:"Indifference Curve Analysis and Consumer Equilibrium", icon:"",
              desc:"The ordinal approach to consumer behaviour — indifference curves, their properties, the budget line, and how a rational consumer maximises utility."},
-            {h:"Indifference Curve Analysis", kicker:"Unit 2 · Topic 5", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Indifference Curves and the Indifference Map (with graph — axes, what each IC represents, why they're convex); Budget Constraint / Budget Line (income and relative prices); Consumer Equilibrium (tangency of IC and budget line); Shifts in budget line; and Income and Substitution Effects.</p></div>`}
+            {h:"Indifference Curve Analysis", kicker:"Unit 2 · Topic 5", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Indifference Curves and the Indifference Map (with graph — axes, what each IC represents, why they're convex); Budget Constraint / Budget Line (income and relative prices); Consumer Equilibrium (tangency of IC and budget line); Shifts in budget line; and Income and Substitution Effects.</p></div>`}
           ],
           sets:[
             {label:"Set 1 — Foundation", mix:"15/9/6", questions:[]},
@@ -2656,18 +2407,18 @@ const DATA = {
         syllabus:["Short-run and Long-run Production Function; Law of Variable Proportions","Returns to Scale; Economies and Diseconomies of Scale","Concepts of Cost: STC, TVC, TFC, SAC, SMC, LTC, LAC, LMC, Implicit Cost, Opportunity Cost","Concepts of Revenue and Profit: TR, AR, MR, and the AR-MR relationship"],
         topics:[{
           learn:[
-            {topicStart:"eco-u3-production", title:"Production Function — Short Run and Long Run", icon:"🏭",
+            {topicStart:"eco-u3-production", title:"Production Function — Short Run and Long Run", icon:"",
              desc:"What a production function is; short-run vs long-run; total product, average product and marginal product; and the Law of Variable Proportions with its three stages."},
-            {h:"Production Function and Law of Variable Proportions", kicker:"Unit 3 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: The Production Function (Q = f(L, K)); Short Run vs Long Run; Total Product (TP), Average Product (AP), Marginal Product (MP) with graphs; Law of Variable Proportions — three stages with TP, AP, MP curves on the same graph, explaining WHY AP and MP first rise then fall.</p></div>`},
-            {topicStart:"eco-u3-returns", title:"Returns to Scale and Economies of Scale", icon:"📐",
+            {h:"Production Function and Law of Variable Proportions", kicker:"Unit 3 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: The Production Function (Q = f(L, K)); Short Run vs Long Run; Total Product (TP), Average Product (AP), Marginal Product (MP) with graphs; Law of Variable Proportions — three stages with TP, AP, MP curves on the same graph, explaining WHY AP and MP first rise then fall.</p></div>`},
+            {topicStart:"eco-u3-returns", title:"Returns to Scale and Economies of Scale", icon:"",
              desc:"What happens when ALL inputs are increased proportionally — increasing, constant and decreasing returns to scale; and why large firms often have lower costs per unit."},
-            {h:"Returns to Scale and Economies of Scale", kicker:"Unit 3 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Returns to Scale — Increasing, Constant, Decreasing (IRS, CRS, DRS) with PPC-style graphs; Economies of Scale — why larger firms have lower average costs; Types: internal vs external economies; Diseconomies of Scale — when firms become too large. Real Indian examples (Reliance Industries, AMUL).</p></div>`},
-            {topicStart:"eco-u3-cost", title:"Concepts of Cost — STC, SAC, SMC, LTC, LAC, LMC", icon:"💰",
+            {h:"Returns to Scale and Economies of Scale", kicker:"Unit 3 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Returns to Scale — Increasing, Constant, Decreasing (IRS, CRS, DRS) with PPC-style graphs; Economies of Scale — why larger firms have lower average costs; Types: internal vs external economies; Diseconomies of Scale — when firms become too large. Real Indian examples (Reliance Industries, AMUL).</p></div>`},
+            {topicStart:"eco-u3-cost", title:"Concepts of Cost — STC, SAC, SMC, LTC, LAC, LMC", icon:"",
              desc:"Fixed vs variable costs; how short-run and long-run average cost curves behave; the U-shape of SAC and the L-shape of LAC; and what opportunity cost and implicit cost really mean."},
-            {h:"Concepts of Cost", kicker:"Unit 3 · Topic 3", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: TFC, TVC, STC; AFC, AVC, SAC, SMC — with graphs showing their shapes and relationships; WHY SAC is U-shaped (LAC of Variable Proportions); LTC, LAC, LMC — the Long-Run Envelope Curve; Opportunity Cost (economic cost vs accounting cost); Implicit Costs (owner's own inputs).</p></div>`},
-            {topicStart:"eco-u3-revenue", title:"Revenue and Profit — TR, AR, MR and the Profit Motive", icon:"📊",
+            {h:"Concepts of Cost", kicker:"Unit 3 · Topic 3", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: TFC, TVC, STC; AFC, AVC, SAC, SMC — with graphs showing their shapes and relationships; WHY SAC is U-shaped (LAC of Variable Proportions); LTC, LAC, LMC — the Long-Run Envelope Curve; Opportunity Cost (economic cost vs accounting cost); Implicit Costs (owner's own inputs).</p></div>`},
+            {topicStart:"eco-u3-revenue", title:"Revenue and Profit — TR, AR, MR and the Profit Motive", icon:"",
              desc:"Total Revenue, Average Revenue and Marginal Revenue; how they relate to price and elasticity; the concept of profit; normal profit vs supernormal profit."},
-            {h:"Revenue and Profit", kicker:"Unit 3 · Topic 4", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: TR, AR, MR — definitions and relationships; AR = Price (under perfect competition); MR curve lies below AR curve (with graph) under monopoly; The AR-MR relationship and elasticity; Gross Profit and Net Profit; Normal Profit vs Supernormal Profit; Profit as the return to entrepreneurship.</p></div>`}
+            {h:"Revenue and Profit", kicker:"Unit 3 · Topic 4", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: TR, AR, MR — definitions and relationships; AR = Price (under perfect competition); MR curve lies below AR curve (with graph) under monopoly; The AR-MR relationship and elasticity; Gross Profit and Net Profit; Normal Profit vs Supernormal Profit; Profit as the return to entrepreneurship.</p></div>`}
           ],
           sets:[
             {label:"Set 1 — Foundation", mix:"15/9/6", questions:[]},
@@ -2689,12 +2440,12 @@ const DATA = {
         syllabus:["Meaning, scope and importance of Statistics in Economics","Types of Data: Primary vs Secondary; Time Series vs Cross-Section; Qualitative vs Quantitative","Features of a Good Questionnaire","Data Sources for the Indian Economy"],
         topics:[{
           learn:[
-            {topicStart:"eco-u4-stats", title:"Meaning, Scope and Importance of Statistics", icon:"🔢",
+            {topicStart:"eco-u4-stats", title:"Meaning, Scope and Importance of Statistics", icon:"",
              desc:"What Statistics means in Economics; why data is the foundation of economic analysis; and how statistical tools help answer economic questions."},
-            {h:"Meaning, Scope and Importance of Statistics", kicker:"Unit 4 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Dual meaning of Statistics (plural data vs singular method); Scope in Economics and Commerce; Importance — how GDP growth rates, inflation, unemployment figures are all statistical outputs; Limitations of Statistics (averages hide inequality, data can be manipulated).</p></div>`},
-            {topicStart:"eco-u4-types", title:"Types of Data and Data Collection Methods", icon:"📋",
+            {h:"Meaning, Scope and Importance of Statistics", kicker:"Unit 4 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Dual meaning of Statistics (plural data vs singular method); Scope in Economics and Commerce; Importance — how GDP growth rates, inflation, unemployment figures are all statistical outputs; Limitations of Statistics (averages hide inequality, data can be manipulated).</p></div>`},
+            {topicStart:"eco-u4-types", title:"Types of Data and Data Collection Methods", icon:"",
              desc:"Primary vs secondary data; time series vs cross-section data; qualitative vs quantitative; and how to design a good questionnaire."},
-            {h:"Types of Data and Collection Methods", kicker:"Unit 4 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Primary Data (original, collected first-hand) vs Secondary Data (already collected by others); Time Series data (same variable across time — India's GDP from 2000-2024) vs Cross-Section data (same time, different units — GDP of 10 states in 2023); Qualitative vs Quantitative; Features of a Good Questionnaire; Data Sources for Indian Economy (NSO, RBI, PLFS, Census).</p></div>`}
+            {h:"Types of Data and Collection Methods", kicker:"Unit 4 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Primary Data (original, collected first-hand) vs Secondary Data (already collected by others); Time Series data (same variable across time — India's GDP from 2000-2024) vs Cross-Section data (same time, different units — GDP of 10 states in 2023); Qualitative vs Quantitative; Features of a Good Questionnaire; Data Sources for Indian Economy (NSO, RBI, PLFS, Census).</p></div>`}
           ],
           sets:[
             {label:"Set 1 — Foundation", mix:"12/6/4", questions:[]},
@@ -2711,18 +2462,18 @@ const DATA = {
         syllabus:["Classification of Data: Continuous and Discrete Variables; frequency distributions","Textual and Tabular Presentation of Data","Graphical Representation: Bar Chart, Histogram, Frequency Polygon","Pie Chart, Ogive (Cumulative Frequency Curve), Arithmetic Line Graph"],
         topics:[{
           learn:[
-            {topicStart:"eco-u5-classify", title:"Classification of Data and Frequency Distributions", icon:"🗂️",
+            {topicStart:"eco-u5-classify", title:"Classification of Data and Frequency Distributions", icon:"",
              desc:"Discrete vs continuous variables; how to organise raw data into frequency distributions; class intervals, class boundaries and class midpoints."},
-            {h:"Classification and Frequency Distribution", kicker:"Unit 5 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Discrete Variables (countable — number of children) vs Continuous Variables (measurable — height, weight, income); Frequency Distribution Tables for both; Class Width, Class Midpoint, Class Boundaries; Relative and Cumulative Frequency; how to construct a good frequency table from raw data.</p></div>`},
-            {topicStart:"eco-u5-tabular", title:"Textual and Tabular Presentation of Data", icon:"📄",
+            {h:"Classification and Frequency Distribution", kicker:"Unit 5 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Discrete Variables (countable — number of children) vs Continuous Variables (measurable — height, weight, income); Frequency Distribution Tables for both; Class Width, Class Midpoint, Class Boundaries; Relative and Cumulative Frequency; how to construct a good frequency table from raw data.</p></div>`},
+            {topicStart:"eco-u5-tabular", title:"Textual and Tabular Presentation of Data", icon:"",
              desc:"Presenting data in words and in well-structured tables; the components of a good statistical table; and why tabular form is more efficient than textual description."},
-            {h:"Textual and Tabular Presentation", kicker:"Unit 5 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Textual Presentation (data described in words — limitations); Tabular Presentation — parts of a table (title, stub, caption, body, footnote); Attributes of a Good Table; Constructing frequency tables; Bivariate frequency tables.</p></div>`},
-            {topicStart:"eco-u5-graphs", title:"Bar Charts, Histograms and Frequency Polygon", icon:"📊",
+            {h:"Textual and Tabular Presentation", kicker:"Unit 5 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Textual Presentation (data described in words — limitations); Tabular Presentation — parts of a table (title, stub, caption, body, footnote); Attributes of a Good Table; Constructing frequency tables; Bivariate frequency tables.</p></div>`},
+            {topicStart:"eco-u5-graphs", title:"Bar Charts, Histograms and Frequency Polygon", icon:"",
              desc:"How to construct and read bar charts, histograms and frequency polygons — and the crucial difference between a bar chart and a histogram."},
-            {h:"Bar Charts, Histograms and Frequency Polygon", kicker:"Unit 5 · Topic 3", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Simple, Multiple and Subdivided Bar Charts (with fully labelled SVG examples); Histogram — why bars touch (continuous data); Frequency Polygon — connecting midpoints; Frequency Bar Diagram; The KEY difference: Bar Chart is for discrete/categorical data; Histogram is for continuous data grouped in class intervals.</p></div>`},
-            {topicStart:"eco-u5-piechart", title:"Pie Charts, Ogive and Line Graphs", icon:"🥧",
+            {h:"Bar Charts, Histograms and Frequency Polygon", kicker:"Unit 5 · Topic 3", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Simple, Multiple and Subdivided Bar Charts (with fully labelled SVG examples); Histogram — why bars touch (continuous data); Frequency Polygon — connecting midpoints; Frequency Bar Diagram; The KEY difference: Bar Chart is for discrete/categorical data; Histogram is for continuous data grouped in class intervals.</p></div>`},
+            {topicStart:"eco-u5-piechart", title:"Pie Charts, Ogive and Line Graphs", icon:"",
              desc:"Circular representation of parts; the cumulative frequency curve and how to use it to find median and quartiles graphically; and arithmetic line graphs for time series."},
-            {h:"Pie Charts, Ogive and Arithmetic Line Graph", kicker:"Unit 5 · Topic 4", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Pie Chart construction (degrees = percentage × 3.6); Ogive — Less-than and More-than Ogive curves; reading Median, Q1, Q3 graphically from the Ogive; Arithmetic Line Graph (time series — India's GDP growth over years); Multiple Line Graphs; Frequency Curve (smoothed histogram).</p></div>`}
+            {h:"Pie Charts, Ogive and Arithmetic Line Graph", kicker:"Unit 5 · Topic 4", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Pie Chart construction (degrees = percentage × 3.6); Ogive — Less-than and More-than Ogive curves; reading Median, Q1, Q3 graphically from the Ogive; Arithmetic Line Graph (time series — India's GDP growth over years); Multiple Line Graphs; Frequency Curve (smoothed histogram).</p></div>`}
           ],
           sets:[
             {label:"Set 1 — Foundation", mix:"15/9/6", questions:[]},
@@ -2744,18 +2495,18 @@ const DATA = {
         syllabus:["Arithmetic Mean — direct, short-cut and step-deviation methods for individual, discrete and continuous series","Geometric Mean — calculation and uses","Median — individual, discrete and continuous series; Partition Values — Quartiles, Deciles, Percentiles (definition only)","Mode — individual, discrete and continuous series; Relationship between Mean, Median and Mode"],
         topics:[{
           learn:[
-            {topicStart:"eco-u6-mean", title:"Arithmetic Mean — Calculation and Properties", icon:"➕",
+            {topicStart:"eco-u6-mean", title:"Arithmetic Mean — Calculation and Properties", icon:"",
              desc:"The most widely used average — three methods for calculating AM for individual, discrete and continuous frequency series; properties and merits/demerits."},
-            {h:"Arithmetic Mean", kicker:"Unit 6 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: AM for Individual Series (direct method); AM for Discrete Frequency Series; AM for Continuous Frequency Series — Direct, Short-Cut (Assumed Mean) and Step-Deviation methods (with worked examples); Properties of AM; Merits and Demerits; Combined Mean formula.</p></div>`},
-            {topicStart:"eco-u6-geometric", title:"Geometric Mean — Calculation and Uses", icon:"✖️",
+            {h:"Arithmetic Mean", kicker:"Unit 6 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: AM for Individual Series (direct method); AM for Discrete Frequency Series; AM for Continuous Frequency Series — Direct, Short-Cut (Assumed Mean) and Step-Deviation methods (with worked examples); Properties of AM; Merits and Demerits; Combined Mean formula.</p></div>`},
+            {topicStart:"eco-u6-geometric", title:"Geometric Mean — Calculation and Uses", icon:"",
              desc:"When to use geometric mean instead of arithmetic mean — particularly for growth rates, index numbers and ratios."},
-            {h:"Geometric Mean", kicker:"Unit 6 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: GM definition and calculation (nth root of product of n values); Log method for calculation; GM for grouped data; Uses of GM — average growth rates, index numbers; Merits and demerits; Real example: average annual GDP growth rate calculation using GM vs AM.</p></div>`},
-            {topicStart:"eco-u6-median", title:"Median, Quartiles, Deciles and Percentiles", icon:"📍",
+            {h:"Geometric Mean", kicker:"Unit 6 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: GM definition and calculation (nth root of product of n values); Log method for calculation; GM for grouped data; Uses of GM — average growth rates, index numbers; Merits and demerits; Real example: average annual GDP growth rate calculation using GM vs AM.</p></div>`},
+            {topicStart:"eco-u6-median", title:"Median, Quartiles, Deciles and Percentiles", icon:"",
              desc:"The positional average; calculating median for all three series types; partition values; and how to find them graphically using the Ogive."},
-            {h:"Median, Quartiles, Deciles and Percentiles", kicker:"Unit 6 · Topic 3", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Median — the middle value concept; formula for Individual, Discrete and Continuous series; Interpolation formula for continuous series; Quartiles Q1 and Q3; Deciles and Percentiles (definition and formula only); Graphical determination using Ogive; Merits and demerits of Median vs Mean.</p></div>`},
-            {topicStart:"eco-u6-mode", title:"Mode and Comparison of Averages", icon:"🏆",
+            {h:"Median, Quartiles, Deciles and Percentiles", kicker:"Unit 6 · Topic 3", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Median — the middle value concept; formula for Individual, Discrete and Continuous series; Interpolation formula for continuous series; Quartiles Q1 and Q3; Deciles and Percentiles (definition and formula only); Graphical determination using Ogive; Merits and demerits of Median vs Mean.</p></div>`},
+            {topicStart:"eco-u6-mode", title:"Mode and Comparison of Averages", icon:"",
              desc:"The most frequently occurring value; modal class and interpolation; empirical relationship between Mean, Median and Mode; when to use which average."},
-            {h:"Mode and Comparison of Averages", kicker:"Unit 6 · Topic 4", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">🚧 Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Mode — most frequently occurring value; Modal class identification; Interpolation formula for continuous series; Mode for Individual and Discrete series; Empirical Relationship: Mode = 3 Median − 2 Mean; Comparison of AM, GM, Median, Mode — when to use each; Advantages and Disadvantages of Mode.</p></div>`}
+            {h:"Mode and Comparison of Averages", kicker:"Unit 6 · Topic 4", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Mode — most frequently occurring value; Modal class identification; Interpolation formula for continuous series; Mode for Individual and Discrete series; Empirical Relationship: Mode = 3 Median − 2 Mean; Comparison of AM, GM, Median, Mode — when to use each; Advantages and Disadvantages of Mode.</p></div>`}
           ],
           sets:[
             {label:"Set 1 — Foundation", mix:"15/9/6", questions:[]},
