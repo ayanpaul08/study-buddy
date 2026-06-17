@@ -2373,19 +2373,774 @@ const DATA = {
           learn:[
             {topicStart:"eco-u2-demand", title:"Demand, Supply and Market Equilibrium", icon:"",
              desc:"Demand and supply curves; why they slope the way they do; equilibrium price; the invisible hand; and how markets clear."},
-            {h:"Demand, Supply and Market Equilibrium", kicker:"Unit 2 · Topic 1", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Law of Demand (with demand curve graph — what goes on each axis, why it slopes downward, what shifts the curve); Law of Supply (supply curve — why it slopes upward); Market Equilibrium (where they intersect — the equilibrium price and quantity); and the Invisible Hand concept.</p></div>`},
+            {h:"Demand, Supply and Market Equilibrium", kicker:"Unit 2", html:`
+              <p>A <strong>market</strong> is any arrangement that brings buyers and sellers together to determine the price and quantity of a good or service. The twin forces of <strong>Demand</strong> (buyers) and <strong>Supply</strong> (sellers) interact to determine the <strong>equilibrium price</strong> — the price at which the market clears.</p>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">The Law of Demand</h3>
+              <p>The Law of Demand states: <em>"Other things being equal (ceteris paribus), the quantity demanded of a good falls when its price rises, and rises when its price falls."</em> Price and quantity demanded move in <strong>opposite directions</strong> — hence the demand curve slopes <strong>downward from left to right</strong>.</p>
+              <table class="cmp"><thead><tr><th>Price (₹/unit)</th><th>60</th><th>50</th><th>40</th><th>30</th><th>20</th><th>10</th></tr></thead><tbody>
+                <tr><td><strong>Quantity Demanded (units/week)</strong></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+              </tbody></table>
+              <div class="diagram"><svg viewBox="0 0 520 370" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="370" fill="#f9f6f0" rx="8"/>
+
+  <line x1="70" y1="30" x2="70" y2="310" stroke="#5a6e63" stroke-width="2" stroke-linecap="round"/>
+  <line x1="70" y1="310" x2="480" y2="310" stroke="#5a6e63" stroke-width="2" stroke-linecap="round"/>
+  <text x="32" y="175" font-size="12" fill="#5a6e63" text-anchor="middle" transform="rotate(-90,32,175)">Price (₹)</text>
+  <text x="275" y="348" font-size="12" fill="#5a6e63" text-anchor="middle">Quantity (units)</text>
+    <line x1="65" y1="270" x2="75" y2="270" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="274" font-size="11" fill="#5a6e63" text-anchor="end" >10</text>   <line x1="65" y1="230" x2="75" y2="230" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="234" font-size="11" fill="#5a6e63" text-anchor="end" >20</text>   <line x1="65" y1="190" x2="75" y2="190" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="194" font-size="11" fill="#5a6e63" text-anchor="end" >30</text>   <line x1="65" y1="150" x2="75" y2="150" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="154" font-size="11" fill="#1a4731" text-anchor="end" font-weight="700">₹40*</text>   <line x1="65" y1="110" x2="75" y2="110" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="114" font-size="11" fill="#5a6e63" text-anchor="end" >50</text>   <line x1="65" y1="70" x2="75" y2="70" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="74" font-size="11" fill="#5a6e63" text-anchor="end" >60</text>
+    <line x1="137" y1="305" x2="137" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="137" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >1</text>   <line x1="203" y1="305" x2="203" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="203" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >2</text>   <line x1="270" y1="305" x2="270" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="270" y="328" font-size="11" fill="#1a4731" text-anchor="middle" font-weight="700">3*</text>   <line x1="337" y1="305" x2="337" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="337" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >4</text>   <line x1="403" y1="305" x2="403" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="403" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >5</text>   <line x1="470" y1="305" x2="470" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="470" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >6</text>
+  <!-- Demand curve -->
+  <polyline points="70,30 137,70 203,110 270,150 337,190 403,230 470,270" stroke="#1a4731" stroke-width="3" fill="none" stroke-linejoin="round"/>
+  <text x="480" y="274" font-size="15" fill="#1a4731" font-weight="700">D</text>
+  <!-- Key points A-E -->
+    <circle cx="137" cy="70" r="5" fill="#e05a2b"/>
+  <text x="145" y="64" font-size="12" fill="#e05a2b" font-weight="700">A (₹60,1)</text>
+    <circle cx="203" cy="110" r="5" fill="#e05a2b"/>
+  <text x="211" y="104" font-size="12" fill="#e05a2b" font-weight="700">B (₹50,2)</text>
+    <circle cx="270" cy="150" r="5" fill="#e05a2b"/>
+  <text x="278" y="144" font-size="12" fill="#e05a2b" font-weight="700">C (₹40,3)</text>
+    <circle cx="337" cy="190" r="5" fill="#e05a2b"/>
+  <text x="345" y="184" font-size="12" fill="#e05a2b" font-weight="700">D (₹30,4)</text>
+    <circle cx="403" cy="230" r="5" fill="#e05a2b"/>
+  <text x="411" y="224" font-size="12" fill="#e05a2b" font-weight="700">E (₹20,5)</text>
+  <text x="140" y="55" font-size="12" fill="#1a4731" text-anchor="middle">As price rises →</text>
+  <text x="140" y="70" font-size="12" fill="#1a4731" text-anchor="middle">quantity demanded falls</text>
+</svg><div class="dcap">Demand curve D slopes downward. As price rises from ₹20 to ₹60, quantity demanded falls from 5 to 1 unit. Each lettered point (A–E) corresponds to one row of the demand schedule above.</div></div>
+              <p><strong>Why does the demand curve slope downward?</strong></p>
+              <ul>
+                <li><strong>Law of Diminishing Marginal Utility</strong> — Each additional unit gives less satisfaction, so buyers are willing to pay less for extra units.</li>
+                <li><strong>Substitution Effect</strong> — When a good's price rises, consumers switch to cheaper substitutes (tea → coffee).</li>
+                <li><strong>Income Effect</strong> — A price rise reduces real purchasing power, so consumers buy less.</li>
+                <li><strong>New buyers</strong> — Lower prices attract buyers who previously could not afford the good.</li>
+              </ul>
+              <div class="example"><div class="lbl">Real-life example</div>
+                <p>When mango prices fell from ₹100/kg to ₹40/kg in summer, Priya's family bought 3 kg per week instead of 1 kg. This is the law of demand in action — lower price, higher quantity demanded. Conversely, when petrol prices rose, car usage fell and public transport ridership rose (substitution effect).</p>
+              </div>
+              <p><strong>Exceptions to the Law of Demand (upward-sloping demand curves):</strong></p>
+              <ul>
+                <li><strong>Giffen goods</strong> — Inferior goods for which the income effect dominates. When the price of a staple (like cheap rice) falls, poor consumers feel richer and switch to more preferred foods, reducing demand for rice. Example: Bread during famine.</li>
+                <li><strong>Veblen/Prestige goods</strong> — Luxury goods where high price signals status. A ₹2 lakh handbag may be demanded MORE at higher prices (Veblen effect).</li>
+                <li><strong>Speculation</strong> — If buyers expect prices to rise further, they may buy MORE today despite current high prices (shares, real estate).</li>
+              </ul>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Shifts in Demand vs. Movement Along Demand</h3>
+              <table class="cmp"><thead><tr><th>Concept</th><th>Cause</th><th>What moves?</th></tr></thead><tbody>
+                <tr><td><strong>Movement along D curve</strong></td><td>Change in the good's own price</td><td>A point slides along the existing curve</td></tr>
+                <tr><td><strong>Shift of D curve (right)</strong></td><td>Income rises · Related goods price changes · Tastes improve · More buyers</td><td>The entire D curve moves right (increase in demand)</td></tr>
+                <tr><td><strong>Shift of D curve (left)</strong></td><td>Income falls · Cheaper substitute appears · Tastes worsen</td><td>The entire D curve moves left (decrease in demand)</td></tr>
+              </tbody></table>
+              <div class="diagram"><svg viewBox="0 0 520 370" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="370" fill="#f9f6f0" rx="8"/>
+
+  <line x1="70" y1="30" x2="70" y2="310" stroke="#5a6e63" stroke-width="2" stroke-linecap="round"/>
+  <line x1="70" y1="310" x2="480" y2="310" stroke="#5a6e63" stroke-width="2" stroke-linecap="round"/>
+  <text x="32" y="175" font-size="12" fill="#5a6e63" text-anchor="middle" transform="rotate(-90,32,175)">Price (₹)</text>
+  <text x="275" y="348" font-size="12" fill="#5a6e63" text-anchor="middle">Quantity (units)</text>
+    <line x1="65" y1="230" x2="75" y2="230" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="234" font-size="11" fill="#5a6e63" text-anchor="end" >20</text>   <line x1="65" y1="190" x2="75" y2="190" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="194" font-size="11" fill="#5a6e63" text-anchor="end" >30</text>   <line x1="65" y1="150" x2="75" y2="150" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="154" font-size="11" fill="#5a6e63" text-anchor="end" >₹40</text>   <line x1="65" y1="110" x2="75" y2="110" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="114" font-size="11" fill="#1a4731" text-anchor="end" font-weight="700">₹50</text>   <line x1="65" y1="70" x2="75" y2="70" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="74" font-size="11" fill="#5a6e63" text-anchor="end" >60</text>
+    <line x1="203" y1="305" x2="203" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="203" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >2</text>   <line x1="270" y1="305" x2="270" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="270" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >3</text>   <line x1="337" y1="305" x2="337" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="337" y="328" font-size="11" fill="#1a4731" text-anchor="middle" font-weight="700">4*</text>   <line x1="403" y1="305" x2="403" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="403" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >5</text>   <line x1="470" y1="305" x2="470" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="470" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >6</text>
+  <!-- Original D1 (dashed) -->
+  <polyline points="70,30 137,70 203,110 270,150 337,190 403,230 470,270" stroke="#1a4731" stroke-width="2" fill="none" stroke-dasharray="6,4"/>
+  <text x="480" y="274" font-size="13" fill="#5a6e63" font-weight="600">D₁</text>
+  <!-- New D2 (solid) -->
+  <polyline points="137,30 203,70 270,110 337,150 403,190 470,230 537,270" stroke="#1a4731" stroke-width="3" fill="none"/>
+  <text x="480" y="234" font-size="14" fill="#1a4731" font-weight="700">D₂</text>
+  <!-- Supply curve -->
+  <polyline points="70,270 137,230 203,190 270,150 337,110 403,70 470,30" stroke="#b6862c" stroke-width="3" fill="none"/>
+  <text x="480" y="34" font-size="15" fill="#b6862c" font-weight="700">S</text>
+  <!-- Shift arrow -->
+  <path d="M 270 142 Q 303 115 337 102" stroke="#e05a2b" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#e05a2b"/></marker></defs>
+  <!-- Old equil E1 -->
+  <circle cx="270" cy="150" r="4" fill="#5a6e63" opacity="0.6"/>
+  <text x="262" y="142" font-size="11" fill="#5a6e63">E₁</text>
+  <!-- New equil E2 -->
+    <circle cx="337" cy="110" r="5" fill="#e05a2b"/>
+  <text x="345" y="104" font-size="12" fill="#e05a2b" font-weight="700">E₂</text>
+  <!-- Dashes to new equil -->
+    <line x1="70" y1="110" x2="337" y2="110" stroke="#e05a2b" stroke-width="1.5" stroke-dasharray="5,4"/>
+    <line x1="337" y1="310" x2="337" y2="110" stroke="#e05a2b" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="290" y="50" font-size="12" fill="#e05a2b">Increase in demand: income↑,</text>
+  <text x="290" y="65" font-size="12" fill="#e05a2b">tastes, related goods prices</text>
+</svg><div class="dcap">D₁ shifts right to D₂ after an increase in consumer income. With the same supply curve S, the equilibrium moves from E₁ (Q=3, P=₹40) to E₂ (Q=4, P=₹50) — both price and quantity rise.</div></div>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">The Law of Supply</h3>
+              <p>The Law of Supply states: <em>"Other things being equal, the quantity supplied of a good rises when its price rises, and falls when its price falls."</em> Price and quantity supplied move in the <strong>same direction</strong> — hence the supply curve slopes <strong>upward from left to right</strong>.</p>
+              <table class="cmp"><thead><tr><th>Price (₹/unit)</th><th>10</th><th>20</th><th>30</th><th>40</th><th>50</th><th>60</th></tr></thead><tbody>
+                <tr><td><strong>Quantity Supplied (units/week)</strong></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+              </tbody></table>
+              <div class="diagram"><svg viewBox="0 0 520 370" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="370" fill="#f9f6f0" rx="8"/>
+
+  <line x1="70" y1="30" x2="70" y2="310" stroke="#5a6e63" stroke-width="2" stroke-linecap="round"/>
+  <line x1="70" y1="310" x2="480" y2="310" stroke="#5a6e63" stroke-width="2" stroke-linecap="round"/>
+  <text x="32" y="175" font-size="12" fill="#5a6e63" text-anchor="middle" transform="rotate(-90,32,175)">Price (₹)</text>
+  <text x="275" y="348" font-size="12" fill="#5a6e63" text-anchor="middle">Quantity (units)</text>
+    <line x1="65" y1="270" x2="75" y2="270" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="274" font-size="11" fill="#5a6e63" text-anchor="end" >10</text>   <line x1="65" y1="230" x2="75" y2="230" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="234" font-size="11" fill="#5a6e63" text-anchor="end" >20</text>   <line x1="65" y1="190" x2="75" y2="190" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="194" font-size="11" fill="#5a6e63" text-anchor="end" >30</text>   <line x1="65" y1="150" x2="75" y2="150" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="154" font-size="11" fill="#1a4731" text-anchor="end" font-weight="700">₹40*</text>   <line x1="65" y1="110" x2="75" y2="110" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="114" font-size="11" fill="#5a6e63" text-anchor="end" >50</text>   <line x1="65" y1="70" x2="75" y2="70" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="74" font-size="11" fill="#5a6e63" text-anchor="end" >60</text>
+    <line x1="137" y1="305" x2="137" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="137" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >1</text>   <line x1="203" y1="305" x2="203" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="203" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >2</text>   <line x1="270" y1="305" x2="270" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="270" y="328" font-size="11" fill="#1a4731" text-anchor="middle" font-weight="700">3*</text>   <line x1="337" y1="305" x2="337" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="337" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >4</text>   <line x1="403" y1="305" x2="403" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="403" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >5</text>   <line x1="470" y1="305" x2="470" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="470" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >6</text>
+  <!-- Supply curve -->
+  <polyline points="70,270 137,230 203,190 270,150 337,110 403,70 470,30" stroke="#b6862c" stroke-width="3" fill="none" stroke-linejoin="round"/>
+  <text x="480" y="34" font-size="15" fill="#b6862c" font-weight="700">S</text>
+  <!-- Key points -->
+    <circle cx="137" cy="230" r="5" fill="#b6862c"/>
+  <text x="145" y="224" font-size="12" fill="#b6862c" font-weight="700">A (₹20,1)</text>
+    <circle cx="203" cy="190" r="5" fill="#b6862c"/>
+  <text x="211" y="184" font-size="12" fill="#b6862c" font-weight="700">B (₹30,2)</text>
+    <circle cx="270" cy="150" r="5" fill="#b6862c"/>
+  <text x="278" y="144" font-size="12" fill="#b6862c" font-weight="700">C (₹40,3)</text>
+    <circle cx="337" cy="110" r="5" fill="#b6862c"/>
+  <text x="345" y="104" font-size="12" fill="#b6862c" font-weight="700">D (₹50,4)</text>
+    <circle cx="403" cy="70" r="5" fill="#b6862c"/>
+  <text x="411" y="64" font-size="12" fill="#b6862c" font-weight="700">E (₹60,5)</text>
+  <text x="380" y="55" font-size="12" fill="#b6862c" text-anchor="middle">As price rises →</text>
+  <text x="380" y="70" font-size="12" fill="#b6862c" text-anchor="middle">quantity supplied rises</text>
+</svg><div class="dcap">Supply curve S slopes upward. As price rises from ₹20 to ₹60, quantity supplied rises from 2 to 6 units. Higher prices make production more profitable, attracting more supply.</div></div>
+              <p><strong>Why does the supply curve slope upward?</strong></p>
+              <ul>
+                <li><strong>Profit motive</strong> — Higher prices mean greater profit per unit, incentivising producers to supply more.</li>
+                <li><strong>New producers enter</strong> — Rising prices attract new firms into the market.</li>
+                <li><strong>Law of Increasing Costs</strong> — To produce more, firms must use less efficient resources, increasing marginal cost, so they need a higher price to justify the extra production.</li>
+              </ul>
+              <p><strong>Determinants of Supply (Shifters):</strong> input costs · technology · number of sellers · taxes &amp; subsidies · future price expectations · prices of related goods (in production)</p>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Market Equilibrium</h3>
+              <p>Equilibrium occurs where <strong>Quantity Demanded = Quantity Supplied</strong>. At this price (P*), the market clears — there is no shortage or surplus. Using our example: P=70–10Q = 10+10Q → Q*=3, P*=₹40.</p>
+              <div class="diagram"><svg viewBox="0 0 520 370" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="370" fill="#f9f6f0" rx="8"/>
+
+  <line x1="70" y1="30" x2="70" y2="310" stroke="#5a6e63" stroke-width="2" stroke-linecap="round"/>
+  <line x1="70" y1="310" x2="480" y2="310" stroke="#5a6e63" stroke-width="2" stroke-linecap="round"/>
+  <text x="32" y="175" font-size="12" fill="#5a6e63" text-anchor="middle" transform="rotate(-90,32,175)">Price (₹)</text>
+  <text x="275" y="348" font-size="12" fill="#5a6e63" text-anchor="middle">Quantity (units)</text>
+    <line x1="65" y1="270" x2="75" y2="270" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="274" font-size="11" fill="#5a6e63" text-anchor="end" >10</text>   <line x1="65" y1="230" x2="75" y2="230" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="234" font-size="11" fill="#5a6e63" text-anchor="end" >20</text>   <line x1="65" y1="190" x2="75" y2="190" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="194" font-size="11" fill="#5a6e63" text-anchor="end" >30</text>   <line x1="65" y1="150" x2="75" y2="150" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="154" font-size="11" fill="#1a4731" text-anchor="end" font-weight="700">P*=40</text>   <line x1="65" y1="110" x2="75" y2="110" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="114" font-size="11" fill="#5a6e63" text-anchor="end" >50</text>   <line x1="65" y1="70" x2="75" y2="70" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="74" font-size="11" fill="#5a6e63" text-anchor="end" >60</text>
+    <line x1="137" y1="305" x2="137" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="137" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >1</text>   <line x1="203" y1="305" x2="203" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="203" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >2</text>   <line x1="270" y1="305" x2="270" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="270" y="328" font-size="11" fill="#1a4731" text-anchor="middle" font-weight="700">Q*=3</text>   <line x1="337" y1="305" x2="337" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="337" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >4</text>   <line x1="403" y1="305" x2="403" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="403" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >5</text>   <line x1="470" y1="305" x2="470" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="470" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >6</text>
+  <!-- Surplus label (above P*=40, supply exceeds demand) -->
+  <text x="360" y="115" font-size="11" fill="#b6862c" text-anchor="middle">Excess Supply (Surplus)</text>
+  <!-- Shortage label (below P*=40, demand exceeds supply) -->
+  <text x="185" y="250" font-size="11" fill="#1a4731" text-anchor="middle">Excess Demand (Shortage)</text>
+  <!-- D curve -->
+  <polyline points="70,30 137,70 203,110 270,150 337,190 403,230 470,270" stroke="#1a4731" stroke-width="3" fill="none" stroke-linejoin="round"/>
+  <text x="480" y="274" font-size="15" fill="#1a4731" font-weight="700">D</text>
+  <!-- S curve -->
+  <polyline points="70,270 137,230 203,190 270,150 337,110 403,70 470,30" stroke="#b6862c" stroke-width="3" fill="none" stroke-linejoin="round"/>
+  <text x="480" y="34" font-size="15" fill="#b6862c" font-weight="700">S</text>
+  <!-- Dashed lines to axes -->
+    <line x1="70" y1="150" x2="270" y2="150" stroke="#e05a2b" stroke-width="1.5" stroke-dasharray="5,4"/>
+    <line x1="270" y1="310" x2="270" y2="150" stroke="#e05a2b" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <!-- Equilibrium dot -->
+    <circle cx="270" cy="150" r="5" fill="#e05a2b"/>
+  <text x="278" y="144" font-size="12" fill="#e05a2b" font-weight="700">E*</text>
+</svg><div class="dcap">D and S intersect at E* (Q*=3, P*=₹40). Above P*, quantity supplied exceeds demand — surplus drives price down. Below P*, demand exceeds supply — shortage drives price up. Market self-corrects to equilibrium.</div></div>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">The Invisible Hand &amp; Laissez-Faire</h3>
+              <p>Adam Smith's concept of the <strong>Invisible Hand</strong> argues that individuals pursuing their own self-interest are guided — as if by an invisible hand — to promote the social good. In a free market:</p>
+              <ul>
+                <li>Sellers seeking profit produce what consumers want.</li>
+                <li>Buyers spending income signal which goods are most valued.</li>
+                <li>Prices coordinate all decisions without central planning.</li>
+              </ul>
+              <p><strong>Laissez-faire</strong> (French: "let it be") is the policy of minimal government intervention in markets. The market mechanism allocates resources efficiently through prices.</p>
+              <div class="example"><div class="lbl">Real-life example — Invisible Hand</div>
+                <p>During the COVID-19 pandemic, demand for sanitizers surged. No government order was needed — within weeks, hundreds of distilleries switched from alcohol to sanitizer production because of higher prices and profits. The invisible hand (price signal) reallocated resources from less urgent to more urgent uses automatically.</p>
+              </div>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Price Ceiling and Price Floor</h3>
+              <div class="diagram"><svg viewBox="0 0 520 370" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="370" fill="#f9f6f0" rx="8"/>
+
+  <line x1="70" y1="30" x2="70" y2="310" stroke="#5a6e63" stroke-width="2" stroke-linecap="round"/>
+  <line x1="70" y1="310" x2="480" y2="310" stroke="#5a6e63" stroke-width="2" stroke-linecap="round"/>
+  <text x="32" y="175" font-size="12" fill="#5a6e63" text-anchor="middle" transform="rotate(-90,32,175)">Price (₹)</text>
+  <text x="275" y="348" font-size="12" fill="#5a6e63" text-anchor="middle">Quantity (units)</text>
+    <line x1="65" y1="230" x2="75" y2="230" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="234" font-size="11" fill="#5a6e63" text-anchor="end" >₹20 (ceiling)</text>   <line x1="65" y1="150" x2="75" y2="150" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="154" font-size="11" fill="#1a4731" text-anchor="end" font-weight="700">₹40 (P*)</text>   <line x1="65" y1="70" x2="75" y2="70" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="74" font-size="11" fill="#5a6e63" text-anchor="end" >₹60 (floor)</text>
+    <line x1="137" y1="305" x2="137" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="137" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >1</text>   <line x1="203" y1="305" x2="203" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="203" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >2</text>   <line x1="270" y1="305" x2="270" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="270" y="328" font-size="11" fill="#1a4731" text-anchor="middle" font-weight="700">3</text>   <line x1="337" y1="305" x2="337" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="337" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >4</text>   <line x1="403" y1="305" x2="403" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="403" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >5</text>
+  <polyline points="70,30 137,70 203,110 270,150 337,190 403,230 470,270" stroke="#1a4731" stroke-width="3" fill="none"/>
+  <text x="478" y="274" font-size="14" fill="#1a4731" font-weight="700">D</text>
+  <polyline points="70,270 137,230 203,190 270,150 337,110 403,70 470,30" stroke="#b6862c" stroke-width="3" fill="none"/>
+  <text x="478" y="34" font-size="14" fill="#b6862c" font-weight="700">S</text>
+  <!-- Equil -->
+    <circle cx="270" cy="150" r="5" fill="#e05a2b"/>
+  <text x="278" y="144" font-size="12" fill="#e05a2b" font-weight="700">E*</text>
+  <!-- Price Ceiling line -->
+  <line x1="70" y1="230" x2="480" y2="230" stroke="#c0392b" stroke-width="2" stroke-dasharray="7,4"/>
+  <text x="485" y="234" font-size="11" fill="#c0392b" font-weight="700">Pmax</text>
+  <text x="170" y="223" font-size="10" fill="#c0392b">Shortage: Qs&lt;Qd at ₹20</text>
+  <!-- Price Floor line -->
+  <line x1="70" y1="70" x2="480" y2="70" stroke="#2471a3" stroke-width="2" stroke-dasharray="7,4"/>
+  <text x="485" y="74" font-size="11" fill="#2471a3" font-weight="700">Pmin</text>
+  <text x="200" y="86" font-size="10" fill="#2471a3">Surplus: Qs&gt;Qd at ₹60</text>
+</svg><div class="dcap">Price Ceiling (Pmax=₹20, below P*=₹40): Quantity supplied falls, quantity demanded rises → Shortage. Government uses it to keep essential goods affordable (rent control, food price caps). Price Floor (Pmin=₹60, above P*): Quantity supplied rises, quantity demanded falls → Surplus. Used to protect producers (minimum support price for farmers).</div></div>
+              <table class="cmp"><thead><tr><th></th><th>Price Ceiling (Maximum Price)</th><th>Price Floor (Minimum Price)</th></tr></thead><tbody>
+                <tr><td><strong>Set</strong></td><td>Below equilibrium</td><td>Above equilibrium</td></tr>
+                <tr><td><strong>Effect</strong></td><td>Shortage (Qd &gt; Qs)</td><td>Surplus (Qs &gt; Qd)</td></tr>
+                <tr><td><strong>Purpose</strong></td><td>Keep prices affordable for buyers</td><td>Protect income of sellers/producers</td></tr>
+                <tr><td><strong>Indian examples</strong></td><td>Rent control; kerosene price cap; drug price control</td><td>MSP for wheat, rice (APMC); minimum wages</td></tr>
+              </tbody></table>
+              <div class="casebox"><div class="lbl">Case in point — MSP in India</div>
+                <p>India's Minimum Support Price (MSP) for wheat is set above the market equilibrium price. This means farmers have an incentive to produce more wheat than consumers will buy at MSP — creating a government surplus stored by the Food Corporation of India (FCI). This is exactly the price floor model: Qs &gt; Qd. The government buys the surplus to maintain the floor price and protect farmer incomes, but this costs taxpayers and creates warehousing challenges.</p>
+              </div>
+            `},
             {topicStart:"eco-u2-elasticity", title:"Price, Income and Cross-Price Elasticity of Demand", icon:"",
              desc:"How sensitive demand is to price changes — the critical concept that determines whether a price rise raises or lowers total revenue."},
-            {h:"Elasticity of Demand", kicker:"Unit 2 · Topic 2", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Price Elasticity (elastic/inelastic/unit elastic — with graphs of differently sloped demand curves); Income Elasticity (normal vs inferior goods); Cross-Price Elasticity (substitutes vs complements); and numerical problems on elasticity measurement.</p></div>`},
+            {h:"Price, Income and Cross-Price Elasticity of Demand", kicker:"Unit 2", html:`
+              <p><strong>Elasticity of demand</strong> measures how <em>sensitive</em> the quantity demanded of a good is to a change in one of its determinants. The most important is <strong>Price Elasticity of Demand (PED)</strong>.</p>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Price Elasticity of Demand (PED)</h3>
+              <p><strong>PED</strong> measures the percentage change in quantity demanded resulting from a 1% change in the good's own price.</p>
+              <div style="text-align:center;background:var(--green-soft);border-radius:10px;padding:14px;margin:12px 0">
+                <span style="font-size:15px;font-weight:700;font-family:IBM Plex Mono,monospace;color:var(--green-deep)">PED = % Change in Quantity Demanded / % Change in Price = (ΔQ/Q) ÷ (ΔP/P)</span>
+              </div>
+              <p>Because price and quantity move in opposite directions (law of demand), PED is always <strong>negative</strong>. By convention we take the <strong>absolute value</strong> |PED|.</p>
+              <div class="diagram"><svg viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="360" fill="#f9f6f0" rx="8"/>
+  <!-- LEFT: Elastic demand panel -->
+  <text x="125" y="22" font-size="12" fill="#1a4731" text-anchor="middle" font-weight="700">Elastic Demand (Ed &gt; 1)</text>
+  <line x1="40" y1="30" x2="40" y2="300" stroke="#5a6e63" stroke-width="2"/>
+  <line x1="40" y1="300" x2="225" y2="300" stroke="#5a6e63" stroke-width="2"/>
+  <text x="28" y="175" font-size="10" fill="#5a6e63" text-anchor="middle" transform="rotate(-90,28,175)">Price</text>
+  <text x="132" y="320" font-size="10" fill="#5a6e63" text-anchor="middle">Quantity</text>
+  <!-- Flat (elastic) demand curve -->
+  <polyline points="55,80 205,200" stroke="#1a4731" stroke-width="3" fill="none"/>
+  <text x="210" y="204" font-size="13" fill="#1a4731" font-weight="700">D</text>
+  <!-- Price change brackets -->
+  <line x1="40" y1="110" x2="40" y2="170" stroke="#e05a2b" stroke-width="2"/>
+  <line x1="36" y1="110" x2="44" y2="110" stroke="#e05a2b" stroke-width="2"/>
+  <line x1="36" y1="170" x2="44" y2="170" stroke="#e05a2b" stroke-width="2"/>
+  <text x="28" y="143" font-size="10" fill="#e05a2b" text-anchor="middle">ΔP</text>
+  <!-- Dashes at P1 and P2 -->
+  <line x1="40" y1="110" x2="110" y2="110" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="40" y1="170" x2="150" y2="170" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="110" y1="110" x2="110" y2="300" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="150" y1="170" x2="150" y2="300" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Quantity change brackets -->
+  <line x1="110" y1="310" x2="150" y2="310" stroke="#e05a2b" stroke-width="2"/>
+  <text x="130" y="330" font-size="10" fill="#e05a2b" text-anchor="middle">Large ΔQ</text>
+  <!-- Label -->
+  <text x="125" y="250" font-size="10" fill="#1a4731" text-anchor="middle">%ΔQ &gt; %ΔP</text>
+  <text x="125" y="265" font-size="10" fill="#1a4731" text-anchor="middle">Ed &gt; 1</text>
+
+  <!-- RIGHT: Inelastic demand panel -->
+  <text x="388" y="22" font-size="12" fill="#1a4731" text-anchor="middle" font-weight="700">Inelastic Demand (Ed &lt; 1)</text>
+  <line x1="295" y1="30" x2="295" y2="300" stroke="#5a6e63" stroke-width="2"/>
+  <line x1="295" y1="300" x2="490" y2="300" stroke="#5a6e63" stroke-width="2"/>
+  <text x="283" y="175" font-size="10" fill="#5a6e63" text-anchor="middle" transform="rotate(-90,283,175)">Price</text>
+  <text x="393" y="320" font-size="10" fill="#5a6e63" text-anchor="middle">Quantity</text>
+  <!-- Steep (inelastic) demand curve -->
+  <polyline points="340,50 380,270" stroke="#1a4731" stroke-width="3" fill="none"/>
+  <text x="385" y="274" font-size="13" fill="#1a4731" font-weight="700">D</text>
+  <!-- Price change brackets -->
+  <line x1="295" y1="100" x2="295" y2="200" stroke="#e05a2b" stroke-width="2"/>
+  <line x1="291" y1="100" x2="299" y2="100" stroke="#e05a2b" stroke-width="2"/>
+  <line x1="291" y1="200" x2="299" y2="200" stroke="#e05a2b" stroke-width="2"/>
+  <text x="283" y="153" font-size="10" fill="#e05a2b" text-anchor="middle">ΔP</text>
+  <!-- Dashes -->
+  <line x1="295" y1="100" x2="348" y2="100" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="295" y1="200" x2="356" y2="200" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="348" y1="100" x2="348" y2="300" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="356" y1="200" x2="356" y2="300" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Quantity bracket -->
+  <line x1="348" y1="310" x2="356" y2="310" stroke="#e05a2b" stroke-width="2"/>
+  <text x="352" y="330" font-size="10" fill="#e05a2b" text-anchor="middle">Small ΔQ</text>
+  <!-- Label -->
+  <text x="388" y="250" font-size="10" fill="#1a4731" text-anchor="middle">%ΔQ &lt; %ΔP</text>
+  <text x="388" y="265" font-size="10" fill="#1a4731" text-anchor="middle">Ed &lt; 1</text>
+</svg><div class="dcap">Left: Elastic demand (flat curve) — a small price change causes a large change in quantity demanded. Right: Inelastic demand (steep curve) — a large price change causes only a small change in quantity.</div></div>
+              <div class="diagram"><svg viewBox="0 0 520 240" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="240" fill="#f9f6f0" rx="8"/>
+  <!-- 4 mini panels: perfectly elastic, elastic, unit, inelastic, perfectly inelastic -->
+  <!-- Panel labels -->
+  <text x="52" y="16" font-size="9.5" fill="#1a4731" text-anchor="middle" font-weight="700">Perfectly Elastic</text>
+  <text x="52" y="27" font-size="9" fill="#5a6e63" text-anchor="middle">Ed = ∞</text>
+  <text x="157" y="16" font-size="9.5" fill="#1a4731" text-anchor="middle" font-weight="700">Elastic</text>
+  <text x="157" y="27" font-size="9" fill="#5a6e63" text-anchor="middle">Ed &gt; 1</text>
+  <text x="262" y="16" font-size="9.5" fill="#1a4731" text-anchor="middle" font-weight="700">Unit Elastic</text>
+  <text x="262" y="27" font-size="9" fill="#5a6e63" text-anchor="middle">Ed = 1</text>
+  <text x="367" y="16" font-size="9.5" fill="#1a4731" text-anchor="middle" font-weight="700">Inelastic</text>
+  <text x="367" y="27" font-size="9" fill="#5a6e63" text-anchor="middle">Ed &lt; 1</text>
+  <text x="472" y="16" font-size="9.5" fill="#1a4731" text-anchor="middle" font-weight="700">Perf. Inelastic</text>
+  <text x="472" y="27" font-size="9" fill="#5a6e63" text-anchor="middle">Ed = 0</text>
+
+  <!-- Mini axes for all 5 -->
+  <!-- P1: Perfectly Elastic (horizontal line) -->
+  <line x1="10" y1="40" x2="10" y2="190" stroke="#9eaaa5" stroke-width="1.5"/>
+  <line x1="10" y1="190" x2="95" y2="190" stroke="#9eaaa5" stroke-width="1.5"/>
+  <line x1="10" y1="115" x2="92" y2="115" stroke="#1a4731" stroke-width="2.5"/>
+  <text x="94" y="119" font-size="10" fill="#1a4731" font-weight="700">D</text>
+
+  <!-- P2: Elastic (flatter slope) -->
+  <line x1="115" y1="40" x2="115" y2="190" stroke="#9eaaa5" stroke-width="1.5"/>
+  <line x1="115" y1="190" x2="200" y2="190" stroke="#9eaaa5" stroke-width="1.5"/>
+  <line x1="120" y1="55" x2="195" y2="180" stroke="#1a4731" stroke-width="2.5"/>
+  <text x="196" y="184" font-size="10" fill="#1a4731" font-weight="700">D</text>
+
+  <!-- P3: Unit Elastic (rectangular hyperbola approximation) -->
+  <line x1="220" y1="40" x2="220" y2="190" stroke="#9eaaa5" stroke-width="1.5"/>
+  <line x1="220" y1="190" x2="305" y2="190" stroke="#9eaaa5" stroke-width="1.5"/>
+  <polyline points="225,50 235,67 250,90 265,120 278,150 290,172 303,188" stroke="#1a4731" stroke-width="2.5" fill="none"/>
+  <text x="304" y="192" font-size="10" fill="#1a4731" font-weight="700">D</text>
+
+  <!-- P4: Inelastic (steeper slope) -->
+  <line x1="325" y1="40" x2="325" y2="190" stroke="#9eaaa5" stroke-width="1.5"/>
+  <line x1="325" y1="190" x2="410" y2="190" stroke="#9eaaa5" stroke-width="1.5"/>
+  <line x1="352" y1="50" x2="368" y2="180" stroke="#1a4731" stroke-width="2.5"/>
+  <text x="369" y="184" font-size="10" fill="#1a4731" font-weight="700">D</text>
+
+  <!-- P5: Perfectly Inelastic (vertical line) -->
+  <line x1="430" y1="40" x2="430" y2="190" stroke="#9eaaa5" stroke-width="1.5"/>
+  <line x1="430" y1="190" x2="515" y2="190" stroke="#9eaaa5" stroke-width="1.5"/>
+  <line x1="475" y1="45" x2="475" y2="190" stroke="#1a4731" stroke-width="2.5"/>
+  <text x="478" y="45" font-size="10" fill="#1a4731" font-weight="700">D</text>
+
+  <!-- Price and Qty labels for each -->
+  <text x="8" y="236" font-size="8.5" fill="#5a6e63" text-anchor="start">P→Price; Q→Quantity on all axes</text>
+</svg><div class="dcap">Five types of price elasticity from left to right: Perfectly Elastic (horizontal — any price rise drops quantity to zero; e.g., perfectly competitive market), Elastic (flat slope, Ed&gt;1; e.g., luxury goods), Unit Elastic (rectangular hyperbola, Ed=1; revenue unchanged), Inelastic (steep slope, Ed&lt;1; e.g., essential medicines), Perfectly Inelastic (vertical — quantity unchanged regardless of price; e.g., insulin for diabetics).</div></div>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Factors Affecting PED</h3>
+              <table class="cmp"><thead><tr><th>Factor</th><th>More Elastic if…</th><th>More Inelastic if…</th></tr></thead><tbody>
+                <tr><td><strong>Availability of substitutes</strong></td><td>Many substitutes exist (Pepsi vs Coke)</td><td>Few or no substitutes (insulin, salt)</td></tr>
+                <tr><td><strong>Necessity vs luxury</strong></td><td>Luxury good (jewellery, foreign holiday)</td><td>Necessity (rice, medicines)</td></tr>
+                <tr><td><strong>Proportion of income</strong></td><td>Large share of budget (car, fridge)</td><td>Tiny share of budget (matchbox, pen)</td></tr>
+                <tr><td><strong>Time period</strong></td><td>Long run (consumers can adjust)</td><td>Short run (habits hard to break immediately)</td></tr>
+                <tr><td><strong>Definition of market</strong></td><td>Narrowly defined (Maruti Suzuki Swift)</td><td>Broadly defined (cars in general)</td></tr>
+              </tbody></table>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Measurement — Percentage (Proportional) Method</h3>
+              <p>This is the <strong>only method prescribed by WBCHSE</strong>.</p>
+              <div class="example"><div class="lbl">Worked example</div>
+                <p>When the price of mangoes falls from ₹80/kg to ₹60/kg, quantity demanded rises from 200 kg to 280 kg per day.</p>
+                <p>% Change in P = (60−80)/80 × 100 = <strong>−25%</strong></p>
+                <p>% Change in Q = (280−200)/200 × 100 = <strong>+40%</strong></p>
+                <p>PED = 40%/25% = <strong>1.6</strong> (|Ed|&gt;1 → Elastic demand)</p>
+                <p>Interpretation: A 1% fall in price leads to a 1.6% rise in quantity demanded.</p>
+              </div>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">PED and Total Revenue</h3>
+              <table class="cmp"><thead><tr><th>Elasticity</th><th>Price falls → TR</th><th>Price rises → TR</th><th>Implication</th></tr></thead><tbody>
+                <tr><td>Elastic (Ed&gt;1)</td><td>Rises</td><td>Falls</td><td>Lower price increases revenue — good for price cuts</td></tr>
+                <tr><td>Unit elastic (Ed=1)</td><td>Unchanged</td><td>Unchanged</td><td>Revenue insensitive to price change</td></tr>
+                <tr><td>Inelastic (Ed&lt;1)</td><td>Falls</td><td>Rises</td><td>Higher price increases revenue — tax incidence falls on buyers</td></tr>
+              </tbody></table>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Income Elasticity of Demand (YED)</h3>
+              <div style="text-align:center;background:var(--green-soft);border-radius:10px;padding:12px;margin:10px 0">
+                <span style="font-size:14px;font-weight:700;font-family:IBM Plex Mono,monospace;color:var(--green-deep)">YED = % Change in Quantity Demanded / % Change in Income</span>
+              </div>
+              <table class="cmp"><thead><tr><th>YED value</th><th>Type of good</th><th>Example</th></tr></thead><tbody>
+                <tr><td>YED &gt; 1</td><td><strong>Luxury/Superior good</strong></td><td>Foreign holidays, cars, jewellery — demand rises faster than income</td></tr>
+                <tr><td>0 &lt; YED &lt; 1</td><td><strong>Normal good (necessity)</strong></td><td>Rice, bread — demand rises with income but less than proportionately</td></tr>
+                <tr><td>YED = 0</td><td><strong>Zero income elasticity</strong></td><td>Salt, matches — demand barely changes with income</td></tr>
+                <tr><td>YED &lt; 0</td><td><strong>Inferior good</strong></td><td>Coarse grains, cheap bus travel — demand falls as income rises (switch to better alternatives)</td></tr>
+              </tbody></table>
+              <div class="example"><div class="lbl">Real-life example</div>
+                <p>As India's per-capita income rose over 2010–2023, demand for two-wheelers (normal goods, YED≈0.8) grew proportionately, while demand for cars (luxury goods, YED≈1.5) grew much faster — India became one of the world's largest car markets. Meanwhile, demand for coarse millets (inferior goods) declined as households switched to rice and wheat.</p>
+              </div>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Cross-Price Elasticity of Demand (XED)</h3>
+              <p>XED measures how the quantity demanded of Good A changes when the price of Good B changes.</p>
+              <div style="text-align:center;background:var(--green-soft);border-radius:10px;padding:12px;margin:10px 0">
+                <span style="font-size:14px;font-weight:700;font-family:IBM Plex Mono,monospace;color:var(--green-deep)">XED(A,B) = % Change in Qty Demanded of A / % Change in Price of B</span>
+              </div>
+              <table class="cmp"><thead><tr><th>XED value</th><th>Relationship</th><th>Example</th></tr></thead><tbody>
+                <tr><td>XED &gt; 0 (positive)</td><td><strong>Substitutes</strong> — goods that can replace each other</td><td>Tea &amp; Coffee; Pepsi &amp; Coke; Butter &amp; Margarine. When price of tea rises, demand for coffee rises.</td></tr>
+                <tr><td>XED &lt; 0 (negative)</td><td><strong>Complements</strong> — goods used together</td><td>Car &amp; Petrol; Printers &amp; Ink; Bread &amp; Butter. When price of cars rises, demand for petrol falls.</td></tr>
+                <tr><td>XED = 0</td><td><strong>Unrelated goods</strong></td><td>Umbrella &amp; Toothpaste — no relationship</td></tr>
+              </tbody></table>
+              <div class="casebox"><div class="lbl">Case in point — Pricing Strategy</div>
+                <p>When Apple raises the price of iPhones, it studies the XED of accessories (cases, AirPods, Apple Watch) — all complements with negative XED. Fewer iPhone buyers means fewer accessory buyers too — so Apple keeps iPhone prices high only when accessories profit compensates. Meanwhile, when Jio cut mobile data prices sharply in 2016 (substitute for broadband), demand for Airtel's mobile data fell sharply (positive XED for substitutes), forcing Airtel to also cut prices to remain competitive.</p>
+              </div>
+            `},
             {topicStart:"eco-u2-supply-elasticity", title:"Elasticity of Supply and Comparative Statics", icon:"",
              desc:"How quickly producers respond to price changes; and what happens to equilibrium when demand or supply shifts (Price Ceiling, Price Floor)."},
-            {h:"Supply Elasticity and Comparative Statics", kicker:"Unit 2 · Topic 3", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Elasticity of Supply with numerical problems; Comparative Statics — how shifts in demand/supply change equilibrium; Price Ceiling (maximum price — why it creates shortage); Price Floor (minimum price — why it creates surplus) with real Indian examples (MSP for wheat, rent control).</p></div>`},
+            {h:"Elasticity of Supply and Comparative Statics", kicker:"Unit 2", html:`
+              <h3 style="color:var(--green-deep);margin:10px 0 10px;padding-top:0">Elasticity of Supply (Es)</h3>
+              <p><strong>Price Elasticity of Supply</strong> measures the responsiveness of quantity supplied to a change in price.</p>
+              <div style="text-align:center;background:var(--green-soft);border-radius:10px;padding:14px;margin:12px 0">
+                <span style="font-size:15px;font-weight:700;font-family:IBM Plex Mono,monospace;color:var(--green-deep)">Es = % Change in Quantity Supplied / % Change in Price = (ΔQs/Qs) ÷ (ΔP/P)</span>
+              </div>
+              <p>Unlike PED, Es is normally <strong>positive</strong> since price and quantity supplied move in the same direction (Law of Supply).</p>
+              <div class="diagram"><svg viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="360" fill="#f9f6f0" rx="8"/>
+  <!-- LEFT: Elastic Supply -->
+  <text x="125" y="22" font-size="12" fill="#b6862c" text-anchor="middle" font-weight="700">Elastic Supply (Es &gt; 1)</text>
+  <line x1="40" y1="30" x2="40" y2="300" stroke="#5a6e63" stroke-width="2"/>
+  <line x1="40" y1="300" x2="225" y2="300" stroke="#5a6e63" stroke-width="2"/>
+  <text x="28" y="175" font-size="10" fill="#5a6e63" text-anchor="middle" transform="rotate(-90,28,175)">Price</text>
+  <text x="132" y="320" font-size="10" fill="#5a6e63" text-anchor="middle">Quantity</text>
+  <polyline points="55,250 205,90" stroke="#b6862c" stroke-width="3" fill="none"/>
+  <text x="208" y="86" font-size="13" fill="#b6862c" font-weight="700">S</text>
+  <line x1="40" y1="140" x2="40" y2="190" stroke="#e05a2b" stroke-width="2"/>
+  <line x1="36" y1="140" x2="44" y2="140" stroke="#e05a2b" stroke-width="2"/>
+  <line x1="36" y1="190" x2="44" y2="190" stroke="#e05a2b" stroke-width="2"/>
+  <text x="28" y="168" font-size="10" fill="#e05a2b" text-anchor="middle">ΔP</text>
+  <line x1="40" y1="140" x2="158" y2="140" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="40" y1="190" x2="123" y2="190" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="158" y1="140" x2="158" y2="300" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="123" y1="190" x2="123" y2="300" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="123" y1="310" x2="158" y2="310" stroke="#e05a2b" stroke-width="2"/>
+  <text x="140" y="330" font-size="10" fill="#e05a2b" text-anchor="middle">Large ΔQ</text>
+  <text x="125" y="270" font-size="10" fill="#b6862c" text-anchor="middle">%ΔQ &gt; %ΔP</text>
+
+  <!-- RIGHT: Inelastic Supply -->
+  <text x="388" y="22" font-size="12" fill="#b6862c" text-anchor="middle" font-weight="700">Inelastic Supply (Es &lt; 1)</text>
+  <line x1="295" y1="30" x2="295" y2="300" stroke="#5a6e63" stroke-width="2"/>
+  <line x1="295" y1="300" x2="490" y2="300" stroke="#5a6e63" stroke-width="2"/>
+  <text x="283" y="175" font-size="10" fill="#5a6e63" text-anchor="middle" transform="rotate(-90,283,175)">Price</text>
+  <text x="393" y="320" font-size="10" fill="#5a6e63" text-anchor="middle">Quantity</text>
+  <polyline points="340,270 385,55" stroke="#b6862c" stroke-width="3" fill="none"/>
+  <text x="388" y="52" font-size="13" fill="#b6862c" font-weight="700">S</text>
+  <line x1="295" y1="100" x2="295" y2="200" stroke="#e05a2b" stroke-width="2"/>
+  <line x1="291" y1="100" x2="299" y2="100" stroke="#e05a2b" stroke-width="2"/>
+  <line x1="291" y1="200" x2="299" y2="200" stroke="#e05a2b" stroke-width="2"/>
+  <text x="283" y="153" font-size="10" fill="#e05a2b" text-anchor="middle">ΔP</text>
+  <line x1="295" y1="100" x2="378" y2="100" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="295" y1="200" x2="365" y2="200" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="378" y1="100" x2="378" y2="300" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="365" y1="200" x2="365" y2="300" stroke="#e05a2b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="365" y1="310" x2="378" y2="310" stroke="#e05a2b" stroke-width="2"/>
+  <text x="371" y="330" font-size="10" fill="#e05a2b" text-anchor="middle">Small ΔQ</text>
+  <text x="388" y="250" font-size="10" fill="#b6862c" text-anchor="middle">%ΔQ &lt; %ΔP</text>
+</svg><div class="dcap">Left: Elastic supply (flat curve) — producers can ramp up output quickly when price rises a little (e.g., a tailor who can stitch more shirts overnight). Right: Inelastic supply (steep curve) — output barely changes even with a big price rise (e.g., a farmer cannot grow extra wheat overnight; agricultural produce takes a season).</div></div>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Factors Affecting Elasticity of Supply</h3>
+              <table class="cmp"><thead><tr><th>Factor</th><th>More Elastic if…</th><th>More Inelastic if…</th></tr></thead><tbody>
+                <tr><td><strong>Time period</strong></td><td>Long run — firms can build capacity</td><td>Short run / immediate period — fixed capacity</td></tr>
+                <tr><td><strong>Spare capacity</strong></td><td>Factory has idle machines/labour to use</td><td>Already operating at full capacity</td></tr>
+                <tr><td><strong>Storability</strong></td><td>Good can be stored and released later (manufactured goods)</td><td>Perishable goods (vegetables, fish) — must sell quickly</td></tr>
+                <tr><td><strong>Ease of entry</strong></td><td>New firms can enter easily</td><td>High barriers to entry (licensing, capital)</td></tr>
+                <tr><td><strong>Mobility of factors</strong></td><td>Labour/capital can shift between uses easily</td><td>Specialised, immobile factors (skilled artisans, fixed land)</td></tr>
+              </tbody></table>
+
+              <div class="example"><div class="lbl">Worked example</div>
+                <p>The price of tomatoes rises from ₹20/kg to ₹30/kg. A farmer who had already harvested can only bring 5% more to market this week (inelastic, short run), but over the next season, many farmers shift land to tomato cultivation and supply rises by 40% (elastic, long run) at the same new price.</p>
+                <p>Short run: Es = 5%/50% = <strong>0.1</strong> (highly inelastic)</p>
+                <p>Long run: Es = 40%/50% = <strong>0.8</strong> (still inelastic, but far more responsive)</p>
+              </div>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:18px;border-top:1px solid var(--line)">Comparative Statics</h3>
+              <p><strong>Comparative statics</strong> is the method of analysing how the equilibrium price and quantity change when demand and/or supply curves shift, by comparing the old and new equilibrium positions (without studying the path between them).</p>
+              <table class="cmp"><thead><tr><th>Change</th><th>Effect on Equilibrium Price</th><th>Effect on Equilibrium Quantity</th></tr></thead><tbody>
+                <tr><td>Demand increases (D shifts right)</td><td>Rises</td><td>Rises</td></tr>
+                <tr><td>Demand decreases (D shifts left)</td><td>Falls</td><td>Falls</td></tr>
+                <tr><td>Supply increases (S shifts right)</td><td>Falls</td><td>Rises</td></tr>
+                <tr><td>Supply decreases (S shifts left)</td><td>Rises</td><td>Falls</td></tr>
+                <tr><td>Both D &amp; S increase</td><td>Ambiguous (depends on relative shift size)</td><td>Rises</td></tr>
+              </tbody></table>
+              <div class="diagram"><svg viewBox="0 0 520 370" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="370" fill="#f9f6f0" rx="8"/>
+
+  <line x1="70" y1="30" x2="70" y2="310" stroke="#5a6e63" stroke-width="2" stroke-linecap="round"/>
+  <line x1="70" y1="310" x2="480" y2="310" stroke="#5a6e63" stroke-width="2" stroke-linecap="round"/>
+  <text x="32" y="175" font-size="12" fill="#5a6e63" text-anchor="middle" transform="rotate(-90,32,175)">Price (₹)</text>
+  <text x="275" y="348" font-size="12" fill="#5a6e63" text-anchor="middle">Quantity (units)</text>
+    <line x1="65" y1="230" x2="75" y2="230" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="234" font-size="11" fill="#5a6e63" text-anchor="end" >20</text>   <line x1="65" y1="190" x2="75" y2="190" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="194" font-size="11" fill="#5a6e63" text-anchor="end" >30</text>   <line x1="65" y1="150" x2="75" y2="150" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="154" font-size="11" fill="#1a4731" text-anchor="end" font-weight="700">P*₁=40</text>   <line x1="65" y1="110" x2="75" y2="110" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="114" font-size="11" fill="#1a4731" text-anchor="end" font-weight="700">P*₂=50</text>   <line x1="65" y1="70" x2="75" y2="70" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="60" y="74" font-size="11" fill="#5a6e63" text-anchor="end" >60</text>
+    <line x1="203" y1="305" x2="203" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="203" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >2</text>   <line x1="270" y1="305" x2="270" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="270" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >3</text>   <line x1="337" y1="305" x2="337" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="337" y="328" font-size="11" fill="#1a4731" text-anchor="middle" font-weight="700">4</text>   <line x1="403" y1="305" x2="403" y2="315" stroke="#5a6e63" stroke-width="1.5"/>
+  <text x="403" y="328" font-size="11" fill="#5a6e63" text-anchor="middle" >5</text>
+  <!-- Original D and S -->
+  <polyline points="70,30 137,70 203,110 270,150 337,190 403,230 470,270" stroke="#1a4731" stroke-width="2" fill="none" stroke-dasharray="6,4"/>
+  <text x="478" y="274" font-size="12" fill="#5a6e63" font-weight="600">D₁</text>
+  <polyline points="70,270 137,230 203,190 270,150 337,110 403,70 470,30" stroke="#b6862c" stroke-width="2" fill="none" stroke-dasharray="6,4"/>
+  <text x="478" y="34" font-size="12" fill="#5a6e63" font-weight="600">S₁</text>
+  <!-- Supply shifts LEFT (costs rise) -->
+  <polyline points="70,230 137,190 203,150 270,110 337,70 403,30" stroke="#b6862c" stroke-width="3" fill="none"/>
+  <text x="411" y="34" font-size="13" fill="#b6862c" font-weight="700">S₂</text>
+  <!-- Demand shifts RIGHT (income rises) -->
+  <polyline points="137,30 203,70 270,110 337,150 403,190 470,230 537,270" stroke="#1a4731" stroke-width="3" fill="none"/>
+  <text x="478" y="234" font-size="13" fill="#1a4731" font-weight="700">D₂</text>
+    <circle cx="270" cy="150" r="5" fill="#5a6e63"/>
+  <text x="278" y="144" font-size="12" fill="#5a6e63" font-weight="700">E₁</text>
+    <circle cx="337" cy="110" r="5" fill="#e05a2b"/>
+  <text x="345" y="104" font-size="12" fill="#e05a2b" font-weight="700">E₂</text>
+    <line x1="70" y1="110" x2="337" y2="110" stroke="#e05a2b" stroke-width="1.5" stroke-dasharray="5,4"/>
+    <line x1="337" y1="310" x2="337" y2="110" stroke="#e05a2b" stroke-width="1.5" stroke-dasharray="5,4"/>
+</svg><div class="dcap">Comparative statics: Demand shifts right (D₁→D₂, income rises) AND Supply shifts left (S₁→S₂, input costs rise). Equilibrium moves from E₁ (Q=3,P=₹40) to E₂ (Q=4,P=₹50). Price rises unambiguously; quantity could rise, fall, or stay same depending on the relative magnitude of the two shifts — here demand effect dominates so quantity rises.</div></div>
+
+              <div class="casebox"><div class="lbl">Case in point — Onion Price Crisis</div>
+                <p>India regularly sees sharp onion price spikes. Onion supply is highly inelastic in the short run (Es≈0.1–0.2) because crops take 3–4 months to grow and cannot be rushed. When unseasonal rains destroy a harvest (supply shifts left sharply), even a small drop in quantity causes onion prices to triple or quadruple, since demand for onions is also inelastic (no easy substitute in Indian cooking). This is comparative statics in action: small supply shift → large price change, because both curves are steep (inelastic).</p>
+              </div>
+            `},
             {topicStart:"eco-u2-utility", title:"Cardinal Utility and the Law of Diminishing Marginal Utility", icon:"",
              desc:"How economists measure satisfaction; why the first slice of pizza gives more pleasure than the fifth; and consumer equilibrium using marginal utility analysis."},
-            {h:"Cardinal Utility Theory", kicker:"Unit 2 · Topic 4", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Utility and Marginal Utility; Total Utility vs Marginal Utility curves (with graph — why MU curve slopes downward); Law of Diminishing Marginal Utility with real examples; Consumer Equilibrium (MU/Price ratio equilisation); and derivation of the demand curve from MU analysis.</p></div>`},
+            {h:"Cardinal Utility and the Law of Diminishing Marginal Utility", kicker:"Unit 2", html:`
+              <p><strong>Cardinal utility analysis</strong> assumes that satisfaction (utility) derived from consuming goods can be measured in precise numerical units, traditionally called <strong>"utils."</strong> This is the older approach to consumer behaviour, later supplemented by the ordinal (indifference curve) approach.</p>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Key Concepts</h3>
+              <table class="cmp"><thead><tr><th>Term</th><th>Meaning</th></tr></thead><tbody>
+                <tr><td><strong>Total Utility (TU)</strong></td><td>The total satisfaction obtained from consuming a given quantity of a good.</td></tr>
+                <tr><td><strong>Marginal Utility (MU)</strong></td><td>The additional utility gained from consuming <em>one more</em> unit of the good. MUₙ = TUₙ − TUₙ₋₁</td></tr>
+                <tr><td><strong>Util</strong></td><td>The hypothetical unit used to measure utility (cardinal/numerical).</td></tr>
+              </tbody></table>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">The Law of Diminishing Marginal Utility (LDMU)</h3>
+              <p>The Law states: <em>"As a consumer consumes more and more units of a good (with all other factors constant), the marginal utility derived from each successive unit goes on diminishing."</em></p>
+              <table class="cmp"><thead><tr><th>Units of cake</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr></thead><tbody>
+                <tr><td><strong>Total Utility (TU)</strong></td><td>10</td><td>18</td><td>24</td><td>28</td><td>30</td><td>30</td><td>28</td></tr>
+                <tr><td><strong>Marginal Utility (MU)</strong></td><td>10</td><td>8</td><td>6</td><td>4</td><td>2</td><td>0</td><td>−2</td></tr>
+              </tbody></table>
+              <div class="diagram"><svg viewBox="0 0 520 330" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="330" fill="#f9f6f0" rx="8"/>
+  <line x1="70" y1="20" x2="70" y2="290" stroke="#5a6e63" stroke-width="2"/>
+  <line x1="70" y1="290" x2="480" y2="290" stroke="#5a6e63" stroke-width="2"/>
+  <text x="30" y="155" font-size="12" fill="#5a6e63" text-anchor="middle" transform="rotate(-90,30,155)">Total Utility</text>
+  <text x="275" y="312" font-size="12" fill="#5a6e63" text-anchor="middle">Units of cake consumed</text>
+  <line x1="70" y1="285" x2="70" y2="295" stroke="#5a6e63" stroke-width="1.5"/><text x="70" y="306" font-size="10" fill="#5a6e63" text-anchor="middle">1</text>
+<line x1="137" y1="285" x2="137" y2="295" stroke="#5a6e63" stroke-width="1.5"/><text x="137" y="306" font-size="10" fill="#5a6e63" text-anchor="middle">2</text>
+<line x1="203" y1="285" x2="203" y2="295" stroke="#5a6e63" stroke-width="1.5"/><text x="203" y="306" font-size="10" fill="#5a6e63" text-anchor="middle">3</text>
+<line x1="270" y1="285" x2="270" y2="295" stroke="#5a6e63" stroke-width="1.5"/><text x="270" y="306" font-size="10" fill="#5a6e63" text-anchor="middle">4</text>
+<line x1="337" y1="285" x2="337" y2="295" stroke="#5a6e63" stroke-width="1.5"/><text x="337" y="306" font-size="10" fill="#5a6e63" text-anchor="middle">5</text>
+<line x1="403" y1="285" x2="403" y2="295" stroke="#5a6e63" stroke-width="1.5"/><text x="403" y="306" font-size="10" fill="#5a6e63" text-anchor="middle">6</text>
+<line x1="470" y1="285" x2="470" y2="295" stroke="#5a6e63" stroke-width="1.5"/><text x="470" y="306" font-size="10" fill="#5a6e63" text-anchor="middle">7</text>
+  <polyline points="70,235 137,175 203,130 270,100 337,85 403,85 470,100" stroke="#1a4731" stroke-width="3" fill="none" stroke-linejoin="round"/>
+  <circle cx="70" cy="235" r="4" fill="#1a4731"/>
+<circle cx="137" cy="175" r="4" fill="#1a4731"/>
+<circle cx="203" cy="130" r="4" fill="#1a4731"/>
+<circle cx="270" cy="100" r="4" fill="#1a4731"/>
+<circle cx="337" cy="85" r="4" fill="#1a4731"/>
+<circle cx="403" cy="85" r="4" fill="#1a4731"/>
+<circle cx="470" cy="100" r="4" fill="#1a4731"/>
+  <text x="478" y="104" font-size="13" fill="#1a4731" font-weight="700">TU</text>
+  <text x="342" y="73" font-size="10" fill="#e05a2b">TU peaks (MU=0)</text>
+</svg><div class="dcap">Total Utility rises at a decreasing rate, reaches a maximum at the 6th unit (where MU=0), then declines as overeating causes disutility (7th unit).</div></div>
+              <div class="diagram"><svg viewBox="0 0 520 280" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="280" fill="#f9f6f0" rx="8"/>
+  <line x1="70" y1="20" x2="70" y2="250" stroke="#5a6e63" stroke-width="2"/>
+  <line x1="70" y1="195" x2="480" y2="195" stroke="#5a6e63" stroke-width="2"/>
+  <text x="30" y="110" font-size="12" fill="#5a6e63" text-anchor="middle" transform="rotate(-90,30,110)">Marginal Utility</text>
+  <text x="275" y="270" font-size="12" fill="#5a6e63" text-anchor="middle">Units of cake consumed</text>
+  <line x1="70" y1="190" x2="70" y2="200" stroke="#5a6e63" stroke-width="1.5"/><text x="70" y="212" font-size="10" fill="#5a6e63" text-anchor="middle">1</text>
+<line x1="137" y1="190" x2="137" y2="200" stroke="#5a6e63" stroke-width="1.5"/><text x="137" y="212" font-size="10" fill="#5a6e63" text-anchor="middle">2</text>
+<line x1="203" y1="190" x2="203" y2="200" stroke="#5a6e63" stroke-width="1.5"/><text x="203" y="212" font-size="10" fill="#5a6e63" text-anchor="middle">3</text>
+<line x1="270" y1="190" x2="270" y2="200" stroke="#5a6e63" stroke-width="1.5"/><text x="270" y="212" font-size="10" fill="#5a6e63" text-anchor="middle">4</text>
+<line x1="337" y1="190" x2="337" y2="200" stroke="#5a6e63" stroke-width="1.5"/><text x="337" y="212" font-size="10" fill="#5a6e63" text-anchor="middle">5</text>
+<line x1="403" y1="190" x2="403" y2="200" stroke="#5a6e63" stroke-width="1.5"/><text x="403" y="212" font-size="10" fill="#5a6e63" text-anchor="middle">6</text>
+<line x1="470" y1="190" x2="470" y2="200" stroke="#5a6e63" stroke-width="1.5"/><text x="470" y="212" font-size="10" fill="#5a6e63" text-anchor="middle">7</text>
+  <text x="60" y="199" font-size="10" fill="#5a6e63" text-anchor="end">0</text>
+  <polyline points="70,87 137,108 203,130 270,152 337,173 403,195 470,217" stroke="#e05a2b" stroke-width="3" fill="none" stroke-linejoin="round"/>
+  <circle cx="70" cy="87" r="4" fill="#e05a2b"/>
+<circle cx="137" cy="108" r="4" fill="#e05a2b"/>
+<circle cx="203" cy="130" r="4" fill="#e05a2b"/>
+<circle cx="270" cy="152" r="4" fill="#e05a2b"/>
+<circle cx="337" cy="173" r="4" fill="#e05a2b"/>
+<circle cx="403" cy="195" r="4" fill="#e05a2b"/>
+<circle cx="470" cy="217" r="4" fill="#e05a2b"/>
+  <text x="478" y="221" font-size="13" fill="#e05a2b" font-weight="700">MU</text>
+  <text x="398" y="185" font-size="10" fill="#1a4731">MU = 0 at 6th unit (saturation)</text>
+  <text x="455" y="239" font-size="10" fill="#c0392b">MU negative — disutility</text>
+</svg><div class="dcap">Marginal Utility declines continuously with each additional unit — from 10 utils (1st cake) down to 0 utils (6th cake, satiation point) and turns negative for the 7th cake (overeating causes discomfort, i.e., disutility).</div></div>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Relationship between TU and MU</h3>
+              <ul>
+                <li>When <strong>MU is positive</strong>, TU is <strong>increasing</strong>.</li>
+                <li>When <strong>MU = 0</strong>, TU is at its <strong>maximum</strong> (point of saturation).</li>
+                <li>When <strong>MU is negative</strong>, TU is <strong>decreasing</strong> (the consumer would be better off not consuming that unit).</li>
+              </ul>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Assumptions of LDMU</h3>
+              <ul>
+                <li><strong>Cardinal measurability</strong> — Utility can be measured in exact numbers (utils).</li>
+                <li><strong>Constant marginal utility of money</strong> — One rupee yields the same utility throughout.</li>
+                <li><strong>Homogeneous units</strong> — All units consumed are identical in quality.</li>
+                <li><strong>Continuous consumption</strong> — No time gap between consuming successive units.</li>
+                <li><strong>Rationality</strong> — The consumer behaves rationally to maximise satisfaction.</li>
+              </ul>
+
+              <div class="example"><div class="lbl">Real-life example</div>
+                <p>You're very thirsty after a long walk. The first glass of water gives enormous satisfaction (high MU). The second glass is still nice but a bit less exciting. By the fourth or fifth glass, you don't really want more — MU has fallen close to zero. If forced to drink a sixth glass, you'd feel uncomfortable (negative MU) — this is the law of diminishing marginal utility playing out in real time.</p>
+              </div>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Importance of LDMU</h3>
+              <ul>
+                <li><strong>Explains the law of demand</strong> — since each additional unit gives less utility, consumers are willing to pay less for it, so demand curves slope downward.</li>
+                <li><strong>Basis of progressive taxation</strong> — the marginal utility of money is assumed to fall as income rises, justifying higher tax rates on higher incomes (equal sacrifice principle).</li>
+                <li><strong>Consumer equilibrium</strong> — guides how a rational consumer allocates a fixed budget across goods (Law of Equi-Marginal Utility).</li>
+              </ul>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Law of Equi-Marginal Utility</h3>
+              <p>A consumer with a fixed budget maximises total utility by allocating spending such that the <strong>marginal utility per rupee spent is equal across all goods</strong>:</p>
+              <div style="text-align:center;background:var(--green-soft);border-radius:10px;padding:12px;margin:10px 0">
+                <span style="font-size:14px;font-weight:700;font-family:IBM Plex Mono,monospace;color:var(--green-deep)">MUx/Px = MUy/Py = ... = MUm (marginal utility of money)</span>
+              </div>
+              <div class="casebox"><div class="lbl">Case in point</div>
+                <p>Rohan has ₹100 to spend on samosas (₹10 each) and tea (₹10 each). If MU of the 3rd samosa is 40 utils and MU of the 2nd tea is 20 utils, then MU per rupee on samosa (40/10=4) exceeds that on tea (20/10=2). Rohan should buy more samosas and less tea until both ratios are equal — this is exactly how he reaches the highest possible total satisfaction from his fixed budget.</p>
+              </div>
+            `},
             {topicStart:"eco-u2-indifference", title:"Indifference Curve Analysis and Consumer Equilibrium", icon:"",
              desc:"The ordinal approach to consumer behaviour — indifference curves, their properties, the budget line, and how a rational consumer maximises utility."},
-            {h:"Indifference Curve Analysis", kicker:"Unit 2 · Topic 5", html:`<div style="background:#f8f0db;border-left:4px solid #b6862c;padding:16px;border-radius:8px"><p style="margin:0;color:#8a6420;font-weight:600">Full content page coming soon</p><p style="margin:8px 0 0;color:#3c4742">This page will cover: Indifference Curves and the Indifference Map (with graph — axes, what each IC represents, why they're convex); Budget Constraint / Budget Line (income and relative prices); Consumer Equilibrium (tangency of IC and budget line); Shifts in budget line; and Income and Substitution Effects.</p></div>`}
+            {h:"Indifference Curve Analysis and Consumer Equilibrium", kicker:"Unit 2", html:`
+              <p>The <strong>Indifference Curve approach</strong> (ordinal utility analysis) was developed by Hicks and Allen as a more realistic alternative to cardinal utility. It assumes consumers can only <strong>rank</strong> their preferences (this bundle is better than that one) without needing to measure satisfaction in precise numbers.</p>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Indifference Curve (IC)</h3>
+              <p>An <strong>Indifference Curve</strong> shows all combinations of two goods that give the consumer the <strong>same level of satisfaction</strong> — the consumer is "indifferent" between any two points on the same curve.</p>
+              <table class="cmp"><thead><tr><th>Combination</th><th>Good X</th><th>Good Y</th></tr></thead><tbody>
+                <tr><td>A</td><td>2</td><td>6</td></tr>
+                <tr><td>B</td><td>4</td><td>3</td></tr>
+                <tr><td>C</td><td>6</td><td>2</td></tr>
+              </tbody></table>
+              <div class="diagram"><svg viewBox="0 0 520 330" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="330" fill="#f9f6f0" rx="8"/>
+  <line x1="60" y1="20" x2="60" y2="290" stroke="#5a6e63" stroke-width="2"/>
+  <line x1="60" y1="290" x2="490" y2="290" stroke="#5a6e63" stroke-width="2"/>
+  <text x="22" y="155" font-size="12" fill="#5a6e63" text-anchor="middle" transform="rotate(-90,22,155)">Good Y (units)</text>
+  <text x="275" y="312" font-size="12" fill="#5a6e63" text-anchor="middle">Good X (units)</text>
+  <polyline points="156,98 175,130 204,162 252,194 290,210 348,226" stroke="#5a6e63" stroke-width="2.5" fill="none"/>
+  <text x="356" y="230" font-size="13" fill="#5a6e63" font-weight="700">IC₁</text>
+  <polyline points="156,-30 180,34 220,98 252,130 300,162 380,194 444,210" stroke="#1a4731" stroke-width="2.5" fill="none"/>
+  <text x="452" y="214" font-size="13" fill="#1a4731" font-weight="700">IC₂</text>
+  <polyline points="204,-30 240,34 300,98 348,130 420,162 540,194" stroke="#b6862c" stroke-width="2.5" fill="none"/>
+  <text x="528" y="188" font-size="13" fill="#b6862c" font-weight="700">IC₃</text>
+  <text x="120" y="40" font-size="11" fill="#1a4731" text-anchor="middle">Higher IC (further from origin)</text>
+  <text x="120" y="54" font-size="11" fill="#1a4731" text-anchor="middle">= higher satisfaction</text>
+  <!-- Sample points on IC1 -->
+  <circle cx="156" cy="98" r="4" fill="#5a6e63"/><text x="146" y="88" font-size="11" fill="#5a6e63">A</text>
+  <circle cx="252" cy="194" r="4" fill="#5a6e63"/><text x="258" y="208" font-size="11" fill="#5a6e63">B</text>
+  <circle cx="348" cy="226" r="4" fill="#5a6e63"/><text x="354" y="240" font-size="11" fill="#5a6e63">C</text>
+</svg><div class="dcap">Points A, B, and C all lie on IC₁ — the consumer is equally satisfied with any of these bundles. IC₂ and IC₃ represent progressively higher levels of satisfaction (further from the origin = more of both goods = higher utility).</div></div>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Properties of Indifference Curves</h3>
+              <ul>
+                <li><strong>Downward sloping (negative slope)</strong> — To keep satisfaction constant, more of Good X must be compensated by less of Good Y.</li>
+                <li><strong>Convex to the origin</strong> — Reflects the principle of diminishing Marginal Rate of Substitution (MRS).</li>
+                <li><strong>Higher IC = higher satisfaction</strong> — Curves further from the origin represent higher utility levels.</li>
+                <li><strong>Do not intersect</strong> — Two ICs crossing would imply contradictory rankings of the same bundle.</li>
+                <li><strong>Never touch the axes</strong> — Assumes the consumer always wants some of both goods.</li>
+              </ul>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Marginal Rate of Substitution (MRS)</h3>
+              <p><strong>MRS</strong> is the rate at which a consumer is willing to give up Good Y to gain one more unit of Good X, while staying on the same indifference curve.</p>
+              <div style="text-align:center;background:var(--green-soft);border-radius:10px;padding:12px;margin:10px 0">
+                <span style="font-size:14px;font-weight:700;font-family:IBM Plex Mono,monospace;color:var(--green-deep)">MRSxy = −ΔY/ΔX (slope of the IC)</span>
+              </div>
+              <p>MRS <strong>diminishes</strong> as we move along the IC — having more X and less Y makes the consumer increasingly reluctant to give up further units of Y (each remaining unit of Y becomes more precious). This is why ICs are convex to the origin.</p>
+              <div class="example"><div class="lbl">Worked example from the table above</div>
+                <p>Moving A→B: ΔX=+2, ΔY=−3 → MRS=3/2=1.5 (give up 1.5 units of Y per extra X)</p>
+                <p>Moving B→C: ΔX=+2, ΔY=−1 → MRS=1/2=0.5 (now willing to give up only 0.5 units of Y)</p>
+                <p>MRS falls from 1.5 to 0.5 — diminishing MRS confirmed.</p>
+              </div>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">The Budget Line (Price Line)</h3>
+              <p>The <strong>Budget Line</strong> shows all combinations of two goods that a consumer can purchase by spending their <em>entire</em> income, given the prices of the goods.</p>
+              <div style="text-align:center;background:var(--green-soft);border-radius:10px;padding:12px;margin:10px 0">
+                <span style="font-size:14px;font-weight:700;font-family:IBM Plex Mono,monospace;color:var(--green-deep)">Px · X + Py · Y = M  (M = Income)</span>
+              </div>
+              <div class="diagram"><svg viewBox="0 0 520 330" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="330" fill="#f9f6f0" rx="8"/>
+  <line x1="60" y1="20" x2="60" y2="290" stroke="#5a6e63" stroke-width="2"/>
+  <line x1="60" y1="290" x2="490" y2="290" stroke="#5a6e63" stroke-width="2"/>
+  <text x="22" y="155" font-size="12" fill="#5a6e63" text-anchor="middle" transform="rotate(-90,22,155)">Good Y (units)</text>
+  <text x="275" y="312" font-size="12" fill="#5a6e63" text-anchor="middle">Good X (units)</text>
+  <!-- Budget line: X-int=8, Y-int=4 -->
+  <line x1="60" y1="162" x2="444" y2="290" stroke="#e05a2b" stroke-width="3"/>
+  <text x="68" y="154" font-size="12" fill="#e05a2b" font-weight="700">M/Py = 4</text>
+  <text x="414" y="310" font-size="12" fill="#e05a2b" font-weight="700">M/Px = 8</text>
+  <text x="280" y="50" font-size="11" fill="#e05a2b" text-anchor="middle">Budget Line: Px·X + Py·Y = M</text>
+  <text x="280" y="64" font-size="11" fill="#e05a2b" text-anchor="middle">Slope = −Px/Py</text>
+  <!-- Shaded affordable area -->
+  <polygon points="60,290 60,162 444,290" fill="#1a4731" opacity="0.06"/>
+  <text x="160" y="220" font-size="10" fill="#1a4731">Affordable bundles</text>
+</svg><div class="dcap">With income M=₹80, Px=₹10, Py=₹20: if all income spent on X, the consumer can buy 8 units (M/Px); if all spent on Y, 4 units (M/Py). The shaded triangle shows all affordable bundles; the line itself shows bundles that use the entire budget. The slope of the budget line = −Px/Py = −10/20 = −0.5.</div></div>
+              <p><strong>Shifts in the Budget Line:</strong> A rise in income shifts the line outward (parallel); a fall in income shifts it inward. A change in the price of X or Y rotates the line (changes its slope) around the unchanged intercept.</p>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Consumer Equilibrium</h3>
+              <p>A rational consumer maximises satisfaction by choosing the bundle where the <strong>budget line is tangent to the highest attainable indifference curve</strong>. At this point of tangency:</p>
+              <div style="text-align:center;background:var(--green-soft);border-radius:10px;padding:12px;margin:10px 0">
+                <span style="font-size:14px;font-weight:700;font-family:IBM Plex Mono,monospace;color:var(--green-deep)">MRSxy = Px/Py  (slope of IC = slope of Budget Line)</span>
+              </div>
+              <div class="diagram"><svg viewBox="0 0 520 330" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="330" fill="#f9f6f0" rx="8"/>
+  <line x1="60" y1="20" x2="60" y2="290" stroke="#5a6e63" stroke-width="2"/>
+  <line x1="60" y1="290" x2="490" y2="290" stroke="#5a6e63" stroke-width="2"/>
+  <text x="22" y="155" font-size="12" fill="#5a6e63" text-anchor="middle" transform="rotate(-90,22,155)">Good Y (units)</text>
+  <text x="275" y="312" font-size="12" fill="#5a6e63" text-anchor="middle">Good X (units)</text>
+  <!-- Multiple IC curves -->
+  <polyline points="156,98 175,130 204,162 252,194 290,210 348,226" stroke="#9eaaa5" stroke-width="2" fill="none"/>
+  <text x="354" y="230" font-size="11" fill="#9eaaa5" font-weight="700">IC₁</text>
+  <polyline points="156,-30 180,34 220,98 252,130 300,162 380,194 444,210" stroke="#1a4731" stroke-width="3" fill="none"/>
+  <text x="450" y="214" font-size="13" fill="#1a4731" font-weight="700">IC₂</text>
+  <polyline points="204,-30 240,34 300,98 348,130 420,162 540,194" stroke="#9eaaa5" stroke-width="2" fill="none"/>
+  <text x="528" y="188" font-size="11" fill="#9eaaa5" font-weight="700">IC₃</text>
+  <!-- Budget line tangent to IC2 at (4,5) approx -->
+  <line x1="60" y1="162" x2="444" y2="290" stroke="#e05a2b" stroke-width="3"/>
+  <text x="68" y="154" font-size="11" fill="#e05a2b" font-weight="700">Budget Line</text>
+  <!-- Tangency point E on IC2, approx (4,5) -->
+  <circle cx="252" cy="130" r="6" fill="#e05a2b"/>
+  <text x="262" y="122" font-size="13" fill="#e05a2b" font-weight="700">E (Equilibrium)</text>
+    <line x1="60" y1="130" x2="252" y2="130" stroke="#9eaaa5" stroke-width="1.5" stroke-dasharray="5,4"/>
+    <line x1="252" y1="290" x2="252" y2="130" stroke="#9eaaa5" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="120" y="50" font-size="10" fill="#1a4731">IC₃ unreachable (beyond budget)</text>
+  <text x="350" y="250" font-size="10" fill="#9eaaa5">IC₁ — affordable but lower satisfaction</text>
+</svg><div class="dcap">The consumer's budget line is tangent to IC₂ at point E. IC₃ would give higher satisfaction but lies beyond the budget (unaffordable). IC₁ is affordable but gives lower satisfaction than E. So E is the unique equilibrium — the highest satisfaction the consumer can reach given their income.</div></div>
+
+              <h3 style="color:var(--green-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid var(--line)">Conditions for Consumer Equilibrium</h3>
+              <ol>
+                <li><strong>First-order condition:</strong> MRSxy = Px/Py (tangency — slopes are equal).</li>
+                <li><strong>Second-order condition:</strong> The indifference curve must be convex to the origin at the point of tangency (i.e., MRS is diminishing), ensuring it is a maximum, not a minimum, of satisfaction.</li>
+              </ol>
+
+              <div class="casebox"><div class="lbl">Case in point — Choosing a Thali</div>
+                <p>Suppose a student has ₹100/day to spend on tea (₹10/cup) and samosas (₹20/piece). The indifference curve approach explains how she picks her daily combination: she keeps comparing the rate at which she's willing to trade tea for samosas (MRS) against the actual market trade-off (Px/Py = 10/20 = 0.5). If she's willing to give up more tea for a samosa than the market requires, she buys more samosas — and vice versa — until MRS = Px/Py, at her personal equilibrium point.</p>
+              </div>
+            `}
           ],
           sets:[
             {label:"Set 1 — Foundation", mix:"15/9/6", questions:[]},
