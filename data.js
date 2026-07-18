@@ -36,7 +36,7 @@ const DATA = {
       {
         id:"acc-u1",
         title:"Introduction & Theory Base of Accounting",
-        marks:12,
+        marks:12, cls:11, sem:1,
         topics:[{
 
           /* ============================== LEARN ============================== */
@@ -1275,7 +1275,7 @@ const DATA = {
         }]
       },
       {
-        id:"acc-u2", title:"Fundamental Accounting Process – I", marks:16,
+        id:"acc-u2", title:"Fundamental Accounting Process – I", marks:16, cls:11, sem:1,
         syllabus:[
           "Vouchers and Transactions",
           "Fundamental Accounting Equation",
@@ -1287,7 +1287,7 @@ const DATA = {
         topics:[]
       },
       {
-        id:"acc-u3", title:"Reserves & Provisions", marks:6,
+        id:"acc-u3", title:"Reserves & Provisions", marks:6, cls:11, sem:1,
         syllabus:[
           "Provisions and Reserves — meaning and need",
           "Difference between Provisions and Reserves",
@@ -1296,11 +1296,118 @@ const DATA = {
         topics:[]
       },
       {
-        id:"acc-u4", title:"Bills of Exchange", marks:6,
+        id:"acc-u4", title:"Bills of Exchange", marks:6, cls:11, sem:1,
         syllabus:[
           "Bills of Exchange and Promissory Note — meaning and features",
           "Important Terms (due date, days of grace, discounting, endorsement, dishonour)",
           "Accounting Treatment of Bills of Exchange up to Dishonour of Bill"
+        ],
+        topics:[]
+      },
+      {
+        id:"acc-u5", title:"Fundamental Accounting Process – II", marks:20, cls:11, sem:2,
+        syllabus:[
+          "Ledger — format, posting from Journal and Subsidiary Books, balancing",
+          "Cash Book — Simple, Cash & Bank Column, Petty Cash Book",
+          "Trial Balance — objectives and preparation from balances",
+          "Bank Reconciliation Statement (excluding amended cash book)",
+          "Rectification of Errors after Trial Balance — Suspense Account",
+          "Depreciation — meaning, need, factors",
+          "Methods of Depreciation — Straight Line Method and Written Down Value Method"
+        ],
+        topics:[]
+      },
+      {
+        id:"acc-u6", title:"Final Accounts of Sole Proprietor", marks:10, cls:11, sem:2,
+        syllabus:[
+          "Meaning, objectives and importance of Final Accounts",
+          "Preparation of Manufacturing Account",
+          "Trading and Profit & Loss Account — Gross, Operating and Net Profit",
+          "Balance Sheet — grouping and marshalling of assets and liabilities",
+          "Adjustments — closing stock, outstanding/prepaid expenses, accrued income, depreciation, bad debts, provisions, manager's commission"
+        ],
+        topics:[]
+      },
+      {
+        id:"acc-u7", title:"Accounts of Non-Profit Seeking Organizations", marks:5, cls:11, sem:2,
+        syllabus:[
+          "Concept of Non-Profit Seeking Organizations",
+          "Receipts and Payments Account — meaning and features",
+          "Income and Expenditure Account — preparation from Receipts & Payments Account"
+        ],
+        topics:[]
+      },
+      {
+        id:"acc-u8", title:"Accounts from Incomplete Records", marks:5, cls:11, sem:2,
+        syllabus:[
+          "Features, reasons and limitations of Incomplete Records",
+          "Statement of Affairs Method",
+          "Preparation of Statement of Profit/Loss from incomplete records"
+        ],
+        topics:[]
+      },
+      {
+        id:"acc-u9", title:"Accounting for Partnership Firms – I", marks:15, cls:12, sem:3,
+        syllabus:[
+          "Partnership — features and Partnership Deed; Indian Partnership Act 1932 provisions in absence of deed",
+          "Fixed vs Fluctuating Capital Accounts",
+          "Profit & Loss Appropriation Account — division of profit, guarantee of profits",
+          "Past Adjustments — interest on capital/drawings, salary, profit-sharing ratio",
+          "Goodwill — meaning, factors, valuation methods (average profit, super profit, capitalization)"
+        ],
+        topics:[]
+      },
+      {
+        id:"acc-u10", title:"Accounting for Company – I", marks:10, cls:12, sem:3,
+        syllabus:[
+          "Features and types of companies",
+          "Share and Share Capital — nature and types",
+          "Debentures — meaning, types, issue at par/premium/discount",
+          "Issue of Debentures for consideration other than cash; redemption terms",
+          "Writing off Discount/Loss on issue of Debentures (AS 16)"
+        ],
+        topics:[]
+      },
+      {
+        id:"acc-u11", title:"Analysis of Financial Statements", marks:15, cls:12, sem:3,
+        syllabus:[
+          "Financial Statement Analysis — meaning, significance, objectives, limitations",
+          "Accounting Ratios — meaning, objectives, classification",
+          "Liquidity Ratios — Current Ratio, Quick Ratio",
+          "Solvency Ratios — Debt-Equity, Total Assets to Debt, Proprietary, Interest Coverage",
+          "Activity Ratios — Inventory, Trade Receivables/Payables, Fixed & Net Asset, Working Capital Turnover",
+          "Profitability Ratios — Gross Profit, Operating, Net Profit Ratio, Return on Investment",
+          "Comparative Statements and Common Size Statements"
+        ],
+        topics:[]
+      },
+      {
+        id:"acc-u12", title:"Accounting for Partnership Firms – II", marks:25, cls:12, sem:4,
+        syllabus:[
+          "Change in Profit-Sharing Ratio — Sacrificing and Gaining Ratio, Revaluation of Assets/Liabilities",
+          "Admission of a Partner — Goodwill, Revaluation, Capital Account adjustment",
+          "Retirement and Death of a Partner — Goodwill, Revaluation, Loan/Executor's Account",
+          "Dissolution of Partnership Firm — Realization Account and settlement of accounts"
+        ],
+        topics:[]
+      },
+      {
+        id:"acc-u13", title:"Accounting for Company – II", marks:10, cls:12, sem:4,
+        syllabus:[
+          "Accounting for Share Capital — issue and allotment, pro-rata allotment",
+          "Public Subscription of Shares — over/under-subscription, calls in advance/arrears",
+          "Forfeiture and Reissue of Shares",
+          "Disclosure of Share Capital in Balance Sheet (Schedule III, Companies Act 2013)"
+        ],
+        topics:[]
+      },
+      {
+        id:"acc-u14", title:"Cash Flow Statement", marks:5, cls:12, sem:4,
+        syllabus:[
+          "Indirect Method under AS-3 (Revised), without adjustments",
+          "Cash and Cash Equivalents",
+          "Classification of Activities — Operating, Investing, Financing",
+          "Preparation of Cash Flow Statement"
         ],
         topics:[]
       }
@@ -1315,7 +1422,7 @@ const DATA = {
     units:[
 
       /* ── UNIT 1 ──────────────────────────────────────────────── */
-      {id:"ct-u1", title:"Introduction to Cost Accounting", marks:5,
+      {id:"ct-u1", title:"Introduction to Cost Accounting", marks:5, cls:11, sem:1,
         syllabus:["Meaning, objectives and importance of Cost Accounting","Difference between Financial Accounting and Cost Accounting","Cost concepts — cost unit, cost centre"],
         topics:[{
           learn:[
@@ -1813,18 +1920,68 @@ const DATA = {
       },
 
       /* ── UNIT 2 ──────────────────────────────────────────────── */
-      {id:"ct-u2", title:"Classification of Cost & Cost Sheet", marks:15,
+      {id:"ct-u2", title:"Classification of Cost & Cost Sheet", marks:15, cls:11, sem:1,
         syllabus:["Element-Based Classification: Raw Materials, Labour, Other Expenses, Overhead, Prime Cost","Function-Based Classification: Factory Cost, Administration Cost, Selling Cost, Distribution Cost, R&D Cost","Behaviour-Based Classification: Fixed Cost, Variable Cost, Semi-variable Cost; distinctions between Fixed and Variable","Preparation of Cost Sheet: definition, basic components, practical problems (excluding cost estimation)"],
         topics:[]},
 
       /* ── UNIT 3 ──────────────────────────────────────────────── */
-      {id:"ct-u3", title:"Introduction to Taxation", marks:10,
+      {id:"ct-u3", title:"Introduction to Taxation", marks:10, cls:11, sem:1,
         syllabus:["Brief history of Income Tax in India; Direct Tax vs Indirect Tax","Basic concepts: Previous Year, Assessment Year, Assessee, Person, Sources of Income","Heads of Income; Gross Total Income; Total Income","Incomes not forming part of Total Income — Section 10 exemptions: HUF member receipts, partnership profit share, LIC proceeds, MP/MLA allowances, awards, local authority income, dividend, units, long-term capital gains on equity"],
         topics:[]},
 
       /* ── UNIT 4 ──────────────────────────────────────────────── */
-      {id:"ct-u4", title:"Residential Status and Incidence of Tax", marks:10,
+      {id:"ct-u4", title:"Residential Status and Incidence of Tax", marks:10, cls:11, sem:1,
         syllabus:["Determination of Residential Status — Resident (Ordinarily Resident), Resident but Not Ordinarily Resident, Non-Resident","Conditions under Sections 6(1) and 6(6) for Individual Assessee","Scope of Total Income based on Residential Status","Incidence of Tax: what income is taxable for each residential status"],
+        topics:[]},
+
+      /* ── UNIT 5 · CLASS XI SEM II ────────────────────────────── */
+      {id:"ct-u5", title:"Cost of Materials", marks:20, cls:11, sem:2,
+        syllabus:["Storing of Materials — Bin Card, Stores Ledger, Centralized vs Decentralized Stores","Materials Control — Re-order, Maximum, Minimum, Average and Danger Stock Levels","Economic Order Quantity (EOQ) — definition, advantages, formula-based problems","Methods of Pricing Materials — FIFO, LIFO, Simple Average, Weighted Average; Stores Ledger Accounts"],
+        topics:[]},
+
+      /* ── UNIT 6 · CLASS XI SEM II ────────────────────────────── */
+      {id:"ct-u6", title:"Agricultural Income", marks:5, cls:11, sem:2,
+        syllabus:["Definition of Agricultural Income","Taxability of income from sale of tea and coffee grown & manufactured in India","Common instances of agricultural vs non-agricultural income"],
+        topics:[]},
+
+      /* ── UNIT 7 · CLASS XI SEM II ────────────────────────────── */
+      {id:"ct-u7", title:"Income under the head \"Salaries\"", marks:15, cls:11, sem:2,
+        syllabus:["Basis of charge [S.15]; essential norms of salary income","Allowances — Basic Salary, DA, CCA, HRA [S.10(13A)], Medical, Bonus, Children Education, Transport Allowance","Perquisites [S.17(2)] — valuation of rent-free accommodation (furnished/unfurnished)","Perquisites — education facilities; common tax-free perquisites","Deduction for professional tax [S.16(iii)]"],
+        topics:[]},
+
+      /* ── UNIT 8 · CLASS XII SEM III ──────────────────────────── */
+      {id:"ct-u8", title:"Concept of Labour", marks:20, cls:12, sem:3,
+        syllabus:["Cost of Labour — Time Keeping (manual & mechanical), Time Booking, Idle Time and its causes","Methods of Remuneration – I: Time Rate Wage","Straight Piece Wages — simple problems, limitations","Differential Piece Wage Rate — Taylor's Method","Differential Piece Wage Rate — Merrick's Method"],
+        topics:[]},
+
+      /* ── UNIT 9 · CLASS XII SEM III ──────────────────────────── */
+      {id:"ct-u9", title:"Income from \"Capital Gains\"", marks:10, cls:12, sem:3,
+        syllabus:["Basis of charge [S.45(1)]","Meaning of Capital Asset [S.2(14)]; assets not treated as Capital Asset","Short-Term vs Long-Term Capital Asset [S.2(42A)/S.2(29A)]","Transfer of Capital Asset [S.2(47)]; simple problems on Capital Gains"],
+        topics:[]},
+
+      /* ── UNIT 10 · CLASS XII SEM III ─────────────────────────── */
+      {id:"ct-u10", title:"Income from Other Sources", marks:10, cls:12, sem:3,
+        syllabus:["Basis of charge [S.56]","Common examples of income taxable under this head","Tax treatment of winnings — lotteries, horse race, card games, crossword puzzles [S.56(2)(ib)]","Interest on Securities [S.56(2)(id)]"],
+        topics:[]},
+
+      /* ── UNIT 11 · CLASS XII SEM IV ──────────────────────────── */
+      {id:"ct-u11", title:"Methods of Remuneration – II", marks:10, cls:12, sem:4,
+        syllabus:["Halsey Premium Bonus Scheme — concept and simple problems","Rowan Premium Bonus Scheme — concept and simple problems"],
+        topics:[]},
+
+      /* ── UNIT 12 · CLASS XII SEM IV ──────────────────────────── */
+      {id:"ct-u12", title:"Basic Concept of Overhead", marks:10, cls:12, sem:4,
+        syllabus:["Definition, importance and classification of Overhead (element/function/behaviour-based)","Distinction between Overhead and Prime Cost","Allocation vs Apportionment; bases of primary distribution","Simple problems on Primary Distribution of Overhead"],
+        topics:[]},
+
+      /* ── UNIT 13 · CLASS XII SEM IV ──────────────────────────── */
+      {id:"ct-u13", title:"Income from \"House Property\"", marks:15, cls:12, sem:4,
+        syllabus:["Chargeability — essential conditions [S.22]; exempt property income [S.23(1)]","Computation of income from let-out property — vacancy adjustment, standard deduction [S.24(a)], interest on borrowed capital [S.24(b)]","Computation of income from one self-occupied house"],
+        topics:[]},
+
+      /* ── UNIT 14 · CLASS XII SEM IV ──────────────────────────── */
+      {id:"ct-u14", title:"Goods and Service Tax (GST)", marks:5, cls:12, sem:4,
+        syllabus:["Concept and historical background of GST; pre-GST vs post-GST Indirect Tax structure","Objectives, structure, types and salient features of GST","Benefits of GST for business, government and consumers","GST rules on goods and services; GSTIN and GSTN"],
         topics:[]}
     ]
   },
@@ -1837,7 +1994,7 @@ const DATA = {
     units:[
 
       /* ─── UNIT 1: Microeconomics — Introduction ──────────────────── */
-      {id:"eco-u1", title:"Introduction to Microeconomics", marks:4,
+      {id:"eco-u1", title:"Introduction to Microeconomics", marks:4, cls:11, sem:1,
         syllabus:["The economic problem — scarcity, choice and opportunity cost","Economic systems — free market, command, mixed; invisible hand","Economic growth, development and sustainable development","Indicators of development — income, poverty, employment, inequality, capital"],
         topics:[{
           learn:[
@@ -2367,7 +2524,7 @@ const DATA = {
       },
 
       /* ─── UNIT 2: Consumer Behaviour ─────────────────────────── */
-      {id:"eco-u2", title:"Demand, Supply and Consumer Behaviour", marks:8,
+      {id:"eco-u2", title:"Demand, Supply and Consumer Behaviour", marks:8, cls:11, sem:1,
         syllabus:["Demand and Supply; Equilibrium Price; Invisible Hand; Laissez-faire","Price Elasticity of Demand; Income Elasticity; Cross-Price Elasticity","Elasticity of Supply; Comparative Statics","Cardinal Utility and Law of Diminishing Marginal Utility","Indifference Curve Analysis; Budget Constraint; Consumer Equilibrium","Price Ceiling and Price Floor"],
         topics:[{
           learn:[
@@ -3158,7 +3315,7 @@ const DATA = {
       },
 
       /* ─── UNIT 3: Producer Behaviour ─────────────────────────── */
-      {id:"eco-u3", title:"Producer Behaviour — Production, Cost and Revenue", marks:8,
+      {id:"eco-u3", title:"Producer Behaviour — Production, Cost and Revenue", marks:8, cls:11, sem:1,
         syllabus:["Short-run and Long-run Production Function; Law of Variable Proportions","Returns to Scale; Economies and Diseconomies of Scale","Concepts of Cost: STC, TVC, TFC, SAC, SMC, LTC, LAC, LMC, Implicit Cost, Opportunity Cost","Concepts of Revenue and Profit: TR, AR, MR, and the AR-MR relationship"],
         topics:[{
           learn:[
@@ -3191,7 +3348,7 @@ const DATA = {
       },
 
       /* ─── UNIT 4: Introduction to Statistics & Data ───────────── */
-      {id:"eco-u4", title:"Introduction to Statistics and Data", marks:4,
+      {id:"eco-u4", title:"Introduction to Statistics and Data", marks:4, cls:11, sem:1,
         syllabus:["Meaning, scope and importance of Statistics in Economics","Types of Data: Primary vs Secondary; Time Series vs Cross-Section; Qualitative vs Quantitative","Features of a Good Questionnaire","Data Sources for the Indian Economy"],
         topics:[{
           learn:[
@@ -3213,7 +3370,7 @@ const DATA = {
       },
 
       /* ─── UNIT 5: Representation of Data ─────────────────────── */
-      {id:"eco-u5", title:"Organisation and Representation of Data", marks:8,
+      {id:"eco-u5", title:"Organisation and Representation of Data", marks:8, cls:11, sem:1,
         syllabus:["Classification of Data: Continuous and Discrete Variables; frequency distributions","Textual and Tabular Presentation of Data","Graphical Representation: Bar Chart, Histogram, Frequency Polygon","Pie Chart, Ogive (Cumulative Frequency Curve), Arithmetic Line Graph"],
         topics:[{
           learn:[
@@ -3246,7 +3403,7 @@ const DATA = {
       },
 
       /* ─── UNIT 6: Measures of Central Tendency ───────────────── */
-      {id:"eco-u6", title:"Measures of Central Tendency", marks:8,
+      {id:"eco-u6", title:"Measures of Central Tendency", marks:8, cls:11, sem:1,
         syllabus:["Arithmetic Mean — direct, short-cut and step-deviation methods for individual, discrete and continuous series","Geometric Mean — calculation and uses","Median — individual, discrete and continuous series; Partition Values — Quartiles, Deciles, Percentiles (definition only)","Mode — individual, discrete and continuous series; Relationship between Mean, Median and Mode"],
         topics:[{
           learn:[
@@ -3276,7 +3433,87 @@ const DATA = {
             {label:"Set 10",mix:"9/9/12", questions:[]}
           ]
         }]
-      }
+      },
+
+      /* ── UNIT 7 · CLASS XI SEM II ────────────────────────────── */
+      {id:"eco-u7", title:"Introduction to Concepts of Market Structure", marks:10, cls:11, sem:2,
+        syllabus:["Forms of Markets — Perfect Competition, Monopoly, Natural Monopoly, Monopolistic Competition, Oligopoly (definition & features)","TR, AR, MR under Fixed and Variable Price; Equilibrium under Perfect Competition & Monopoly","Financing through Debt & Equity — basics of Stocks and Bonds","Externality — Social Cost vs Private Cost, Market Failure, Environmental Problems","Public Goods vs Private Goods"],
+        topics:[]},
+
+      /* ── UNIT 8 · CLASS XI SEM II ────────────────────────────── */
+      {id:"eco-u8", title:"Basics of International Trade", marks:10, cls:11, sem:2,
+        syllabus:["Internal Trade vs International Trade","Absolute Advantage vs Comparative Advantage; Gains from Trade","Tariff and Quota (definitions only)","Trade Liberalization, Bilateral and Regional Trade Agreements"],
+        topics:[]},
+
+      /* ── UNIT 9 · CLASS XI SEM II ────────────────────────────── */
+      {id:"eco-u9", title:"Measures of Dispersion", marks:8, cls:11, sem:2,
+        syllabus:["Absolute Measures — Range, Standard Deviation, Variance, Quartile Deviation","Relative Measure — Coefficient of Variation"],
+        topics:[]},
+
+      /* ── UNIT 10 · CLASS XI SEM II ───────────────────────────── */
+      {id:"eco-u10", title:"Correlation", marks:8, cls:11, sem:2,
+        syllabus:["Concept of Correlation and Scatter Diagram","Spearman's Rank Correlation","Pearson's Correlation Coefficient"],
+        topics:[]},
+
+      /* ── UNIT 11 · CLASS XI SEM II ───────────────────────────── */
+      {id:"eco-u11", title:"Index Numbers", marks:4, cls:11, sem:2,
+        syllabus:["Concept and use of Index Numbers","Consumer Price Index (CPI) and Wholesale Price Index (WPI)"],
+        topics:[]},
+
+      /* ── UNIT 12 · CLASS XII SEM III ─────────────────────────── */
+      {id:"eco-u12", title:"National Income Accounting", marks:8, cls:12, sem:3,
+        syllabus:["Stocks & Flows, Transfer Payments, Closed vs Open Economy; GDP, GNP, NDP, NNP, NI","Factor Cost vs Market Price; Intermediate vs Final Goods; Real vs Nominal Income","Methods of Measuring National Income — Value Added, Income, Expenditure Methods; numerical conversions","Difficulties of measuring National Income"],
+        topics:[]},
+
+      /* ── UNIT 13 · CLASS XII SEM III ─────────────────────────── */
+      {id:"eco-u13", title:"Simple Keynesian System", marks:8, cls:12, sem:3,
+        syllabus:["Keynesian Consumption & Savings Function — MPC, APC, MPS, APS relationships","Cross-Diagonal Model — equilibrium income and impact of Investment/Government Expenditure/Taxation changes","Paradox of Thrift; basic concept of Government Budget and Taxation","Multipliers — Investment, Government Expenditure, Tax, Balanced Budget Multiplier"],
+        topics:[]},
+
+      /* ── UNIT 14 · CLASS XII SEM III ─────────────────────────── */
+      {id:"eco-u14", title:"Balance of Payments & Exchange Rate", marks:4, cls:12, sem:3,
+        syllabus:["BOP Concepts — Current & Capital Account, Autonomous & Accommodating Transactions","BOP vs Balance of Trade; causes and solutions of BOP disequilibrium","Types of Exchange Rates — Fixed, Flexible, Managed Float; advantages & disadvantages"],
+        topics:[]},
+
+      /* ── UNIT 15 · CLASS XII SEM III ─────────────────────────── */
+      {id:"eco-u15", title:"Brief Reference to Colonial Past", marks:4, cls:12, sem:3,
+        syllabus:["Impact of British rule on agriculture — productivity, market absence, feudalism, land sub-division","Land revenue system and forced commercialization of agriculture","Impact of British rule on industry — decay of handicrafts, railways","Foreign trade under British rule; Drainage of Wealth theory (Dadabhai Naoroji)"],
+        topics:[]},
+
+      /* ── UNIT 16 · CLASS XII SEM III ─────────────────────────── */
+      {id:"eco-u16", title:"Evolving Features of Indian Economy", marks:8, cls:12, sem:3,
+        syllabus:["Sectoral composition of National Income — pre- and post-Liberalization","Occupational distribution of National Income and its changes","Types of Unemployment; employment generation programs; Jobless Growth","India & its neighbours — comparison of growth, population, HDI (special reference to China)"],
+        topics:[]},
+
+      /* ── UNIT 17 · CLASS XII SEM III ─────────────────────────── */
+      {id:"eco-u17", title:"Agriculture", marks:8, cls:12, sem:3,
+        syllabus:["Agricultural problems post-Independence — 1st Plan and Green Revolution","Institutional Reforms — Land Reforms, Operation Barga, rural credit","Agricultural reforms post-Liberalization; impact of globalization","Food Security and Public Distribution System"],
+        topics:[]},
+
+      /* ── UNIT 18 · CLASS XII SEM IV ──────────────────────────── */
+      {id:"eco-u18", title:"Money, Banking & Inflation", marks:10, cls:12, sem:4,
+        syllabus:["Concept and Functions of Money; Supply of Money, Credit Creation, Money Multiplier","Inflation — Demand-Pull, Cost-Push, Stagflation","Functions of Central Bank; Credit Control — CRR, SLR, Repo Rate, Bank Rate, Prime Lending Rate"],
+        topics:[]},
+
+      /* ── UNIT 19 · CLASS XII SEM IV ──────────────────────────── */
+      {id:"eco-u19", title:"Financing of Government Budget", marks:10, cls:12, sem:4,
+        syllabus:["Public Finance vs Private Finance","Government Revenue — Tax vs Non-Tax; Progressive/Proportional, Direct/Indirect Taxes; GST","Government Budget & Deficit — Revenue, Fiscal, Primary Deficit; Balanced Budget Multiplier","Public Debt — Internal vs External; Short-Term vs Long-Term"],
+        topics:[]},
+
+      /* ── UNIT 20 · CLASS XII SEM IV ──────────────────────────── */
+      {id:"eco-u20", title:"Industry", marks:4, cls:12, sem:4,
+        syllabus:["2nd Five-Year Plan, Mahalanobis Model and Industrial Growth","Industrial Liberalization 1991 and its impact","Trade Policy — Import Substitution to Export Promotion; India in WTO","Importance of Small Scale and Village Industries"],
+        topics:[]},
+
+      /* ── UNIT 21 · CLASS XII SEM IV ──────────────────────────── */
+      {id:"eco-u21", title:"Service Sector", marks:8, cls:12, sem:4,
+        syllabus:["Growth of the Service Sector in India","Growth in Trade of Services — Financial, IT, Outsourcing","Impact of Liberalization and Globalization on Service Sector growth"],
+        topics:[]},
+
+      /* ── UNIT 22 · CLASS XII SEM IV ──────────────────────────── */
+      {id:"eco-u22", title:"Inclusive Growth", marks:8, cls:12, sem:4,
+        syllabus:["Inclusive Growth — definition and measurement; Sustainable Development and the 17 SDGs","Inequality & Poverty — Head Count Ratio, Poverty Gap, Lorenz Curve; anti-poverty programs in West Bengal","Environmental problems of economic growth in the Indian context","Human Development Index — concept and Indian scenario","NITI Aayog — concept, objectives and functions"],
+        topics:[]}
     ]
   },
 
@@ -3286,14 +3523,57 @@ const DATA = {
   bmaths:{
     name:"Business Maths & Statistics", code:"BMS", accent:"soon",
     units:[
-      {id:"bm-u1", title:"Algebra", marks:0,
-        syllabus:["Theory of Quadratic Equations — roots, nature of roots, discriminant, sum &amp; product of roots","Compound Interest — formula, effective rate, present value","Taxes — types of taxes, tax calculation, GST computation basics"], topics:[]},
-      {id:"bm-u2", title:"Statistics", marks:0,
-        syllabus:["Arithmetic Mean for Discrete Data — direct &amp; short-cut methods","Arithmetic Mean for Grouped Data — direct, short-cut, step-deviation","Mode for Discrete Data — inspection &amp; grouping","Median for Discrete Data — cumulative frequency method"], topics:[]},
-      {id:"bm-u3", title:"Theory of Sets", marks:0,
-        syllabus:["Meaning and types of sets — empty, finite, infinite, equal, equivalent","Subset, Universal Set, Power Set","Operations on Sets — union, intersection, difference, complement","Venn Diagrams — representation and application","De Morgan's Laws"], topics:[]},
-      {id:"bm-u4", title:"Trigonometry", marks:0,
-        syllabus:["Trigonometrical Ratios — sin, cos, tan, cosec, sec, cot","Ratios of standard angles (0°, 30°, 45°, 60°, 90°)","Trigonometric identities","Application problems using trigonometrical ratios"], topics:[]}
+      /* ── UNIT 1 · CLASS XI SEM I ─────────────────────────────── */
+      {id:"bm-u1", title:"Algebra", marks:18, cls:11, sem:1,
+        syllabus:["Theory of Quadratic Equations — roots, nature of roots, discriminant, sum &amp; product of roots, Sridharacharya's method","Compound Interest — yearly, half-yearly, quarterly, monthly compounding","Taxes — Sales Tax, VAT, GST (SGST &amp; CGST), comparison among them"], topics:[]},
+      /* ── UNIT 2 · CLASS XI SEM I ─────────────────────────────── */
+      {id:"bm-u2", title:"Statistics", marks:10, cls:11, sem:1,
+        syllabus:["Arithmetic Mean for Discrete Data — direct &amp; short-cut methods","Arithmetic Mean for Grouped Data — direct, short-cut, step-deviation","Mode for Discrete Data — inspection &amp; grouping","Median for Discrete Data — cumulative frequency method","Mean of y from mean of x, where y = ax + b"], topics:[]},
+      /* ── UNIT 3 · CLASS XI SEM I ─────────────────────────────── */
+      {id:"bm-u3", title:"Theory of Sets", marks:6, cls:11, sem:1,
+        syllabus:["Meaning and types of sets — empty, finite, infinite, equal, equivalent","Roster form and Set-Builder form; Cartesian product of two finite sets","Subset, Superset, Proper Subset — Special Thinking: A⊂B ⇒ A⊆B (converse not always true)"], topics:[]},
+      /* ── UNIT 4 · CLASS XI SEM I ─────────────────────────────── */
+      {id:"bm-u4", title:"Trigonometry", marks:6, cls:11, sem:1,
+        syllabus:["Trigonometrical Ratios — sin, cos, tan, cosec, sec, cot","Ratios of standard angles (0°, 30°, 45°, 60°, 90°)","Trigonometric identities (sin²x + cos²x = 1) and others","Complementary &amp; supplementary angles — values at 120°, 135°, 150°, 180°"], topics:[]},
+
+      /* ── UNIT 5 · CLASS XI SEM II ────────────────────────────── */
+      {id:"bm-u5", title:"Algebra — Progressions & Permutations/Combinations", marks:12, cls:11, sem:2,
+        syllabus:["Arithmetic Progression and Geometric Progression — general term, sum of first n terms","Standard series formulae — Σi, Σi², Σi³ verification for a given positive integer n","Permutations and Combinations — factorial, ⁿPᵣ, ⁿCᵣ; simple problems for n ≤ 8"], topics:[]},
+      /* ── UNIT 6 · CLASS XI SEM II ────────────────────────────── */
+      {id:"bm-u6", title:"Theory of Sets — Operations & Functions", marks:10, cls:11, sem:2,
+        syllabus:["Power Set of a finite set and its cardinality; Set Operations — Union, Intersection, Difference, Symmetric Difference, Complement","Commutative &amp; Distributive properties; De Morgan's Laws; Venn Diagram verification","Inclusion-Exclusion Theorem for two and three sets; Cartesian Product of two sets","Functions — domain, co-domain, range; one-to-one, many-to-one, surjective, bijective (pictorial)"], topics:[]},
+      /* ── UNIT 7 · CLASS XI SEM II ────────────────────────────── */
+      {id:"bm-u7", title:"Limits and Derivatives", marks:12, cls:11, sem:2,
+        syllabus:["Concept of Limits; Right-Hand vs Left-Hand Limit; standard limit formulae","Derivative as a rate of measure; standard differentiation formulae; Chain Rule","Applications of Derivatives — Maxima &amp; Minima for cost, demand and marginal cost functions"], topics:[]},
+      /* ── UNIT 8 · CLASS XI SEM II ────────────────────────────── */
+      {id:"bm-u8", title:"Theory of Probability", marks:6, cls:11, sem:2,
+        syllabus:["Terminology — random experiment, sample space, events, mutually exclusive/collectively exhaustive/equally likely events","Classical definition of probability and related problems"], topics:[]},
+
+      /* ── UNIT 9 · CLASS XII SEM III ──────────────────────────── */
+      {id:"bm-u9", title:"Algebra — Banking, Shares, Indices & Logarithm", marks:14, cls:12, sem:3,
+        syllabus:["Banking — Fixed Deposit and Recurring Deposit calculation","Shares and Dividends","Laws of Indices","Logarithm"], topics:[]},
+      /* ── UNIT 10 · CLASS XII SEM III ─────────────────────────── */
+      {id:"bm-u10", title:"Geometry", marks:6, cls:12, sem:3,
+        syllabus:["Cartesian coordinate system in two dimensions","Distance formula between two points; Section formula","Coordinates of the centroid of a triangle given its vertices"], topics:[]},
+      /* ── UNIT 11 · CLASS XII SEM III ─────────────────────────── */
+      {id:"bm-u11", title:"Statistics — Dispersion & Index Numbers", marks:16, cls:12, sem:3,
+        syllabus:["Graphical representation — Line Graph, Bar Diagram, Pie Diagram, Histogram, Frequency Polygon, Ogives","Measures of Dispersion — Mean Deviation, Variance, Standard Deviation, Coefficient of Variance","Index Numbers — Simple Aggregate Method, Weighted Aggregate Method, Cost of Living Index"], topics:[]},
+      /* ── UNIT 12 · CLASS XII SEM III ─────────────────────────── */
+      {id:"bm-u12", title:"Logical Reasoning", marks:4, cls:12, sem:3,
+        syllabus:["Number series, coding-decoding, odd man out","Direction Tests","Seating Arrangements","Blood Relations"], topics:[]},
+
+      /* ── UNIT 13 · CLASS XII SEM IV ──────────────────────────── */
+      {id:"bm-u13", title:"Algebra — Matrices, Determinants & Loans", marks:12, cls:12, sem:4,
+        syllabus:["Theory of Matrices (order up to 2×2) — types, algebra of matrices","Determinants of a 2×2 matrix; solving equations via Cramer's Rule","Financial Loans — EMI calculation; billing discount and average billing date"], topics:[]},
+      /* ── UNIT 14 · CLASS XII SEM IV ──────────────────────────── */
+      {id:"bm-u14", title:"Calculus — Integration & Differential Equations", marks:14, cls:12, sem:4,
+        syllabus:["Integration as the inverse of Differentiation; standard integral formulae; integration by parts","Fundamental Theorem of Integral Calculus (statement); definite integration — simple problems","Differential Equations — order, degree, formation; solving by variable separation"], topics:[]},
+      /* ── UNIT 15 · CLASS XII SEM IV ──────────────────────────── */
+      {id:"bm-u15", title:"Statistics — Bivariate Data & Regression", marks:7, cls:12, sem:4,
+        syllabus:["Covariance and Correlation Coefficient; geometric interpretation of Pearson &amp; Rank Correlation","Regression coefficients bₓᵧ and bᵧₓ; regression lines x-on-y and y-on-x; point of intersection (x̄, ȳ)"], topics:[]},
+      /* ── UNIT 16 · CLASS XII SEM IV ──────────────────────────── */
+      {id:"bm-u16", title:"Linear Programming", marks:7, cls:12, sem:4,
+        syllabus:["Linear Inequalities — locating the region represented by a linear inequation","Linear Programming Problems — objective function, constraints, feasible solution, corner points","Solving LPPs graphically — two-variable case with non-negativity restriction"], topics:[]}
     ]
   }
 

@@ -312,7 +312,7 @@ function renderHome(){
       return n+t.sets.reduce((m,set)=>m+((set.questions&&set.questions.length)||0),0);
     },0);
     return `<div class="subj" onclick="go('subject','${key}')">
-      <div class="code">Semester I</div>
+      <div class="code">Class XI – XII</div>
       <h3>${s.name}</h3>
       <div class="meta">${s.units.length} units${qCount?` &nbsp;·&nbsp; ${qCount} questions`:''}</div>
       <span class="pill ${ready?'ready':'soon'}">${ready?'Ready to practise':'Coming soon'}</span>
@@ -367,7 +367,13 @@ function renderSubject(key){
     '#1e7a72', // deep teal
     '#8b5e2a', // warm brown
   ];
-  const units=s.units.map((u,i)=>{
+  const SEM_LABEL={
+    '11-1':'Class XI · Semester I',
+    '11-2':'Class XI · Semester II',
+    '12-3':'Class XII · Semester III',
+    '12-4':'Class XII · Semester IV'
+  };
+  const unitCard=(u,i)=>{
     const t=u.topics[0];
     const sets=t&&t.sets?t.sets:null;
     const liveSets=sets?sets.filter(x=>x.questions&&x.questions.length).length:0;
@@ -392,16 +398,32 @@ function renderSubject(key){
       </div>
       ${syllabusHtml}
     </div>`;
-  }).join('');
+  };
+
+  // Group units by class/semester while preserving original index (needed for onclick routing)
+  const groups=[]; let curKey=null, curGroup=null;
+  s.units.forEach((u,i)=>{
+    const gk=`${u.cls||11}-${u.sem||1}`;
+    if(gk!==curKey){ curKey=gk; curGroup={key:gk,items:[]}; groups.push(curGroup); }
+    curGroup.items.push({u,i});
+  });
+
+  const sections=groups.map(g=>`
+    <section style="padding-top:30px">
+      <div style="font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px">${SEM_LABEL[g.key]||g.key}</div>
+    </section>
+    <section class="units">${g.items.map(({u,i})=>unitCard(u,i)).join('')}</section>
+  `).join('');
+
   app.innerHTML=`
     <section style="padding-top:34px">
-      <div style="font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px">Semester I</div>
+      <div style="font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px">Class XI – XII · Full Syllabus</div>
       <h2 style="font-family:Fraunces;font-size:34px;font-weight:700;color:var(--green-deep);margin-bottom:4px">${s.name}</h2>
-      <p style="color:var(--ink-soft);font-size:14px;margin-bottom:24px">Select a unit to learn the concept or jump straight into practice questions.</p>
+      <p style="color:var(--ink-soft);font-size:14px;margin-bottom:8px">Select a unit to learn the concept or jump straight into practice questions.</p>
     </section>
-    <section class="units">${units}
-      ${s.accent==='soon'?`<div class="note"><b>Content for this subject is being prepared.</b> Check back soon — units will be unlocked as they are added.</div>`:''}
-    </section>`;
+    ${sections}
+    ${s.accent==='soon'?`<section class="units"><div class="note"><b>Content for this subject is being prepared.</b> Check back soon — units will be unlocked as they are added.</div></section>`:''}
+  `;
 }
 
 function renderSets(ctx){
